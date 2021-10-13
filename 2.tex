@@ -148,6 +148,301 @@ $\pm 2,\pm 4,\pm 6,\pm 8,\ldots,\pm 2n\ldots$的集
 其中$x$表示集合$A$的任一元素，$x|\alpha$表示元素$x$具有特征性
 质$\alpha$, 而$A=\{x|\alpha\}$则表示由所有具有性质$\alpha$的元素所构
 成的集合$A$. 这样一来，上述各例又可表示如下：
+\begin{enumerate}
+    \item $A=\{x|x\text{能被2整除}\}$
+    \item $B=\{x|x\text{被2除余1}\}$
+    \item $C= \{x|x^2=2\}$
+    \item $D=\{X|\overline{OX}<5{\rm cm},\; \text{且$O$是平面$P$上定点，$X\in$平面$P$} \}$
+\end{enumerate}
+
+有时候“任一元素$x$”也可用某种形式写出来，例如上面的集合$A$、$B$可写为：
+\[\begin{split}
+    A&=\{2n|n\text{为任意整数}\}=\{2n|n\in\mathbb{Z}\}\\
+    B&=\{2n+1|n\text{为任意整数}\}=\{2n+1|n\in\mathbb{Z}\}
+\end{split}\]
+
+\begin{ex}
+\begin{enumerate}
+    \item 用列举法表示下列集合：
+\begin{enumerate}
+    \item 头五个质数的全体构成的集合。
+    \item 12的所有因数构成的集合。
+    \item 自然数里头五个平方数的全体构成的集合。
+    \item 20与30间的奇数的全体构成的集合。
+    \item 小于20的全体偶数构成的集合$P$。
+\end{enumerate}
+
+\item 用符号“$\in$”，“$\notin$”表示$b$, $c$, $d$与集合的关系。
+\begin{enumerate}
+    \item $A=\{x|x\text{是15的因数}\}$，$b=5$, $c=15$, $d=12$；
+    \item $O=\{x|x\text{是小于16的质数}\}$，$b=2$, $c=3$, $d=7$。
+\end{enumerate}
+
+\item $C$是平面$P$上以$O$为圆心，半径为3cm的圆周上的所有点组
+成的集合，$X$、$Y$、$Z$是平面$P$上的三个点，且$\overline{OX}=5{\rm cm}$, $\overline{OY}=2{\rm  cm}$, $\overline{OZ}=3{\rm cm}$, 试用符号“$\in$”和“$\notin$”表示$X$,
+$Y$, $Z$与集合$C$的关系。
+
+\item 试用特征性质描述法描述下列集合。
+\begin{enumerate}
+    \item 一元二次方程$x^2+2x-3=0$的两个根所构成的集合。
+    \item 所有加7就大于15的实数所构成的集合。
+    \item 所有大于或等于3而小于5的实数的集合。
+\end{enumerate}
+
+\item 试用特征性质描述第1题中的五个集合。
+
+\item 把下列集合用列举法描述出来：
+\begin{enumerate}
+    \item $A=\{x|x\text{是整数且}|x|<5\}$
+    \item $B=\{x|x\text{是英语中的元音字母}\}$
+    \item $C=\{x|x\text{是整数且}1<x<10  \}$
+    \item $D=\{x|x\text{是$a$或是$b$，或是$c$}\}$
+\end{enumerate}
+\end{enumerate} 
+\end{ex}
+
+\subsection{集合与集合的关系和集合的运算}
+
+\subsubsection{集合与集合的关系}
+如果集合$A$的每一个元素，也是集合$B$的元素，那么我们说$A$是$B$的\textbf{子集}。也可以说“$A$\textbf{含于}$B$”，或“$B$\textbf{包含}$A$”，我们用符号$A\subseteq B$, 或$B\supseteq A$来表示，请同学们注意：因为集合$A$的每个元素肯定是集合$A$的一个元素，所以每个集合$A$都是它本身的子集。
+
+为了能够形象化地帮助我们理解集合，我们常用图来表示集合。最常用的方法是对给定的集合用圆形表示，圆形上的点表示该集合的元素，圆形外的点表示不是该集合的元素。不同的圆形表示不同的集合。这种圆形通常叫做维恩（Venn）图。
+
+这样，集合$A$是集合$B$的子集，可形象地用图2.3所示的两圆形来表示。
+
+如果集合$A$中的每一个元素都是集合$B$中的元素，而$B$中的元素却有不属于$A$的，这时我们说$A$是$B$的\textbf{真子集}，记作$A\subset B$。
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.9]
+\draw (0,0) circle (.6);
+\draw (0,-.5) circle (1.3);
+\node at (0,0){$A$};
+\node at (-.7,-1){$B$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.9]
+\draw[<->](-2,1)--(2,1);
+\draw (-.8,1) [fill=black]circle (1.5pt)node[below]{$A$};
+\draw (.8,1) [fill=black]circle (1.5pt)node[below]{$B$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+在图2.4中，$\overline{AB}$上的点都是直线$AB$上的点，但是直线$AB$上的点却还有很多不属于$\overline{AB}$, 所以$\overline{AB}$是直线$AB$的真子集，记作：
+\[\overline{AB}\subset \text{直线}AB\]
+
+这里我们要提醒同学们注意区分“属于”关系和“含于”关系。“属于”关系是集合的元素与集合本身的关系，但“含于”关系却是集合与集合之间的关系。
+
+例如集合$A=\{3, 4, 5\},\; B=\{3, 4, 5, 6, 7\}$, 对于元素4来说，它和$A$或$B$的关系是“属于”关系，即$4\in A$, $4\in B$; 对于集合$A$与$B$来说，它们的关系却是“含于”关系，即$A\subset B$。
+
+如果两个集合$A$、$B$是由共同的元素所构成的，我们称它们为相等的集合，记作$A=B$. 例如，$\{x,y,z\}=\{y,x, z\}$, $\{+, -, \x, \div \}=\{ \x, -,+,\div\}$等。
+
+如果两个集合$A$、$B$, $A\subseteq B$且$B\subseteq A$, 这就是说$A$的每个元素都是$B$的元素，而$B$的每个元素也都是$A$的元素，显然这两个集合含有相同的元素，则$A=B$. 例如，$A=\{\text{偶数}\}$，$B=\{2n|n\in\mathbb{Z}\}$, 则$A=B$. 事实上$A$, $B$两个集合
+就是同一个集合的两种不同描述法。
+
+如果有三个集合$A$、$B$、$C$, $A\subseteq B$且$B\subseteq C$, 那么显然有$A\subseteq C$. 这就是说集合的含于关系具有传递性。
+
+\subsubsection{集合的运算}
+
+\paragraph{交集}
+由集合$A$与集合$B$的公共元素所成的集合叫做集合$A$与集合$B$的交集（或交）。记为：
+$A\cap B$，读为$A$交$B$.
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \draw (0,0)node{$A$} circle(.75);
+    \draw (1.3,0)node{$B$} circle (1);
+    \draw[->](.5,-1.3)node[below]{$A\cap B$}--(.5,-.7);
+    \clip {(0,0) circle (.75)};
+    \fill[pattern=north east lines] {(1.3,0) circle (1)};
+    
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.9]
+\draw (-2,.8)--(2,-.8)node[right]{$m$};
+\draw (-1.5,-1)--(1.5,1)node[right]{$\ell$};
+\node at (0,0)[above]{$A$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+两个集合$A$、$B$的交集用维恩图来示意，如图2.5中的阴影部分就表示$A\cap B$.
+
+若$A=\{ a, b, c, d \}$, $B=\{ c, d, e\}$, 则$A\cap B=\{c,d\}$。
+
+在图2.6中，直线$\ell$与直线$m$的交集是$A$点，即$\ell \cap m=\{A\text{点}\}$。
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.9]
+\draw[<->](-2,1)--(2,1);
+\draw (-.8,1) [fill=black]circle (1.5pt)node[below]{$A$};
+\draw (.8,1) [fill=black]circle (1.5pt)node[below]{$B$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.9]
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+在图2.7中，$\overline{AB}$是射线$AB$和射线$BA$的交集，即：
+\[\overline{AB}=\text{射线}AB\cap \text{射线}BA\]
+
+一条直线把一个平面分成两部分，其中每一部分都叫做半平面，这条直线叫作半平面的界。图2.8中，$\angle AOB$的内部是以直线$OA$为界含有射线$OB$的半平面与以直线$OB$为界含有射线$OA$的半平面的交集（即图中的阴影部分）。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\fill[draw, pattern=north east lines] (0,0)node[fill=white]{$A$} circle(.75);
+\fill[draw, pattern=north east lines]  (1.3,0)node[fill=white]{$B$} circle (1);
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.9]
+\draw[<->](-2,1)--(2,1);
+\draw (-.8,1) [fill=black]circle (1.5pt)node[below]{$A$};
+\draw (.8,1) [fill=black]circle (1.5pt)node[below]{$B$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+显然，若$A\subseteq B$, 则$A\cap B=A$, 反之，若$A\cap B=A$, 则$A\subseteq B$.
+
+\paragraph{并集}
+由集合$A$的元素或集合$B$的元素合并而成的
+集合叫做集合$A$与集合$B$的并集（或并）记为：
+$A\cup B$，读为A并B。
+
+集合$A$与集合$B$的并集用维恩图示意，如图2.9所示，图中的阴影部分就表示$A\cup B$.
+
+如果$A=\{1, 2, 3\}$, $B=\{3, 4, 5\}$, 那么$A\cup B= \{1, 2, 3, 4, 5\}$.
+
+\begin{rmk}
+    在求上述$A$、$B$的并集时，虽然$A$与$B$含有共同的元素3, 但在$A\cup B$中3只取一次。
+\end{rmk}
+
+如果$A_+=\{x|x\text{是实数，且}x\ge 5\}$，$A_-=\{x|x\text{是实数，且}x\le -5\}$，$A=\{x|x^2\ge 25\}$，那么$A_+\cup A_-=A$。
+
+在图2.10中，直线$AB$是射线$AB$和射线$BA$的并集，即
+\[\text{直线}AB=\text{射线}AB \cup \text{射线}BA\]
+
+\paragraph{空集}
+为了使集合$A$和集合$B$的交集$A\cap B$在集合$A$与集合$B$不含有任何公共元素时仍有意义，我们自然想到：这时的$A\cap B$应是一个不含有任何元素的集合。因此，我们把这种不含任何元素的集合叫做\textbf{空集}，并用符号$\emptyset$表示。
+
+由空集的意义可知，对任何一个集合$P$, 都有$P\cap \emptyset=\emptyset$, $P\cup\emptyset=P$成立，并且空集是任何一个集合$P$的子集。即：$P\supseteq \emptyset$
+
+如果$A=\{\text{奇数}\}$，$B=\{\text{偶数}\}$，那么$A\cap B=\emptyset$。
+
+在图2.11中，若$\odot O_1$和$\odot O_2$相离，则$\odot O_1\cap \odot O_2=\emptyset$
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\draw (0,0)node[below]{$O_1$} circle (1);
+\draw (2.5,0)node[below]{$O_2$} circle (.8);
+\draw (0,0) [fill=black] circle(1pt); 
+\draw (2.5,0) [fill=black] circle(1pt); 
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+如果直线$a\parallel$直线$b$, 那么$a\cap b=\emptyset$.
+
+\paragraph{基集与补集}
+
+如果我们所讨论的集合都是一个给定集合的子集，我们就称这个给定集合为\textbf{基集}，通常用符号$I$表示基集。
+
+例如，我们所讨论的集合是$\emptyset$、$\{1\}$、$\{2\}$、$\{3\}$、$\{1, 2\}$、$\{2, 3\}$、$\{1, 3\}$和$\{1, 2, 3\}$时，因为上述集合都是集合$\{1, 2, 3\}$的子集，所以我们称$\{1, 2, 3\}$为基集。
+
+又因为平面和平面上的几何图形都是点的集合，那么平面几何所讨论的图形都可以看作是某平面上所有点的集合的
+子集，这时，我们把平面叫做基集。
+
+在代数中，当我们讨论有理数运算时，全体有理数就是基集。
+
+如果$A\subseteq I$, 在基集$I$中所有不属于$A$的元素所构成的集
+合叫做$A$的\text{补集}，以符号“$A^c$”表示，读为$A$补。因此，
+
+
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1.3]
+\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
+\draw [fill=white](1.5,1)node{$A$} circle (.6);
+\node at (3,2)[fill=white]{$I$};
+\node at (3,1)[fill=white]{$A^c$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.3]
+\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
+\draw [fill=white](1.5,1)node[left]{$O$} circle (.6);
+\node at (1.5,.75){$B^c=A$};
+\draw [->](1.5,1)--node[above]{3}+(30:.6);
+\node at (1.2,1.35){$A$};
+\node at (3,2)[fill=white]{$P$};
+\node at (2.8,1)[fill=white]{$A^c=B$};
+\node at (.5,.5)[fill=white]{$B$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1.3]
+\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
+\draw [fill=white](1.8,1.2)node{$A$} circle (1);
+\draw [fill=white](2,1)node{$A$} circle (.5);
+\node at (1.2,1.4){$B$};
+\node at (3.1,.25)[fill=white]{$B^c$};
+\node at (.5,2.2)[fill=white]{$I$};
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.3]
+\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
+\draw [fill=white](1.8,1.2) circle (1);
+\draw [fill=white](2,1)node{$A$} circle (.5);
+\node at (3.1,.25)[fill=white]{$B^c$};
+\node at (.5,2.2)[fill=white]{$I$};
+\node at (1.2,1.4){$A^c$};
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
 
 
 
