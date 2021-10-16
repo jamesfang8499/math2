@@ -380,9 +380,9 @@ $A\cup B$，读为A并B。
 
 如果$A\subseteq I$, 在基集$I$中所有不属于$A$的元素所构成的集
 合叫做$A$的\text{补集}，以符号“$A^c$”表示，读为$A$补。因此，
+\[A\cap A^c=\emptyset,\qquad A\cup A^c=I\]
 
-
-
+基集在图示时，常常用一矩形所包围的点表示。图2.12中的阴影部分示意$A^c$。
 
 \begin{figure}[htp]\centering
     \begin{minipage}[t]{0.48\textwidth}
@@ -411,6 +411,16 @@ $A\cup B$，读为A并B。
     \end{minipage}
     \end{figure}
 
+如果以实数全体为基集$I$，$A=\{\text{有理数}\}$，$B=\{\text{无理数}\}$，那么$A^c=B$, $B^c=A$, $A\cup B=I$, $A$和$B$互为补集。
+
+如果以实数的全体为基集$I$, $A=\{x|x\ge 5\}$, $B=\{x|x<5\}$, $那么A^c=B$, $B^c=A$, $A$和$B$互为补集。
+
+如果以平面$P$上的所有点的集合为基集$I$, $O$是$P$上一个定点，$A=\{X|OX<3{\rm cm},\; X\in P\}$, $B=\{X|OX>3{\rm cm},\; X\in P\}$, 那么$A^c=B$, $B^c=A$, $A$和$B$互为补集（图2.13）。
+
+对于基集$I$的任何子集合$A$, 都有$I\supseteq A\supseteq \emptyset$. 
+
+$A\cap B=A$和$A\cap B^c=\emptyset$是同一件事的两种说法（图2.14）。$A\subseteq B$和$B^c\subseteq A^c$是同一件事的两种说法（图2.15）。
+
 
 
 \begin{figure}[htp]\centering
@@ -430,32 +440,262 @@ $A\cup B$，读为A并B。
     \begin{minipage}[t]{0.48\textwidth}
     \centering
     \begin{tikzpicture}[>=latex, scale=1.3]
-\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
-\draw [fill=white](1.8,1.2) circle (1);
+\fill[pattern=crosshatch, draw](0,0) rectangle (3.5,2.5);
+\fill [white](1.8,1.2) circle (1);
+\draw [pattern=north east lines](1.8,1.2) circle (1);
 \draw [fill=white](2,1)node{$A$} circle (.5);
 \node at (3.1,.25)[fill=white]{$B^c$};
 \node at (.5,2.2)[fill=white]{$I$};
-\node at (1.2,1.4){$A^c$};
-
+\node at (1.2,1.4)[fill=white]{$B$};
+\node at (2,2.2)[fill=white]{$A^c$};
     \end{tikzpicture}
     \caption{}
     \end{minipage}
     \end{figure}
 
+\section*{习题2.1}
+\addcontentsline{toc}{subsection}{习题2.1}
+\begin{enumerate}
+    \item 设$A=\{1, 2, 3\}$
+\begin{enumerate}
+    \item 写出一个对象，它是$A$的元素；
+    \item 写出一个对象，它不是$A$的元素；
+    \item 写出一个对象，它是$A$的子集；
+    \item 写出一个对象，它不是$A$的子集；
+    \item 存在一个既是$A$的元素又是$A$的子集的对象吗？
+\end{enumerate}
 
+\item 设$A=\{x|x\text{是一位的奇数}\}$，指出在下列集合中，哪个
+是空集？哪个是只有一个元素的集合？
+\[B=\{x|x\in A,\; x>2\};\qquad C=\{x|x\in A,\;x>9\}\]
+\[D=\{x|x\in A,\;x\text{除以3余2}\}\]
+\item 指出下列各题中集合$A$与集合$B$的关系。
+\begin{enumerate}
+    \item $A= \{1, 3, 5,7,9\},\qquad B=\{3,5,7\}$
+    \item $A= \{2, 4, 6, 8\} ,\qquad B=\{x|x\text{是偶数且}1<x<9\}$
+    \item $A= \{2, 3\} ,\qquad  B=\{x|x^2-5x+6=0\}$
+\end{enumerate}
 
+\item 写出$\{0, 1\}$的所有子集。
+\item 写出$\{\text{黄},\text{红},\text{兰}\}$的所有真子集。
+\item 用列举法表示$A\cap B$.
+\begin{enumerate}
+    \item $A= \{1, 2, 3, 4\} ,\qquad B= \{3, 5, 7, 9\}$
+    \item $A=\{x|x\text{是18的约数}\},\qquad B=\{x|x\text{是小于或等于10的整数}\}$
+\end{enumerate}
 
+\item 已知$A=\{2, 3, 5, 6, 7\}$, $B=\{x|x\text{为一位奇数}\}$，分别把$A\cap B$, $A\cup B$的元素用列举法表示出来。
+\item 若基集选定为实数集，$A=\{x|x<5\}$，求$A^c$。
+\item 若基集定为平面$P$, $O$是$P$上一定点，设平面$P$上的一个子集$A=\{X|OX<2,\; X\in \text{平面}P\}$, 求$A^c$。
+\item 某小组共有学生18人，其中有12人喜欢排球，有15人喜
+欢篮球，这两种运动都喜欢的有10人，试问：
+\begin{enumerate}
+    \item 喜欢排球不喜欢篮球的有几人？   
+     \item 喜欢篮球不喜欢排球的有几人？  
+       \item 喜欢排球或者喜欢篮球的有几人？   
+        \item 这两种运动都不喜欢的有几人？
+\end{enumerate}
+\end{enumerate}
 
+\section{简易逻辑}
+\subsection{推出关系}
 
+在上一节中，我们学过了可用某集合的元素的特征性质来描述这个集合。
+例如：
+\[\begin{split}
+    A&=\{x|x\text{被2整除}\}\\
+B&= \{x|x^2=4\}\\
+C&=\{X|\overline{OX}=3{\rm cm},\; \text{且$O$是平面$P$上定点，$X\in$平面$P$}\}
+\end{split}\]
 
+由此可见，一个集合完全被它所含元素的特征性质所确
+定。
 
+在本书中，我们用小写字母如$\alpha,\beta,\gamma,\ldots$等去表示“性质”；用相对的大写英文字母$A,B,C,D,\ldots$等去表
+示由具有该性质的元素所构成的集合。
 
+例如：集合$A=\{\text{偶数}\}$，$\alpha$表示性质：被2整除，那么集合$A$完全由具有性质$\alpha$的元素确定。这样，偶数集合$A$与构成这个集合的元素所具有的性质$\alpha$（被2整除）互相对应。因此，如果$A$是由具有性质$\alpha$的元素所构成的集合，那么$A$与$\alpha$之间的这种对应关系，可以表示为：
+\[\alpha\longleftrightarrow A,\qquad \text{或}\qquad A\longleftrightarrow \alpha\]
 
+下面我们将利用集合与性质之间的对应关系简单地把今后要用到的简易逻辑作些说明。
 
+如果$A=\{x|x\text{是4的倍数}\}$，$B=\{x|x\text{是2的倍数}\}$，则$A$中的元素都具有性质$\alpha$：“4的倍数”；$B$中的元素都具有性质$\beta$：“2的倍数”。我们知道如果某元素$x$是“4的倍数”，则$x$一定是“2的倍数”（即$A$是$B$的子集），这时我们说可由“$x$是4的倍数”推出“$x$是2的倍数”。
 
+一般地，\textbf{如果具有性质$\alpha$的元素也具有性质$\beta$, 我们说可
+由$\alpha$推出$\beta$, 用符号$\alpha=\beta$表示。}
 
+推出关系是简易逻辑中最基本的关系。如果令：$A\longleftrightarrow \alpha$, $ B\longleftrightarrow \beta$，
+则$\alpha=\beta$和$A\subseteq B$是同一件事的两种说法，从集合的观点看$A$是$B$的子集（即$A\subseteq B$）；从性质的观点看$\alpha$推出$\beta$（即$\alpha\Rightarrow\beta$）。
 
+在日常用语中，我们常说“如果某事物具有性质$\alpha$, 则必具有性质$\beta$.” 也就是上面讲的$\alpha\Rightarrow\beta$。
 
+如果$\alpha :x>2$, $\beta :x>3$, 因为一个大于3的数也一定大于2, 所以$\beta \Rightarrow\alpha$, 若$A=\{ x|x>2\}$, $B=\{ x|x>3\}$, 则有$B\subseteq A$。
+
+如果$\alpha :|x|>2$, $\beta :x>1$. 设$A=\{x|\; |x|>2\}$, $B=\{ x| x>1\}$, 因为$A=\{ x|\; |x|>2\}=\{x|x>2\}\cup\{x|<-2\}$, 由此，我们可以看到一个绝对值大于2
+的数，并不一定大于1, 所以$A$不含于$B$,即$\alpha \Rightarrow\beta$ 不成立，反之，$\beta \Rightarrow \alpha$也不成立。
+
+如果$\alpha \Rightarrow\beta$, 且$\beta \Rightarrow\alpha$, 我们便表示为：$\alpha\longleftrightarrow \beta$.
+
+设$\alpha \longleftrightarrow A$, $\beta \longleftrightarrow B$, 若$\alpha \longleftrightarrow\beta$, 从集合的观点看就是$A\subseteq B$且$B\subseteq A$, 即$A=B$.
+
+设$\alpha \longleftrightarrow A$, $\beta \longleftrightarrow B$, $\gamma\longleftrightarrow C$, 如果$\alpha \Rightarrow\beta$, 且$\beta \Rightarrow\gamma$, 由集合与性质之间的对应关系可知$A\subseteq B$, $B\subseteq C$. 再由包含关系的传递性我们就得到$A\subseteq C$. 所以$\alpha \Rightarrow\gamma$. 这就说明了推出关系的一个基本特性：
+
+当$\alpha \Rightarrow\beta$, 且$\beta \Rightarrow\gamma$成立时，$\alpha \Rightarrow\gamma$也一定成立。这个特性叫做推出关系的\textbf{传递性}。
+
+现在我们从性质的观点看一下集合的交集，并集，补集的意义。
+
+设 $\alpha \longleftrightarrow A$、$\beta\longleftrightarrow B$, 不难看出：
+\begin{itemize}
+    \item $A\cap B$就是具有性质$\alpha$ 且具有性质$\beta$ 的元素所构成的集
+合。“具有性质$\alpha$ 且具有性质$\beta$ ”，记作$\alpha \wedge\beta$， 读作$\alpha$ 且$\beta$；
+\item  $A\cup B$就是具有性质$\alpha$或具有性质$\beta$ 的元素所构成的集
+合。“具有性质$\alpha$ 或具有性质$\beta$ ”，记作$\alpha \vee\beta$. 读作$\alpha$ 或$\beta$。 
+\item $A^c$就是哪些不具有性质$\alpha$ 的元素所构成的集合。我
+们用$\bar{\alpha}$表示“不具有性质$\alpha$”，读作非$\alpha$, 也叫$\alpha$的反性质。
+\end{itemize}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+    \draw (0,0) circle (1);
+    \draw (1.4,0) circle (.8);
+    \node at (0,0)[below]{$O_1$};
+    \node at (1.4,0)[below]{$O_2$};
+    \draw (0,0)[fill=black] circle (1.5pt);
+    \draw (1.4,0)[fill=black] circle (1.5pt);
+\end{tikzpicture}    
+    \caption{}
+\end{figure}
+
+设$A=\{X|X\text{为$\odot O_1$内的点}\}$，$B=\{X|X\text{为$\odot O_2$内的点}\}$，$\alpha$表示$\odot O_1$内的点，$\beta$表示$\odot O_2$内的点。则$A,B$与$\alpha,\beta$的关系如下（图2.16）：
+\begin{itemize}
+    \item $A\cap B \longleftrightarrow \alpha\wedge \beta$\quad 在$\odot O_1$且在$\odot O_2$内的点的集合。
+    \item $A\cup B\longleftrightarrow \alpha\vee \beta$\quad 在$\odot O_1$或在$\odot O_2$内的点的集合。
+    \item $A^c\longleftrightarrow \bar{\alpha}$\quad 不在$\odot O_1$内的点的集合。
+    \item $B^c\longleftrightarrow \bar{\beta}$\quad 不在$\odot O_2$内的点的集合。
+    \item $A^c\cap B^c\longleftrightarrow \bar\alpha\wedge\bar\beta $\quad 不在$\odot O_1$内且不在$\odot O_2$内的点的集合。
+    \item $A^c\cup B^c\longleftrightarrow \bar\alpha\vee\bar\beta$\quad 不在$\odot O_1$内或不在$\odot O_2$内的点的集合。
+\end{itemize}
+
+总结以上讨论，我们把性质与集合之间的关系列成下表：
+\begin{center}
+    \begin{tabular}{cc|cc}
+\hline
+        集合  & 性质 &集合  &性质\\
+\hline
+$A$ & $\alpha$ & $B$ & $\beta$\\
+$A^c$ & $\bar\alpha$ & $B^c$ & $\bar\beta$\\
+$A\cap B$ & $\alpha\wedge \beta$ & $A\cup B$ & $\alpha\vee\beta$\\
+$A\subseteq B$ & $\alpha\Rightarrow\beta $& $A=B$&$\alpha\Leftrightarrow \beta$\\
+\multicolumn{2}{c|}{$A\subseteq B$与$B\subseteq A^c$同义}& \multicolumn{2}{|c}{$\alpha\Rightarrow\beta$与$\bar\beta\Rightarrow\bar\alpha$同义}\\
+\hline
+    \end{tabular}
+\end{center}
+
+\subsection{基本逻辑语句}
+\subsubsection{命题}
+凡可决定其真假的语句就叫做\textbf{命题}。例如：
+\begin{enumerate}
+    \item 雪是白的。（真）
+    \item 对顶角相等。（真）
+    \item $2+2=5$。 （假）
+    \item 若$x>y$, 则$\frac{x+2y}{3}>\frac{x+y}{2}$。（假）
+\end{enumerate}
+
+这些语句都是命题。从上面这些命题中我们可以看到，命题不一定为数学所独有，如1就不是数学命题，另外我们还看到一个命题是可以判断真假的，有的容易判断如1、2、3。有的就较难判断一些，如4是个假命题，但一眼
+不容易看出来，实际上如果设$x=1$, $y=0,\;(x>y)$那么
+$\frac{1+2\x 0}{3}\not>\frac{1+0}{2}$。这就说明4是个假命题了。所谓“判断真假”是对事物的本质说的，并不要求现在就要，“决定”，也不要求最近的将来便可决定。例如：
+\begin{itemize}
+    \item 别的星球上有生物。
+    \item 凡大于4的偶数都是两个奇质数之和（这就是著名的哥德巴赫猜想）。
+\end{itemize}
+
+这些语句的真假不但现在不能决定，在最近的将来也未必“可决定”，但是我们认为从事物的本质来说，它们本身是有真假可言的，所以应该承认它们都是命题。
+
+数学命题，经常使用“如果……，那么……”，“若……，则……。”的叙述形式，如前面提到的4便是这一类形式的
+命题。这类命题写成一般形式就是：
+\begin{blk}{}
+若$\alpha$, 则$\beta$\qquad 或\qquad  如果$\alpha$, 那么$\beta$.
+\end{blk}
+
+下面我们仔细的分析它的结构和逻辑关系。
+
+命题“若$\alpha$, 则$\beta$”是否正确，就要看$\alpha$、$\beta$之间是否具有推出关系$\alpha\Rightarrow\beta$了。也就是说，如果$\alpha$、$\beta$之间具有$\alpha\Rightarrow\beta$的关系，则“若$\alpha$, 则$\beta$”是真命题（即正确的命题），由此可见“$\alpha\Rightarrow\beta$”与“若$\alpha$, 则$\beta$”是真命题是同一关系的两种不同说法。
+
+在命题“若$\alpha$, 则$\beta$”中，我们把$\alpha$叫做命题的\textbf{条件}，$\beta$叫做命题的\textbf{结论}。
+
+把“若$\alpha$, 则$\beta$”中的$\beta$作为条件，$\alpha$作为结论，就得到另一个命题：若$\beta$, 则$\alpha$. 这个命题叫做“若$\alpha$, 则$\beta$”的\textbf{逆命题}。
+
+把“若$\alpha$, 则$\beta$”中的$\alpha$的反性质：非$\alpha$, $\beta$的反性质：非$\beta$, 分别作为条件和结论，又得到一个新命题：若$\bar\alpha$, 则$\bar\beta$, 这个命题叫做“若$\alpha$, 则$\beta$”的\textbf{否命题}。
+
+把“若$\alpha$, 则$\beta$”中的$\beta$的反性质：非$\beta$, $\alpha$的反性质：非$\alpha$, 分别作为条件和结论，又可得到一个新命题：若$\bar\beta$, 则$\bar\alpha$. 这个命题叫做“若$\alpha$, 则$\beta$”的\textbf{逆否命题}。
+
+若“$\alpha$, 则$\beta$”则叫做上述逆命题，否命题、逆否命题的\textbf{原命题}。这就是说，逆命题，否命题，逆否命题都是对原命题而说的，在四种命题中任何一个命题都可作为原命题。如：
+\begin{itemize}
+    \item 原命题\quad 若$\bar\alpha$，则$\bar\beta$
+    \item 逆命题\quad 若$\bar\beta$，则$\alpha$
+    \item 否命题\quad 若$\alpha$，则$\beta$（$\bar\alpha$的非是$\alpha$，$\bar\beta$的非是$\beta$）
+    \item 逆否命题\quad 若$\beta$，则$\alpha$
+\end{itemize}
+
+我们把上述四种命题之间的关系，列成下图：
+\begin{center}
+\begin{tikzpicture}[>=latex]
+\node (A)[draw, rectangle]at (-3,2) {原命题：若$\alpha$，则$\beta$}; 
+\node (B)[draw, rectangle]at (3,2) {逆命题：若$\beta$，则$\alpha$}; 
+\node (C)[draw, rectangle]at (-3,-2){否命题：若$\bar\alpha$，则$\bar\beta$}; 
+\node (D)[draw, rectangle]at (3,-2) {逆否命题：若$\bar\beta$，则$\bar\alpha$}; 
+\node (E)[draw, rectangle, rounded corners=3mm]at (0,0) {互为逆否}; 
+\draw[<->, ultra thick](A)--node[above]{互逆}(B);
+\draw[<->, ultra thick](C)--node[below]{互逆}(D);
+\draw[<->, ultra thick](A)--node[left]{互否}(C);
+\draw[<->, ultra thick](B)--node[right]{互否}(D);
+\foreach \x in {A,B,C,D}
+{
+    \draw[->, ultra thick](E)--(\x);
+}
+\end{tikzpicture}
+\end{center}
+
+\begin{example}
+    写出“对顶角相等”这个命题的逆命题，否命题和逆否命题。
+\end{example}
+
+\begin{solution}
+“对顶角相等”这个命题是由两部分组成的：(1)两个角是对顶角，(2)这两个角相等。(1)是命题的条件，(2)是命题的结论。这个命题若用“若—则”连结(1)、(2)两部分，就可写成。
+
+若两个角是对顶角，则这两个角相等。所以，
+\begin{itemize}
+    \item 逆命题\quad 若两个角相等，则这两个角是对顶角。
+    \item 否命题\quad 若两个角不是对顶角，则这两个角就不相等。
+    \item 逆否命题\quad 若两个角不相等，则这两个角就不是对顶角。
+\end{itemize}
+\end{solution}
+
+从这个例子，我们会发现，在这四个命题中有的正确，有的不正确，那么，这四种命题的真假之间是否存在某种关系呢？下面我们再举两个例子。
+
+\begin{example}
+    写出“如果一个数末位数字是0,那么它一定能被5整除。”这个命题的逆命题，否命题、逆否命题。
+\begin{itemize}
+    \item 原命题\quad 如果一个数末位数字是0, 那么它一定能被5整除（真）。
+    \item 逆命题\quad 如果一个数能被5整除，那么它的末位数字一定是0（假）。
+    \item 否命题\quad 如果一个数末位数字不是0, 那么它一定 不能被5整除（假）。
+    \item 逆否命题\quad 如果一个数不能被5整除，那么它的末位数字一定不是0（真）。
+\end{itemize}
+\end{example}
+
+\begin{example}
+    写出“若某人是中国人，则他是北京人。”这个命题的逆命题、否命题、逆否命题。
+
+\begin{itemize}
+    \item 原命题\quad 若某人是中国人，则他是北京人（假）。
+    \item 逆命题\quad 若某人是北京人，则他是中国人（真）。
+    \item 否命题\quad 若某人不是中国人，则他不是北京人（真）。
+    \item 逆否命题\quad 若某人不是北京人，则他不是中国人（假）。
+\end{itemize}
+\end{example}
+
+从以上的例子，我们看到原命题和逆否命题同真假，逆命题和否命题同真假。
 
 
 
