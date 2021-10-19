@@ -165,6 +165,34 @@ $\overline{OP}>r$。
 已知一个点$A$, 很明显，以$A$点以外的任何点为圆心，
 以这点到$A$点的距离为半径所作的圆都经过$A$点（图4.5）。
 因此，\textbf{经过一点可以作无数个圆}。
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1]
+\draw (0,.9) circle (1);
+\draw (0,-.9) circle (1);
+\draw (1.95,0) circle (1.5);
+\foreach \x/\y in{0/.9, 0/-.9, 1.95/0}
+{
+    \draw (\x,\y)[fill=black]circle(1.5pt);
+}
+\node at (1.95-1.5,0)[right]{$A$};
+
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1]
+	\draw (0,1) circle (1.25);
+	\draw (0,-1) circle (1.25);
+	\draw (0,0) circle (.8);	
+	\draw (-.8,0)node[left]{$A$}--(.8,0)node[right]{$B$}   ;	
+	\draw(0,2.25)--(0,-2.25);
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+\end{figure}
 
 经过两个已知点$A$、$B$，可以作多少个圆呢（图4.6）？
 由于经过$A$、$B$两点的圆的圆心到$A$点与$B$点的距离应相等，而
@@ -176,6 +204,149 @@ $\overline{OP}>r$。
 
 现在我们来研究，经过$A$、$B$、$C$三点可以作多少个圆的
 问题？
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1]
+\draw (0,0)node[right]{$O$} circle (1.5);
+\draw[dashed] (-30:1.5)node[right]{$C$}--(0,0)--(-150:1.5)node[left]{$B$};
+\draw (-30:1.5)--(-150:1.5)--(60:1.5);
+\draw[dashed] (0,0)--(60:1.5)node[above]{$A$};
+\draw (0,0)--(-90:2)node[right]{$\ell_2$};
+\draw (0,0)--(135:2)node[above]{$\ell_1$};
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1]
+\draw (0,0)--(5,0);
+\foreach \x/\xtext in{1/A,2.5/B,4.5/C}
+{
+    \draw (\x,0)node[below]{$\xtext$}[fill=black] circle(1.5pt) ;
+}
+\draw[thick] (1.5,-1.5)--(1.5,1.5)node[above]{$\ell_1$};
+\draw[thick] (4,-1.5)--(4,1.5)node[above]{$\ell_2$};
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+\end{figure}
+
+我们知道，经过$A$、$B$两点的圆的圆心必定在$\overline{AB}$的垂
+直平分线上（图4.7中的$\ell_1$），经过$B$、$C$两点的圆的圆心
+又必定在$\overline{BC}$的垂直平分线上（图4.7中的$\ell_2$），因而经过
+$A$、$B$、$C$三点的圆的圆心必定是直线$\ell_1$和$\ell_2$的交点$O$, 由
+于$\overline{OA}=\overline{OB}=\overline{OC}$, 所以以$O$为圆心$\overline{OA}$为半径的圆经过
+$A$、$B$、$C$三点。
+
+这样一来，能不能说经过三个点就可作一个圆呢？我们
+再来看图4.8中所示的三点$A$、$B$、$C$,它们是在同一条直线
+上的，这时$\overline{AB}$和$\overline{BC}$的垂直平分线$\ell_1$和$\ell_2$都垂直于同一条直
+线，于是$\ell_1\parallel \ell_2$, $\ell_1$和$\ell_2$便没有交点，这就说明了经过$A$、
+$B$、$C$三点的圆的圆心根本不存在，所以也就没有圆都经过
+$A$、$B$、$C$三点。因此，我们不能笼统地说经过三个点可作一
+个圆。如果$A$、$B$、$C$三点在同一条直线上（叫做共线的点），
+便没有圆经过这三点；如果$A$、$B$、$C$三点不在同一条直线
+上（叫做不共线的点），那么$\overline{AB}$与
+$\overline{BC}$的垂直平分线必相交
+（为什么？），这时，就可作一个圆经过这三点，又由于
+$\overline{AB}$和$\overline{BC}$的垂直平分线都只有一条，所以它们的交点也是唯
+一的，从而$\overline{OA}$的长也是唯一的，所以经过$A$、$B$、$C$三点也
+只能作一个圆。
+
+于是，我们便得到确切的结论：
+
+\begin{blk}{定理}
+过不共线的三个点，可以作一个圆且只可以作一
+个圆。    
+\end{blk}
+ 
+由上述讨论，我们还可看到一个圆的圆心到圆的任一条
+弦的两个端点的距离相等，因而可得：
+
+\begin{blk}{推论1}
+圆的任一条弦的垂直平分线都通过圆心。
+\end{blk}
+ 
+由于任一个$\triangle ABC$的三个顶点不共线，因此经过$A$、$B$、
+$C$三个顶点可以作一个圆，且只可以作一个圆$\odot O$（图4.9），这个圆叫做$\triangle ABC$的\textbf{外接圆}，它的圆心$O$叫做$\triangle ABC$的\textbf{外心}，而$\triangle ABC$叫做$O$的\textbf{内接三角形}。由于$\overline{OA}=\overline{OB}=\overline{OC}$, 
+$O$点一定在三边的垂直平分线上，于是又可得：
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex, scale=1.2]
+\draw (0,0)node[above]{$O$} circle (1.5);
+\draw[thick] (-30:1.5)node[right]{$C$}--(-150:1.5)node[left]{$B$}--(60:1.5)node[above]{$A$}--(-30:1.5);
+\draw(0,.4)--(0,-2)node[right]{$\ell_2$};
+\draw(15+180:.4)--(15:2)node[right]{$\ell_3$};
+\draw(125-180:.4)--(125:2)node[left]{$\ell_1$};
+
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{blk}{推论2}
+    三角形的三边的垂直平分线相交于一点，这个
+点就是三角形的外心。
+\end{blk}
+ 
+由推论2我们又可得到：
+ 
+\begin{blk}{推论3}
+   三角形的三条高线相交于一点。
+\end{blk}
+
+已知：$AD$、$BE$、$CF$是$\triangle ABC$的三条高线（图4.10）。
+求证：$AD$、$BE$、$CF$相交于一点。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=.8]
+\draw[thick] (15:4)node[above]{$B'$}--(180-15:4)node[above]{$C'$}--(-90-15:4)node[below]{$A'$}--(15:4);
+\draw[very thick] (0,1.04)node[above]{$A$}--(-2.45,-1.41)node[left]{$B$}--(1.41,-1.41)node[right]{$C$}--(0,1.04);
+\draw (0,1.04)--(0,-1.41)node[below]{$D$};
+\draw (-2.45,-1.41)--(0,0)--(0.406,.235)node[right]{$E$};
+\draw (1.41,-1.41)--(0,0)--(-.5,.5)node[left]{$F$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{proof}
+    经过$\triangle ABC$的各顶点$A$、$B$、$C$分别作对边的平
+行线，设它们分别相交于$B'$、$C'$、$A'$各点，于是$AD\bot B'C'$,
+$BE\bot C'A'$, $CF\bot A'B'$（为什么？），又因为四边形$BCAC'$和
+$BCB'A$都是平行四边形（为什么？）。
+
+$\therefore\quad \overline{CA}=\overline{BC}=\overline{AB'}$, 于是$A$是$\overline{B'C'}$的中点。
+
+同理，$B$是$\overline{A'C'}$的中点，$C$是$\overline{A'B'}$的中点，因此，$AD$、
+$BE$、$CF$分别是$\triangle A'B'C'$的三边上的垂直平分线，由推论2
+可知$AD$、$BE$和$CF$相交于一点。
+\end{proof}
+
+
+图4.10中，画出的是锐角三角形，如$\triangle ABC$是钝角三
+角形，上述证明过程同样适用，同学可自己验证。
+
+三角形的三条高线的交点叫做\textbf{三角形的垂心}。
+
+\begin{example}
+    求作一条已知弧的圆心。
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
