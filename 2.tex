@@ -1,6 +1,6 @@
 \chapter{集合与简易逻辑}
 
- \section{集合}
+\section{集合}
 \subsection{集合的概念}
 我们在第一册中曾用到过集合的概念，如自然数所构成
 的集合$\{1,2,3,\ldots\}$, 方程$x^2=4$的解所构成的集合$\{-2,2\}$
@@ -20,7 +20,7 @@
 是一样的。例如，“一堆还没有组装的手表另件”和用“这
 些另件组装好了的手表”是同一个集合。因为两者包含同样
 的元素。因此，集合这个概念的要素是：\textbf{一个集合完全被它
-所含的元素所确定}。
+	所含的元素所确定}。
 
 第二，集合是指构成集合的全体元素，而不是个别元
 素。作为整体的集合和集合中的每个元素都是不同的。
@@ -51,12 +51,12 @@ $c$、$d$的整体的集合$A$与$A$中的个别元素如$a,b,c,d$不
 	\begin{tikzpicture}[scale=.7]
 		\begin{scope}
 			\draw (0,0) circle (2);
-\draw[ultra thick] (0,0)node[below]{$O$}--node[left]{$r$}(45:2);		
-\node at (0,-3){(1)圆};	
+			\draw[ultra thick] (0,0)node[below]{$O$}--node[left]{$r$}(45:2);		
+			\node at (0,-3){(1)圆};	
 		\end{scope}
 		\begin{scope}[xshift=6cm]
 			\draw[pattern=north west lines] (0,0) circle (2);
-\draw[ultra thick] (0,0)node[below, fill=white]{$O$}--(45:2);	
+			\draw[ultra thick] (0,0)node[below, fill=white]{$O$}--(45:2);	
 			\node at (60:1.5) [left, rotate=45, fill=white]{$r$};
 			
 			\node at (0,-3){(2)圆面};
@@ -87,24 +87,24 @@ AB$（图2.2）。
 \begin{figure}[htp]
 	\centering
 	\begin{tikzpicture}[scale=1]
-\draw(0,0)--(6,0);
-\draw (1,0)[fill=black]circle (1.5pt) node[below]{$A$};
-\draw  (4.5,0)[fill=black]circle (1.5pt) node[below]{$B$};
-\draw  (4,-.5)[fill=black]circle (1.5pt) node[below]{$Y$};
-\draw  (3,0)[fill=black]circle (1.5pt) node[above]{$X$};
+		\draw(0,0)--(6,0);
+		\draw (1,0)[fill=black]circle (1.5pt) node[below]{$A$};
+		\draw  (4.5,0)[fill=black]circle (1.5pt) node[below]{$B$};
+		\draw  (4,-.5)[fill=black]circle (1.5pt) node[below]{$Y$};
+		\draw  (3,0)[fill=black]circle (1.5pt) node[above]{$X$};
 	\end{tikzpicture}	
 	\caption{}
 \end{figure}
 
 \begin{ex}
-\begin{enumerate}
-\item 若$S$是
-所有平方数的集合，试判定100至200之间哪些数
-属于$S$.
-\item 若$B$是所有英语元音字母所构成的集合，$A$是所有英语
-辅音字母所构成的集合，试判定$a,b,c,d,e$这五个字
-母分别属于哪一集合，又不属于哪一集合。
-\end{enumerate}
+	\begin{enumerate}
+		\item 若$S$是
+		所有平方数的集合，试判定100至200之间哪些数
+		属于$S$.
+		\item 若$B$是所有英语元音字母所构成的集合，$A$是所有英语
+		辅音字母所构成的集合，试判定$a,b,c,d,e$这五个字
+		母分别属于哪一集合，又不属于哪一集合。
+	\end{enumerate}
 \end{ex}
 
 \subsection{集合的描述法}
@@ -133,14 +133,14 @@ $\{\quad \}$把它们括起来，这种描述法叫做\textbf{列举法}。
 去描述这个集合，这种方法叫做\textbf{特征性质描述法}。如：
 
 \begin{enumerate}
-\item 集合元素为
-$\pm 2,\pm 4,\pm 6,\pm 8,\ldots,\pm 2n\ldots$的集
-合，可描述为\{偶数｝或\{能被2整除的数｝。
-\item 集合元素为$\pm 1,\pm 3,\pm 5,\pm 7,\ldots,\pm (2n+1)\ldots$的集合，可描述为\{奇数\}或\{被2除余1的数\}。
-\item $\{-\sqrt{2},\sqrt{2}\}$,可描述为$\{\text{平方为2的数}\}$。
-\item 圆面上不在圆上的点叫做圆内的点。在平面$P$上以$O$为
-圆心，5厘米长为半径的圆内的点所成的集合，可描述为\{在
-平面$P$上和点$O$的距离小于5厘米的点\}。	
+	\item 集合元素为
+	$\pm 2,\pm 4,\pm 6,\pm 8,\ldots,\pm 2n\ldots$的集
+	合，可描述为\{偶数｝或\{能被2整除的数｝。
+	\item 集合元素为$\pm 1,\pm 3,\pm 5,\pm 7,\ldots,\pm (2n+1)\ldots$的集合，可描述为\{奇数\}或\{被2除余1的数\}。
+	\item $\{-\sqrt{2},\sqrt{2}\}$,可描述为$\{\text{平方为2的数}\}$。
+	\item 圆面上不在圆上的点叫做圆内的点。在平面$P$上以$O$为
+	圆心，5厘米长为半径的圆内的点所成的集合，可描述为\{在
+	平面$P$上和点$O$的距离小于5厘米的点\}。	
 \end{enumerate}
 
 集合的特征性质描述法，常常采用下面更一般的形式：
@@ -149,56 +149,56 @@ $\pm 2,\pm 4,\pm 6,\pm 8,\ldots,\pm 2n\ldots$的集
 质$\alpha$, 而$A=\{x|\alpha\}$则表示由所有具有性质$\alpha$的元素所构
 成的集合$A$. 这样一来，上述各例又可表示如下：
 \begin{enumerate}
-    \item $A=\{x|x\text{能被2整除}\}$
-    \item $B=\{x|x\text{被2除余1}\}$
-    \item $C= \{x|x^2=2\}$
-    \item $D=\{X|\overline{OX}<5{\rm cm},\; \text{且$O$是平面$P$上定点，$X\in$平面$P$} \}$
+	\item $A=\{x|x\text{能被2整除}\}$
+	\item $B=\{x|x\text{被2除余1}\}$
+	\item $C= \{x|x^2=2\}$
+	\item $D=\{X|\overline{OX}<5{\rm cm},\; \text{且$O$是平面$P$上定点，$X\in$平面$P$} \}$
 \end{enumerate}
 
 有时候“任一元素$x$”也可用某种形式写出来，例如上面的集合$A$、$B$可写为：
 \[\begin{split}
-    A&=\{2n|n\text{为任意整数}\}=\{2n|n\in\mathbb{Z}\}\\
-    B&=\{2n+1|n\text{为任意整数}\}=\{2n+1|n\in\mathbb{Z}\}
+	A&=\{2n|n\text{为任意整数}\}=\{2n|n\in\mathbb{Z}\}\\
+	B&=\{2n+1|n\text{为任意整数}\}=\{2n+1|n\in\mathbb{Z}\}
 \end{split}\]
 
 \begin{ex}
-\begin{enumerate}
-    \item 用列举法表示下列集合：
-\begin{enumerate}
-    \item 头五个质数的全体构成的集合。
-    \item 12的所有因数构成的集合。
-    \item 自然数里头五个平方数的全体构成的集合。
-    \item 20与30间的奇数的全体构成的集合。
-    \item 小于20的全体偶数构成的集合$P$。
-\end{enumerate}
-
-\item 用符号“$\in$”，“$\notin$”表示$b$, $c$, $d$与集合的关系。
-\begin{enumerate}
-    \item $A=\{x|x\text{是15的因数}\}$，$b=5$, $c=15$, $d=12$；
-    \item $O=\{x|x\text{是小于16的质数}\}$，$b=2$, $c=3$, $d=7$。
-\end{enumerate}
-
-\item $C$是平面$P$上以$O$为圆心，半径为3cm的圆周上的所有点组
-成的集合，$X$、$Y$、$Z$是平面$P$上的三个点，且$\overline{OX}=5{\rm cm}$, $\overline{OY}=2{\rm  cm}$, $\overline{OZ}=3{\rm cm}$, 试用符号“$\in$”和“$\notin$”表示$X$,
-$Y$, $Z$与集合$C$的关系。
-
-\item 试用特征性质描述法描述下列集合。
-\begin{enumerate}
-    \item 一元二次方程$x^2+2x-3=0$的两个根所构成的集合。
-    \item 所有加7就大于15的实数所构成的集合。
-    \item 所有大于或等于3而小于5的实数的集合。
-\end{enumerate}
-
-\item 试用特征性质描述第1题中的五个集合。
-
-\item 把下列集合用列举法描述出来：
-\begin{enumerate}
-    \item $A=\{x|x\text{是整数且}|x|<5\}$
-    \item $B=\{x|x\text{是英语中的元音字母}\}$
-    \item $C=\{x|x\text{是整数且}1<x<10  \}$
-    \item $D=\{x|x\text{是$a$或是$b$，或是$c$}\}$
-\end{enumerate}
-\end{enumerate} 
+	\begin{enumerate}
+		\item 用列举法表示下列集合：
+		\begin{enumerate}
+			\item 头五个质数的全体构成的集合。
+			\item 12的所有因数构成的集合。
+			\item 自然数里头五个平方数的全体构成的集合。
+			\item 20与30间的奇数的全体构成的集合。
+			\item 小于20的全体偶数构成的集合$P$。
+		\end{enumerate}
+		
+		\item 用符号“$\in$”，“$\notin$”表示$b$, $c$, $d$与集合的关系。
+		\begin{enumerate}
+			\item $A=\{x|x\text{是15的因数}\}$，$b=5$, $c=15$, $d=12$；
+			\item $O=\{x|x\text{是小于16的质数}\}$，$b=2$, $c=3$, $d=7$。
+		\end{enumerate}
+		
+		\item $C$是平面$P$上以$O$为圆心，半径为3cm的圆周上的所有点组
+		成的集合，$X$、$Y$、$Z$是平面$P$上的三个点，且$\overline{OX}=5{\rm cm}$, $\overline{OY}=2{\rm  cm}$, $\overline{OZ}=3{\rm cm}$, 试用符号“$\in$”和“$\notin$”表示$X$,
+		$Y$, $Z$与集合$C$的关系。
+		
+		\item 试用特征性质描述法描述下列集合。
+		\begin{enumerate}
+			\item 一元二次方程$x^2+2x-3=0$的两个根所构成的集合。
+			\item 所有加7就大于15的实数所构成的集合。
+			\item 所有大于或等于3而小于5的实数的集合。
+		\end{enumerate}
+		
+		\item 试用特征性质描述第1题中的五个集合。
+		
+		\item 把下列集合用列举法描述出来：
+		\begin{enumerate}
+			\item $A=\{x|x\text{是整数且}|x|<5\}$
+			\item $B=\{x|x\text{是英语中的元音字母}\}$
+			\item $C=\{x|x\text{是整数且}1<x<10  \}$
+			\item $D=\{x|x\text{是$a$或是$b$，或是$c$}\}$
+		\end{enumerate}
+	\end{enumerate} 
 \end{ex}
 
 \subsection{集合与集合的关系和集合的运算}
@@ -212,26 +212,26 @@ $Y$, $Z$与集合$C$的关系。
 
 如果集合$A$中的每一个元素都是集合$B$中的元素，而$B$中的元素却有不属于$A$的，这时我们说$A$是$B$的\textbf{真子集}，记作$A\subset B$。
 \begin{figure}[htp]\centering
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-\begin{tikzpicture}[>=latex, scale=.9]
-\draw (0,0) circle (.6);
-\draw (0,-.5) circle (1.3);
-\node at (0,0){$A$};
-\node at (-.7,-1){$B$};
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \begin{tikzpicture}[>=latex, scale=.9]
-\draw[<->](-2,1)--(2,1);
-\draw (-.8,1) [fill=black]circle (1.5pt)node[below]{$A$};
-\draw (.8,1) [fill=black]circle (1.5pt)node[below]{$B$};
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \end{figure}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=.9]
+			\draw (0,0) circle (.6);
+			\draw (0,-.5) circle (1.3);
+			\node at (0,0){$A$};
+			\node at (-.7,-1){$B$};
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=.9]
+			\draw[<->](-2,1)--(2,1);
+			\draw (-.8,1) [fill=black]circle (1.5pt)node[below]{$A$};
+			\draw (.8,1) [fill=black]circle (1.5pt)node[below]{$B$};
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+\end{figure}
 
 在图2.4中，$\overline{AB}$上的点都是直线$AB$上的点，但是直线$AB$上的点却还有很多不属于$\overline{AB}$, 所以$\overline{AB}$是直线$AB$的真子集，记作：
 \[\overline{AB}\subset \text{直线}AB\]
@@ -253,28 +253,28 @@ $Y$, $Z$与集合$C$的关系。
 由集合$A$与集合$B$的公共元素所成的集合叫做集合$A$与集合$B$的交集（或交）。记为：
 $A\cap B$，读为$A$交$B$.
 \begin{figure}[htp]\centering
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-\begin{tikzpicture}[>=latex, scale=1]
-    \draw (0,0)node{$A$} circle(.75);
-    \draw (1.3,0)node{$B$} circle (1);
-    \draw[->](.5,-1.3)node[below]{$A\cap B$}--(.5,-.7);
-    \clip {(0,0) circle (.75)};
-    \fill[pattern=north east lines] {(1.3,0) circle (1)};
-    
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \begin{tikzpicture}[>=latex, scale=.9]
-\draw (-2,.8)--(2,-.8)node[right]{$m$};
-\draw (-1.5,-1)--(1.5,1)node[right]{$\ell$};
-\node at (0,0)[above]{$A$};
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \end{figure}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1]
+			\draw (0,0)node{$A$} circle(.75);
+			\draw (1.3,0)node{$B$} circle (1);
+			\draw[->](.5,-1.3)node[below]{$A\cap B$}--(.5,-.7);
+			\clip {(0,0) circle (.75)};
+			\fill[pattern=north east lines] {(1.3,0) circle (1)};
+			
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=.9]
+			\draw (-2,.8)--(2,-.8)node[right]{$m$};
+			\draw (-1.5,-1)--(1.5,1)node[right]{$\ell$};
+			\node at (0,0)[above]{$A$};
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+\end{figure}
 
 
 两个集合$A$、$B$的交集用维恩图来示意，如图2.5中的阴影部分就表示$A\cap B$.
@@ -283,23 +283,26 @@ $A\cap B$，读为$A$交$B$.
 
 在图2.6中，直线$\ell$与直线$m$的交集是$A$点，即$\ell \cap m=\{A\text{点}\}$。
 \begin{figure}[htp]\centering
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-\begin{tikzpicture}[>=latex, scale=.9]
-\draw[<->](-2,1)--(2,1);
-\draw (-.8,1) [fill=black]circle (1.5pt)node[below]{$A$};
-\draw (.8,1) [fill=black]circle (1.5pt)node[below]{$B$};
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \begin{tikzpicture}[>=latex, scale=.9]
-
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \end{figure}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=.9]
+			\draw[<->](-2,1)--(2,1);
+			\draw (-.8,1) [fill=black]circle (1.5pt)node[below]{$A$};
+			\draw (.8,1) [fill=black]circle (1.5pt)node[below]{$B$};
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=.9]
+\draw[dashed](-1,.3)--(0,0)--(-1,-.3);
+\draw(4,-1.2)node[right]{$B$}--(0,0)node[below]{$O$}--(4,1.2)node[right]{$A$};
+\fill[pattern=north east lines](-1,.3)--(-1,1.5)--(4,1.5)--(4,-1.2)--(-1,.3);
+\fill[pattern=north west lines](-1,-.3)--(-1,-1.5)--(4,-1.5)--(4,1.2)--(-1,-.3);
+\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+\end{figure}
 
 在图2.7中，$\overline{AB}$是射线$AB$和射线$BA$的交集，即：
 \[\overline{AB}=\text{射线}AB\cap \text{射线}BA\]
@@ -307,24 +310,24 @@ $A\cap B$，读为$A$交$B$.
 一条直线把一个平面分成两部分，其中每一部分都叫做半平面，这条直线叫作半平面的界。图2.8中，$\angle AOB$的内部是以直线$OA$为界含有射线$OB$的半平面与以直线$OB$为界含有射线$OA$的半平面的交集（即图中的阴影部分）。
 
 \begin{figure}[htp]\centering
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-\begin{tikzpicture}[>=latex, scale=1]
-\fill[draw, pattern=north east lines] (0,0)node[fill=white]{$A$} circle(.75);
-\fill[draw, pattern=north east lines]  (1.3,0)node[fill=white]{$B$} circle (1);
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \begin{tikzpicture}[>=latex, scale=.9]
-\draw[<->](-2,1)--(2,1);
-\draw (-.8,1) [fill=black]circle (1.5pt)node[below]{$A$};
-\draw (.8,1) [fill=black]circle (1.5pt)node[below]{$B$};
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \end{figure}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1]
+			\fill[draw, pattern=north east lines] (0,0)node[fill=white]{$A$} circle(.75);
+			\fill[draw, pattern=north east lines]  (1.3,0)node[fill=white]{$B$} circle (1);
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=.9]
+			\draw[<->](-2,1)--(2,1);
+			\draw (-.8,1) [fill=black]circle (1.5pt)node[below]{$A$};
+			\draw (.8,1) [fill=black]circle (1.5pt)node[below]{$B$};
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+\end{figure}
 
 显然，若$A\subseteq B$, 则$A\cap B=A$, 反之，若$A\cap B=A$, 则$A\subseteq B$.
 
@@ -338,7 +341,7 @@ $A\cup B$，读为A并B。
 如果$A=\{1, 2, 3\}$, $B=\{3, 4, 5\}$, 那么$A\cup B= \{1, 2, 3, 4, 5\}$.
 
 \begin{rmk}
-    在求上述$A$、$B$的并集时，虽然$A$与$B$含有共同的元素3, 但在$A\cup B$中3只取一次。
+	在求上述$A$、$B$的并集时，虽然$A$与$B$含有共同的元素3, 但在$A\cup B$中3只取一次。
 \end{rmk}
 
 如果$A_+=\{x|x\text{是实数，且}x\ge 5\}$，$A_-=\{x|x\text{是实数，且}x\le -5\}$，$A=\{x|x^2\ge 25\}$，那么$A_+\cup A_-=A$。
@@ -355,14 +358,14 @@ $A\cup B$，读为A并B。
 
 在图2.11中，若$\odot O_1$和$\odot O_2$相离，则$\odot O_1\cap \odot O_2=\emptyset$
 \begin{figure}[htp]
-    \centering
-\begin{tikzpicture}
-\draw (0,0)node[below]{$O_1$} circle (1);
-\draw (2.5,0)node[below]{$O_2$} circle (.8);
-\draw (0,0) [fill=black] circle(1pt); 
-\draw (2.5,0) [fill=black] circle(1pt); 
-\end{tikzpicture}
-    \caption{}
+	\centering
+	\begin{tikzpicture}
+		\draw (0,0)node[below]{$O_1$} circle (1);
+		\draw (2.5,0)node[below]{$O_2$} circle (.8);
+		\draw (0,0) [fill=black] circle(1pt); 
+		\draw (2.5,0) [fill=black] circle(1pt); 
+	\end{tikzpicture}
+	\caption{}
 \end{figure}
 
 如果直线$a\parallel$直线$b$, 那么$a\cap b=\emptyset$.
@@ -385,31 +388,31 @@ $A\cup B$，读为A并B。
 基集在图示时，常常用一矩形所包围的点表示。图2.12中的阴影部分示意$A^c$。
 
 \begin{figure}[htp]\centering
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-\begin{tikzpicture}[>=latex, scale=1.3]
-\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
-\draw [fill=white](1.5,1)node{$A$} circle (.6);
-\node at (3,2)[fill=white]{$I$};
-\node at (3,1)[fill=white]{$A^c$};
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \begin{tikzpicture}[>=latex, scale=1.3]
-\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
-\draw [fill=white](1.5,1)node[left]{$O$} circle (.6);
-\node at (1.5,.75){$B^c=A$};
-\draw [->](1.5,1)--node[above]{3}+(30:.6);
-\node at (1.2,1.35){$A$};
-\node at (3,2)[fill=white]{$P$};
-\node at (2.8,1)[fill=white]{$A^c=B$};
-\node at (.5,.5)[fill=white]{$B$};
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \end{figure}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1.3]
+			\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
+			\draw [fill=white](1.5,1)node{$A$} circle (.6);
+			\node at (3,2)[fill=white]{$I$};
+			\node at (3,1)[fill=white]{$A^c$};
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1.3]
+			\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
+			\draw [fill=white](1.5,1)node[left]{$O$} circle (.6);
+			\node at (1.5,.75){$B^c=A$};
+			\draw [->](1.5,1)--node[above]{3}+(30:.6);
+			\node at (1.2,1.35){$A$};
+			\node at (3,2)[fill=white]{$P$};
+			\node at (2.8,1)[fill=white]{$A^c=B$};
+			\node at (.5,.5)[fill=white]{$B$};
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+\end{figure}
 
 如果以实数全体为基集$I$，$A=\{\text{有理数}\}$，$B=\{\text{无理数}\}$，那么$A^c=B$, $B^c=A$, $A\cup B=I$, $A$和$B$互为补集。
 
@@ -424,77 +427,77 @@ $A\cap B=A$和$A\cap B^c=\emptyset$是同一件事的两种说法（图2.14）�
 
 
 \begin{figure}[htp]\centering
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-\begin{tikzpicture}[>=latex, scale=1.3]
-\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
-\draw [fill=white](1.8,1.2)node{$A$} circle (1);
-\draw [fill=white](2,1)node{$A$} circle (.5);
-\node at (1.2,1.4){$B$};
-\node at (3.1,.25)[fill=white]{$B^c$};
-\node at (.5,2.2)[fill=white]{$I$};
-
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \begin{minipage}[t]{0.48\textwidth}
-    \centering
-    \begin{tikzpicture}[>=latex, scale=1.3]
-\fill[pattern=crosshatch, draw](0,0) rectangle (3.5,2.5);
-\fill [white](1.8,1.2) circle (1);
-\draw [pattern=north east lines](1.8,1.2) circle (1);
-\draw [fill=white](2,1)node{$A$} circle (.5);
-\node at (3.1,.25)[fill=white]{$B^c$};
-\node at (.5,2.2)[fill=white]{$I$};
-\node at (1.2,1.4)[fill=white]{$B$};
-\node at (2,2.2)[fill=white]{$A^c$};
-    \end{tikzpicture}
-    \caption{}
-    \end{minipage}
-    \end{figure}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1.3]
+			\fill[pattern=north east lines, draw](0,0) rectangle (3.5,2.5);
+			\draw [fill=white](1.8,1.2)node{$A$} circle (1);
+			\draw [fill=white](2,1)node{$A$} circle (.5);
+			\node at (1.2,1.4){$B$};
+			\node at (3.1,.25)[fill=white]{$B^c$};
+			\node at (.5,2.2)[fill=white]{$I$};
+			
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1.3]
+			\fill[pattern=crosshatch, draw](0,0) rectangle (3.5,2.5);
+			\fill [white](1.8,1.2) circle (1);
+			\draw [pattern=north east lines](1.8,1.2) circle (1);
+			\draw [fill=white](2,1)node{$A$} circle (.5);
+			\node at (3.1,.25)[fill=white]{$B^c$};
+			\node at (.5,2.2)[fill=white]{$I$};
+			\node at (1.2,1.4)[fill=white]{$B$};
+			\node at (2,2.2)[fill=white]{$A^c$};
+		\end{tikzpicture}
+		\caption{}
+	\end{minipage}
+\end{figure}
 
 \section*{习题2.1}
 \addcontentsline{toc}{subsection}{习题2.1}
 \begin{enumerate}
-    \item 设$A=\{1, 2, 3\}$
-\begin{enumerate}
-    \item 写出一个对象，它是$A$的元素；
-    \item 写出一个对象，它不是$A$的元素；
-    \item 写出一个对象，它是$A$的子集；
-    \item 写出一个对象，它不是$A$的子集；
-    \item 存在一个既是$A$的元素又是$A$的子集的对象吗？
-\end{enumerate}
-
-\item 设$A=\{x|x\text{是一位的奇数}\}$，指出在下列集合中，哪个
-是空集？哪个是只有一个元素的集合？
-\[B=\{x|x\in A,\; x>2\};\qquad C=\{x|x\in A,\;x>9\}\]
-\[D=\{x|x\in A,\;x\text{除以3余2}\}\]
-\item 指出下列各题中集合$A$与集合$B$的关系。
-\begin{enumerate}
-    \item $A= \{1, 3, 5,7,9\},\qquad B=\{3,5,7\}$
-    \item $A= \{2, 4, 6, 8\} ,\qquad B=\{x|x\text{是偶数且}1<x<9\}$
-    \item $A= \{2, 3\} ,\qquad  B=\{x|x^2-5x+6=0\}$
-\end{enumerate}
-
-\item 写出$\{0, 1\}$的所有子集。
-\item 写出$\{\text{黄},\text{红},\text{兰}\}$的所有真子集。
-\item 用列举法表示$A\cap B$.
-\begin{enumerate}
-    \item $A= \{1, 2, 3, 4\} ,\qquad B= \{3, 5, 7, 9\}$
-    \item $A=\{x|x\text{是18的约数}\},\qquad B=\{x|x\text{是小于或等于10的整数}\}$
-\end{enumerate}
-
-\item 已知$A=\{2, 3, 5, 6, 7\}$, $B=\{x|x\text{为一位奇数}\}$，分别把$A\cap B$, $A\cup B$的元素用列举法表示出来。
-\item 若基集选定为实数集，$A=\{x|x<5\}$，求$A^c$。
-\item 若基集定为平面$P$, $O$是$P$上一定点，设平面$P$上的一个子集$A=\{X|OX<2,\; X\in \text{平面}P\}$, 求$A^c$。
-\item 某小组共有学生18人，其中有12人喜欢排球，有15人喜
-欢篮球，这两种运动都喜欢的有10人，试问：
-\begin{enumerate}
-    \item 喜欢排球不喜欢篮球的有几人？   
-     \item 喜欢篮球不喜欢排球的有几人？  
-       \item 喜欢排球或者喜欢篮球的有几人？   
-        \item 这两种运动都不喜欢的有几人？
-\end{enumerate}
+	\item 设$A=\{1, 2, 3\}$
+	\begin{enumerate}
+		\item 写出一个对象，它是$A$的元素；
+		\item 写出一个对象，它不是$A$的元素；
+		\item 写出一个对象，它是$A$的子集；
+		\item 写出一个对象，它不是$A$的子集；
+		\item 存在一个既是$A$的元素又是$A$的子集的对象吗？
+	\end{enumerate}
+	
+	\item 设$A=\{x|x\text{是一位的奇数}\}$，指出在下列集合中，哪个
+	是空集？哪个是只有一个元素的集合？
+	\[B=\{x|x\in A,\; x>2\};\qquad C=\{x|x\in A,\;x>9\}\]
+	\[D=\{x|x\in A,\;x\text{除以3余2}\}\]
+	\item 指出下列各题中集合$A$与集合$B$的关系。
+	\begin{enumerate}
+		\item $A= \{1, 3, 5,7,9\},\qquad B=\{3,5,7\}$
+		\item $A= \{2, 4, 6, 8\} ,\qquad B=\{x|x\text{是偶数且}1<x<9\}$
+		\item $A= \{2, 3\} ,\qquad  B=\{x|x^2-5x+6=0\}$
+	\end{enumerate}
+	
+	\item 写出$\{0, 1\}$的所有子集。
+	\item 写出$\{\text{黄},\text{红},\text{兰}\}$的所有真子集。
+	\item 用列举法表示$A\cap B$.
+	\begin{enumerate}
+		\item $A= \{1, 2, 3, 4\} ,\qquad B= \{3, 5, 7, 9\}$
+		\item $A=\{x|x\text{是18的约数}\},\qquad B=\{x|x\text{是小于或等于10的整数}\}$
+	\end{enumerate}
+	
+	\item 已知$A=\{2, 3, 5, 6, 7\}$, $B=\{x|x\text{为一位奇数}\}$，分别把$A\cap B$, $A\cup B$的元素用列举法表示出来。
+	\item 若基集选定为实数集，$A=\{x|x<5\}$，求$A^c$。
+	\item 若基集定为平面$P$, $O$是$P$上一定点，设平面$P$上的一个子集$A=\{X|OX<2,\; X\in \text{平面}P\}$, 求$A^c$。
+	\item 某小组共有学生18人，其中有12人喜欢排球，有15人喜
+	欢篮球，这两种运动都喜欢的有10人，试问：
+	\begin{enumerate}
+		\item 喜欢排球不喜欢篮球的有几人？   
+		\item 喜欢篮球不喜欢排球的有几人？  
+		\item 喜欢排球或者喜欢篮球的有几人？   
+		\item 这两种运动都不喜欢的有几人？
+	\end{enumerate}
 \end{enumerate}
 
 \section{简易逻辑}
@@ -503,9 +506,9 @@ $A\cap B=A$和$A\cap B^c=\emptyset$是同一件事的两种说法（图2.14）�
 在上一节中，我们学过了可用某集合的元素的特征性质来描述这个集合。
 例如：
 \[\begin{split}
-    A&=\{x|x\text{被2整除}\}\\
-B&= \{x|x^2=4\}\\
-C&=\{X|\overline{OX}=3{\rm cm},\; \text{且$O$是平面$P$上定点，$X\in$平面$P$}\}
+	A&=\{x|x\text{被2整除}\}\\
+	B&= \{x|x^2=4\}\\
+	C&=\{X|\overline{OX}=3{\rm cm},\; \text{且$O$是平面$P$上定点，$X\in$平面$P$}\}
 \end{split}\]
 
 由此可见，一个集合完全被它所含元素的特征性质所确
@@ -522,7 +525,7 @@ C&=\{X|\overline{OX}=3{\rm cm},\; \text{且$O$是平面$P$上定点，$X\in$平�
 如果$A=\{x|x\text{是4的倍数}\}$，$B=\{x|x\text{是2的倍数}\}$，则$A$中的元素都具有性质$\alpha$：“4的倍数”；$B$中的元素都具有性质$\beta$：“2的倍数”。我们知道如果某元素$x$是“4的倍数”，则$x$一定是“2的倍数”（即$A$是$B$的子集），这时我们说可由“$x$是4的倍数”推出“$x$是2的倍数”。
 
 一般地，\textbf{如果具有性质$\alpha$的元素也具有性质$\beta$, 我们说可
-由$\alpha$推出$\beta$, 用符号$\alpha=\beta$表示。}
+	由$\alpha$推出$\beta$, 用符号$\alpha=\beta$表示。}
 
 推出关系是简易逻辑中最基本的关系。如果令：$A\longleftrightarrow \alpha$, $ B\longleftrightarrow \beta$，
 则$\alpha=\beta$和$A\subseteq B$是同一件事的两种说法，从集合的观点看$A$是$B$的子集（即$A\subseteq B$）；从性质的观点看$\alpha$推出$\beta$（即$\alpha\Rightarrow\beta$）。
@@ -546,68 +549,68 @@ C&=\{X|\overline{OX}=3{\rm cm},\; \text{且$O$是平面$P$上定点，$X\in$平�
 
 设 $\alpha \longleftrightarrow A$、$\beta\longleftrightarrow B$, 不难看出：
 \begin{itemize}
-    \item $A\cap B$就是具有性质$\alpha$ 且具有性质$\beta$ 的元素所构成的集
-合。“具有性质$\alpha$ 且具有性质$\beta$ ”，记作$\alpha \wedge\beta$， 读作$\alpha$ 且$\beta$；
-\item  $A\cup B$就是具有性质$\alpha$或具有性质$\beta$ 的元素所构成的集
-合。“具有性质$\alpha$ 或具有性质$\beta$ ”，记作$\alpha \vee\beta$. 读作$\alpha$ 或$\beta$。 
-\item $A^c$就是哪些不具有性质$\alpha$ 的元素所构成的集合。我
-们用$\bar{\alpha}$表示“不具有性质$\alpha$”，读作非$\alpha$, 也叫$\alpha$的反性质。
+	\item $A\cap B$就是具有性质$\alpha$ 且具有性质$\beta$ 的元素所构成的集
+	合。“具有性质$\alpha$ 且具有性质$\beta$ ”，记作$\alpha \wedge\beta$， 读作$\alpha$ 且$\beta$；
+	\item  $A\cup B$就是具有性质$\alpha$或具有性质$\beta$ 的元素所构成的集
+	合。“具有性质$\alpha$ 或具有性质$\beta$ ”，记作$\alpha \vee\beta$. 读作$\alpha$ 或$\beta$。 
+	\item $A^c$就是哪些不具有性质$\alpha$ 的元素所构成的集合。我
+	们用$\bar{\alpha}$表示“不具有性质$\alpha$”，读作非$\alpha$, 也叫$\alpha$的反性质。
 \end{itemize}
 
 \begin{figure}[htp]
-    \centering
-\begin{tikzpicture}
-    \draw (0,0) circle (1);
-    \draw (1.4,0) circle (.8);
-    \node at (0,0)[below]{$O_1$};
-    \node at (1.4,0)[below]{$O_2$};
-    \draw (0,0)[fill=black] circle (1.5pt);
-    \draw (1.4,0)[fill=black] circle (1.5pt);
-\end{tikzpicture}    
-    \caption{}
+	\centering
+	\begin{tikzpicture}
+		\draw (0,0) circle (1);
+		\draw (1.4,0) circle (.8);
+		\node at (0,0)[below]{$O_1$};
+		\node at (1.4,0)[below]{$O_2$};
+		\draw (0,0)[fill=black] circle (1.5pt);
+		\draw (1.4,0)[fill=black] circle (1.5pt);
+	\end{tikzpicture}    
+	\caption{}
 \end{figure}
 
 设$A=\{X|X\text{为$\odot O_1$内的点}\}$，$B=\{X|X\text{为$\odot O_2$内的点}\}$，$\alpha$表示$\odot O_1$内的点，$\beta$表示$\odot O_2$内的点。则$A,B$与$\alpha,\beta$的关系如下（图2.16）：
 \begin{itemize}
-    \item $A\cap B \longleftrightarrow \alpha\wedge \beta$\quad 在$\odot O_1$且在$\odot O_2$内的点的集合。
-    \item $A\cup B\longleftrightarrow \alpha\vee \beta$\quad 在$\odot O_1$或在$\odot O_2$内的点的集合。
-    \item $A^c\longleftrightarrow \bar{\alpha}$\quad 不在$\odot O_1$内的点的集合。
-    \item $B^c\longleftrightarrow \bar{\beta}$\quad 不在$\odot O_2$内的点的集合。
-    \item $A^c\cap B^c\longleftrightarrow \bar\alpha\wedge\bar\beta $\quad 不在$\odot O_1$内且不在$\odot O_2$内的点的集合。
-    \item $A^c\cup B^c\longleftrightarrow \bar\alpha\vee\bar\beta$\quad 不在$\odot O_1$内或不在$\odot O_2$内的点的集合。
+	\item $A\cap B \longleftrightarrow \alpha\wedge \beta$\quad 在$\odot O_1$且在$\odot O_2$内的点的集合。
+	\item $A\cup B\longleftrightarrow \alpha\vee \beta$\quad 在$\odot O_1$或在$\odot O_2$内的点的集合。
+	\item $A^c\longleftrightarrow \bar{\alpha}$\quad 不在$\odot O_1$内的点的集合。
+	\item $B^c\longleftrightarrow \bar{\beta}$\quad 不在$\odot O_2$内的点的集合。
+	\item $A^c\cap B^c\longleftrightarrow \bar\alpha\wedge\bar\beta $\quad 不在$\odot O_1$内且不在$\odot O_2$内的点的集合。
+	\item $A^c\cup B^c\longleftrightarrow \bar\alpha\vee\bar\beta$\quad 不在$\odot O_1$内或不在$\odot O_2$内的点的集合。
 \end{itemize}
 
 总结以上讨论，我们把性质与集合之间的关系列成下表：
 \begin{center}
-    \begin{tabular}{cc|cc}
-\hline
-        集合  & 性质 &集合  &性质\\
-\hline
-$A$ & $\alpha$ & $B$ & $\beta$\\
-$A^c$ & $\bar\alpha$ & $B^c$ & $\bar\beta$\\
-$A\cap B$ & $\alpha\wedge \beta$ & $A\cup B$ & $\alpha\vee\beta$\\
-$A\subseteq B$ & $\alpha\Rightarrow\beta $& $A=B$&$\alpha\Leftrightarrow \beta$\\
-\multicolumn{2}{c|}{$A\subseteq B$与$B\subseteq A^c$同义}& \multicolumn{2}{|c}{$\alpha\Rightarrow\beta$与$\bar\beta\Rightarrow\bar\alpha$同义}\\
-\hline
-    \end{tabular}
+	\begin{tabular}{cc|cc}
+		\hline
+		集合  & 性质 &集合  &性质\\
+		\hline
+		$A$ & $\alpha$ & $B$ & $\beta$\\
+		$A^c$ & $\bar\alpha$ & $B^c$ & $\bar\beta$\\
+		$A\cap B$ & $\alpha\wedge \beta$ & $A\cup B$ & $\alpha\vee\beta$\\
+		$A\subseteq B$ & $\alpha\Rightarrow\beta $& $A=B$&$\alpha\Leftrightarrow \beta$\\
+		\multicolumn{2}{c|}{$A\subseteq B$与$B\subseteq A^c$同义}& \multicolumn{2}{|c}{$\alpha\Rightarrow\beta$与$\bar\beta\Rightarrow\bar\alpha$同义}\\
+		\hline
+	\end{tabular}
 \end{center}
 
 \subsection{基本逻辑语句}
 \subsubsection{命题}
 凡可决定其真假的语句就叫做\textbf{命题}。例如：
 \begin{enumerate}
-    \item 雪是白的。（真）
-    \item 对顶角相等。（真）
-    \item $2+2=5$。 （假）
-    \item 若$x>y$, 则$\frac{x+2y}{3}>\frac{x+y}{2}$。（假）
+	\item 雪是白的。（真）
+	\item 对顶角相等。（真）
+	\item $2+2=5$。 （假）
+	\item 若$x>y$, 则$\frac{x+2y}{3}>\frac{x+y}{2}$。（假）
 \end{enumerate}
 
 这些语句都是命题。从上面这些命题中我们可以看到，命题不一定为数学所独有，如1就不是数学命题，另外我们还看到一个命题是可以判断真假的，有的容易判断如1、2、3。有的就较难判断一些，如4是个假命题，但一眼
 不容易看出来，实际上如果设$x=1$, $y=0,\;(x>y)$那么
 $\frac{1+2\x 0}{3}\not>\frac{1+0}{2}$。这就说明4是个假命题了。所谓“判断真假”是对事物的本质说的，并不要求现在就要，“决定”，也不要求最近的将来便可决定。例如：
 \begin{itemize}
-    \item 别的星球上有生物。
-    \item 凡大于4的偶数都是两个奇质数之和（这就是著名的哥德巴赫猜想）。
+	\item 别的星球上有生物。
+	\item 凡大于4的偶数都是两个奇质数之和（这就是著名的哥德巴赫猜想）。
 \end{itemize}
 
 这些语句的真假不但现在不能决定，在最近的将来也未必“可决定”，但是我们认为从事物的本质来说，它们本身是有真假可言的，所以应该承认它们都是命题。
@@ -615,7 +618,7 @@ $\frac{1+2\x 0}{3}\not>\frac{1+0}{2}$。这就说明4是个假命题了。所谓
 数学命题，经常使用“如果……，那么……”，“若……，则……。”的叙述形式，如前面提到的4便是这一类形式的
 命题。这类命题写成一般形式就是：
 \begin{blk}{}
-若$\alpha$, 则$\beta$\qquad 或\qquad  如果$\alpha$, 那么$\beta$.
+	若$\alpha$, 则$\beta$\qquad 或\qquad  如果$\alpha$, 那么$\beta$.
 \end{blk}
 
 下面我们仔细的分析它的结构和逻辑关系。
@@ -632,67 +635,67 @@ $\frac{1+2\x 0}{3}\not>\frac{1+0}{2}$。这就说明4是个假命题了。所谓
 
 若“$\alpha$, 则$\beta$”则叫做上述逆命题，否命题、逆否命题的\textbf{原命题}。这就是说，逆命题，否命题，逆否命题都是对原命题而说的，在四种命题中任何一个命题都可作为原命题。如：
 \begin{itemize}
-    \item 原命题\quad 若$\bar\alpha$，则$\bar\beta$
-    \item 逆命题\quad 若$\bar\beta$，则$\alpha$
-    \item 否命题\quad 若$\alpha$，则$\beta$（$\bar\alpha$的非是$\alpha$，$\bar\beta$的非是$\beta$）
-    \item 逆否命题\quad 若$\beta$，则$\alpha$
+	\item 原命题\quad 若$\bar\alpha$，则$\bar\beta$
+	\item 逆命题\quad 若$\bar\beta$，则$\alpha$
+	\item 否命题\quad 若$\alpha$，则$\beta$（$\bar\alpha$的非是$\alpha$，$\bar\beta$的非是$\beta$）
+	\item 逆否命题\quad 若$\beta$，则$\alpha$
 \end{itemize}
 
 我们把上述四种命题之间的关系，列成下图：
 \begin{center}
-\begin{tikzpicture}[>=latex]
-\node (A)[draw, rectangle]at (-3,2) {原命题：若$\alpha$，则$\beta$}; 
-\node (B)[draw, rectangle]at (3,2) {逆命题：若$\beta$，则$\alpha$}; 
-\node (C)[draw, rectangle]at (-3,-2){否命题：若$\bar\alpha$，则$\bar\beta$}; 
-\node (D)[draw, rectangle]at (3,-2) {逆否命题：若$\bar\beta$，则$\bar\alpha$}; 
-\node (E)[draw, rectangle, rounded corners=3mm]at (0,0) {互为逆否}; 
-\draw[<->, ultra thick](A)--node[above]{互逆}(B);
-\draw[<->, ultra thick](C)--node[below]{互逆}(D);
-\draw[<->, ultra thick](A)--node[left]{互否}(C);
-\draw[<->, ultra thick](B)--node[right]{互否}(D);
-\foreach \x in {A,B,C,D}
-{
-    \draw[->, ultra thick](E)--(\x);
-}
-\end{tikzpicture}
+	\begin{tikzpicture}[>=latex]
+		\node (A)[draw, rectangle]at (-3,2) {原命题：若$\alpha$，则$\beta$}; 
+		\node (B)[draw, rectangle]at (3,2) {逆命题：若$\beta$，则$\alpha$}; 
+		\node (C)[draw, rectangle]at (-3,-2){否命题：若$\bar\alpha$，则$\bar\beta$}; 
+		\node (D)[draw, rectangle]at (3,-2) {逆否命题：若$\bar\beta$，则$\bar\alpha$}; 
+		\node (E)[draw, rectangle, rounded corners=3mm]at (0,0) {互为逆否}; 
+		\draw[<->, ultra thick](A)--node[above]{互逆}(B);
+		\draw[<->, ultra thick](C)--node[below]{互逆}(D);
+		\draw[<->, ultra thick](A)--node[left]{互否}(C);
+		\draw[<->, ultra thick](B)--node[right]{互否}(D);
+		\foreach \x in {A,B,C,D}
+		{
+			\draw[->, ultra thick](E)--(\x);
+		}
+	\end{tikzpicture}
 \end{center}
 
 \begin{example}
-    写出“对顶角相等”这个命题的逆命题，否命题和逆否命题。
+	写出“对顶角相等”这个命题的逆命题，否命题和逆否命题。
 \end{example}
 
 \begin{solution}
-“对顶角相等”这个命题是由两部分组成的：(1)两个角是对顶角，(2)这两个角相等。(1)是命题的条件，(2)是命题的结论。这个命题若用“若—则”连结(1)、(2)两部分，就可写成。
-
-若两个角是对顶角，则这两个角相等。所以，
-\begin{itemize}
-    \item 逆命题\quad 若两个角相等，则这两个角是对顶角。
-    \item 否命题\quad 若两个角不是对顶角，则这两个角就不相等。
-    \item 逆否命题\quad 若两个角不相等，则这两个角就不是对顶角。
-\end{itemize}
+	“对顶角相等”这个命题是由两部分组成的：(1)两个角是对顶角，(2)这两个角相等。(1)是命题的条件，(2)是命题的结论。这个命题若用“若—则”连结(1)、(2)两部分，就可写成。
+	
+	若两个角是对顶角，则这两个角相等。所以，
+	\begin{itemize}
+		\item 逆命题\quad 若两个角相等，则这两个角是对顶角。
+		\item 否命题\quad 若两个角不是对顶角，则这两个角就不相等。
+		\item 逆否命题\quad 若两个角不相等，则这两个角就不是对顶角。
+	\end{itemize}
 \end{solution}
 
 从这个例子，我们会发现，在这四个命题中有的正确，有的不正确，那么，这四种命题的真假之间是否存在某种关系呢？下面我们再举两个例子。
 
 \begin{example}
-    写出“如果一个数末位数字是0,那么它一定能被5整除。”这个命题的逆命题，否命题、逆否命题。
-\begin{itemize}
-    \item 原命题\quad 如果一个数末位数字是0, 那么它一定能被5整除（真）。
-    \item 逆命题\quad 如果一个数能被5整除，那么它的末位数字一定是0（假）。
-    \item 否命题\quad 如果一个数末位数字不是0, 那么它一定 不能被5整除（假）。
-    \item 逆否命题\quad 如果一个数不能被5整除，那么它的末位数字一定不是0（真）。
-\end{itemize}
+	写出“如果一个数末位数字是0,那么它一定能被5整除。”这个命题的逆命题，否命题、逆否命题。
+	\begin{itemize}
+		\item 原命题\quad 如果一个数末位数字是0, 那么它一定能被5整除（真）。
+		\item 逆命题\quad 如果一个数能被5整除，那么它的末位数字一定是0（假）。
+		\item 否命题\quad 如果一个数末位数字不是0, 那么它一定 不能被5整除（假）。
+		\item 逆否命题\quad 如果一个数不能被5整除，那么它的末位数字一定不是0（真）。
+	\end{itemize}
 \end{example}
 
 \begin{example}
-    写出“若某人是中国人，则他是北京人。”这个命题的逆命题、否命题、逆否命题。
-
-\begin{itemize}
-    \item 原命题\quad 若某人是中国人，则他是北京人（假）。
-    \item 逆命题\quad 若某人是北京人，则他是中国人（真）。
-    \item 否命题\quad 若某人不是中国人，则他不是北京人（真）。
-    \item 逆否命题\quad 若某人不是北京人，则他不是中国人（假）。
-\end{itemize}
+	写出“若某人是中国人，则他是北京人。”这个命题的逆命题、否命题、逆否命题。
+	
+	\begin{itemize}
+		\item 原命题\quad 若某人是中国人，则他是北京人（假）。
+		\item 逆命题\quad 若某人是北京人，则他是中国人（真）。
+		\item 否命题\quad 若某人不是中国人，则他不是北京人（真）。
+		\item 逆否命题\quad 若某人不是北京人，则他不是中国人（假）。
+	\end{itemize}
 \end{example}
 
 从以上的例子，我们看到原命题和逆否命题同真假，逆命题和否命题同真假。
@@ -702,52 +705,52 @@ $\frac{1+2\x 0}{3}\not>\frac{1+0}{2}$。这就说明4是个假命题了。所谓
 也成立。这就是说，两个互逆命题不一定同真假。
 
 \begin{ex}
-\begin{enumerate}
-    \item 试从日常生活中举出两个命题的例子，并判断它们是否正确。
-    \item 举出两个代数内容的命题，并分别指出它们的条件和结论。
-    \item 举出三个几何内容的命题（写成若一则形式）。
-    \item 把下列命题写成“若一则”形式，并标出条件和结论。
-\begin{enumerate}
-    \item 等角的补角相等。
-    \item 同圆或等圆的半径相等。
-    \item 同位角相等则两直线平行。
-    \item 三角形内角和等于180$^{\circ}$。
-    \item 自然数必为有理数。
-\end{enumerate}
-\item 在以下各题中，用符号“$\Rightarrow$”把$\alpha$、$\beta$联系起来：
-\begin{enumerate}
-    \item $\alpha$表示自然数$a$被4整除，$\beta$表示自然数$a$被2整除。
-    \item $\alpha$表示两角相等，$\beta$表示两个角是对顶角。
-\end{enumerate}
-\item 举出反例说明下列命题是假命题。
-\begin{enumerate}
-    \item 若$|a|=|b|$, 则$a=b$
-    \item 若$a^2=b^2$, 则$a=b$
-    \item 若在$\triangle ABC$与$\triangle A'B'C'$中，$\angle A=\angle A'$, $\angle B=\angle B'$, $\angle C=\angle C'$，则$\triangle ABC\cong \triangle A'B'C'$
-    \item 如果$(x-a)(x-b)=0$，则$x-a=0$
-    \item 如果$a+c=b+d$，则$a=b$, $c=d$
-\end{enumerate}
-\item 分别写出下列命题的逆命题、否命题，逆否命题，并判断它们的真假。
-\begin{enumerate}
-    \item 若$a=0$, 则$ab=0$.
-    \item 如果$a=b$, 则$a^2=b^2$.
-    \item 如果$|a|=|b|$, 则$a=b$.
-    \item 如果$\triangle ABC\cong \triangle A'B'C'$, 则$\overline{AB}=\overline{A'B'}$.
-    \item 等角的余角相等。
-    \item 若$a\ne b$, 则$a^2\ne c^2$.
-    \item 若$(x-a)(x-b)=0$, $x=a$.
-    \item 如果$x_1$、$x_2$是方程$ax^2+bx+c=0$的两个根，那么$x_1+x_2=-\frac{b}{a}$, $x_1x_2=\frac{c}{a}$.
-    \item 多项式$f(x)$除以$(x-a)$所得的余式等于$f(a)$.
-\end{enumerate}
-\end{enumerate}
+	\begin{enumerate}
+		\item 试从日常生活中举出两个命题的例子，并判断它们是否正确。
+		\item 举出两个代数内容的命题，并分别指出它们的条件和结论。
+		\item 举出三个几何内容的命题（写成若一则形式）。
+		\item 把下列命题写成“若一则”形式，并标出条件和结论。
+		\begin{enumerate}
+			\item 等角的补角相等。
+			\item 同圆或等圆的半径相等。
+			\item 同位角相等则两直线平行。
+			\item 三角形内角和等于180$^{\circ}$。
+			\item 自然数必为有理数。
+		\end{enumerate}
+		\item 在以下各题中，用符号“$\Rightarrow$”把$\alpha$、$\beta$联系起来：
+		\begin{enumerate}
+			\item $\alpha$表示自然数$a$被4整除，$\beta$表示自然数$a$被2整除。
+			\item $\alpha$表示两角相等，$\beta$表示两个角是对顶角。
+		\end{enumerate}
+		\item 举出反例说明下列命题是假命题。
+		\begin{enumerate}
+			\item 若$|a|=|b|$, 则$a=b$
+			\item 若$a^2=b^2$, 则$a=b$
+			\item 若在$\triangle ABC$与$\triangle A'B'C'$中，$\angle A=\angle A'$, $\angle B=\angle B'$, $\angle C=\angle C'$，则$\triangle ABC\cong \triangle A'B'C'$
+			\item 如果$(x-a)(x-b)=0$，则$x-a=0$
+			\item 如果$a+c=b+d$，则$a=b$, $c=d$
+		\end{enumerate}
+		\item 分别写出下列命题的逆命题、否命题，逆否命题，并判断它们的真假。
+		\begin{enumerate}
+			\item 若$a=0$, 则$ab=0$.
+			\item 如果$a=b$, 则$a^2=b^2$.
+			\item 如果$|a|=|b|$, 则$a=b$.
+			\item 如果$\triangle ABC\cong \triangle A'B'C'$, 则$\overline{AB}=\overline{A'B'}$.
+			\item 等角的余角相等。
+			\item 若$a\ne b$, 则$a^2\ne c^2$.
+			\item 若$(x-a)(x-b)=0$, $x=a$.
+			\item 如果$x_1$、$x_2$是方程$ax^2+bx+c=0$的两个根，那么$x_1+x_2=-\frac{b}{a}$, $x_1x_2=\frac{c}{a}$.
+			\item 多项式$f(x)$除以$(x-a)$所得的余式等于$f(a)$.
+		\end{enumerate}
+	\end{enumerate}
 \end{ex}
 
-\subsection{充分、必要条件}
+\subsubsection{充分、必要条件}
 
 如果“若$\alpha$, 则$\beta$.”是正确的命题，这个命题与$\alpha\Rightarrow\beta$的意义就完全一致，也就是说这两种表达形式是同一逻辑关系的两种说法。
 
 \begin{blk}{}
-  如果$\alpha\Rightarrow\beta$, 我们就说$\alpha$是$\beta$的充分条件，$\beta$是$\alpha$的必要条件。  
+	如果$\alpha\Rightarrow\beta$, 我们就说$\alpha$是$\beta$的充分条件，$\beta$是$\alpha$的必要条件。  
 \end{blk}
 
 例如，如果李华是北京人，那么他是中国人。这个命题显然是个真命题。这时，我们也说，“李华是北京人”是“李华是中国人”的充分条件，而“李华是中国人”是“李华是北京人”的必要条件，这就是说由“李华是北京人”就能充分说明“李华是中国人”，但“李华是中国人”只是“李华是北京人”必定有的条件。如果李华不是中国人，更谈不上他是北京人了。
@@ -762,32 +765,32 @@ $\angle B=\angle B'$，$\angle C=\angle C'$，
 $\overline{BC}=\overline{B'C'}$的充分必要条件：$x-2=0$是$x=0$的充要条件；两圆能够重合是两个圆半径相等的充要条件。
 
 \begin{ex}
-\begin{enumerate}
-    \item 下面四句话是否都是表达的同一逻辑关系？
-    \begin{enumerate}
-        \item $\alpha\Rightarrow\beta$；
-        \item 若$\alpha$,则$\beta$是真命题；
-        \item $\alpha$是$\beta$的充分条件；
-        \item $\beta$是$\alpha$的必要条件。
-    \end{enumerate}
-
-\item 说明$\alpha$是$\beta$的什么条件：
-
-\begin{tabular}{cll}
-& $\alpha$ &$\beta$\\
-(a)& $a=-b$ &$a^2=b^2$\\
-(b)& $a+b=c+d$ & $a=c,\; b=d$\\
-(c)& $a=b$ & $a^2-2ab+b^2=0$\\
-(d)& $\triangle ABC\cong \triangle A'B'C'$ & $\angle B=\angle B'$，
-$\overline{AB}=\overline{A'B'}$\\
-(e)&  $\overline{AB}$能够重合$\overline{CD}$
-& $\overline{AB}$与$\overline{CD}$等长
-\end{tabular}
-\end{enumerate}
+	\begin{enumerate}
+		\item 下面四句话是否都是表达的同一逻辑关系？
+		\begin{enumerate}
+			\item $\alpha\Rightarrow\beta$；
+			\item 若$\alpha$,则$\beta$是真命题；
+			\item $\alpha$是$\beta$的充分条件；
+			\item $\beta$是$\alpha$的必要条件。
+		\end{enumerate}
+		
+		\item 说明$\alpha$是$\beta$的什么条件：
+		
+		\begin{tabular}{cll}
+			& $\alpha$ &$\beta$\\
+			(a)& $a=-b$ &$a^2=b^2$\\
+			(b)& $a+b=c+d$ & $a=c,\; b=d$\\
+			(c)& $a=b$ & $a^2-2ab+b^2=0$\\
+			(d)& $\triangle ABC\cong \triangle A'B'C'$ & $\angle B=\angle B'$，
+			$\overline{AB}=\overline{A'B'}$\\
+			(e)&  $\overline{AB}$能够重合$\overline{CD}$
+			& $\overline{AB}$与$\overline{CD}$等长
+		\end{tabular}
+	\end{enumerate}
 \end{ex}
 
-\subsection{定义和基本性质}
-\subsubsection{定义}
+\subsubsection{定义和基本性质}
+\paragraph{定义}
 在数学中，我们使用的“概念”和“符号”，如果它们的意义不明确，人们可以自由理解，那就无法研究问题了。以必须对“概念”和“符号”的意义作确切的规定。这种又“概念”和“符号”的意义作规定的工作就叫做给“概念”
 和“符号”下定义。
 
@@ -811,37 +814,976 @@ $\overline{AB}=\overline{A'B'}$\\
 
 \paragraph{符号} $\angle$, $\triangle$, $\odot$, $\bot$, $\parallel$, $\cong$, $\backsim$, $\in$, $\notin$, $\subseteq$, $=$, $\cup$, $\cap$, ${\rm I}$, $\emptyset$, $\wedge$, $\vee$, $\Rightarrow$, $\Leftrightarrow$.
 
-\subsubsection{基本性质}
+\paragraph{基本性质}
 
 我们要论证一个命题的正确性，必须先由实践确立一系列命题的正确性，再以它们为根据作为出发点，才能设法论证其他命题的正确性，作为论证的原始依据的正确命题，我们称它为\textbf{基本性质（或公理）}。基本性质的正确性不是通过推理论证而得出来的，而是通过实践检验确定无疑地归纳出来的。
 
 以下几个命题今后作为\textbf{基本性质}使用。
 
+\begin{enumerate}
+\item 两点确定一条直线。
+\item 过已知直线外一点有且只有一条直线和已知直线平行
+（平行公理）。
+\item 一个图形可以移动到任何其它位置而不改变它的形状
+和大小（移形公理）。
+\item 任何一个图形都可以翻转而不改变它的形状和大小
+（翻转公理）。
+\item 能够重合的两个图形具有相等的量。
+\item  三条边对应相等的两个三角形全等（SSS).
+\end{enumerate}
+
+在代数中学过的等式和不等式的基本性质也可以作为今
+后的推理依据。
+\begin{blk}{等量的基本性质}
+\begin{enumerate}
+	\item 等量加等量它们的和相等。
+	\item  等量减等量它们的差相等。
+	\item 等量的同倍量相等。
+	\item 等量的同分量相等。
+	\item 在一个等式或不等式中，一个量也可用它的等量代
+	换（简称等量代换）。
+\end{enumerate}
+\end{blk}
+
+\begin{blk}{不等量的基本性质}
+	设$a$、$b$、$c$、$d$是任意实数。
+\begin{enumerate}
+\item 如果$a>b$, 那么$a+c>b+c$.
+\item 如果$a>b, c>0$, 那么$ac>bc$, $\frac{a}{c}>\frac{b}{c}$.
+\item  如果$a>b$, 并且$c>d$, 那么$a+c>b+d$.
+\item 如果$a>b$, 并且$c<d$, 那么$a-c>b-d$.
+\item 如果$a>b$, 并且$b>c$, 那么$a>c$.
+\item 全量大于它的任意一部分。
+\end{enumerate}
+\end{blk}
+
+\subsubsection{定理和证明}
+我们要说明。“若$\alpha$ 则$\beta$”是真命题时，以什么方式来
+推证呢？最常用的基本推理格式就是推出关系的传递性。
+即：
+\begin{align*}
+	\text{如果}& \quad \alpha \Rightarrow \beta \tag{1}\\
+	& \quad \beta \Rightarrow \gamma \text{成立} \tag{2}\\
+\text{那么}&  \quad \alpha \Rightarrow \gamma \text{成立}\tag{3}
+\end{align*}
+
+例如，
+\begin{align*}
+	\text{若}& \quad \text{$\angle 1$和$\angle 2$是对顶角} \tag{1}\\
+	& \quad \text{对顶角相等} \tag{2}\\
+\text{则}&  \quad \angle 1=\angle 2 \tag{3}
+\end{align*}
+
+在几何论证中，使用上述推理格式，在书写上常常由(1)
+直接得到(3), 而把(2)作为由(1)推出(3)的理由写在(3)后边的括
+号里。因此，上例又可以写为：
+\[\begin{split}
+	\because&\quad \text{$\angle 1$和$\angle 2$是对顶角}\\
+	\therefore&\quad  \angle 1=\angle 2 \qquad \text{（对顶角相等）}
+\end{split}\]
+
+在数学中要证明一个命题的正确性，往往要连续使用若
+干次上述基本推理格式。为此，我们重新回忆一下“对顶角
+相等”的证明过程。
+
+已知：$\angle 1$是$\angle 2$的对顶角（如图2.17）。
+
+求证：$\angle 1=\angle 2$
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\draw (-3,1)--(3,-1);
+\draw(-3,-1)--(3,1);
+\draw (-18.4:.5) arc (-18.4:18.4:.5);
+\node at (1,0){2};\node at (-1,0){1};\node at (0,.5){3};
+\draw (180-18.4:.5) arc (180-18.4:180+18.4:.5);
+\draw (18.4:.25) arc (18.4:180-18.4:.25);
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+
+\begin{proof}
+	\begin{center}
+\begin{tikzpicture}[yscale=1.5, >=latex]
+\node (A)[draw, rectangle] at  (0,0) {$\angle 1$是$\angle 2$的对顶角};
+\node (B)[draw, rectangle] at  (0,-1) {$\angle 1$的两边分别是$\angle 2$的反向延长线};
+\node (C)[draw, rectangle] at  (0,-2) {$\angle 1$与$\angle 3$; $\angle 2$与$\angle 3$互为补角};
+\node (D)[draw, rectangle] at  (0,-3) {$\angle 1+\angle 3=180^{\circ}\qquad \angle 2+\angle 3=180^{\circ}$};
+\node (E)[draw, rectangle] at  (0,-4) {$\angle 1+\angle 3=\angle 2+\angle 3$};
+\node (F)[draw, rectangle] at  (0,-5) {$\angle 1=\angle 2$};
+
+\draw[very thick, ->](A)--(B);\draw[very thick, ->](B)--(C);
+\draw[very thick, ->](C)--(D);\draw[very thick, ->](D)--(E);
+\draw[very thick, ->](E)--(F);
+
+\foreach \x/\xtext in {0/\alpha,-1/\alpha_1,-2/\alpha_2,-3/\alpha_3,-4/\alpha_4,-5/\beta}
+{
+	\node at (4,\x){$\xtext$};
+}	
+\foreach \x in {0,-1,...,-4}
+{
+	\node at (4,\x-.5){$\Downarrow$};
+}
+\end{tikzpicture}
+	\end{center}
+
+\end{proof}
+
+从上述推演过程可知，要证明$\alpha \Rightarrow \beta$, 我们先设法找出
+了一连串适当的并且已知是正确的命题，如
+$\alpha \Rightarrow \alpha_1$, $\alpha_1\Rightarrow 
+\alpha_2$, $\alpha_2\Rightarrow \alpha_3$, $\alpha_3\Rightarrow \alpha_4$, $\alpha_4\Rightarrow \beta$, 再由推出关系的传递
+性，就可断定$\alpha \Rightarrow\beta$了。这种推演过程就叫做\textbf{证明}。经过证
+明正确的命题叫做\textbf{定理}。如果一个定理的逆命题经过证明也
+正确时，这个逆命题也叫做这个定理的\textbf{逆定理}。
+
+应用已经被认为正确的命题为依据，经过推理，导出某
+一命题成立，这种方法叫做\textbf{演绎推理法}（简称\textbf{演绎法}）。从
+下一章开始，我们就要用这种方法来研究几何学了。所以学
+习几何学，不但可对图形性质有精确的了解，也可以初步体
+会演绎法这个基本有力的科学方法的实际应用。
+
+以下几个命题今后作为定理来使用。
+\begin{enumerate}
+	\item 对顶角相等，
+	\item 两个三角形如果有两边一夹角对应相等，它们就全等
+（SAS）。
+\item 两个三角形如果有两角一夹边对应相等，它们就全等
+（ASA）。
+\end{enumerate}
+
+\subsubsection{证明举例}
+在几何学中，要证明一个命题的正确性，一定要经过以
+下过程。首先要分清待证命题的条件和结论，并根据条件画
+出图形，然后按图上标记的符号写出已知，求证。接着分析
+思考证明的途径，最后有根据的写出证明的全过程。
+
+但是证明一个定理，从逻辑上说只要求写出三项：
+\begin{multicols}{3}
+	\begin{enumerate}
+	\item 已知（带图）;
+	\item 求证;
+	\item 证明。
+\end{enumerate}
+\end{multicols}
+
+在下例中为了使同学们体会
+一下证明一个定理的全过程，我们把分析命题的条件和结论
+以及思考证明的途径等也都写出来了，以供同学们参考。
+
+\begin{example}
+	证明：同角的余角相等。
+	
+	待证命题的条件是“如果两
+个角是同一个角的余角”，结论
+是“这两个角相等。”根据条件
+画出图形，标上必要的字母，如
+图2.18, 再根据图形写出已知、求证。
+\end{example}
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\foreach \x/\xtext in {0/A, 45/B, 90/C, 135/D}
+{
+	\draw(0,0)--(\x:2.5)node[right]{$\xtext$};
+}
+\node at (0,0)[below]{$O$};
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+已知：$\angle AOB$和$\angle COD$都是$\angle BOC$的余角。
+
+求证：$\angle AOB=\angle COD$.
+
+分析思考证明途径：要证明$\angle AOB=\angle COD$, 由于已知$\angle AOB$和$\angle COD$
+都是$\angle BOC$的余角，回忆互为余角的定义可知：$\angle AOB+
+\angle BOC=90^{\circ}$, $\angle COD+\angle BOC=90^{\circ}$, 比较这两个等式，
+自然有$\angle AOB=\angle COD$了。
+
+\begin{proof}
+$\because\quad \angle AOB$和$\angle COD$都是$\angle BOC$的余角（已知）
+
+$\therefore\quad \angle AOB+\angle BOC=90^{\circ}$, 
+$\angle COD+\angle BOC=90^{\circ}$ （余角定义）
+
+$\therefore\quad \angle AOB+\angle BOC=\angle COD+\angle BOC$ （等量代换）
+
+$\because\quad \angle BOC=\angle BOC$
+
+$\therefore\quad \angle AOB=\angle COD$（等量减等量差相等）	
+\end{proof}
+
+\begin{example}
+证明定理：线段垂直平分线上的点到线段两端点
+的距离相等。
+
+已知：直线$CD\bot\overline{AB}$且过$\overline{AB}$
+的中点$O$, $P$是$CD$上任一点（图2.19）。
+
+求证：$\overline{PA}=\overline{PB}$.
+\end{example}
+
+\begin{figure}[htp]
+	\centering
+	\begin{tikzpicture}[scale=1.5]
+\draw(-1,0)node[left]{$A$}--(1,0)node[right]{$B$}--(0,1.5)node[left]{$P$}--(-1,0);
+\draw(0,-.5)node[below]{$D$}--(0,2)node[right]{$C$};
+\node at (.2,0)[below]{$O$};		
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+在$\triangle PAO$与$\triangle PBO$中
+
+$\because\quad \overline{PO}=\overline{PO}$（公共边），
+
+又$\because\quad $直线$CD\bot\overline{AB}$于$O$, $O$是$AB$的中点（已知）
+
+$\therefore\quad \overline{AO}=\overline{BO}$（线段中点定义） $\angle POA=\angle POB$（垂直定义）。
+
+$\therefore\quad \triangle POA\cong \triangle POB$ （SAS）
+
+$\therefore\quad \overline{PA}=\overline{PB}$（全等三角形的对应边相等）。
+\end{proof}
+
+\begin{example}
+	已知：直线$EF$与直线$AB$、$CD$分别相交于$P$、$Q$
+两点，并且$\angle 1=\angle 2$（图2.20）。
+
+求证：$AB\parallel CD$
+\end{example}
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 4/0/B, 0/-1/C, 4/-1/D}
+	\tkzDrawLines (A,B C,D)
+	\tkzLabelPoints[above left](A,C)\tkzLabelPoints[above right](B,D)
+	\tkzDefPoints{2/0/P, 1.5/-1/Q}
+	\tkzDrawLines[add =1 and 1](P,Q)
+	\tkzLabelPoints[below](P,Q)
+	\tkzMarkAngles[mark=none, size=.4](A,P,Q D,Q,P)
+	\tkzLabelAngles[pos=.6](A,P,Q){1} 
+	\tkzLabelAngles[pos=.6](D,Q,P){2}
+	\node at (.8,-2){$F$};
+	\node at (2.8,1){$E$};
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+	
+
+\begin{proof}
+$\because\quad $已知$AB$与$EF$是两条相交
+于$P$点的直线
+
+$\therefore\quad \angle 1$与$\angle EPB$是对顶角
+
+又$\because\quad $对顶角相等
+
+$\therefore\quad \angle 1=\angle EPB$
+
+已知$\angle 1=\angle 2$, 由等量代换，就有
+$\angle 2=\angle EPB$。
+由平行线定义，可知$AB\parallel CD$.
+\end{proof}
+
+通过以上三例，我们初步体会了一下证明定理的步骤。值
+得注意的是在推理时，每推一步都要有可靠的根据，都要有
+充分的理由。定义、基本性质、已经证明过的定理和已知条件
+都可作为推理的根据。推理的根据可以象例2.4、例2.5那样写在
+结论后面的（\qquad）之中，也可以象例2.6那样写在结论的前面。
+总之，不管怎样叙述，都要“出言有本”，“推理有据”把
+论证的理由说清楚。
+
+\section*{习题2.2}
+\addcontentsline{toc}{subsection}{习题2.2}
+\begin{enumerate}
+	\item 写出下列各命题的已知和求证。
+\begin{enumerate}
+\item 如果两个角是对顶角，则它们相等。
+\item 如果$x_1$、$x_2$是方程$ax^2+bx+c=0$的两个根，则
+	$$x_1+x_2=-\frac{b}{a},\quad x_1\cdot x_2=\frac{c}{a}$$
+	\item 若在$\triangle ABC$中，$\overline{AB}=\overline{AC}$, 则$\angle B=\angle C$.
+	\item 多项式$f(x)$除以$(x-a)$所得的余式等于$f(a)$.
+	\item 如果$(x-a)(x-b)=0$, 则$x=a$或$x=b$。
+\end{enumerate}
+
+\item 把下列各题抄在练习本上，并在括号内填写理由：
+\begin{enumerate}
+	\item 已知：如图$\overline{AB}=\overline{CD}$, 	求证：$\overline{AC}=\overline{BD}$.
+
+	证明：$\because\quad \overline{AB}=\overline{CD}$ （\qquad）
+
+	又$\because\quad \overline{BC}=\overline{BC}$
+
+	$\therefore\quad \overline{AB}+\overline{BC}=\overline{CD}+\overline{BC}$ （\qquad）
+
+	即 $\overline{AC}=\overline{BD}$.
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\draw[|-|](0,0)node[below]{$A$}--(5,0)node[below]{$D$};
+\draw[|-|](2,0)node[below]{$B$}--(3,0)node[below]{$C$};	
+\end{tikzpicture}
+	\caption{第2(a)题}
+\end{figure}
+
+\item 已知：如图$\angle AOC=\angle BOD$, 求证：$\angle AOB=\angle COD$
+
+证明：$\because\quad \angle AOC=\angle BOD$ （\qquad）
+	
+又$\because\quad \angle BOC=\angle BOC$
+
+$\therefore\quad \angle AOC-\angle BOC=\angle BOD-\angle BOC$ （\qquad ）
+
+即 $\angle AOB=\angle COD$.
+
+\item 已知：如图，$C$是$\overline{AB}$的中点，$F$点是$\overline{DE}$的中点，$\overline{AC}=\overline{DF}$, 
+
+求证：$\overline{AB}=\overline{DE}$.
+
+证明：$\because\quad \overline{AC}=\overline{DF}$ （\qquad）
+
+$\therefore\quad 2\overline{AC}=2\overline{DF}$ （\qquad）
+
+又$\because\quad C$点，$F$点分别是$\overline{AB}$, $\overline{DE}$的中点（\qquad）
+
+$\therefore\quad 2\overline{AC}=2\overline{AB}$ （\qquad），
+$2\overline{DF}=\overline{DE}$（\qquad）。
+
+$\therefore\quad \overline{AB}=\overline{DE}$（\qquad）。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+       \foreach \x/\xtext in {15/C,-15/B,50/D,-50/A}
+{
+	\draw(0,0)--(\x:2)node[right]{$\xtext$};
+}
+\node at (0,0)[left]{$O$};
+    \end{tikzpicture}
+    \caption*{第2(b)题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+      \draw[|-|](0,0)node[below]{$A$}--(4,0)node[below]{$B$};
+\draw[|-|](0,-1)node[below]{$D$}--(4,-1)node[below]{$E$};
+\node at (2,0)[below]{$C$};
+\node at (2,-1)[below]{$F$};
+\draw(2,0)--(2,.1);\draw(2,-1)--(2,-1+.1);
+    \end{tikzpicture}
+    \caption*{第2(c)题}
+    \end{minipage}
+    \end{figure}
+
+
+\item 已知：如图，$\angle ABC=\angle EFG$, $BD$, $FH$分别是
+$\angle ABC$，$\angle FFG$的平分线。
+
+求证：$\angle ABD=\angle HFG$.
+
+证明：$\because\quad BD, FH$分别是$\angle ABC$和$\angle EFG$的平分线（\qquad ）
+
+$\therefore\quad \angle ABD=\angle DBC,\quad \angle EFH=\angle HFG$（\qquad）
+
+又$\because\quad \angle ABC=\angle EFG$（\qquad）
+
+$\therefore\quad \angle ABD=\angle HFG$（\qquad）
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+      \foreach \x/\xtext in {30/D,60/A,0/C}
+{
+	\draw(0,0)--(\x:2)node[right]{$\xtext$};
+}
+\node at (0,0)[left]{$B$}; 
+
+\draw (0,-2)node[left]{$F$}--(1.5,-2)node[right]{$G$};
+\draw (0,-2)--(.75*1.732,-2+.75)node[right]{$H$};
+\draw (0,-2)--(.75,-2+.75*1.732)node[right]{$E$};       
+    \end{tikzpicture}
+    \caption*{第2(d)题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1/-2/A, 3/-2/B, 1/1/C, -.5/-2.5/D, 2.5/-2.5/E}
+\tkzDrawLines[add =0 and 0](C,D C,E  A,B)
+\tkzInterLL(A,B)(C,D) \tkzGetPoint{F}
+\tkzInterLL(A,B)(C,E) \tkzGetPoint{G}
+\tkzMarkAngles[mark=none, size=.4](A,F,D E,G,B B,F,C C,G,A)
+\tkzLabelAngle[pos=.5](A,F,D){3}
+\tkzLabelAngle[pos=.5](E,G,B){4}
+\tkzLabelAngle[pos=.5](B,F,C){1}
+\tkzLabelAngle[pos=.5](C,G,A){2}
+
+    \end{tikzpicture}
+    \caption*{第2(e)题}
+    \end{minipage}
+    \end{figure}
+
+\item 已知：如图，$\angle 1$和$\angle 3$, $\angle 2$和$\angle 4$是对顶角，且$\angle 1=\angle 2$.
+
+求证：$\angle 3=\angle 4$.
+
+证明：$\because\quad \angle 1$和$\angle 3$, $\angle 2$和$\angle 4$是对顶角（\qquad）
+
+$\therefore\quad \angle 1=\angle 3,\; \angle 2=\angle 4$（\qquad）
+
+又$\because\quad \angle 1=\angle 2$（\qquad ）
+
+$\therefore\quad \angle 3=\angle 4$（\qquad ）
+
+\item 已知：如图，直线$EF$与直线$AB$、$CD$分别相交于
+$P$、$Q$两点，且$\angle 1=\angle 2$.
+
+求证：$\angle 2+\angle 3=180^{\circ}$.
+
+证明：$\because\quad AB$是过$P$的直线（\qquad）
+
+$\therefore\quad \angle 1$与$\angle 3$互为补角（\qquad）
+
+即$\angle 1+\angle 3=180^{\circ}$.
+
+又$\because\quad \angle 1=\angle 2$（\qquad）
+
+$\therefore\quad \angle 2+\angle 3=180^{\circ}$（\qquad ）。
+
+\item 已知：如图，直线$AO\bot OC$, 直线$BO\bot OD$
+
+求证：$\angle 1=\angle 2$.
+
+证明：$\because\quad AO\bot OC$（\qquad ）
+
+$\therefore\quad \angle AOC=90^{\circ}$ （\qquad ）
+
+即$\angle 1+\angle BOC=90^{\circ}$
+
+$\therefore\quad \angle 1=90^{\circ}-\angle BOC$。
+
+同理：$\angle 2=90^{\circ}-\angle BOC$
+
+$\therefore\quad \angle 1=\angle 2$ （\qquad ）
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1.2]
+	\tkzDefPoints{0/0/A, 4/0/B, 0/-1/C, 4/-1/D}
+	\tkzDrawSegments (A,B C,D)
+	\tkzLabelPoints[left](A,C)
+	\tkzLabelPoints[right](B,D)
+	\tkzDefPoints{2/0/P, 1.5/-1/Q}
+	\tkzDrawLines[add =1 and 1](P,Q)
+	\tkzLabelPoints[below](Q)\tkzLabelPoints[above](P)
+	\tkzMarkAngles[mark=none, size=.4](A,P,Q D,Q,P)
+	\tkzLabelAngles[pos=.6](A,P,Q){1} 
+	\tkzLabelAngles[pos=.6](D,Q,P){2}
+	\tkzMarkAngle[mark=none, size=.5](Q,P,B)
+	\tkzLabelAngles[pos=.6](Q,P,B){3}
+	\node at (.8,-2){$F$};
+	\node at (2.8,1){$E$};
+    \end{tikzpicture}
+    \caption*{第2(f)题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+		\tkzDefPoint(0:0){O}
+		\tkzDefPoint(0:2.5){D}
+		\tkzDefPoint(30:2.5){C}
+		\tkzDefPoint(90:2.5){B}
+		\tkzDefPoint(120:2.5){A}
+\tkzAutoLabelPoints[center=O](A,B,C,D)
+\tkzDrawSegments(O,A O,B O,C O,D)
+\tkzMarkRightAngles(B,O,D A,O,C)
+\tkzMarkAngles[mark=none, size=.7](D,O,C B,O,A)
+\tkzLabelAngles[pos=.8](D,O,C){2}
+\tkzLabelAngles[pos=.8](B,O,A){1}
+\node at (-.2,-.2){$O$};
+    \end{tikzpicture}
+    \caption*{第2(g)题}
+    \end{minipage}
+    \end{figure}
+
+\item 已知：如图，$\overline{AB}=\overline{DC}$, $\overline{AC}=\overline{DB}$
+
+求证：$\angle 1=\angle 2$.
+
+证明：在$\triangle ABC$与$\triangle DCB$中
+
+$\because\quad \overline{AB}=\overline{DC},\quad \overline{AC}=\overline{DB}$（\qquad ）
+
+又$\because\quad \overline{BC}=\overline{BC}$（\qquad）
+
+$\therefore\quad \triangle ABC\cong \triangle DCB$（\qquad）
+
+$\therefore\quad \angle 1=\angle 2$（\qquad ）
+
+\item 已知：如图，$\overline{AC}$与$\overline{BD}$交于$O$点，并且$\overline{OA}=\overline{OC}$, $\overline{OB}=\overline{OD}$.
+
+求证：$\overline{AB}=\overline{CD}$.
+
+证明：在$\triangle AOB$与$\triangle COD$中，
+
+$\because\quad \overline{OA}=\overline{OC},\quad \overline{OB}=\overline{OD}$（\qquad）
+
+又$\because\quad \overline{AC}$与$\overline{BD}$交于$O$点（\qquad）
+
+$\therefore\quad \angle AOB=\angle COD$（\qquad）
+
+$\therefore\quad \triangle AOB\cong\triangle COD$（\qquad）
+
+$\therefore\quad \overline{AB}=\overline{CD}$
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{-2/0/B, 2/0/C, -1/3/A, 1/3/D}
+\tkzDrawSegments(A,B A,C B,D B,C D,C)
+\tkzLabelPoints[left](A,B)
+\tkzLabelPoints[right](C,D)
+\tkzMarkAngles[mark=none, size=.4](A,C,B C,B,D)
+\tkzLabelAngles[pos=.6](A,C,B){2}
+\tkzLabelAngles[pos=.6](C,B,D){1}
+
+    \end{tikzpicture}
+    \caption*{第2(h)题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+    \draw(0,0)node[left]{$D$}--(3,0)node[right]{$C$};
+\draw(1,3)node[left]{$A$}--(4,3)node[right]{$B$};
+\draw(0,0)--(4,3);
+\draw(1,3)--(3,0);
+\node at (2,1.5)[left]{$O$};
+    \end{tikzpicture}
+    \caption*{第2(i)题}
+    \end{minipage}
+    \end{figure}
+
+\item 已知：如图，$\angle 1=\angle 2$, $\angle 3=\angle 4$,
+
+求证：$\overline{AC}=\overline{AD}$
+
+证明：$\because\quad \angle 1=\angle 2,\quad \angle 3=\angle 4$（\qquad ）
+
+又$\because\quad \overline{AB}=\overline{AB}$（\qquad ）
+
+$\therefore\quad\triangle ABC\cong \triangle ABD$（\qquad ）
+
+$\therefore\quad \overline{AC}=\overline{AD}$（\qquad ）
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+	\tkzDefPoints{0/0/A, 1/1.5/C, 1/-1.5/D, 4/0/B}
+	\tkzDrawSegments(A,C C,B B,D A,D A,B)
+	\tkzLabelPoints[left](A,C,D)
+	\tkzLabelPoint[right](B){$B$}
+	\tkzMarkAngles[mark=none, size=.4](B,A,C A,B,D)
+	\tkzLabelAngles[pos=.6](B,A,C){1}
+	\tkzLabelAngles[pos=.6](A,B,D){4}
+	\tkzMarkAngles[mark=none, size=.5](C,B,A D,A,B)
+	\tkzLabelAngles[pos=.7](C,B,A){3}
+	\tkzLabelAngles[pos=.7](D,A,B){2}
+    \end{tikzpicture}
+    \caption*{第2(j)题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.8]
+      \draw(-3,0)node[below]{$B$}--(0,3)node[above]{$A$}--(3,0)node[below]{$C$};
+\draw(-1,2)node[left]{$D$}--(3,0);
+\draw(1,2)node[right]{$E$}--(-3,0);
+    \end{tikzpicture}
+    \caption*{第3(a)题}
+    \end{minipage}
+    \end{figure}
+\end{enumerate}
+
+\item 去掉下列各题中推理的多余步骤。
+\begin{enumerate}
+	\item 已知；如图，$\overline{AC}=\overline{AB}$, $\overline{AD}=\overline{AE}$.
+	
+求证：$\angle ADC=\angle AEB$.
+
+证明：在$\triangle ADC$和$\triangle AEB$中，
+
+$\because\quad \overline{AC}=\overline{AB},\quad \overline{AD}=\overline{AE}$（已知）
+
+又$\because\quad \angle A=\angle A$ （公共角）
+
+又$\because\quad \angle B=\angle C$ 
+
+$\therefore\quad \triangle ADC\cong \triangle AEB$（SAS）
+
+$\therefore\quad \angle ADC=\angle AEB$（全等三角形对应角相
+等）
+
+\item 已知：如图，$\overline{AB}=\overline{DC},\quad \angle A=\angle D,\quad \angle B=\angle C$
+
+求证：$\overline{BF}=\overline{CE}$.
+
+证明：在$\triangle ABE$与$\triangle DCF$中，
+
+$\because\quad \overline{AB}=\overline{DC},\quad \angle A=\angle D,\quad \angle B=\angle C$（已知）
+
+又$\because\quad \angle 1=\angle 2$
+
+$\therefore\quad \triangle ABE\cong \triangle DCF$（ASA）
+
+$\therefore\quad \overline{BE}=\overline{CF}$（全等三角形的对应边相等）
+
+又$\because\quad \overline{EF}=\overline{EF}$
+
+$\therefore\quad \overline{BF}=\overline{CE}$（等量减等量差相等）
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/C, 2/0/D, 2/3/F, 1/1.5/E, 1/4.5/A, 3/4.5/B}
+\tkzDrawSegments(B,C F,D A,E A,B C,D)
+\tkzLabelPoints[left](A,C,E)
+\tkzLabelPoints[right](B,F,D)
+\tkzMarkAngles[mark=none, size=.5](C,F,D B,E,A)
+\tkzLabelAngles[pos=.7](C,F,D){1}
+\tkzLabelAngles[pos=.7](B,E,A){2}
+    \end{tikzpicture}
+    \caption*{第3(b)题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-2.5/0/D, 2.5/0/B, -1/2.5/A, 1/2.5/C}
+\tkzDrawSegments(A,B A,D B,C C,D)
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[right](C,B)
+\node at (0,1.5){$O$};
+    \end{tikzpicture}
+    \caption*{第4(a)题}
+    \end{minipage}
+    \end{figure}
+
+\item 补上下列各题推理中所缺少的必要步骤。
+\begin{enumerate}
+	\item 已知；如图，$\overline{AB}$, $\overline{CD}$相交于$O$点，并且$\overline{AO}=\overline{OC}$，$\overline{OD}=\overline{OB}$.
+
+求证：$\angle D=\angle B$, $\overline{AD}=\overline{BC}$.
+
+证明：在$\triangle AOD$和$\triangle COB$中，
+
+$\because\quad \overline{AO}=\overline{OC}$（已知）
+
+又$\because\quad \overline{AB}$, $\overline{CD}$相交于$O$点（已知）
+
+$\therefore\quad \angle AOD=\angle COB$（对顶角相等）
+
+$\therefore\quad \triangle AOD\cong \triangle COB$（SAS）
+
+$\therefore\quad \angle D=\angle B$（全等三角形的对应角相等），
+$\overline{AD}=\overline{BC}$（全等三角形的对应边相等）。
+
+\item 已知：如图，$\overline{AD}=\overline{BC}$, $\overline{AB}=\overline{CD}$.
+
+求证：$\angle B=\angle D$.
+
+证明：在$\triangle ABC$与$\triangle CDA$中
+
+$\because\quad \overline{AD}=\overline{BC},\quad \overline{AB}=\overline{CD}$（已知）
+
+$\therefore\quad \triangle ABC\triangle CDA$（SSS）
+
+$\therefore\quad \angle B=\angle D$（全等三角形的对应角相等）。
+
+
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+	\tkzDefPoints{0/0/B, 3/0/C, 1/2/A, 4/2/D}
+	\tkzDrawSegments(A,B A,C A,D B,C D,C)
+	\tkzLabelPoints[left](A,B)
+	\tkzLabelPoints[right](C,D)
+    \end{tikzpicture}
+    \caption*{第4(b)题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoint(0:3){A}
+\tkzDefPoint(60:3){C}
+\tkzDefPoint(30:3){B}
+\tkzDefPoint(20:3){A1}
+\tkzDefPoint(50:3){A2}
+\tkzDefPoint(0,0){O}
+\tkzDrawSegments(O,A O,B O,C O,A1 O,A2)
+\tkzLabelPoints[right](A,B,C)
+\node at (-.2,-.2){$O$};
+
+\draw(1,0) arc (0:20:1);
+\draw(20:1.5) arc (20:30:1.5);
+\draw(30:1) arc (30:50:1);
+\draw(50:1.5) arc (50:60:1.5);
+\node at (10:1.2){1};
+\node at (25:1.8){2};
+\node at (40:1.2){3};
+\node at (55:1.8){4};
+    \end{tikzpicture}
+    \caption*{第5题}
+    \end{minipage}
+    \end{figure}
+
+\item 已知：如图，$OB$是$\angle AOC$的平分线，并且$\angle 1=\angle 4$,
+
+求证：$\angle 2=\angle 3$.
+\item 已知：如图，$\angle 2$与$\angle 3$是对顶角，且$\angle 1=\angle 3$,
+
+求证：$\angle 1=\angle 2$.
+\item 已知：如图，$\overline{AB}=\overline{AC}$, $D$是$\overline{BC}$的中点，
+
+求证：$\triangle ABD\cong \triangle ACD$.
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+	\tkzDefPoints{0/0/A, 4/0/B, 0/-1/C, 4/-1/D}
+	\tkzDrawSegments (A,B C,D)
+	\tkzDefPoints{2/0/P, 1.5/-1/Q, 2.5/1/E}
+	\tkzDrawLines[add =1 and 1](P,Q)
+	\tkzMarkAngles[mark=none, size=.4](A,P,Q D,Q,P B,P,E)
+	\tkzLabelAngles[pos=.6](A,P,Q){2} 
+	\tkzLabelAngles[pos=.6](D,Q,P){1}
+	\tkzLabelAngles[pos=.6](B,P,E){3}
+
+    \end{tikzpicture}
+    \caption*{第6题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+		\draw(-1.5,0)node[below]{$B$}--(0,0)node[below]{$D$}--(1.5,0)node[below]{$C$}--(0,3)--(-1.5,0);
+\draw(0,3)node[above]{$A$}--(0,0);
+    \end{tikzpicture}
+    \caption*{第7题}
+    \end{minipage}
+    \end{figure}
+
+\item 已知：如图，$\overline{AB}\bot \overline{BD}$, $\overline{CD}\bot \overline{BD}$, $O$是$\overline{BD}$的中点，
+$\overline{AC}$与$\overline{BD}$交于$O$.
+
+求证：$\triangle ABO\cong \triangle CDO$.
+\item 已知；如图，$BD$平分$\angle ABC$, 并且$\overline{AB}=\overline{BC}$,
+
+求证：$\triangle ABD\cong \triangle CBD$.
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\draw(0,0)node[below]{$B$}--(4,0)node[right]{$D$}--(4,-1.5)node[right]{$C$}--(2,0)node[below]{$O$}--(0,1.5)node[left]{$A$}--(0,0)  ;
+    \end{tikzpicture}
+    \caption*{第8题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+      \draw(0,0)node[left]{$B$}--(4,0)node[right]{$D$}--(3,1.5)node[right]{$A$}--(0,0)--(3,-1.5)node[right]{$C$}--(4,0);
+    \end{tikzpicture}
+    \caption*{第9题}
+    \end{minipage}
+    \end{figure}
 
 
 
 
 
+\end{enumerate}
 
 
+\section*{复习题二}
+\addcontentsline{toc}{section}{复习题二}
+\begin{enumerate}
+	\item 试举出五个集合的例子，并用列举法或描述法表示出来。
+	\item 写出下列集合的所有元素。
+\begin{enumerate}
+	\item $A=\{\text{绝对值小于10的2的倍数}\}$
+	\item $B=\{\text{绝对值小于40的5的倍数}\}$
+	\item $C=\{\text{绝对值小于20的3的倍数}\}$
+\end{enumerate}
+
+\item 用特征性质描述法表示下列集合：
+\begin{enumerate}
+	\item 一切偶数的集合。
+	\item 一切奇数的集合。
+	\item 大于等于0, 而小于等于1的实数集合。
+\end{enumerate}
+
+\item 下列命题是否正确？
+\begin{enumerate}
+	\item 一个正方形是正方形集合的一个元素。
+	\item 飞机是飞机场集合的一个元素。
+	\item 某校一成员是这校全体学生构成的集合的一个元素。
+\end{enumerate}
+
+\item 指出下列集合中的元素：
+\begin{enumerate}
+	\item $A=\{x|x<15\text{ 且 $x$ 是质数}\}$
+	\item $B=\{x|x^2-2=0\text{ 且 $x$ 是实数}\}$
+\end{enumerate}
+
+\item 设$A=\{1,2,3,4\}$, $B=\{ 2,4,6,8\}$, $C=\{3,4,5,6\}$, 求：
+\begin{multicols}{4}
+\begin{enumerate}
+	\item $A\cup B$
+	\item $A\cup C$
+	\item $B\cup C$
+	\item $(A\cup B)\cup C$
+	\item $A\cup (B\cup C)$
+	\item $A\cap B$
+	\item $A\cap C$
+	\item $B\cap C$
+	\item $(A\cap B)\cap C$
+	\item $A\cap (B\cap C)$
+\end{enumerate}	
+\end{multicols}
 
 
+\item 如图，$A$、$B$、$C$三个集合相交成非空集，用阴影分别
+把下列各集合所表示的区域划出来。
+\begin{multicols}{4}
+\begin{enumerate}
+	\item $A\cap B$
+	\item $A\cup B$
+	\item $A\cap C$
+	\item $A\cup C$
+	\item $B\cap C$
+	\item $B\cup C$
+	\item $A\cap (B\cap C)$
+	\item $(A\cap B)\cap C$
+	\item $A\cup (B\cup C)$
+	\item $(A\cup B)\cup C$
+\end{enumerate}	
+\end{multicols}
 
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+       \draw (0,0)node{$A$} circle (1);
+	\draw (1.7,0) node{$B$} circle (1.2);
+	\draw (.7,-1.2) node{$C$} circle (.8);
+    \end{tikzpicture}
+	\caption*{第7题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, -1/2/A, 1/2/C, 0/3.5/E, 0/2.75/D}
+\tkzDrawLines[add=0 and .5](B,A B,C B,D)
+\tkzLabelPoints[left](A,B)
+\tkzLabelPoints[right](C,D)
+\draw(A)--(D)--(C);
+\tkzMarkAngles[mark=none, size=.45](E,D,A E,B,A)
+\tkzMarkAngles[mark=none, size=.5](C,D,E C,B,E)
+\tkzLabelAngle[pos=.6](E,D,A){1}
+\tkzLabelAngle[pos=.7](E,B,A){3}
+\tkzLabelAngle[pos=.6](C,D,E){2}
+\tkzLabelAngle[pos=.7](C,B,E){4}
+\node at (0,3.8)[right]{$E$};
+    \end{tikzpicture}
+	\caption*{第11题}
+    \end{minipage}
+    \end{figure}
 
+\item 设基集${\rm I}=\{1,2,3,4,5,6,7,8,9,10\}$,
+$A=\{6,8,9\}$, $B=\{ 1, 3, 7,8,9\}$,
+$C=\{2,6,8,9\}$。求：
+\begin{multicols}{4}
+\begin{enumerate}
+	\item $A^c$
+	\item $B^c$
+	\item $C^c$
+	\item $(A\cap B)^c$
+	\item $(A^c)\cap (B^c)$
+	\item $(A\cup B)^c$
+	\item $(A^c)\cup (B^c)$
+\end{enumerate}	
+\end{multicols}
 
+\item 写出列各命题中的“已知”部分和“求证”部分。
+\begin{enumerate}
+	\item 三角形三个角的和等于$180^{\circ}$.
+	\item 角平分线上任一点到角的两边距离相等。
+\end{enumerate}
 
+\item 在下列各题的（\qquad）中，适当地填上“必要不充分”，
+“充分不必要”，“充分必要”等词。
+\begin{enumerate}
+	\item $a=0$是$ab=0$的（\qquad）条件。
+	\item 两个角相等是两个角为对顶角的（\qquad）条件。
+	\item 形状和大小完全相同的两个图形是全等形的（\qquad）
+	条件。
+	\item $a^2=b^2$是$a=b$的（\qquad）条件。
+	\item 多项式$P(x)$被$x-\alpha$整除是$P(\alpha)=0$的（\qquad）
+	条件。
+	\item $a\ne b$ 是$a^2+b^2>2ab$的（\qquad）条件。
+\end{enumerate}
 
+\item 已知：如图，$\angle 1=\angle 2$, $\angle 3=\angle 4$, $BE$是直线。
 
+求证：$\overline{AD}=\overline{CD}$.
 
+\item 已知：如图，$\overline{AB}=\overline{DE}$, $\overline{AC}=\overline{DF}$, $\overline{BC}=\overline{EF}$.
 
+求证：$\angle 1=\angle 2$, $AC\parallel DF$.
+\item 已知：如图，$\angle 1=\angle 2$, $\overline{AD}=\overline{BC}$.
 
+求证：$\angle B=\angle D$, $\overline{AB}=\overline{CD}$.
 
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.8]
+\draw (0,0)node[below]{$B$}--(4,0)node[below]{$C$}--(1.5,3)node[above]{$A$}--(0,0);
+\draw (3,0)node[below]{$E$}--(7,0)node[below]{$F$}--(4.5,3)node[above]{$D$}--(3,0);
+\foreach \x/\xtext in {4/1,7/2}
+{
+	\draw (\x-.25,0) arc (180:130:.25);
+	\draw(\x-.5,0)node[above]{$\xtext$};
+}
+    \end{tikzpicture}
+	\caption*{第12题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.7]
+    \draw(1,0)--(-3.5,-4)node[below]{$B$}--(-1,0)node[above]{$A$}--(1,0)node[above]{$C$}--(3.5,-4)node[below]{$D$}--(-1,0);
+	\draw (1-.5,0) arc (180:220:.5);
+	\draw (-1+.5,0) arc (0:-40:.5);
+	\draw(1-.75,0)node[below]{2};\draw(-1+.75,0)node[below]{1};
+    \end{tikzpicture}
+	\caption*{第13题}
+    \end{minipage}
+    \end{figure}
 
-
-
-
-
-
-
-
-
+\item 证明：同角的补角相等。
+\item 证明：等角的余角相等。
+\item 证明：等角的补角相等。
+\end{enumerate}
