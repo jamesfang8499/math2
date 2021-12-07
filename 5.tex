@@ -448,46 +448,593 @@ $B$、$C$为两个顶点，求作一三角形，使第三个顶点与$B$的距
 形。像这样应用轨迹的交集来确定点的位置，从而来解作图
 题的方法，就叫做\textbf{轨迹法}。
 
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.8, rotate=-15]
+\tkzDefPoints{0/0/B, 3/0/C, -.5/1.94/A,-.5/-1.94/A'}
+\draw(A)--(B)--(C)--(A);
+\draw(B)--(A')--(C);
+\tkzDrawArc[delta=10](C,A)(A')
+\tkzCompass(B,A)
+\tkzCompass(B,A')
+\tkzLabelPoints[above](A,C)
+\tkzLabelPoints[left](A',B)
 
-% P86
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.7]
+\draw (0,0) circle(1);
+\tkzDefPoints{0/0/O}
+\tkzDrawPoints(O)
+\tkzLabelPoints[below](O)
+\tkzDefPoint(-5:1){C}
+\tkzDefPoint(45:1){D}
+\tkzDrawLines[add=.5 and .5](O,C O,D)
+\draw[dashed](15:1)node[right]{$B$}--(0,0)--(75:1)node[above]{$A$};
+\draw (75:1)--(15:1);
+\node at (-5:1.5)[right]{$\ell$};
+\node at (45:1.5)[right]{$m$};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
 
 
+\begin{example}
+    已知一条定直线和直线外两个定点，求作一个
+圆，使圆心在这条直线上，并且经过这两个定点。
+\end{example}
+
+已知：定直线$\ell$和两定点$AB$, 且$A\notin \ell$, $B\notin \ell$（图5.6）。
+
+求作：一圆使圆心在$\ell$上，且经过$A$、$B$两点。
+
+分析：假定$\odot O$为所求作的圆；那么，圆心$O$应满足两
+个条件：
+\begin{enumerate}
+    \item $O\in \ell$；
+    \item $O$点到$A$、$B$两点等距离。
+\end{enumerate}
+因为$\ell$
+是已知的直线，而到$A$、$B$两点等距离的点的轨迹是$\overline{AB}$的
+垂直平分线，所以，圆心$O$应是$\ell\cap \overline{AB}$的垂直平分线中的点，于是得作法如下：
+
+作法：
+\begin{enumerate}
+\item 作$\overline{AB}$;
+\item 作$\overline{AB}$的垂直平分线$m$与$\ell$相交于$O$点，
+\item 以$O$为圆心，$OA$为半径作$\odot O$, 则$\odot O$即为所求
+作的圆。
+\end{enumerate}
+
+\begin{proof}
+    作$\overline{OA}$、$\overline{OB}$,
+
+$\because\quad m$是$\overline{AB}$的垂直平分线，且$O\in m$.
+
+$\therefore\quad \overline{OA}=\overline{OB}$
+
+\begin{multicols}{2}
+  $\because\quad A$点$\in \odot O$，
+
+$\therefore\quad B$点$\in \odot O$，
+
+又知$O$点$\in\ell$，
+
+$\therefore \odot O$为所求作的圆。  
+\end{multicols}
+
+\end{proof}
+
+讨论：
+\begin{enumerate}
+    \item 当直线$\ell$与AB所在的直线不垂直时，$\overline{AB}$的垂直平分线$m$与$\ell$一定有一个交点，且只有一个交点。这时，问
+题有一解。
+\item 当$\ell$与直线$\overline{AB}$垂直时，如果$\ell$与$m$重合时，问题
+有无穷多解；如果$\ell\parallel m$时问题无解。
+\end{enumerate}
+
+\begin{example}
+    已知三角形的一边和这条边上的中线及高，求作
+三角形。
+\end{example}
+
+已知：线段$a$、$m$、$h$（图5.7）。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=1.7]
+\begin{scope}
+    \draw(0,0)--node[above]{$h$}(1.4,0);
+    \draw(0,.5)--node[above]{$m$}(1.6,.5);
+    \draw(0,1)--node[above]{$a$}(2,1);
+\end{scope}
+\begin{scope}[xshift=3cm]
+    
+
+\draw(0,0)node[left]{$B$}--node[below]{$a$}(2,0)node[right]{$C$};
+\draw(-.5,1.4)--(1.8,1.4);
+\tkzDefPoints{1/0/M, 0.23/1.4/A}
+\tkzCompass(M,A)
+\draw(M)--node[right]{$m$}(A)--(2,0);
+\draw(0,0)--(A)--node[right]{$h$}(0.23,0)node[below]{$D$};
+\tkzLabelPoints[above](M,A)
+\node (D) at (0.23,0){};
+\tkzMarkRightAngle[size=.1](C,D,A)
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+求作：三角形使它的一边等于$a$, 且这边上的中线等于
+$m$, 高等于$h$.
+
+分析：画一草图（图5.7），假设$\triangle ABC$为所求作的三
+角形，且$\overline{BC}=a$, $\overline{BC}$上的中线$\overline{AM}=m$, 高$\overline{AD}=h$, $B$、
+$C$两个顶点由条件$\overline{BC}=a$, 很容易确定；$A$点的位置应该
+满足条件：
+\begin{enumerate}
+    \item 与$\overline{BC}$的中点$M$的距离等于$a$的长；
+    \item 与$\overline{BC}$所在直线的距离等于$h$.
+\end{enumerate}
+分别满足条件1和2的轨迹
+都可作，故$A$的位置可作出，于是所要求作的三角形可作。
+
+作法：（图5.8）
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=1.7]
+    \draw(0,0)node[left]{$B$}--(2,0)node[right]{$C$};
+\draw(-.5,1.4)--(2,1.4)node[right]{$\ell$};
+\tkzDefPoints{1/0/M, 0.23/1.4/A}
+\tkzCompass(M,A)
+\draw(M)node[below]{$M$}--node[right]{$m$}(A)--(2,0);
+\draw(0,0)--(A)--(0.23,0)node[below]{$D$};
+\draw[dashed](1.5,0)--node[right]{$h$}(1.5,1.4);
+\tkzLabelPoints[above](A)
+\node (D) at (0.23,0){};
+\tkzMarkRightAngle[size=.1](C,D,A)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{enumerate}
+    \item 任取一点$B$, 作$\overline{BC}=a$,
+    \item 作直线$\ell\parallel$直线$BC$,
+    且与直线$BC$的距离等于$h$.
+    \item 作$\overline{BC}$的中点$M$, 作$\odot(M,m)$交$\ell$于$A$点
+    \item  作$\overline{AB}$、$\overline{AC}$, 则$\triangle
+    ABC$为所求作的三角形。
+\end{enumerate}
+
+\begin{proof}
+    （略）
+\end{proof}
+
+讨论
+\begin{enumerate}
+    \item 当$m\ge h$时，由于$\odot(M,m)$与直线$\ell$能够相
+交，所以问题有一解。
+\item 当$m<h$时，$\odot(M,m)$与直线$\ell$不相交，所以
+这时问题无解。
+\end{enumerate}
+
+\begin{rmk}
+    上题中所求作的三角形，并没有指定它在平面上
+    的确切位置（叫做\textbf{不定位}），我们可在不同的位置分别作出很
+    多满足已知条件的三角形，而且这些三角形都是全等形，遇到
+    这种情况，我们任作一个满足条件的图形就可以了，并说问
+    题只有一解；如果作出的满足已知条件的三角形不是全等
+    形，那么要把这些图形都作出来，作出几个，我们就说问题
+    有几解。如果在问题里是要求在固定位置作图（叫做\textbf{定位}），
+    那么不管作出的是不是全等形，都要把它们作出来，作出几
+    个我们就说问题有几解。 
+\end{rmk}
+
+\begin{example}
+   求作和定角$\angle ABC$的两边都相切，并且半径等于
+$r$的圆。 
+\end{example}
+
+已知：$\angle ABC$, 线段$r$（图5.9）。
+
+求作：和$\angle ABC$的两边都相切，并且半径等于$r$的圆。
+
+分析：画一草图（图5.10），假设$\odot O$为所求作的圆，
+且$\odot O$的半径等于$r$, 那么圆心$O$应满足条件：
+\begin{enumerate}
+    \item 与$\angle ABC$的两边等距离；
+    \item 与边$BA$或$BC$的距离等于$r$．
+\end{enumerate}
+满足1或2的轨迹都可作，故所求的圆的圆心可以作出。
+
+作法：（图5.9）
+\begin{enumerate}
+    \item 作$\angle ABC$的平分线$BF$;
+    \item 作直线$\ell\parallel BC$, 且与$BC$的距离等于$r$, 设$\ell$与$BF$
+    相交于$O$点；
+    \item 以$O$为圆心，$r$为半径作$\odot(O,r)$, $\odot(O,r)$即为所求作的圆。
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\foreach \x in {0,20,40}
+{
+    \draw(0,0)--(\x:5);
+}
+\draw(2,1)--(5,1)node[right]{$\ell$};
+\draw[dashed](4.5,0)node[below]{$C$}--node[right]{$r$}(4.5,1);
+\draw(2.75,1) circle(1);
+\draw(2.75,0)node[below]{$E$}--(2.75,1)node[above]{$O$}--(40:2.75)node[above]{$D$};
+\node at (0,0) [left]{$B$};
+\node at (20:5) [right]{$F$};
+\node at (40:5) [right]{$A$};
+\draw(0,2)--node[above]{$r$}(1,2);
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\foreach \x/\xtext in {0/C,20/F,40/A}
+{
+    \draw(0,0)--(\x:5)node[right]{$\xtext$};
+}
+\draw(2,1)--(5,1);
+\draw(2.75,1) circle(1);
+\draw(2.75,0)--node[right]{$r$}(2.75,1)node[above]{$O$}--(40:2.75);
+\node at (0,0) [left]{$B$};
+\tkzDefPoint(40:2.75){D}
+\tkzDefPoint(0:2.75){E}
+\tkzDefPoint(2.75,1){O}\tkzDefPoint(0,0){B}
+\tkzMarkRightAngles[size=.1](B,D,O B,E,O)
+
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{proof}
+    作$\overline{OD} \bot BA$于$D$点，$\overline{OE}\bot BC$于$E$点。
+
+$\because\quad EF$平分$\angle ABC$, 且$O\in BF$,
+
+$\therefore\quad \overline{OD}=\overline{OE}$
+
+又$\because\quad O\in\ell$, 而$\ell$与$BC$的距离是$r$的长。
+
+$\therefore\quad \overline{OD}=\overline{OE}=r,\quad D\in \odot O,\quad E\in \odot O$
+
+$\odot O$与$BA$和$BC$都相切，$\odot O$为所求作的圆。
+\end{proof}
+
+讨论：由于$\angle ABC$的平分线$BF$与直线$\ell$不会平行，所
+以它们总有一个唯一的交点，所以此题只有一解。
+
+从例5.5中可以看到，$\wideparen{DE}$把$\angle ABC$的两边在切点$D$、$E$
+处连接起来了，这种连结叫做\textbf{直线与圆弧的平滑连接}。
+
+\begin{example}
+已知：$\odot (O_1,r_1)$和$\odot (O_2,r_2)$外离，且$r_1=
+    10$mm, $r_2=8$mm（图5.11）。
+
+    求作：一圆与$\odot (O_1,r_1)$外切，与$\odot (O_2,r_2)$内切，并
+    且半径是20mm. 
+\end{example}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.7]
+\draw (0,0) circle (2);
+\draw (4,-1.2) circle (1.2);
+\draw[thick](4,-3) circle (3);
+\tkzDefPoints{0/0/O_1, 4/-1.2/O_2, 4/0/C1, 4/-3/O, 1.6/-1.2/B, 0/2/A, 1/-3/C}
+\tkzLabelPoints[right](O_1,O_2,O)
+\tkzLabelPoints(B,A,C)
+\tkzDrawPoints(O_1,O_2,O, B,A,C)
+\draw[dashed](O_1)--(O)--(4,0);
+\tkzCompass(O_1,O)
+\tkzCompass(C1,O)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.5]
+   \draw (0,0) circle (2);
+\draw (4,-1.2) circle (1.2);
+\draw[thick](4,-3) circle (3);
+\tkzDefPoints{0/0/O_1, 4/-1.2/O_2, 4/-3/O}
+\tkzLabelPoints[right](O_1,O_2,O)
+\tkzDrawPoints(O_1,O_2,O)
+\draw[dashed](O_1)--(O)--(4,0);   
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{analyze}
+    画一草图（图5.12），设$\odot (O,20{\rm mm})$为要求作的
+圆．由于$\odot (O,20{\rm mm})$与$\odot (O_1,r_1)$外切，并与$\odot (O_2,r_2)$内切，
+所以
+\[\begin{split}
+   \overline{OO_1}&=r_1+20{\rm  mm}=30{\rm mm}\\
+   \overline{OO_2}&=20{\rm  mm}-r_2=12{\rm  mm} 
+\end{split}\]
+
+因此，$O$点是$\odot (O_1,30{\rm mm})$和$\odot (O_2,12{\rm  mm})$的交点，
+故$O$点可作出。
+\end{analyze}
+
+作法：（图5.11）。
+\begin{enumerate}
+    \item 作$\odot (O_1,30{\rm mm})$和$\odot (O_2,12{\rm mm})$, 设两圆有
+交点$O$;
+\item 以$O$为圆心，以20mm为半径作$\odot O$, 即$\odot O$为
+所求作的圆。
+\end{enumerate}
+
+\begin{proof}
+（略）
+\end{proof}
+
+讨论：
+\begin{enumerate}
+    \item 当$(r_1+20{\rm mm})+(20{\rm mm}-r_2)\ge \overline{O_1O_2}$时，
+即当$ \overline{O_1O_2}\le 42{\rm mm}$时，问题有一解。
+\item 当$ \overline{O_1O_2}> 42{\rm mm}$时，问题无解。
+\end{enumerate}
+
+从例5.6中的图5.11, 我们可看出$\odot O_1$的
+$\wideparen{AB}$与$\odot O_2$的$\wideparen{BC}$
+在切点$B$处连接起来了，这种连结叫做\textbf{圆弧与圆弧的平
+滑连接}。
+
+\begin{ex}
+\begin{enumerate}
+    \item 已知两定点$A$、$B$, 且直线$AB$与定直线$\ell$平行，在$\ell$上求作与$A$、$B$两点直线$\ell$距离相等的点。
+    \item 求作和两条相交直线$\ell$和$m$的距离相等，且和它们的交点的距离等于定长$d$的点。
+    \item 求作和已知直线$\ell$的距离等于定长$d$，并且和$\ell$上的一个定点的距离等于$2d$的点。
+    \item 求作和$\overline{AB}$的两端的距离相等，且和$\overline{AB}$的两端的连线所夹的角等于定角$\alpha$的点。
+    \item 求作等腰三
+    角形，使它的底边等于定长$a$, 顶角等于定
+    角$\alpha$.
+    \item 求作一圆，使它的半径等于定长$a$, 且经过一定点并和
+    一条定直线相切。
+    \item 已知三角形的二边和其中一边上的高，求作三角形。
+    \item 已知$\odot O(0,15{\rm mm})$和直线$\ell$, 并且$\ell$与$\odot O$相离，画半
+    径为10mm的圆，使其与$\odot O$外切并和$\ell$相切。
+\end{enumerate}
+\end{ex}
+
+\subsection{代数法作图}
+解作图题时，有时也常常归结为要求作一条线段的长度
+问题。这时我们可根据给出的条件，求出这条线段的代数表
+达式，根据线段的代数表达式，把线段作出，使问题得到解
+决。这种解作图题的方法，就叫做\textbf{代数分析法}。
+
+\begin{example}
+    已知：正方形$ABCD$(图5.13).
+
+    求作：一点$P$使$P\in \overline{CD}$, 且$\overline{AP}=\overline{BC}+\overline{CP}$.
+\end{example}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 0/2/D, 2/2/C, 2/0/B, 1/2/E, 1.5/2/P}
+\tkzDrawPolygon(A,B,C,D)
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[right](B,C)
+\tkzLabelPoints[above](E,P)
+\draw(A)--(P);
+\tkzDrawPoints(E)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+      \tkzDefPoints{0/0/A, 0/2/D, 2/2/C, 2/0/B,  1.5/2/P}
+      \tkzDrawPolygon(A,B,C,D)
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[right](B,C)
+\tkzLabelPoints[above](P)
+\draw(A)--(P);
+\tkzDrawPoints(E)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{analyze}
+    画一草图（图5.14），已知正方形$ABCD$, 假设$P$点是所求作的点，即$P\in \overline{CD}$, 且$\overline{AP}=\overline{BC}+
+    \overline{CP}$, 设
+    $\overline{CP}=x$, $\overline{BC}=a$, 故$\overline{AP}=8+x$, $\overline{DP}=\overline{DC}-\overline{CP}=\overline{BC}-\overline{CP}=a-x$, 又因$\triangle ADP$是直角三角形，所以根据
+    勾股定理有：$\overline{AP}^2=\overline{AD}^2+\overline{DP}^2$, 即：$(a+x)^2=a^2+(a-x)^2$.
+    解此方程得
+    $x=\frac{a}{4}$；$a$为已知，$\frac{a}{4}$
+    可作出，故$P$点也可作
+    出。
+\end{analyze}
+
+作法：（图5.13）。
+
+\begin{enumerate}
+    \item 作$\overline{CD}$的中点$E$.
+    \item 作$\overline{CE}$的中点$P$, $P$点即为所求作的点。
+\end{enumerate}
+
+\begin{proof}
+    由作图知$\overline{CP}=\frac{a}{4}$,
+
+$\therefore\quad \overline{DP}=\overline{CD}-\overline{CP}=\frac{3}{4}a$
+\[\overline{AP}=\sqrt{\overline{AD}^2+\overline{DP}^2}=\sqrt{a^2+\left(\frac{3}{4}a\right)^2}=\frac{5}{4}a=a+\frac{a}{4}\]
+\[\overline{AP}=\overline{BC}+\overline{CP}\]
+\end{proof}
+
+
+讨论：由分析知，$\overline{DP}:\overline{PC}=3:1$, 因为分点$P$是唯一的，所以此题只有一解。
+
+
+\begin{example}
+    在已知线段上求作一点，分已知线段为两部分，
+    使其中一部分是全线段和另一部分的比例中项。
+
+    已知：$\overline{AB}$(图5.15).
+
+    求作：$\overline{AB}$的内分点$G$, 使$\overline{AG}^2=\overline{AB}\cdot \overline{GB}$.
+\end{example}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.8]
+    \draw(0,0)node[left]{$A$}--(0.618*4,0)node[below]{$G$}--(4,0)node[right]{$B$};
+    \tkzDrawPoint(0,0)
+    \tkzDrawPoint(0.618*4,0)
+    \tkzDrawPoint(4,0)
+\tkzDefPoints{4/2/D, 4/0/B, 0/0/A, 2.472/0/G}
+\tkzDefPoint(26.57: 2.472){E}
+\tkzDrawArc[delta=10](D,E)(B)
+\tkzDrawArc[delta=10](A,G)(E)
+\tkzDrawSegments(A,D D,B)
+\tkzLabelPoints[above](D,E)
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\draw(0,0)node[left]{$A$}--node[above]{$x$}(0.618*4,0)node[below]{$G$}--(4,0)node[right]{$B$};
+\tkzDrawPoint(0,0)
+\tkzDrawPoint(0.618*4,0)
+\tkzDrawPoint(4,0)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+
+\begin{analyze}
+    画一草图（图5.16），已知$\overline{AB}$, 假定$G$为所求
+    之点，设$\overline{AG}=x$, 则
+    $\overline{BG}=a-x$,
+    $x$满足方程
+\[    x^2=a(a-x)\]
+    即：$x^2+ax-a^2=0$. 解此方程得：
+\[x_1=\frac{-a+\sqrt{4a^2+a^2}}{2},\qquad x_2=\frac{-a-\sqrt{4a^2+a^2}}{2}\quad \text{舍去}\]
+$\therefore\quad x=\frac{-a+\sqrt{4a^2+a^2}}{2}=\sqrt{a^2+\left(\frac{a}{2}\right)^2}-\frac{a}{2}$
+
+此线段$x$可作，故$G$点也可作出来。
+\end{analyze}
+
+作法：（图5.15）。
+\begin{enumerate}
+\item 作$\overline{ED}\bot\overline{AB}$, 使$\overline{BD}=\frac{1}{2}\overline{AB}$
+\item 在$\overline{DA}$上截取$\overline{DE}=\overline{DB}$,\item 在$\overline{AB}$上截取$\overline{AG}=\overline{AE}$, $G$点即为所求作的点。
+\end{enumerate}
+
+\begin{proof}
+    设$\overline{AB}=a$, 由作法有，
+\[\begin{split}
+    \overline{AG}&=\overline{AE}=\overline{AD}-\overline{ED}\\
+&=\sqrt{\overline{AB}^2+\overline{BD}^2  }-\overline{BD}=\sqrt{a^2+\left(\frac{a}{2}\right)^2}-\frac{a}{2}\\
+\overline{GB}&=\overline{AB}-\overline{AG}=a-\left(\sqrt{a^2+\left(\frac{a}{2}\right)^2}-\frac{a}{2}\right)\\
+&=\frac{3}{2}a-\sqrt{a^2+\left(\frac{a}{2}\right)^2}
+\end{split}\]
+$\therefore\quad \overline{AB}\cdot \overline{GB}=a\left(\frac{3}{2}a-\sqrt{a^2+\left(\frac{a}{2}\right)^2}\right)$
+
+由于：
+\[\begin{split}
+    \overline{AG}^2&=\left(\sqrt{a^2+\left(\frac{a}{2}\right)^2}-\frac{a}{2}\right)^2\\
+&=a^2+\left(\frac{a}{2}\right)^2-2\x\frac{a}{2}\x \sqrt{a^2+\left(\frac{a}{2}\right)^2}+\left(\frac{a}{2}\right)^2\\
+&=\frac{3}{2}a^2-a\sqrt{a^2+\left(\frac{a}{2}\right)^2}\\
+&=a\left(\frac{3}{2}a-\sqrt{a^2+\left(\frac{a}{2}\right)^2}\right)
+\end{split}
+    \]
+$\therefore\quad \overline{AG}^2=\overline{AB}\cdot \overline{BG}$
+
+故$G$点为所求之点。
+\end{proof}
+
+讨论：由分析可知，满足条件的$\overline{AG}$总有一个，所以$G$
+点总能作出一个，故此题有一解也只有一解。
+
+由于
+\[\overline{AG}=\sqrt{a^2+\left(\frac{a}{2}\right)^2}-\frac{a}{2}=\frac{\sqrt{5}}{2}a-\frac{1}{2}a=\frac{\sqrt{5}-1}{2}a\approx 0.618 a\]
+所以$\overline{AG}$是$\overline{AB}$被$G$点分成的两段中，较长的一段，这种作图通常叫做分已知线段成“\textbf{中
+外比}”，又叫做\textbf{黄金分割}。
+
+\begin{example}
+    在已知圆中，作内接正十边形。
+
+已知：$\odot(O,r)$(图5.17).
+
+求作：$\odot O$的内接正十边形。
+\end{example}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\draw (0,0) circle (2.5);
+\tkzDefPoint(0,0){O}
+\foreach \x/\xtext in {0/D,1/E,2/F,3/G,4/H,5/I,6/J,7/A,8/B,9/C}
+{
+    \tkzDefPoint(\x*36:2.5){\xtext}
+    \tkzDrawPoint(\xtext)
+    \tkzAutoLabelPoints[center=O](\xtext)
+}
+\tkzDrawPolygon(A,B,C,D,E,F,G,H,I,J)
+\draw(O)--(A);
+\tkzDefPoint(-108:1.545){C'}  
+\tkzLabelPoints[left](O, C') \tkzDrawPoints(O, C')
+\tkzCompass[delta=10](A,B)
+\tkzCompass[delta=10](B,C)
+\tkzCompass[delta=10](C,D)
+\tkzCompass[delta=10](D,E)
+\tkzCompass[delta=10](E,F)
+\tkzCompass[delta=10](F,G)
+\tkzCompass[delta=10](G,H)
+\tkzCompass[delta=10](H,I)
+\tkzCompass[delta=10](I,J)
+\tkzCompass[delta=10](J,A)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.8]
+        \draw (0,0) circle (2.5);
+        \tkzDefPoint(0,0){O}
+        \tkzDefPoint(7*36:2.5){A}
+        \tkzDrawPoint(A)
+        \tkzAutoLabelPoints[center=O](A)
+        \tkzDefPoint(8*36:2.5){B}
+        \tkzDrawPoint(B)
+        \tkzAutoLabelPoints[center=O](B)
+        \draw(O)--(A)--(B);
+\tkzDefPoint(-108:1.545){C'}  
+\tkzLabelPoints[left](O, C') \tkzDrawPoints(O, C')
+\draw(C')--(B)--(O);
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
 
 
@@ -495,20 +1042,199 @@ $B$、$C$为两个顶点，求作一三角形，使第三个顶点与$B$的距
 
 
 
+\begin{analyze}
+    画一草图（图5.18），设$\overline{AB}$是$\odot O$的内接正十
+边形的一边，则
+\[\angle AOB=36^{\circ},\qquad \angle OAB=\angle OBA=72^{\circ}\]
+作$\angle OBA$的平分线交$\overline{OA}$于$C'$点，则
+\[\angle OBC'=\angle ABC'=\frac{1}{2}\angle OBA=36^{\circ}\]
+又知$\angle BC'A=180^{\circ}-\angle ABC'-\angle OAB$,
+
+$\therefore\quad \angle BC'A=72^{\circ},\quad 
+\overline{OC'}=\overline{BC'}=\overline{AB}$, 且
+$$\triangle OAE\backsim \triangle BAC',\quad \overline{OA}:\overline{AB}=\overline{AB}:\overline{AC'}$$
+
+即：$\overline{AB}^2=\overline{OA}\cdot \overline{AC'}$
+
+$\therefore\quad \overline{OC'}^2=\overline{OA}\cdot \overline{AC'}$
+\end{analyze}
+
+这个结果告诉我们，$C'$点恰好把半径$\overline{OA}$分成中外比且
+$\overline{OC'}$是较长的一段。故应用黄金分割法由已知圆的半径作出
+正十边形的边长，从而圆内接正十边形可以作出来。
+
+作法 (图5.17).
+\begin{enumerate}
+\item 作半径$\overline{OA}$.
+\item 作$C'$点分$\overline{OA}$成中外比，使$\overline{OC'}$为较长的一段，
+\item 以$A$为起点，顺次作$\odot O$的弦$\overline{AB}$、$\overline{BC}$、$\overline{CD}$、
+$\overline{DE}$、$\overline{EF}$、$\overline{FG}$、$\overline{GH}$、$\overline{HI}$、$\overline{IJ}$、$\overline{JA}$, 且使它们都
+等于$\overline{OC'}$, 则$ABCDEFGHIJ$为所求作的圆内接正十边形。
+\end{enumerate}
 
 
 
+\begin{proof}
+    （略）
+\end{proof}
+
+讨论：由分析可知一个圆内接正十边形的边长等于一个
+定值，所以此问题有一解。
+
+我们把圆十等分后，把相
+间的五个分点用弦顺次连结，
+就可作出圆内接正五边形，把
+正五边形的五条对角线都作出
+来，然后去掉各边剩下的图形
+就是正五角星了（图5.19）。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=.8]
+\draw (0,0) circle (2.5);
+\tkzDefPoint(0,0){O}
+\foreach \x/\xtext in {0/A,1/B,2/C,3/D,4/E}
+{
+    \tkzDefPoint(18+\x*72:2.5){\xtext}
+    \tkzDrawPoint(\xtext)
+ %   \tkzAutoLabelPoints[center=O](\xtext)
+}
+\tkzDrawPolygon[dashed](A,B,C,D,E)
+\tkzDrawSegments(A,C C,E B,D B,E A,D)
+
+\foreach \x/\xtext in {0/A1,1/B1,2/C1,3/D1,4/E1}
+{
+    \tkzDefPoint(54+\x*72:2.5){\xtext}
+   % \tkzAutoLabelPoints[center=O](\xtext)
+}
+\tkzCompass[delta=10](A,A1)
+\tkzCompass[delta=10](A1,B)
+\tkzCompass[delta=10](B,B1)
+\tkzCompass[delta=10](B1,C)
+\tkzCompass[delta=10](C,C1)
+\tkzCompass[delta=10](C1,D)
+\tkzCompass[delta=10](D,D1)
+\tkzCompass[delta=10](D1,E)
+\tkzCompass[delta=10](E,E1)
+\tkzCompass[delta=10](E1,A)
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+通过以上三例，我们看出，用代数法解作图题的一般步
+骤：
+\begin{itemize}
+    \item 首先要分析解决这个问题需要作出哪条线段，并用$x$
+表示；
+\item 其次依照题中所给的条件和图形的性质，列出关于$x$
+的方程；
+\item 第三步，解这个方程（不合题意的根舍去）；
+\item 第四
+步，依照方程的根的表示式，作出未知线段$x$; 
+\item 第五步，完
+成作图。即得所求作的图形。
+\end{itemize}
 
 
 
+\begin{ex}
+\begin{enumerate}
+    \item 已知线段$a$、$b$ ($a>b$), 求作下列线段$x$
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $x=\frac{ab}{a+b}$
+        \item $x=\sqrt{4a^2+b^2}$
+        \item $x=\sqrt{a^2-\frac{b^2}{4}}$
+        \item $x=\sqrt{a^2+3b^2}-\frac{b}{2}$
+    \end{enumerate}
+\end{multicols}
+    \item 求作已知三角形的相似形，使它的面积等于已知三角形
+    面积的三分之二。
+    \item 从圆外一定点求作圆的一条割线，使它的圆外部分同圆
+    内部分相等。
+    \item 求作一正方形，使它同已知长方形等积。
+    \item 在已知梯形中，求作底的平行线，平分已知梯形的面积。
+    \item 作一圆的内接正五边形（只用尺、规）。
+    \item 经过圆内一点作一条弦，使这个点是这条弦的一个三等
+分点。
+\end{enumerate}
+\end{ex}
 
 
+\section*{习题5.2}
+\begin{enumerate}
+    \item 已知线段$a$、$b$、$c$且$a>b$, 求作线段$x=\sqrt{a^2-b^2}+c$.
+    \item 已知五条线段$a$、$b$、$c$、$d$、$e$, 求作线段$x=\frac{abc}{de}$。
+    \item 已知线段$a$, 求作一条线段$x=\frac{\sqrt{5}-1}{2}a$
+    \item 已知线段$a$、$b$, 且$a>b$, 求作$a+b$和$a-b$的比例中
+    项。
+    \item 求作与一个已知圆相切于已知点，且经过已知圆外的一
+    个定点的圆。
+    \item 已知三角形的一边长是3cm, 这边上的中线长4cm, 这边
+    的对角是$65^{\circ}$, 求作这个三角形。
+    \item 已知一边和这边上的中线及另一边上的高线，求作这个
+    三角形。
+    \item 求作一个三角形，使它同已知三角形等积，又同另一个
+    已知的三角形相似。
+    \item 求作直径是$d$的圆内接矩形，使它的面积等于每边是$a$
+    的已知正方形面积（提示：设矩形的长、宽各为$x$、$y$,
+    列出含有$x$、$y$的方程组解之）。
+    \item 从已知圆外的一个已知点，作圆的割线，使它在圆外的
+    部分与圆内的部分的比是$1:2$.
+    \item 求作过两定点，且在一条定直线上截取定长弦的圆
+    （提示：利用切割线定理）。
+\end{enumerate}
 
+\section*{复习题五}
 
-
-
-
-
+\begin{enumerate}
+    \item 连结一定直线上的点和线外一定点的线段，求这线段中
+    点的轨迹。
+    \item 求具有公共底边，且这边上的高相等的三角形顶点的轨
+    迹。
+    \item 三定点$A$、$B$、$C$在一直线上，且$\overline{AB}=\overline{BC}$, 求与$A$、$B$
+    两点和与$B$、$C$两点连线夹角相等点的轨迹。
+    \item 从一定点$A$向通过另一定点$B$的动直线引垂线，求垂足
+    $P$的轨迹。
+    \item 求到两定点$A$、$B$的距离的平方和等于$\overline{AB}^2$
+    的点的轨迹。
+    \item 求到一定圆引切线，切线长等于定长的点的轨迹。
+    \item 求对相交的两定圆有等幂的点的轨迹。
+    \item 求到两定点$A$、$B$平方差等于$\overline{AB}^2$的点的轨迹。
+    \item 已知三点$A$、$B$、$C$在一条直线上，求与$A$、$B$两点和$B$、
+   $ C$两点连线夹角相等的点的轨迹。
+    \item 求作一个圆使和两条已知平行线都相切，并且经过两平
+    行线间一个已知点。
+    \item 已知$\odot(O_1,1.5{\rm cm})$, $\odot(O_2,1{\rm cm})$, 圆心间的距离
+    $\overline{O_1O_2}=4{\rm cm}$, 求作一圆，使它的半径等于1.3cm, 并且
+    和$\odot O_1$与$\odot O_2$都外切。
+    \item 已知$\odot(O_1,1.4{\rm cm})$, $\odot(O_2,1{\rm cm})$, $\overline{O_1O_2}=3{\rm cm}$, 求
+    作一个圆，使它的半径为3.2cm, 并且和$\odot O_1$与$\odot O_2$都相内切。
+    \item 已知线段$a$, 求作线$x=\sqrt{3a}$, $y=\sqrt{12a}$.
+    \item 已知线段$x$与$y$满足方程组：
+    \[\begin{cases}
+        \frac{x+y}{2}=a\\
+        \sqrt{xy}=b
+    \end{cases}\qquad (a>b)\]
+    求作线段$x$和$y$. 
+    \item 作一个三角形具有已知的周长，并和一个已知三角形相
+似。
+\item 求作$\triangle ABC$的内接正方形，使正方形的一边位于$\overline{AB}$边
+上，另外两个顶点各在$\overline{AC}$边和$\overline{BC}$边上。
+\item 在已知正方形$ABCD$内作内接正方形，使内接正方形的
+四个顶点分别在正方形的各边上，且使它的边长等于定
+长$b$.
+\item 把任一个三角形改为等边三角形，使它的面积不变。
+\item 求作三个两两外切的圆，使它们的半径分别等于1cm,
+ 2cm, 3cm.
+\item 作一个正五角星（只画出图形）．
+\item 已知$A$、$B$、$C$为定直线$\ell$上的三个定点，求作$\odot A$、
+$\odot B$、$\odot C$使它们两两均相切，但不切于同一点。
+\item 在已知矩形内作两个互相外切的等圆，使各切于这矩形
+一组对角的两边。
+\end{enumerate}
 
 
 

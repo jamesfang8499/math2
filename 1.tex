@@ -689,11 +689,62 @@ $a, b$, 它们的长度比值是否总是一个分数（整数也可看作
 边和面就不密合了。这就是说并不是在任何位置上直尺的边
 总和这个面密合，这个面不是一个平面，实际上是一个曲
 面。
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+	\includegraphics[scale=.8]{fig/1-18.png}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+	\includegraphics[scale=.8]{fig/1-19.png}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
 在几何学的讨论中，平面就是一个到处平直而且向各个
 方向无限延展的面，它的特点就是在它上面任取两点$A$和$B$
 （图1.20），直线$AB$就完全在这个平面内。
 
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, yscale=1.5, x={(0:1cm)}, y={(60:.5cm)}]
+
+\draw (0,0)--(4,0)--(4,3)--(0,3)--(0,0);
+\foreach \x in {.5,1.5,...,3.5}
+{
+	\draw[->](\x,0)--(\x,-1);
+	\draw[->](\x,3)--(\x,4);
+}
+\foreach \x in {.5,1.5,2.5}
+{
+	\draw[->](0,\x)--(-1,\x);
+	\draw[->](4,\x)--(5,\x);
+}
+
+\tkzDefPoints{1/2.2/A, 2.8/.75/B}
+\tkzDrawLine(A,B)
+\tkzDrawPoints(A,B)
+\tkzLabelPoints[right](A,B)
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\draw(0,0) rectangle (2,3);
+\draw[fill=white](0,0)--(-30:1.8)--+(0,3)--(0,3)--(0,0);
+\draw(0,0)--(-140:1.5)--+(0,3)--(0,3);
+\draw[dashed,->](0,0)--(0,-1);
+\draw[dashed](0,0)--(2,0);
+\draw[dashed,->](0,3)--(0,4)node[right]{$\ell$};
+\node at (0,1.5)[right]{门轴};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
 我们观察一扇门，把它看作平面的一部分，那么它的轴
 线既在墙壁的平面内（图1.21），又在这扇门所在的平面
@@ -745,17 +796,763 @@ $a, b$, 它们的长度比值是否总是一个分数（整数也可看作
 	出$\overline{AB}$所表示的这根铁棍的中点来？
 	\item 请同学们复习一下小学学过的公制、市制两种长度单位，
 	并填下表：
+	\begin{center}
+\begin{tabular}{ll}
+	1公里(km)$=\underline{\qquad}$米(m) &\qquad 1里$=\underline{\qquad}$丈\\
+1米(m)$=\underline{\qquad}$分米(dm)&\qquad 1丈$=\underline{\qquad}$尺\\
+1分米(dm)$=\underline{\qquad}$厘米(cm)&\qquad 1尺$=\underline{\qquad}$寸\\
+1厘米(cm)$=\underline{\qquad}$毫米(mm)&\qquad 1寸$=\underline{\qquad}$分
+\end{tabular}		
+	\end{center}
 
+	\item 	求出下列结果，并化成括号中指定的长度单位：
+\begin{enumerate}
+\item 5尺4寸5分 $+$ 3尺4寸 $+$ 6尺7寸8分$=\underline{\qquad}$（米）；
+\item 46厘米 $+$ 1米60厘米 $+$ 7米50厘米$=\underline{\qquad}$（尺）；
+\item 4丈5尺6寸$\x3=\underline{\qquad}$（米）；
+\item 5米40厘米$\div 1000=\underline{\qquad}$（毫米）；
+\item 20mm$\x0.1\%=\underline{\qquad}$（m）
+\end{enumerate}
 
+\item 在一条直线上，顺次取$A$、$B$、$C$三点，使$\overline{AB}=4$cm, $\overline{BC}=2$cm, 并且取$\overline{AC}$的中点$O$, 求：
+\begin{multicols}{3}
+	\begin{enumerate}
+		\item $\overline{AO}$的长
+		\item $\overline{OB}$的长
+		\item $\overline{OC}$的长
+	\end{enumerate}
+\end{multicols}
 
+\begin{figure}[htp]
+	\centering
+	\begin{tikzpicture}
+	\draw (0,0)--(8,0);
+\tkzDefPoints{1/0/A,5/0/B,7/0/C, 4/0/O}
+\tkzDrawPoints(A,B,C,O)
+\tkzLabelPoints[below](A,B,C,O)	
+	\end{tikzpicture}
+	\caption*{第5题}
+\end{figure}
 
+\item 把一条32cm的线段分成三段，中间的一段长为8cm,问
+第一段中点到第二段中点的距离等于多少cm?
+\item 图中表明四个点可以确定一条、四条或者六条直线。试
+划图说明五个点可以确定1、5、6、8或10条直线（其它情
+况不存在）。
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+	\begin{scope}
+		\draw (0,0)--(5,0);
+		\tkzDefPoints{1/0/P_1,2/0/P_2,3/0/P_3, 4/0/P_4}
+		\tkzDrawPoints(P_1,P_2,P_3,P_4)
+		\tkzLabelPoints[above](P_1,P_2,P_3,P_4)	
+	\end{scope}
+	\begin{scope}[yshift=-2cm]
+		\tkzDefPoints{1/0/P_2,2/0/P_3,3/0/P_4, 2/-1/P_1}
+		\tkzDrawLines[add=.8 and .8](P_2,P_4 P_3,P_1 P_2,P_1 P_1,P_4)
+		\tkzDrawPoints(P_1,P_2,P_3,P_4)
+		\tkzLabelPoints[above right](P_1,P_2,P_3,P_4)	
+	\end{scope}
+	\begin{scope}[yshift=-2cm, xshift=6cm]
+		\tkzDefPoints{.5/0/P_1,3.5/0/P_3,2/1.5/P_4, 2/-1.5/P_2}
+		\tkzDrawLines[add=.5 and .5](P_2,P_4 P_3,P_1 P_2,P_1 P_1,P_4 P_2,P_3 P_3,P_4)
+		\tkzDrawPoints(P_1,P_2,P_3,P_4)
+		\tkzLabelPoints[above right](P_1,P_2,P_3,P_4)
+	\end{scope}
+\end{tikzpicture}
+	\caption*{第7题}
+\end{figure}
 
+\item 在三角形$ABC$的$\overline{BC}$边上如果取$n$个点$P_1,P_2,P_3,\ldots,P_n$，
+并把这$n$个点分别和$A$点连结起来，就出现很多三角形，
+试研究三角形的总数有多少？（原来的三角形$ABC$也包括
+在内）。
 
-
-
-
+（提示：$\overline{BC}$上每一条线段都
+可与$A$点构成一个三角形，因此
+求三角形的总数实际上就是求
+$\overline{BC}$上线段的总数）。
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/B, .5/0/P_1,1.5/0/P_2,3/0/P_n, 4/0/C, 1.5/2/A}
+	\tkzLabelPoints[below](P_1,P_2,P_n,B,C)	
+	\tkzDrawSegments(A,B A,P_1 A,P_2 A,P_n A,C B,C)
+	\tkzLabelPoints[above](A)	
+\end{tikzpicture}
+	\caption*{第8题}
+\end{figure}
 
 \end{enumerate}
+
+\section{方向、角度与平行}
+\subsection{方向与角}
+当我们在平坦的操场上要从一个位置（以$A$点表示）走
+到另一个位置（以$B$点表示），经验告诉我们最省事的走法
+是：“由$A$点朝向$B$点一直走”。（图1.22）
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[>=latex, yscale=.6]
+\draw(1,4)--(7,4)--(6,0)--(0,0)--(1,4);
+\draw[->](1,1)node[left]{$A$}--(1.5,1.25);
+\draw[->](2,1.5)--(2.5,1.75);
+\draw[->](3,2)--(3.5,2.25);
+\draw[->](4,2.5)--(4.5,2.75);
+\draw[->](5,3)--(5.5,3.25)node[right]{$B$};
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+上面这种常用的走法，很明显地突出了“方向”这个常
+用的基本几何概念。再设想我们是正在茫茫大海中航行的船
+的舵手，或者是一架越洋飞行的飞机的驾驶员，那么“方向”这
+个概念就更是至关紧要的了！因为“航行的方向”是我们随
+时要确切掌握的要素！
+
+现在让我们就上面的实例，对于所涉及的“方向”这个
+概念的直观含义，稍加分析。
+
+假如我们从操场的$A$点走向$B$点去（图1.23），最省事
+的“通路”当然就是$\overline{AB}$（因为它是最短的通路）。所以
+我们先站在$A$点，向$B$点望一望，头脑中抽象地计画了所要
+走的路线应该是直线段（图中虚线所示）。然后便一步步
+地沿着设想的路线$\overline{AB}$向$B$点一直走。从几何的观点看，每跨
+一步就沿着某一个方向做了一个和自己步幅等长的“有向线
+段”。所以说，“由$A$点朝向$B$点一直走的走法”就是每一
+步都是沿着$\overline{AB}$这个固定的方向走的那种走法。
+
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[>=latex, yscale=.6]
+	\draw(1,4)--(7,4)--(6,0)--(0,0)--(1,4);
+	\draw[->](1,1)node[left]{$A$}--(1.5,1.25);
+	\draw[->](2,1.5)--(2.5,1.75);
+	\draw[->](3,2)--(3.5,2.25);
+	\draw[->](4,2.5)--(4.5,2.75);
+	\draw[->](5,3)--(5.5,3.25)node[right]{$B$};
+	\draw[dashed](1,1.2)--(5.5,3.45);
+\node at (4,2.7)[above]{$P_n$};
+\node at (4.5,2.95)[above]{$P_{n+1}$};
+
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+在由$A$点可以直接看到$B$点的情形下，要保持每一步的
+方向都是正对着$B$点的方向是很简单的。因为我们随时可以用
+目光把行进中的位置（图1.23中的$P_n$点）和$B$点连一条直
+线，这条直线的方向也就是下一步（图1.23中的$P_nP_{n+1}$)
+所要走的方向。但是在另外两个设想的航海和飞行的实例
+中，目的地是遥远而看不到的，而计划中要走的航线，所经
+过的绝大部分都是“漫无边际”的海洋和天空，毫无可供
+“瞄准”的标志。所以要随时保持航行的方向的正确性就变
+成确保安全到达目的地的最重要的依据了。
+
+由$A$点出发，沿着一个固定的方向（比如向着$B$点的方
+向）前进时，它的路线就是一条\textbf{射线}。如图1.24所示，
+它就是居于$A$点右侧的那条半直线。
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+       \draw[->, thick](0,0)--(3,0);
+	   \draw[dashed](-2,0)--(0,0);
+	   \tkzDefPoints{0/0/A,1.5/0/B}
+	   \tkzDrawPoints(A,B)
+	   \tkzLabelPoints[below](A,B)		   
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+      \draw[->, thick](0,0)node[left]{顶点}--node[below]{边}(4,0);
+	  \draw[->, thick](0,0)--node[above]{边}(30:4);
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+所以我们把直线上一点一旁的部分叫做\textbf{射线}，这一点叫
+做射线的\textbf{端点}。例如射线$AB$（图1.24）。（注意：表示射
+线时，射线的端点字母必须写在前面）。在几何中，我们把
+以$A$点为端点的一条射线看作是由$A$点出发的一个方向。
+
+我们把从同一端点引出的两条
+射线所组成的图形叫做\textbf{角}，这个共同的端点叫做角的\textbf{顶点}，这两条射线分别叫做角的\textbf{边}。我们把角看成
+是由构成这个角的两条射线所表示的方向差（图1.25）。
+
+一个角通常用符号“$\angle$”（读作角）后边带三个大写字
+母来表示，中间一个字母表示角的顶点，两旁的两个字母分
+别表示角的两边上的任意点，如图1.26(1)中的角可记作
+$\angle AOB$, 读作“角$AOB$”。如果用一个点作顶点的角只有
+一个，这个角也可以只用表示顶点的那个大写字母来表示，
+如图1.26(1)的$\angle AOB$也可表示为$\angle O$。有时，为了方
+便，还可以在角的里面靠近顶点写个数字、或小写希腊字
+母表示角，如图1.26(2)(3)中的$\angle 1$、$\angle 2$、$\angle 3$和$\angle \alpha$、$\angle \beta$、$\angle \gamma$等。
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[scale=2]
+\begin{scope}
+\draw(-1,.5)node[left]{$A$}--(0,0)node[right]{$O$}--(-1,-.5)node[left]{$B$};
+\node at (-.5,-1){(1)};
+\end{scope}
+\begin{scope}[xshift=1.3cm]
+	\tkzDefPoints{0/.5/O, -1/-.5/A, -.5/-.7/B, .5/-.7/C, 1/-.5/D}
+	\tkzDrawSegments(O,A O,B O,C O,D)
+	\tkzMarkAngles[mark=none, size=.4](A,O,B C,O,D)
+	\tkzLabelAngle[pos=.5](A,O,B){1}
+	\tkzLabelAngle[pos=.5](B,O,C){2}
+	\tkzLabelAngle[pos=.5](C,O,D){3}
+	\tkzMarkAngles[mark=none, size=.3](B,O,C)
+	\node at (0,-1){(2)};
+\end{scope}
+\begin{scope}[xshift=3.5cm]
+	\tkzDefPoints{0/0/O, -1/.5/A, 1/-.5/B, 1/.5/C, -1/-.5/D}
+	\tkzDrawSegments(A,B C,D)
+	\tkzMarkAngles[mark=none, size=.2](C,O,A D,O,B)
+	\tkzMarkAngles[mark=none, size=.3](A,O,D)
+	\tkzLabelAngle[pos=.3](D,O,B){$\gamma$}
+	\tkzLabelAngle[pos=.4](A,O,D){$\beta$}
+	\tkzLabelAngle[pos=.3](C,O,A){$\alpha$}
+	\node at (0,-1){(3)};
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+当一个角的两条边重合时，其夹角显然为$O$（即方向
+没有差别）。另外一种特殊情形是当角的一边是另一边的反
+向延长线时，就称这个角为\textbf{平角}。
+如图1.27中射线$CA$和射线$CB$的
+方向相反，那么$\angle ACB$就是一个平角。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\draw[<->](0,0)--(5,0);
+\tkzDefPoints{1/0/B,2.5/0/C,4/0/A}
+		\tkzDrawPoints(A,B,C)
+		\tkzLabelPoints[below](A,B,C)	
+		\draw[->](3,0) arc (0:180:.5);
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.7]
+    \foreach \x in {-20,-10,...,20}
+	{
+		\draw(0,0)--(\x:5);
+	}
+	\draw[->](0,0)node[left]{$A$}--(30:5);
+	\draw[->](0,0)--(-30:5);
+\node at (30:3)[above]{$C$};
+\node at (-30:3)[below]{$B$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+根据上述，我们可以把日常常用的“方向”和角这两个
+概念，给以如下的说明：
+\begin{enumerate}
+\item 自定点$A$出发的所有方向和以$A$点为端点的所有
+射线之间一一地相对应。换句话说，对应于自$A$点出发的一
+个方向，就有唯一的一条射线（它就是自$A$点出发沿着这个
+固定方向一直走的路线）；反之任何一条以$A$点为端点的射
+线也就唯一地表示了一个确定的方向。所以在几何学中，我
+们以一条射线表示一个方向。
+\item 一条以$A$为端点的射线，由起始的任何一小段唯
+一确定（因为整个射线只是那一小段沿着那个方向的无限延
+伸），所以自$A$点出发的一个方向实可以用它所对应的那
+条射线开头的任何一小段所表示。
+\item 设射线$AB$和$AC$分别表示由$A$点出发的两个方
+向，那么$\angle BAC$的直观含义就是射线$AB$和$AC$所表示的那
+两个方向的差。
+\item 除了零角和平
+角的特殊情形，如$A$、$B$、$C$
+三点不共线，我们把射线
+$AB$由原来的位置沿着
+平面绕$A$点旋转到射线$AC$的位置所“扫过的区
+域”叫做$\angle BAC$的\textbf{内部}，
+角的内部也可以叫做\textbf{角区}（图1.28）。
+\end{enumerate}
+
+\begin{ex}
+\begin{enumerate}
+	\item 什么是射线？射线的直观含义是什么？
+	\item 什么是角？角的直观含义是什么？
+	\item 线段、射线、直线有什么区别？
+	\item 指出图中有几个角？并按图中字母把它们都写出来。
+	\item 把图中数字表示的角，改用大写字母表示。
+	\item 把图中用小写希腊字母表示的角，改用大写字母表示。
+	\item 指出图中有多少个角，并按图中字母把它们都写出来。
+	\item 已知（如图）$P$、$Q$两点分别在$\angle AOB$的两边上，试问是否存在不经过$\angle AOB$的内部，由$	P$到$Q$的最短通路？
+	\item 如果在射线$OA$上依次取5个点，
+	那么在射线$OA$上（包括射线$OA$
+	在内）共有多少条射线？如果依次取10个点，100个点那么在射线$OA$
+	上分别有多少条射线？如果在射线$OA$上取$n$个点，那么
+在射线$OA$上又有多少条射线？
+\item 如果在直线$\ell$上依次取3个点，那么直线$\ell$上有多少条射
+线？如果取100个点，那么直线$\ell$上有多少条射线？如果
+在$\ell$上依次取$n$个点，那么直线$\ell$上有多少条射线？
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.3\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 2/0/C, 1.5/2/A}
+\tkzDefMidPoint(A,C) \tkzGetPoint{D}
+\tkzDrawSegments(B,C A,B A,C B,D)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[right](A,D)
+    \end{tikzpicture}
+    \caption*{第4题}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.3]
+      \tkzDefPoints{0/0/O, 2/0/A, 1.75/.5/B, 1.5/1/C, 1.25/1.5/D}
+\tkzDrawSegments(O,A O,B O,C O,D)
+\tkzLabelPoints[right](A,D,B,C)
+\tkzLabelPoints[left](O)
+\tkzMarkAngles[mark=none, size=.7](A,O,B C,O,D)
+\tkzMarkAngles[mark=none, size=.9](A,O,C)
+\tkzMarkAngles[mark=none, size=1.3](A,O,D)
+\tkzLabelAngle[pos=1.5](A,O,D){4}
+\tkzLabelAngle[pos=1](A,O,C){2}
+\tkzLabelAngle[pos=.8](A,O,B){1}
+\tkzLabelAngle[pos=.8](C,O,D){3}
+    \end{tikzpicture}
+    \caption*{第5题}
+\end{minipage}
+	\begin{minipage}[t]{0.34\textwidth}
+		\centering
+		\begin{tikzpicture}[>=latex, scale=1]
+      \tkzDefPoints{0/0/B, 3/0/C, 1/2/A, 4/2/D,2/1/O}
+\tkzDrawSegments(B,C A,B A,C C,D A,D B,D)
+\tkzLabelPoints[below](B,C,O)	  
+\tkzLabelPoints[above](A,D)	
+\tkzMarkAngles[mark=none, size=.3](B,A,C A,O,B D,C,A)
+\tkzMarkAngles[mark=none, size=.2](D,O,A)
+\tkzLabelAngle[pos=.5](B,A,C){$\alpha$}
+\tkzLabelAngle[pos=.5](A,O,B){$\gamma$}
+\tkzLabelAngle[pos=.5](D,C,A){$\beta$}
+\tkzLabelAngle[pos=.4](D,O,A){$\delta$}
+		\end{tikzpicture}
+		\caption*{第6题}
+    \end{minipage}
+    \end{figure}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\foreach \x/\xtext in {30/E, 10/D, 0/C, -15/B, -30/A}
+{
+	\draw(0,0)--(\x:3)node[right]{$\xtext$};
+}
+\node at (-.2,0){$O$};
+    \end{tikzpicture}
+    \caption*{第7题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/O, 3/0/A, 1.5/0/P, 1/1/Q, 2/2/B}
+\tkzLabelPoints[below](O,P,A)
+\tkzLabelPoints[above](Q,B)
+\tkzDrawSegments(O,B O,A)
+\tkzDrawPoints(Q,P)
+    \end{tikzpicture}
+    \caption*{第8题}
+    \end{minipage}
+    \end{figure}
+
+
+
+
+\subsection{角度和旋转}
+在前面我们说明了可以用以$A$点为端点的一条射线来
+表示一个由$A$点出发的方向。设射线$AB$和$AC$分别表示一个
+由$A$点出发的两个方向，那么这两条射线所成的角也可以看
+作是一条以$A$点为端点的射线，从$AB$的位置沿着平面旋转
+到$AC$的位置而成的图形。象度量线段$\overline{PQ}$的长度就是度量表
+示$P$、$Q$这两个位置之间的距离一样；度量射线$AB$和$AC$所
+表示的这两个方向之间的差别也就是度量这两条射线之间所
+夹的“角度”。而角度也就可以看成是旋转量了。下面采用旋
+转的观点对于角度的度量再作一初步的探讨：
+
+\subsubsection{角度的大小}
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+\tkzDefPoint(2,0){B}	
+\tkzDefPoint(20:2){B'}
+\tkzDefPoint(45:2){C}
+\tkzDefPoint(100:1.8){C'}
+\tkzDefPoint(0,0){A}
+\tkzDrawPoints(B,C,B',C')
+\tkzLabelPoints[left](A,C',C)
+\node at (0,0)[below]{$A'$};
+\tkzLabelPoints[below](B',B)
+\tkzDrawLines[add=0 and .5, ->](A,B A,B' A,C A,C')
+\end{scope}
+\begin{scope}[xshift=5cm]
+\draw (0,0) rectangle (4,3);
+\tkzDefPoints{.5/1.5/A', 3/2.5/C', 3/.5/B'}
+\tkzDrawPoints(A',B',C')
+\tkzLabelPoints[below](A',C',B')
+\tkzDrawLines[add=0 and .2 ](A',B' A',C')
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+如图1.29所示，$\angle BAC$和$\angle B'A'C'$分别是以$A$和$A'$为
+顶点的两个角，用一张透明的塑胶片，先把它盖在$\angle B'A'C'$
+的上面，用笔把$\angle B'A'C'$复印到塑胶片上。然后把塑
+胶片移到$\angle BAC$的上面，调整其位置使得顶点$A$和顶点$A'$
+相重合；再用一个针插在$A$、$A'$点之上，这样，塑胶片仍然
+可以绕着针尖所插的$A'$点旋转，但是$A$、$A'$点依然确保重
+合。适当旋转可以使得两个角的边$AB$和$A'B'$重合，而且
+“角区”位于相重边的同侧（图1.30）。
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{0/0/A, 2/0/B', 3/0/B}
+	\tkzDefPoint(40:2.5){C}
+	\tkzDefPoint(60:2.5){C'}
+\tkzLabelPoints[below](A,B',B)
+\tkzLabelPoints[above](C,C')
+\tkzDrawLines[add=0 and .4 ](A,B A,C' A,C)
+\tkzDrawPoints(A,B',C',C)
+\node at (0,0)[left]{$A'$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+		\tkzDefPoints{0/0/A, 3/0/B}
+		\tkzDefPoint(40:3){C}
+		\tkzDefPoint(100:2.5){D}	
+		\tkzDrawLines[add=0 and .3 ](A,B A,C A,D)	
+		\tkzLabelPoints[below](A,C,B)
+		\tkzLabelPoints[left](D)
+		\tkzDrawPoints(A,B,C,D)
+		\tkzMarkAngles[mark=none,->, size=.6](B,A,C C,A,D)
+		\tkzMarkAngles[mark=none,->, size=.8](B,A,D)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+这样，两角之间有下列三种可能的位置关系：
+\begin{itemize}
+	\item 它们的另一边也重合，那么就说这两个角相等，记作
+	$\angle B'A'C'=\angle BAC$；
+	\item $A'C'$落在$\angle BAC$的内部，那么就说$\angle B'A'C'$小于$\angle BAC$, 记作$\angle B'A'C'<\angle BAC$；
+	\item $A'C'$落在$\angle BAC$的外部，那么就说$\angle B'A'C'$大于$\angle BAC$, 记作$\angle B'A'C'>\angle BAC$。
+\end{itemize}
+
+\subsubsection{两角的相加}
+如图1.31所示，$\angle BAC$和$\angle CAD$两个角的顶点相同，
+有一条边相重合（即射线$AC$），而且两者的角区分居于公共
+边的两侧，就说$\angle BAD$为$\angle BAC$和$\angle CAD$之和，即$\angle BAD=\angle BAC+\angle CAD$. 这时由等式的性质，又可知$\angle BAC=\angle BAD-\angle CAD$，$\angle CAD=\angle BAD-\angle BAC$。
+
+
+当两个角相加后是一个平角时，就说这两个角\textbf{互为补角}，
+其中一个角叫做另一个角的补角。简称为\textbf{互补}（图1.32(1)）。
+一个角如果和它的补角相等，这个角叫做\textbf{直角}（图1.32(2)）。
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{-2/0/A, 0/0/O, 2/0/B, -1.5/1.5/C}
+\tkzDrawSegments(A,B  C,O)
+\tkzMarkAngles[mark=none, size=.6](C,O,A)
+\tkzMarkAngles[mark=none, size=.4](B,O,C)
+\tkzLabelAngle[pos=.8](C,O,A){$\alpha$}
+\tkzLabelAngle[pos=.6](B,O,C){$\beta$}
+\node at (0,-.5){(1)};
+\end{scope}
+\begin{scope}[xshift=5cm]
+	\tkzDefPoints{-2/0/A, 0/0/O, 2/0/B, 0/2/C}
+	\tkzDrawSegments(A,B  C,O)
+	\tkzMarkRightAngle[size=.3](C,O,A)
+	\tkzMarkRightAngle[size=.2](B,O,C)
+	\node at (0,-.5){(2)};
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+小于直角的角叫做\textbf{锐角}，大于直角小于平角的角叫做\textbf{钝
+角}。如图1.33所示，$\angle AOB$为锐角，$\angle CPD$为钝角。
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+\tkzDefPoints{3/0/A, 0/0/O, 1.8/1.8/B, 0/2/C}
+\tkzDrawSegments(A,O B,O)
+\tkzDrawSegments[dashed](C,O)
+\tkzMarkAngles[mark=none, size=.6,->](A,O,B)
+\tkzLabelPoints[below](A,O,B)
+\node at (1.5,-.75){(1)};
+\end{scope}
+\begin{scope}[xshift=7cm]
+	\tkzDefPoints{-2/0/A, 0/0/P, 2/0/C, -1.8/1.8/D, 0/2/E}
+	\tkzDrawSegments[dashed](A,P P,E)
+	\tkzDrawSegments(C,P P,D)
+	\tkzMarkAngles[mark=none, size=.4,->](C,P,D)
+	\tkzLabelPoints[below](C,P,D)
+	\node at (0,-.75){(2)};
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+如果两个角相加的和等于直角，这两角叫做互为余角。
+其中一个角叫做另一个角的余角。例如图1.34中的$\angle\alpha+\angle\beta=$直角，则$\angle\alpha$、$\angle\beta$互为余角。
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+\tkzDefPoints{2/0/A, 0/0/O}
+\tkzDefPoint(30:1.8){B1}
+\tkzDrawSegments(A,O B1,O)
+\tkzMarkAngles[mark=none, size=.6](A,O,B1)
+\tkzLabelAngle[pos=.8](A,O,B1){$\alpha$}
+\end{scope}
+\begin{scope}[xshift=4cm]
+	\tkzDefPoints{2/0/A, 0/0/O}
+\tkzDefPoint(60:1.8){B2}
+\tkzDrawSegments(A,O B2,O)
+\tkzMarkAngles[mark=none, size=.6](A,O,B2)
+\tkzLabelAngle[pos=.8](A,O,B2){$\beta$}
+\end{scope}
+\begin{scope}[xshift=8cm]
+	\tkzDefPoints{2/0/A, 0/0/O, 0/2/C}
+\tkzDefPoint(30:1.8){B1}
+\tkzDrawSegments(A,O B1,O O,C)
+\tkzMarkAngles[mark=none, size=.6](A,O,B1)
+\tkzLabelAngle[pos=.8](A,O,B1){$\alpha$}
+\tkzMarkAngles[mark=none, size=.5](B1,O,C)
+\tkzLabelAngle[pos=.8](B1,O,C){$\beta$}
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\subsubsection{角的度量与量角器}
+角的度量和线段的度量的做法基本上是相同的。也是先
+取定一个角度单位，然后用这个单位，或把它适当等分所得
+的分单位去和一个要量的角来比较大小。常用的单位是把一
+个平角分成180等份，其中一份叫做1度；再把1度分成60
+等份，其中一份叫做1分；再把1分分成60等份，其中一份叫
+做1秒。常用的符号是在数字的右上角上标以“${}^{\circ}$”表示
+度，“$'$”表示分，
+“$''$”表示秒。例如：35度12分30秒就
+写成$35^{\circ}12'30''$。
+
+平角$=180^{\circ}$, 平角的二等分角（即平角的一半）就是直
+角，直角$=90^{\circ}$. 四个直角相加得一周角，周角$=360^{\circ}$.
+
+\begin{figure}[htp]
+	\centering
+	\begin{tikzpicture}[scale=.9]
+\draw(-5,0) rectangle (5,-.5);	
+\foreach \x in {.5, 2.5,3.5,5}
+{
+	\draw(\x ,0) arc (0:180:\x );
+}
+\foreach \x in {0, 10,20,...,170,180}
+{
+	\draw (\x:0.7)--(\x:2.6);
+	\draw (\x:3.2)--(\x:3.9);
+	\draw (\x:4.7)--(\x:5);
+	\node[rotate=-90+\x] at (\x:2.9){\tiny \x};
+	\node[rotate=90-\x] at (180-\x:4.3){\small \x};
+}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+
+度量长度的常用工具是刻有等分刻度的直尺，相应地度
+量角度的常用工具是图1.35所示的量角器。量角器是一个
+具有180个等分刻度的半圆形塑胶板，当我们要去量一个给
+定的角的角度时，先把顶点和这个半圆板的圆心叠合，然后
+使得直径和角的一边相重合；那么角的另一边通过半圆的位
+置的刻度就是所量角度的近似值。如图1.36中的$\angle BAC$,
+$AB$与$0^{\circ}$线重合，$AC$恰好落在$40^{\circ}$的刻度上，所以$\angle BAC=40^{\circ}$.
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[>=latex]
+\draw (-4,0)--(4,0)node[right]{$B$};
+\draw (2.5,0) arc (0:180:2.5);
+\draw (3,0) arc (0:180:3);
+\draw(0,0) --(40:4)node[right]{$C$};
+\node at (-.2,0)[above]{$O$};
+\draw(0,0)--(0,2.5)node[above]{$90$};
+\draw[->](3.2,0) arc(0:40:3.2);
+\node at (20:3.5)[fill=white]{$40^{\circ}$};
+\draw(-3,-.25)--node[below]{$A$}(3,-.25);
+
+\end{tikzpicture}	
+	\caption{}
+\end{figure}
+
+\begin{example}
+	求$30^{\circ}19'21''$与$18^{\circ}40'42''$的和。
+\end{example}
+
+\begin{solution}
+\[30^{\circ}19'21''+18^{\circ}40'42''=48^{\circ}59'63''=49^{\circ}3''\]
+\end{solution}
+
+\begin{example}
+	把$3.62^{\circ}$化成度、分、秒。
+\end{example}
+
+\begin{solution}
+$\because\quad 1^{\circ}=60',\qquad \therefore\quad 0.62^{\circ}=60'\x 0.62=37.2'$
+
+$\because\quad 1'=60'',\qquad \therefore\quad 0.2'=60''\x 0.2=12''$
+
+$\therefore\quad 3.62^{\circ}=3^{\circ}37'12''$
+\end{solution}
+
+\begin{example}
+	把$15^{\circ}18'15''$化为度。
+\end{example}
+
+
+\begin{solution}
+	先把$15''$化为分：
+\[\frac{15''}{60''}=0.25'\]
+$\therefore\quad 18'15''=18.25'$。
+再把$18.25'$化为度：
+\[\frac{18.25'}{60'}\approx 0.304^{\circ}\]
+$\therefore\quad 15^{\circ}18'15''\approx 15.304^{\circ}$.
+\end{solution}
+
+\subsubsection{对顶角相等和两条直线互相垂直}
+
+如图1.37所示 直线$AB$和$CD$相交于$O$点，这时，
+$\angle AOC$和$\angle BOD$中$OA$和$OB$, $OC$和$OD$都互为反向延长
+线。象这样，一个角的两边分别是另一个角的两边的反向延
+长线时，我们就称这两个角为\textbf{对顶
+角}。
+
+如果两个角是对顶角，那么它
+们之间有什么关系呢？由图1.37
+可知，$\angle AOC$和$\angle AOD$互为补
+角，即$\angle AOC+\angle AOD=180^{\circ}$;
+$\angle BOD$和$\angle AOD$也互为补角，即$\angle BOD+\angle AOD=180^{\circ}$,
+因而$\angle AOC+\angle AOD=\angle BOD+\angle AOD$, 所以，$\angle AOC=\angle BOD$.
+
+总结上述事实就成为下述性质：
+\textbf{对顶角相等}
+
+\begin{example}
+	如果两条直线$AB$、$CD$相交于$O$点（图1.37），
+$\angle AOC=40^{\circ}$, 求$\angle BOD$, $\angle AOD$, $\angle COB$的度数。
+\end{example}
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\tkzDefPoints{-2/.75/A, 2/-.75/B, -2/-.75/C, 2/.75/D,0/0/O}
+\tkzLabelPoints[above](A,B,C,D,O)
+\draw(A)--(B);
+\draw(C)--(D);
+\tkzMarkAngles[mark=none, size=.5](A,O,C B,O,D)
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{solution}
+	两条直线$AB$、$CD$相交于$O$点
+
+$\therefore\quad \angle AOC$和$\angle BOD$是对顶角，
+$\therefore\quad \angle AOC=\angle BOD$（对顶角相等）。
+
+$\because\quad \angle AOC=40^{\circ}$
+
+$\therefore\quad \angle BOD=40^{\circ}$.
+
+又：$\angle AOC+\angle AOD=180^{\circ}$,
+
+$\therefore\quad \angle AOD=180^{\circ}-\angle AOC=180^{\circ}-40^{\circ}=140^{\circ}$.
+
+$\because\quad \angle AOD=\angle COB$（对顶角相等）
+
+$\therefore\quad \angle COB=140^{\circ}$
+\end{solution}
+
+
+由于两条直线相交得出四个角，根据对顶角的概念可
+知，这四个角分为两双对顶角，当然每双对顶角都是相等
+的。并且不难看出，如果两条直线相交得出的四个角中，有
+一个是直角，那么其余的三个角也都是直角。
+
+当两条直线相交成直角时，这两条直线就叫做\textbf{互相垂直}。其中一条叫做另一条的垂线，交
+点叫做垂足。如图1.38所示$\ell_1$和$\ell_2$
+互相垂直，$O$是它们的垂足，记作
+$\ell_1\bot \ell_2$于$O$点。符号“$\bot$”读作“垂直
+于”。
+
+因为三角板中有一个角是直角，
+所以可以用三角板来画垂线。
+
+
+
+
+
+
+\begin{example}
+	
+\end{example}
+
+\begin{solution}
+	
+\end{solution}
+
+
+\begin{example}
+	
+\end{example}
+
+\begin{example}
+	
+\end{example}
+
+\begin{example}
+	
+\end{example}
+
+
+
+
+
+
+
 
 
 
