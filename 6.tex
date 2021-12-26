@@ -1105,42 +1105,162 @@ $a$
 
 \subsection{解直角三角形的应用}
 下面我们举例说明解直角三角形在实际中的应用。
-
-
-
-
-
-
 \begin{example}
-    
-\end{example}
+如图6.17, 已知在测点$C$处，测得一铁塔顶端$A$的
+仰角$\angle ACE=\aleph$, $\overline{BD}=a$, 仪器的高度$\overline{CD}=b$, 求铁塔的高$\overline{AB}$.
 
-\begin{example}
-    
 \end{example}
 
 
 \begin{solution}
-    
+\[\overline{AB}=\overline{AE}+\overline{EB}\]
+已知$\overline{EB}=\overline{CD}=b$, 在$\triangle ACE$中，
+\[\overline{AE}=\overline{CE}\x\tan\alpha\]
+又$\overline{CE}=\overline{BD}=a$.
+
+$\therefore\quad \overline{AB}=a\cdot \tan\alpha+b$
 \end{solution}
 
-\begin{solution}
-    
-\end{solution}
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\includegraphics[scale=.5]{fig/6-17.png}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\begin{scope}
+\draw(30:2)node[right]{$B$}--(0,0)node[left]{$A$}--(2,0)node[right]{$C$};
+\node at (1,-.5){(1)};
+\draw(0.5,0) arc (0:30:.5);
+\end{scope}
+\begin{scope}[xshift=3cm]
+    \draw(2,1)node[right]{$C$}--(0,1)node[left]{$A$}--+(-30:2)node[right]{$B$};
+    \node at (1,-.5){(2)};
+    \draw(0.5,1) arc (0:-30:.5);
+\end{scope}
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
-\begin{solution}
-    
-\end{solution}
+\begin{rmk}
+    如图6.18(1)连结测点$A$和目的物$B$, 并且经过$A$点画和
+$AB$在同一铅直平面内的水平线$AC$, 如$AB$在$AC$的上方，那么
+$\angle BAC$叫做仰角；如图6.18(2), 如果$AB$在$AC$的下方，那么
+$\angle CAB$叫做俯角。
+\end{rmk}  
+
+
 \begin{example}
-    
+    如图6.19, 已知$C$、$D$两点与物体“$\overline{AB}$”的底端$B$
+点共线，且
+$\overline{CD}=a$, 仪器$\overline{CC'}$、$\overline{DD'}$的高都等于$b$, 在$C'$、
+$D'$两点测得物体的顶端$A$的仰角分别是$\alpha$、$\beta$, 求物体的高
+$\overline{AB}$
 \end{example}
 
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[scale=.5]{fig/6-19.png}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\draw(0,0)--node[below]{$\ell$}(4,0)--node[right]{$h$}(4,.8)--(0,0);
+\draw(1,0) arc (0:11.3:1)node[right]{$\alpha$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+\begin{solution}
+    在直角$\triangle AEC'$与直角$\triangle AED'$中，
+\begin{align}
+    \overline{C'E}&=\overline{AE}\x \cot\alpha\\
+    \overline{D'E}&=\overline{AE}\x \cot\beta
+\end{align}
+$(6.1)-(6.2)$得：
+\[\overline{D'E}-\overline{C'E}=\overline{AE} \x(\cot\beta-\cot\alpha)\]
+即：$\overline{C'D'}=\overline{AE} \x(\cot\beta-\cot\alpha)$
+
+已知$\overline{C'D'}=\overline{CD}=a$
+
+$\therefore\quad \overline{AE}=\frac{a}{\cot\beta-\cot\alpha}$
+
+但$\overline{AB}=\overline{AE}+\overline{EB}=\overline{AE} +b$, 
+
+$\therefore\quad \overline{AB}=b+\frac{a}{\cot\beta-\cot\alpha}$
+
+\end{solution}
+
+如果要测底部可以到达的物体的高度，可用例6.22所介绍
+的方法，如要测底部不能到达的的物体的高度，可用例6.23所
+介绍的方法。
+
 \begin{example}
-    
+    一条公路的路面升高$h$与水平距离$\ell$的比值$i$叫做
+    路面的坡度。即$i=h:\ell$ (图6.20). 已知某段公路，每前进
+    100米就升高4米，求路面的坡度及路面对水平面的倾角$\alpha$.
 \end{example}
 
 \begin{solution}
+    路面的坡度$i=\frac{h}{\ell}$
+    ，已知$h=4$米，$\ell=100$米，
+
+$\therefore\quad  i=\frac{4}{100}=0.04$
+
+    从图6.20中的直角三角形可
+    见，$h:\ell$正好是角$\alpha$的正切，即：$i=\tan\alpha$,
     
+    $\therefore\quad \tan\alpha=0.04$. 倒查正切表得：
+    $\alpha=2^{\circ}17'$.
+
+    答：路面的坡度是0.04, 路面对水平面的倾角是$2^{\circ}17'$.
+\end{solution}
+
+\begin{example}
+   已知一门式起重
+机（图6.21），机身高21
+米，吊杆长$\overline{AB}=36$米，吊
+杆的倾角$A$（即吊杆与水平
+线的夹角）可以从$30^{\circ}$转到
+$80^{\circ}$, 求这门起重机工作时
+的最大高度和最大水平距
+离。
+\end{example}
+    
+\begin{figure}[htp]
+    \centering
+\includegraphics[scale=.6]{fig/6-21.png}
+    \caption{}
+\end{figure}
+
+\begin{solution}
+    当吊杆$\overline{AB}$的倾角
+    $A$达到最大限度$80^{\circ}$时，这时
+    起重机吊的最高位置如图6.
+    21中$\overline{AB}$的位置．在直角
+    $\triangle ABC$中，$\angle A=80^{\circ}$, 
+   $\overline{AB}=36$米，因此：
+\[    \overline{EC}=\overline{AB} \x \sin80^{\circ}=36\x\sin80^{\circ}
+    =36\x0.9848\approx 35.45{\rm m}\]
+\[\text{起重机的最大高度}=\text{机身高}+\overline{BC}=21+35.45=56.45{\rm m}\]
+
+当倾角$A$达到最小角时，起吊的水平距离最远，这时，
+如图6.21中$\overline{AB'}$的位置。在直角$\triangle AB'C'$中，$\angle A=30^{\circ}$, 
+$\overline{AB'}=36$米。
+
+因此：起重机起吊的最远水平距离
+\[\overline{AC'}=\overline{AB'}\x\cos30^{\circ}=36\x0.8660
+\approx 31.18{\rm m}\]
+
+答：起重机工作的最大高度是56.45米，最远水平距离
+是31.18米。
 \end{solution}
 
 
