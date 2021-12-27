@@ -1263,60 +1263,657 @@ $\overline{AB'}=36$米。
 是31.18米。
 \end{solution}
 
+\begin{ex}
+\begin{enumerate}
+    \item 测量学校旗杆的高度。
+    \item 选择底部不能到达的建筑物或树本，测量它的高度。
+    \item 如图，要求河两岸$B$、$C$两点间的距离，在$B$点这一岸垂
+    直于$BC$方向上找一点$A$, 测出$\angle BAC=58^{\circ}12'$,
+    $\overline{AB}=25$米，求$B$、$C$两点间的距离。
+    \item 如图，从山顶$D$测得地平面上同一方向的两点$A$和$B$的俯
+角分别是$18^{\circ}$和$23^{\circ}$, 已知$\overline{AB}=140$米，求山高
+$\overline{CD}$（得数保留整数米）。
+\item 已知传送带和地面的夹角是$25^{\circ}$, 它把物件从地面运到
+离地面9米高的地方，求物件所走的路程。
+\item 工件上有V形槽，测出上口宽200mm,深19.2mm,
+求V形角$\alpha$多大。
+\item 如图，在离地面高5米处引拉线固定电线杆，拉线和地
+面成$60^{\circ}$角，求每根拉线多长，拉线底端离杆底多远。
+\end{enumerate}
+\end{ex}
 
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.3\textwidth}
+    \centering
+\includegraphics[scale=.7]{fig/6-3ti.PNG}
+    \caption*{第3题}
+    \end{minipage}
+    \begin{minipage}[t]{0.6\textwidth}
+    \centering
+    \includegraphics[scale=.7]{fig/6-4ti.PNG}
+    \caption*{第4题}
+    \end{minipage}
+    \end{figure}
 
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 4/0/B, 4/2/C, 2.7/2/D, 2/1/E, 1.3/2/F, 0/2/G}
+\tkzDrawPolygon(A,B,C,D,E,F,G)
+\draw[dashed](F)--node[above]{20}(D);
+\draw[<->](3.5,1)--node[fill=white]{19.2}(3.5,2);
+\draw(E)--(3.7,1);
+\tkzMarkAngle[mark=none, size=.3](D,E,F)
+\node at (E)[above=.2]{$\alpha$};
+    \end{tikzpicture}
+    \caption*{第6题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\fill[pattern=north east lines](-2,-.25) rectangle (2.5,0);
+\draw(-2,0)--(2.5,0);
+\draw[very thick](-1.75,0)--(0,3.03)--(1.75,0);
+\draw(-.04,0) rectangle (.04,3.5);
+\draw(0,3.03)--(2.5,3.03);
+\draw[<->](2.25,0)--node[fill=white]{5m}(2.25,3.03);
+\draw(-1.25,0) arc (0:60:.5)node[right]{$60^{\circ}$};
+    \end{tikzpicture}
+    \caption*{第7题}
+    \end{minipage}
+    \end{figure}
 
+\subsection*{习题6.2}
+\begin{enumerate}
+    \item 已知等腰$\triangle ABC$, 腰长为5cm, 底边长为8cm, 求
+    $\angle A$、$\angle B$、$\angle C$.
+    \item 把2米的竹杆，垂直于地面的时候，影长1.6米，这时
+    太阳的仰角大约是多少度？
+    \item  已知等腰$\triangle ABC$, 腰长$\overline{AB}=\overline{AC}=10$cm, 底角为$40^{\circ}$, 
+    求高$\overline{AD}$, 底边$\overline{BC}$和面积$S$.
+    \item 在$\triangle ABC$中，$\angle B$、
+    $\angle C$是锐角，$\overline{AB}=c$, $\overline{AC}=b$, $\overline{AD}$是
+    $\overline{BC}$边上的高，求证：
+\begin{enumerate}
+    \item $\overline{AD}=b\sin C=c\sin B$
+    \item $\frac{b}{\sin B}=\frac{c}{\sin C}$
+\end{enumerate}
+\item 已知正$n$边形的半径是$r$，周长是$\ell$，求证：
+\[\ell=2nr\sin\frac{180^{\circ}}{n}\]
+\item  一架战斗机从3300米高空以每秒150米的速度向轰炸目
+标俯冲，俯冲角为$42^{\circ}$, 在离地面1300米时投弹，击中
+目标，问飞机开始俯冲到投弹共用几秒钟？
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\draw(-2,0)--(4,0);
+\draw(-1.5,0) rectangle (-.8,.5);
+\draw(-1.3,.5) rectangle (-1,.9);
+\draw[dashed](0,3.3)--(4,3.3);
+\draw[dashed](0,1.3)--(3,1.3);
+\draw[dashed](3,0)--(3,3.3);
+\draw[very thick, ->](3,3.3)--(0,1.3);
+\draw[<->] (3.5,3.3)--node[fill=white]{3300}(3.5,0);
+\draw[<->] (1,1.3)--node[fill=white]{1300}(1,0);
+    \end{tikzpicture}
+    \caption*{第6题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.8]
+\draw(0,0)node[left]{$A$}--node[above]{2km}(4,0)node[right]{$B$};
+\draw[dashed](0,-2)--(0,0)--(4,-4.767)node[below]{$C$}--(4,0);
+\draw(0,-.5) arc (-90:-50:.5)node[below=4pt]{$40^{\circ}$};
+    \end{tikzpicture}
+    \caption*{第7题}
+    \end{minipage}
+    \end{figure}
 
+\item 东西两炮台$A$、$B$相距2km, 同时发现入侵敌舰$C$, 炮台
+$A$测得敌舰$C$在它的南偏东$40^{\circ}$的方向，炮台$B$测得敌舰$C$
+在它的正南方，试求敌舰与两炮台的距离。
+
+\item 
+从圆外一点向圆引两条切线，已知切线长等于21.8cm, 
+圆的半径等于10.6cm, 求这两条切线间的夹角。
+\end{enumerate}
+
+\section{任意三角形中的边角关系}
+\subsection{正弦定理}
+
+为了解任意的三角形，下面我们用三角比来研究任意三
+角形中的边角关系。
+
+我们约定在$\triangle ABC$中，$\angle A$、$\angle B$、$\angle C$分别用$\alpha$、$\beta$、$\gamma$
+来表示；$\angle A$、$\angle B$、$\angle C$的对边分别用$a$、$b$、$c$来表示；外
+接圆的半径用$r$来表示。
+
+假定$\alpha$是锐角（图6.22），作$\triangle ABC$的外接圆$O$, 再作$\odot O$的直径$\overline{CA'}$, 弦$\overline{BA'}$, 在$\triangle A'BC$中，$\angle A'BC$是直角，因此$a=2r\sin A'$
+
+$\because\quad \angle A'=\angle A=\alpha$
+
+$\therefore\quad a=2r\sin\alpha$，因此：
+\begin{equation}
+\frac{a}{\sin\alpha}=r
+\end{equation}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\draw[thick](0,0) circle(2);
+\tkzDefPoints{0/0/O}
+\tkzDefPoint(40:2){B}\tkzDefPoint(-30:2){C}\tkzDefPoint(-170:2){A}\tkzDefPoint(150:2){A'}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon[dashed](A',B,C)
+\tkzAutoLabelPoints[center=O](A,B,C,A')
+\tkzLabelPoints[right](O)
+\tkzDrawPoints(O)
+\tkzMarkAngles[mark=none, size=.5](C,A,B C,A',B)
+\node at (5:2)[left]{$a$};
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+  \draw[thick](0,0) circle(2);
+\tkzDefPoint(120:2){B}\tkzDefPoint(-120:2){C}\tkzDefPoint(180:2){A}\tkzDefPoint(60:2){A'}    
+\tkzLabelPoints[right](O)
+\tkzDrawPoints(O)
+\tkzDefPoints{0/0/O}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon[dashed](A',B,C)
+\tkzAutoLabelPoints[center=O](A,B,C,A')
+\tkzMarkAngles[mark=none, size=.4](C,A,B B,A',C)
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+假定$\angle A$是钝角（图6.23），作$\triangle ABC$的外接圆$\odot O$, 再
+作直径$\overline{CA'}$, 弦$\overline{BA'}$
+
+$\because\quad \angle A+\angle A'=180^{\circ}$
+
+$\therefore\quad \angle A'=180^{\circ}-\angle A$, $\angle A'$是一个锐角，
+
+在直角$\triangle A'BC$中，$\angle A'BC$是直角。
+
+$\therefore\quad a=2r\sin A'=2r\sin(180^{\circ}-A)=2r\sin(180^{\circ}-\alpha)$，因此：
+\begin{equation}
+    \frac{a}{\sin(180^{\circ}-\alpha)}=2r
+\end{equation}
+
+我们比较(6.3)、(6.4)两式，可以
+看出，如果我们定义一个钝角的正弦
+等于它的补角的正弦，即
+\[\sin\alpha  =\sin(180^{\circ}-\alpha )\]
+其中：$\alpha$ 是钝角。
+那么(6.4)式在形式上就与(6.3)式相同
+了，这就是说，$\alpha$ 不论是锐角还是钝角
+都有：
+\[\frac{a}{\sin\alpha}=2r\]
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+    \draw[thick](0,0) circle(2);
+    \tkzDefPoint(100:2){B}\tkzDefPoint(-80:2){C}\tkzDefPoint(-130:2){A}
+    \tkzDefPoints{0/0/O}
+    \tkzLabelPoints[right](O)    \tkzDrawPoints(O)
+    \tkzDrawPolygon(A,B,C)
+    \tkzAutoLabelPoints[center=O](A,B,C)
+    \tkzMarkRightAngle[size=.2](C,A,B)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+当$\alpha$是直角时（图6.24），作直角$\triangle ABC$的外接圆$\odot O$
+这时斜边$\alpha$正好是$O$的直径。
+
+$\because\quad \sin90^{\circ}=1$
+
+$\therefore\quad \frac{a}{\sin\alpha}=2r$
+仍然成立。
+
+同理，我们还可得出，
+\[\frac{b}{\sin\beta}=2r,\qquad \frac{c}{\sin\gamma}=2r\]
+
+总结上面的讨论，我们得到：
+
+\begin{blk}
+    {正弦定理}
+在任意$\triangle ABC$中，边角关系满足：
+\[\frac{a}{\sin\alpha}=\frac{b}{\sin\beta}=\frac{c}{\sin\gamma}=2r\]
+\end{blk}
 
 \begin{example}
-    
+    已知等边$\triangle ABC$的边长是$a$, 求$r$。
 \end{example}
 
 \begin{solution}
-    
+$\because\quad \frac{a}{\sin\alpha}=2r,\quad \alpha=60^{\circ}$
+
+$\therefore\quad \frac{a}{\sin60^{\circ}}=2r$
+\[r=\frac{a}{2\sin60^{\circ}}=\frac{a}{2\cdot \frac{\sqrt{3}}{2}}=\frac{\sqrt{3}}{3}a\]
 \end{solution}
 
 \begin{example}
-    
+    在$\triangle ABC$中，已知$b\sin\beta=c\sin\gamma$, 求证$\triangle ABC$是等腰三角形。
 \end{example}   
 
-    \begin{solution}
-    
-\end{solution}
+\begin{proof}
+$\because\quad b\sin\beta=c\sin\gamma$
+
+$\therefore\quad \frac{b}{c}=\frac{\sin\gamma}{\sin\beta}$
+
+又$\because\quad \frac{b}{\sin\beta}=\frac{c}{\sin\gamma}$
+
+$\therefore\quad \frac{c}{b}=\frac{\sin\gamma}{\sin\beta},\quad \frac{b}{c}=\frac{c}{b},\quad b^2=c^2$
+
+$\because\quad b>0,\quad c>0$
+
+$\therefore\quad b=c$，$\triangle ABC$是等腰三角形。
+\end{proof}
 
 \begin{example}
- 
-    
+    已知$P$点是$\triangle ABC$的$\overline{BC}$边上的任一点，求证：
+\[\frac{\overline{BP}}{\overline{PC}}=\frac{c\sin \angle PAB}{b\sin\angle PAC}\]
+\end{example}
+
+\begin{proof}
+    如图6.25所示，在$\triangle ABP$与$\triangle APC$中，根据正弦
+    定理有：
+\[\frac{\overline{BP}}{\sin \angle PAB}=\frac{c}{\sin \angle APB},\qquad \frac{\overline{PC}}{\sin \angle PAC}=\frac{b}{\sin\angle APC}\]
+即：    
+\[\overline{BP}=\frac{c\sin \angle PAB}{\sin \angle APB},\qquad \overline{PC}=\frac{b\sin \angle PAC}{\sin \angle APC}\]
+
+$\because\quad \angle APB+\angle APC=\pi$    
+
+$\therefore\quad \sin \angle APB=\sin\angle APC,\qquad \frac{\overline{BP}}{\overline{PC}}=\frac{c\sin\angle PAB}{b\sin\angle PAC}$
+\end{proof}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=.8]
+\tkzDefPoints{0/0/B, 5/0/C, 2/3/A, 1.5/0/P}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(A,P)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](B,C,P)
+\node at (1,1.5)[left]{$c$};
+\node at (3.5,1.5)[right]{$b$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{ex}
+\begin{enumerate}
+    \item 求证在$\triangle ABC$中，
+\begin{enumerate}
+    \item $\sin\alpha=\frac{a}{b}\sin\beta=\frac{a}{c}\sin\gamma$
+    \item $a+b+c=2r(\sin\alpha +\sin\beta+\sin\gamma)$
+    \item $\sin\alpha+\sin\beta<\sin\gamma$
+\end{enumerate}
+
+\item 在$\odot O$中，量得一个$30^{\circ}$的圆周角所对的弦长是4cm,
+求$\odot O$的半径$r$.
+\item 求下列各角的正弦：
+\[90^{\circ},\quad 120^{\circ},\quad 150^{\circ},\quad 135^{\circ},\quad 132^{\circ}\]
+\item 在半径是5cm的圆中，$120^{\circ}$的圆心角所对的弦长是多
+少？
+\item 在半径是15cm的圆中，一条长18cm的弦所对的圆心角
+是多少度（精确到度）。
+\item 应用正弦定理证明三角形内角平分线定理（提示：模仿
+例6.28的证法）。
+\end{enumerate}
+\end{ex}
+
+\subsection{余弦定理}
+在$\triangle ABC$中，如果$\beta$、$\gamma$都是锐角（图6.26），作$\overline{BC}$边
+上的高$\overline{AD}$, 则$a=\overline{BD}+\overline{DC}$.
+
+但$\overline{BD}=c\cos\beta$, $\overline{DC}=b\cos\gamma$，因此：
+\begin{equation}
+    a=c\cos\beta+b\cos\gamma
+\end{equation}
+
+如果$\beta$、$\gamma$中有一个是钝角，设$\gamma$是钝角（图6.27）作
+$\overline{BC}$边上的高$\overline{AD}$, 这时垂足$D$落在$\overline{BC}$的延长线上，则$a=\overline{BD}-\overline{CD}$。但$\overline{BD}=c\cos\beta$, $\overline{CD}=b\cos(180^{\circ}-\gamma)$，因此：
+\begin{equation}
+    a=c\cos\beta -b\cos(180^{\circ}-\gamma)
+\end{equation}
+
+比较(6.5)、(6.6)两式，为了使它们在形式上得到一致，
+我们定义钝角Y的余弦为：
+\[\cos\gamma=-\cos(180^{\circ}-\gamma)\qquad \text{($\gamma$为钝角)}\]
+这样，不论$\gamma$是锐角还是钝角都有关系式
+\[a=c\cos\beta +b\cos\gamma\]
+如果$\beta$ 是钝角，由$\cos\beta =-\cos(180^{\circ}-\beta )$同样可以得到：
+\[a=c\cos\beta +b\cos\gamma\]
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.32\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 2/2/A, 2/0/D}
+\tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[above](A)   
+\tkzDrawPolygon(A,B,C)
+\node at (1,1)[left]{$c$};  \node at (2.5,1)[right]{$b$};
+\node at (1,0)[below]{$a$};  \draw(A)--(D);
+\tkzMarkRightAngle[size=.2](A,D,B)
+\tkzMarkAngles[size=.3, mark=none](A,C,D C,B,A)
+\tkzLabelAngle[pos=.5pt](A,C,D){$\gamma$}
+\tkzLabelAngle[pos=.5pt](C,B,A){$\beta$}
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.32\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{0/0/B, 2/0/C, 3/2/A, 3/0/D}     
+    \tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[above](A)   
+\tkzDrawPolygon(A,B,C)
+\draw[dashed](A)--(D)--(C);
+\tkzMarkRightAngle[size=.2](A,D,B)
+\node at (1.5,1)[left]{$c$};  \node at (2.5,1)[right]{$b$};
+\node at (1,0)[below]{$a$};  
+\tkzMarkAngles[size=.3, mark=none](A,C,B)
+\tkzLabelAngle[pos=.5pt](A,C,B){$\gamma$}
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.32\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 2/0/C, 2/2.5/A}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)   
+\tkzMarkRightAngle[size=.2](A,C,B)
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+如果$\beta$、$\gamma$中有一个是直角，设$\gamma=90^{\circ}$ (图6.28), 
+
+$\because\quad \cos\gamma=\cos90^{\circ}=0$
+
+$\therefore\quad a=c\cos\beta +b\cos\gamma$ 仍然成立。
+
+若分别作$\overline{AB}$、$\overline{AC}$边上的高，同样还可证明
+\[\begin{split}
+  b&=a\cos\gamma+c\cos\alpha \\
+c&=b\cos\alpha+a\cos\beta  
+\end{split}\]
+
+总结上面的讨论，我们得到：
+
+\begin{blk}
+ {定理}
+在任意$\triangle ABC$中，边角关系满足：
+\begin{align}
+ a&=c\cos\beta +b\cos\gamma\\
+b&=a\cos\gamma+c\cos\alpha \\
+c&=b\cos\alpha +a\cos\beta 
+\end{align}  
+\end{blk}
+
+由上面的定理，我们就可推出余弦定理
+
+\begin{blk}
+    {余弦定理}
+在任意的$\triangle ABC$中，边角关系满足
+\[\begin{split}
+  a^2&=b^2+c^2-2bc\cos\alpha\\
+b^2&=c^2+a^2-2ca \cos\beta\\
+c^2&=a^2+b^2-2ab\cos\gamma  
+\end{split}\]
+\end{blk}
+
+\begin{proof}
+    由上面的定理的(6.7)式得，
+\[\cos\beta=\frac{a-b\cos\gamma}{c}\]
+由(6.8)式得
+\[\cos\alpha=\frac{b-a\cos\gamma}{c}\]
+把$\cos\beta$、$\cos\alpha$代入(6.9)得
+\[c=a\frac{a-b\cos\gamma}{c}+b\frac{b-a\cos\gamma}{c}=\frac{a^2+b^2-2ab\cos\gamma}{c}\]
+$\therefore\quad c^2=a^2+b^2-2ab\cos\gamma$
+
+用同样的办法我们可证：
+\[\begin{split}
+   b^2&=c^2+a^2-2ca \cos\beta\\ 
+   a^2&=b^2+c^2-2bc\cos\alpha   
+\end{split}\]
+\end{proof}
+
+请同学们自证如下两个推论：
+
+\begin{blk}{推论1}
+在$\triangle ABC$中，
+\[\begin{split}
+    \cos\alpha&=\frac{b^2+c^2-a^2}{2bc}\\
+    \cos\beta&=\frac{a^2+c^2-b^2}{2ac}\\
+        \cos\gamma&=\frac{a^2+b^2-c^2}{2ab}
+\end{split}\]
+\end{blk}
+
+\begin{blk}{推论2}
+     一个三角形两边平方的和如果等于第三边的平
+方，那么第三边所对的角是直角；如果小于第三边的平方，
+那么第三边所对的角是钝角；如果大于第三边的平方，那么
+第三边所对的角是锐角。
+\end{blk}
+
+
+\begin{example}
+    分别求出$120^{\circ}$、$135^{\circ}$、$150^{\circ}$、$140^{\circ}$的余弦。
 \end{example}
 
 \begin{solution}
-    
+由定义知，一个钝角的余弦等于它的补角的余弦的
+相反数，所以有：
+\[\begin{split}
+  \cos120^{\circ}&=-\cos(180^{\circ}-120^{\circ})=-\cos60^{\circ}=-\frac{1}{2}\\
+  \cos135^{\circ}&=-\cos(180^{\circ}-135^{\circ})=-\cos45^{\circ}=-\frac{\sqrt{2}}{2}\\  
+  \cos150^{\circ}&=-\cos(180^{\circ}-150^{\circ})=-\cos30^{\circ}=-
+\frac{\sqrt{3}}{2}\\
+\cos140^{\circ}&=-\cos(180^{\circ}-140^{\circ})=-\cos40^{\circ}\approx -0.7660  
+\end{split}\]
 \end{solution}
 
 \begin{example}
+    用余弦定理证明广义勾股定理。
+
+    已知：$\parallelogram ABCD$ (图6.29)
+
+    求证：
+    $\overline{AC}^2+\overline{BD}^2=2(\overline{AB}^2+\overline{AD}^2)$
+\end{example}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+ \tkzDefPoints{0/0/A, 3/0/B, 3.75/1.5/C, .75/1.5/D}
+\tkzDrawPolygon[thick](A,B,C,D)
+\tkzDrawSegments[thick](A,C B,D)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C,D)   
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{proof}
+在$\triangle ABC$与$\triangle ABD$中，
+\begin{align}
+   \overline{AC}^2&=\overline{AB}^2+\overline{BC}^2-2\overline{AB}\cdot \overline{BC} \cos\angle ABC \\
+    \overline{BD}^2&=\overline{AB}^2+\overline{AD}^2-2\overline{AB}\cdot \overline{AD}\cos\angle BAD
+\end{align}
+
+$\because\quad \angle BAD+\angle ABC =180^{\circ}$
+
+$\therefore\quad \cos \angle ABC=-\cos\angle BAD$
+
+又$\because\quad \overline{BC}=\overline{AD}$
+
+$(6.10)+(6.11)$则得：
+\[\overline{AC}^2+\overline{BD}^2=\overline{AB}^2+\overline{BC}^2+\overline{AB}^2+\overline{AD}^2=2\left(\overline{AB}^2+\overline{AD}^2\right)\]
+\end{proof}
+
+\begin{ex}
+\begin{enumerate}
+    \item 在$\triangle ABC$中，已知$a=4$, $b=7$, $\gamma=40^{\circ}$, 求$c$.
+    \item 在$\triangle ABC$中，已知$a=2$, $b=3$, $c=4$, 求$\cos\alpha$、$\cos\beta$、
+    $\cos\gamma$.
+    \item 已知$\triangle ABC$的三边：
+\begin{enumerate}
+    \item 56, 65, 33, 求最大角；
+    \item 7、$4\sqrt{3}$、$\sqrt{13}$, 求最小角。
+\end{enumerate}
+
+    \item 在$\triangle ABC$中，$\angle A=120^{\circ}$, 求证：
+\begin{enumerate}
+    \item $a^2-b^2=c(b+c)$
+    \item $ b(a^2-b^2)=c(a^2-c^2)$
+\end{enumerate}
+
+\item  在$\triangle ABC$中，已知$\cos\beta=\frac{\sin\alpha}{2\sin\gamma}$, 求证$\triangle ABC$是等腰三角形。
+\item  在$\triangle ABC$中，求证：
+\[\frac{\cos A}{a}+\frac{\cos B}{b}+\frac{\cos C}{c}=\frac{a^2+b^2+c^2}{2abc}\]
+\end{enumerate}    
+\end{ex}
+
+\subsection{解斜三角形}
+在一个三角形中，如果没有一个角是直角，那么，这个三角
+形叫做斜三角形。斜三角形的解法可以分成下面的四种情形：
+\begin{enumerate}
+\item 已知一边和两角；
+\item 已知两边和它们的夹角；
+\item 已知三边；
+\item 已知两边和其中一边的对角。
+\end{enumerate}
+
+下面我们分别举例说明每种情形的解法。
     
+\begin{example}
+    已知：$c=100$、$\alpha=40^{\circ}$, $\beta=60^{\circ}$ (图6.30), 求
+$\gamma$、$a$、$b$.
+\end{example}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A, 4/0/B, 2.8/2/C}
+\tkzDrawPolygon(A,B,C)
+\tkzMarkAngles[mark=none, size=.3](B,A,C C,B,A)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
 \begin{solution}
-    
+\[\begin{split}
+    \gamma&=180^{\circ}-(40^{\circ}+60^{\circ})=80^{\circ}\\
+    a&=\frac{c\sin\alpha}{\sin\gamma}\approx \frac{100\x \sin 40^{\circ}}{\sin 80^{\circ}}=\frac{100\x 0.6428}{0.9848}=65.27\\
+    b&=\frac{c\sin\beta}{\sin\gamma}=\frac{100\x \sin 60^{\circ}}{\sin 80^{\circ}}=\frac{100\x 0.8660}{0.9848}=87.94
+\end{split}\]
 \end{solution}
+
+例6.31告诉我们，如果已知两角和一边，先用内角和定理
+求出未知的第三个角，然后再用正弦定理便可求出未知的两
+边了。
+
+\begin{ex}
+\begin{enumerate}
+    \item 已知下列条件，解三角形，并求其外接圆的半径。
+\begin{enumerate}
+    \item $b=4,\qquad \alpha=30^{\circ} ,\qquad \beta=120^{\circ} $
+    \item $c=13,\qquad \alpha=45^{\circ},\qquad \beta=60^{\circ} $
+\end{enumerate}
+    \item 解三角形：
+\begin{enumerate}
+    \item $\alpha=62^{\circ} ,\qquad \beta=48^{\circ} ,\qquad c=24$
+    \item $\alpha=55^{\circ} 12',\qquad \beta=29^{\circ} 18',\qquad c=18$
+\end{enumerate}
+\end{enumerate}
+\end{ex}
+
+
+\begin{example}
+    已知$b=60$、$c=34$、$\alpha=41^{\circ}$ (图6.31)。求$\alpha$, $\beta$，
+$\gamma$.
+\end{example}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/B, 4/0/C, 1.5/2/A}
+\tkzDrawPolygon(A,B,C)
+\tkzMarkAngles[mark=none, size=.3](B,A,C)
+\tkzLabelPoints[below](C,B)
+\tkzLabelPoints[above](A)
+\node at (2,0)[below]{$a$};
+\node at (5.5/2,1)[right]{$b$};
+\node at (.75,1)[left]{$c$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{solution}
+\[\begin{split}
+    a^2&=b^2+c^2-2bc\cos\alpha\\
+&=602+342-2\x60\x34\cos41^{\circ}\\
+&=3600+1156-4080\x0.755\approx 1676
+\end{split}\]
+查平方根表，得：$a\approx 41$。
+\[\sin\gamma=\frac{c\sin\alpha}{a}=\frac{34\x\sin41^{\circ}}{41}=\frac{34\x 0.655}{41}\approx 0.5441\]
+
+$\therefore\quad \gamma\approx 32^{\circ}58'$
+
+\[\beta=180^{\circ}-(\alpha+\gamma)
+=180^{\circ}-(41^{\circ}+32^{\circ}58')
+=106^{\circ}2'\]    
+\end{solution}
+
+
+例6.32告诉我们，如果已知两边及夹角，可由余弦定理先求
+出未知的一边，然后由正弦定理就可算出未知的一个角了，
+再由内角和定理，就可求出未知的另一个角了。再求出未知
+边后，最好先求较短边所对的角，因为较短边所对的角一定
+是锐角，这样就可避免求钝角的情况。
+
+\begin{ex}
+    已知下列条件，解三角形
+\begin{enumerate}
+\item  $a=22,\qquad b=26,\qquad \gamma=78^{\circ}$
+\item  $b=10,\qquad c=10,\qquad \alpha=102^{\circ}$
+\item  $a=0.8,\qquad c=0.6,\qquad \beta=50^{\circ}$
+\item  $a=4,\qquad b=5,\qquad \gamma=60^{\circ}$
+\end{enumerate}
+\end{ex}
+
+
+
+
+
+
+
+\begin{example}
     
 \end{example}
 
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
 
 \begin{solution}
     
@@ -1327,3 +1924,200 @@ $\overline{AB'}=36$米。
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{ex}
+\begin{enumerate}
+    \item 要测量一条河两岸的两点$A$、$B$之间的距离，在$A$点所在
+    的岸边选择一条基线$\overline{AC}=380$米，测出
+    $\angle BAC=75^{\circ}32'$, $\angle BCA=45^{\circ}35'$, 
+    求$A$、$B$间的距离。
+    \item 如图，$A$、$B$两地不能直接测量，选同时能看到$A$、$B$的一点
+    $C$, 测得$\overline{AC}=280$米，$\overline{BC}=470$米，$\angle ACB=80^{\circ}21'$, 
+    求$A$、$B$两地的距离。
+    \item 河对岸有两个目标$A$、$B$, 若
+    不准过河，如何测量才能
+    算出$A$、$B$两点间的距离？
+\end{enumerate}
+\end{ex}
+
+
+
+\subsection*{习题6.3}
+\begin{enumerate}
+    \item 在$\triangle ABC$中，
+\begin{enumerate}
+    \item 已知$a=8$、$\beta=40^{\circ}$、$\gamma=90^{\circ}$, 求$b$.
+    \item 已知$a=25$、$b=31$、$\gamma=90^{\circ}$, 求$a$、$c$.
+    \item 已知$a=6$、$\beta=40^{\circ}$、$\gamma=80^{\circ}$, 求b.
+    \item 已知$a=8$、$b=6$、$\alpha=75^{\circ}$, 求$\beta$、$c$.
+    \item 已知$a=3$、$b=4$、$c=5$, 求$\gamma$.
+\end{enumerate}
+\item  已知下列条件，求$S_{\triangle}$.
+\begin{enumerate}
+    \item $a=6,\qquad c=12,\qquad \beta =135^{\circ}$
+    \item $a=10,\qquad \beta =45^{\circ},\qquad \gamma=60^{\circ}$
+    \item $a=3,\qquad b=5,\qquad c=10$
+\end{enumerate}
+
+\item  在$\triangle ABC$中，$a=10$cm, $\beta =54^{\circ}16'$, $\alpha=63^{\circ}6'$, 求$\triangle ABC$的面积和$\angle C$的平分线长。
+\item  设$D$把$\triangle ABC$的边$\overline{BC}$分成$m:n$, 求证：
+\[n\overline{AB}^2+m \overline{AC}^2=(m+n)\overline{AD}^2+\overline{BD}^2+m\overline{CD}^2\]
+\item  已知$\triangle ABC$, 且
+$\frac{a+b}{6}=\frac{b+c}{4}=\frac{c+a}{5}$，
+求证：
+\begin{enumerate}
+    \item $\frac{\sin\alpha}{7}=\frac{\sin\beta}{5}=\frac{\sin\gamma}{3}$
+    \item $\frac{\cos\alpha}{-7}=\frac{\cos\beta}{11}=\frac{\cos\gamma}{13}$
+    \item $\alpha=120^{\circ}$
+\end{enumerate}
+\item  已知在$\triangle ABC$中，$\gamma=60^{\circ}$, 求证：$a^2+b^2=c^2+ab$.
+\item  求证在$\triangle ABC$中，
+$a^2-b^2=ac\cos\beta -bc\cos\alpha$
+\item  已知三角形三边的比是$3:5:7$, 求最大角。
+\item  如果$\triangle ABC$的边角之间满足下列关系，那么这个三角形
+是什么三角形，
+\begin{enumerate}
+    \item $\sin^2\alpha=\sin^2\beta +\sin^\gamma$
+    \item $a\cos A=b\cos B$
+\end{enumerate}
+
+\item  等腰梯形$ABCD$的上底$\overline{AD}=18$cm, 下底$\overline{BC}=22$cm, 
+$\angle ABC=60^{\circ}$, 求它的面积。
+\item 已知梯形$ABCD$, $AD\parallel BC$. $\overline{AB}=13$, $\overline{BC}=18$, 
+$\overline{CD}=15$, $\overline{DA}=4$, 求它的面积。
+\item 如果已知四边形$ABCD$的$\angle A=90^{\circ}$, $\overline{AB}=32$, $\overline{BC}=
+27$, $\overline{CD}=35$, $\overline{DA}=24$, 那么它的面积是多少？
+\item 已知一四边形的两条对角线的长分别为$x$、$y$, 夹角为$\theta$, 
+面积为$S$, 求证：
+\[S=\frac{1}{2}xy\sin\theta\]
+\end{enumerate}
+
+\section*{复习题六}
+\begin{enumerate}
+    \item 用作图法求锐角$x$.
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\sin x=\frac{4}{5}$
+        \item $\cos x=\frac{1}{3}$
+        \item $\tan x=\sqrt{3}+\sqrt{2}$
+        \item $\sin x=2\cos x$
+    \end{enumerate}
+\end{multicols}
+
+\item 已知：$\tan\alpha=m,\; m\ge 0$, 求$\cos\alpha$、$\sin\alpha$.
+\item 已知
+   $ \sin\alpha+\cos\alpha=1.2$, 求$\sin\alpha$、$\cos\alpha$的值。
+    \item 计算：
+\begin{enumerate}
+    \item $3\sin90^{\circ}+2\cos0^{\circ}-3\sin45^{\circ}$
+    \item $\sin^2 30^{\circ}-\frac{1}{2}\cos 90^{\circ}+\cos^2 30^{\circ}$
+    \item $\sin^2 45^{\circ}+\tan^2 30^{\circ}$
+\end{enumerate}
+
+    \item 已知$\triangle ABC$, $\angle C=90^{\circ}$, 求证
+  \[  \tan A+\tan B=\frac{c^2}{ab}\]
+    \item 已知在$\triangle ABC$中，$\angle C=90^{\circ}$, $\overline{CE}\overline{CB}$, 延长$CA$到$D$
+    使$\overline{AD}=\overline{AB}$, 作$\overline{DB}$, 求$\angle D$的度数，并根据图形求
+    $\angle D$的正弦、余弦、正切和余切的值。
+
+\item 在正方形$ABCD$中，已知$E$是$\overline{BC}$的中点，求$\angle AEC$的正
+弦和余弦。
+\item 在四边形$ABCD$中，$\overline{AB}=2a$, $BC=(\sqrt{3}+1)a$, 
+$\overline{CD}=\sqrt{2}a$, $\angle B=60^{\circ}$, $\angle C=75^{\circ}$, 求$\overline{AC}$的长和四边
+形$ABCD$的面积。
+\item 已知在$\triangle ABC$中，$a=4$、$b=5$、$c=6$, 求$\cos\alpha$、$\sin\gamma$、
+$\sin\beta$、$\sin\alpha$, 问$\alpha$、$\beta$、$\gamma$是锐角还是钝角？
+\item 一个三角形的三边的长分别为3尺，4尺及$\sqrt{37}$尺，求
+此三角形的最大角的度数。
+\item 在$\triangle ABC$中，求证：
+\[\frac{a}{\sin\alpha}=\frac{b+c}{\sin\beta+\sin\gamma}=\frac{b-c}{\sin\beta-\sin\gamma}\]
+\item 设$P$是等边三角形$ABC$外接圆的$\wideparen{BC}$上的一点，求证
+\[\overline{PA}^2=\overline{AB}^2+\overline{PB}\cdot \overline{PC}\]
+（提示：求$\cos\angle ABP$, $\cos\angle ACP$，利用$\cos\angle ABP=-\cos\angle ACP$化简即得）。
+\item 在$\triangle ABC$中，已知$\gamma=60^{\circ}$, $\overline{AC}=4$, 面积为$\sqrt{3}$, 求
+$\overline{AB}$及$\overline{BC}$的长。
+\item 如图，为求得河对岸某建
+筑物的高$\overline{AB}$, 在地面上
+引一条基线$\overline{CD}=a$, 测得
+$\angle ACB=\alpha$, $\angle BCD=\beta$, 
+$\angle BDC=\gamma$, 求$\overline{AB}$.
+\item 已知$\odot (A,\sqrt{3})$、
+$\odot (B,2-\sqrt{3})$、$\odot (c,1)$。
+$\odot A$分别与$\odot B$和$\odot C$相外
+切．$\angle BAC=60^{\circ}$, 求$\overline{BC}$
+的长和$\angle ACB$的度数。
+
+\item 外国船只除特许者外，不得进入离我海岸$d$海里以内的
+区域，设$A$和$B$是我们的两个观测站，$A$与$B$之间的距离为
+$S$海里，海岸线是过$A$点及$B$点的直线，一外国船在$P$点，
+在$A$站测得$\angle BAP=\alpha$, 同时在$B$站测得$\angle ABP=\beta$, 问$\alpha$
+及$\beta$满足什么简单的三角比的不等式，就应当向此未经
+特许的外国船发出警告，命令退出我海域。
+\item 已知$I$是$\triangle ABC$的内心，$I_a$、$I_b$、$I_c$为$\triangle ABC$的三个旁
+心，$r,r',r_a,r_b$分别为$\triangle ABC$的外接圆、内切圆和三个
+旁切圆的半径；设$p=\frac{1}{2}(a+b+c)$, $S_{\triangle}$为$\triangle ABC$的面积；求证：
+\begin{enumerate}
+    \item $S_{\triangle}=r'p=r_a(p-a)=r_b(p-b)=r_c(p-c)$
+    \item $4rS_{\triangle}=abc$
+    \item $4r=r_a+r_b+r_c-r'$
+\end{enumerate}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/B, 3/0/C, 2.4/2/A}
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzDefTriangleCenter[in](A,B,C) \tkzGetPoint{I}
+\tkzDefTriangleCenter[ex](A,B,C) \tkzGetPoint{I_b}
+\tkzDefTriangleCenter[ex](B,C,A) \tkzGetPoint{I_c}
+\tkzDefTriangleCenter[ex](C,A,B) \tkzGetPoint{I_a}
+\tkzDrawLines(I_a,I_b I_a,I_c I_b,I_c)  
+\tkzDrawLines[add = .5 and .5](A,B A,C B,C)
+\tkzDrawLines[add = 0 and .1](A,I_a B,I_b C,I_c)
+\tkzLabelPoints[above left](B)
+\tkzLabelPoints[below right](C,I_b,I_a)
+\tkzLabelPoints[above](A, I_c,I)
+\tkzInterLL(B,I_b)(A,C) \tkzGetPoint{X}
+\tkzDrawCircle(I_b,X)
+\end{tikzpicture}
+    \caption*{第17题}
+\end{figure}
+
+
+\end{enumerate}

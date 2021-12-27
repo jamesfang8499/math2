@@ -132,6 +132,17 @@ subsubsection = {
 
 \usepackage{multicol}
 \usepackage{cases}
+
+\newcommand\parallelogram{%
+  \mathord{\text{%
+  \tikz[baseline]
+  \draw(0em,.1ex)--++(.9em,0ex)--++(.2em,1.2ex)--++(-.9em,0ex)--cycle;
+  }}
+}
+
+\renewcommand\parallel{\mathrel{/\mskip-2.5mu/}}
+
+
 \begin{document}
 
 
@@ -166,12 +177,12 @@ subsubsection = {
 
 \mainmatter
 
-%  \input{1.tex}
+%   \input{1.tex}
 
-%  \input{2.tex}
-  \input{3.tex}
-% \input{4.tex}
- % \input{5.tex}
+%   \input{2.tex}
+%   \input{3.tex}
+%  \input{4.tex}
+%   \input{5.tex}
 \input{6.tex}
 
 
