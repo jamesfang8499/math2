@@ -1904,62 +1904,489 @@ $\therefore\quad \gamma\approx 32^{\circ}58'$
 \end{enumerate}
 \end{ex}
 
+\begin{example}
+    已知$a=134.6$, $b=87.8$, $c=161.7$(图6.32)，
+    求$\alpha$、$\beta$、$\gamma$.
+\end{example}
 
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/C, 3/0/B, 0/2.5/A}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+\node at (1.5,0)[below]{$a$};
+\node at (0,1.25)[left]{$b$};
+\node at (1.5,1.25)[right]{$c$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
 
+\begin{solution}
+\textbf{解法一：} 先用余弦定理求两个较短的边所对的角。
+\[\cos\alpha=\frac{87.8^2+161.7^2-134.6^2}{2\x 87.8\x 161.7}\approx 0.5549\]
+$\therefore\quad \alpha=56^{\circ}18'$
 
+\[\cos\beta=\frac{134.6^2+161.7^2-87.8^2}{2\x134.6\x161.7}\approx 0.8400\]
+$\therefore\quad \beta=32^{\circ}51',\quad 
+\gamma=180^{\circ}-(56^{\circ}18'+32^{\circ}51')=90^{\circ}51'$
 
+\textbf{解法二：} 
+\[\cos\alpha=\frac{87.8^2+161.7^2-134.6^2}{2\x 87.8\x 161.7}\approx 0.5549\]
+$\therefore\quad \alpha=56^{\circ}18'$
+    
+\[\sin\beta=\frac{b}{a}\sin\alpha=\frac{87.8\x \sin 56^{\circ}18'}{134.6}\approx 0.5427\]
+$\therefore\quad \beta=32^{\circ}51', \quad \gamma=180^{\circ}-(56^{\circ}18'+32^{\circ}51')=90^{\circ}51'$
+\end{solution}
 
+由例6.33可知，如果已知三边$a$、$b$、$c$, 可用余弦定理求
+出两个较短的边所对的角的余弦；或由余弦定理求出一角
+后，再改用正弦定理求另一角的正弦。一般地说后一种方法
+比较方便。我们所以要先求较短边所对的角，主要还是避免
+在计算中出现求钝角的情况。
+
+\begin{ex}
+    已知下列条件，解三角形
+\begin{enumerate}
+\item $a=40,\qquad b=19,\qquad c=41$
+\item $a=1.5,\qquad b=2.5,\qquad c=1.8$
+\item $a=6,\qquad b=3,\qquad c=3\sqrt{3}$
+\item $a=\sqrt{10},\qquad b=4,\qquad c=\sqrt{2}$   
+\end{enumerate}
+\end{ex}
 
 \begin{example}
-    
+    在锐角$\triangle ABC$中，已知$a=12$, $b=20$, $\alpha=34^{\circ}$, 
+    求：$\beta$、$\gamma$和$c$ (图6.33).
 \end{example}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A, 4/0/B, 3.2/2.5/C, 2.4/0/B'}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[below](A,B,B')
+\tkzLabelPoints[above](C)
+\tkzDrawSegments[dashed](C,B')
+\node at (1.6,1.25)[left]{$b$};
+\node at (3.6,1.25)[right]{$a$};
+\tkzDrawArc[delta=10](C,B')(B)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
 
 
 \begin{solution}
-    
+$\because\quad \frac{a}{\sin\alpha}=\frac{b}{\sin\beta}$
+
+$\therefore\quad \sin\beta=\frac{b\sin\alpha}{a}=\frac{20\x \sin 34^{\circ}}{12}=\frac{20\x 0.5592}{12}=0.9320$
+
+由于$\beta$是锐角，反查正弦表得：$\beta=68^{\circ}45'$
+
+$\therefore\quad \gamma=180^{\circ}-(\alpha+\beta)=180^{\circ}-(34^{\circ}+68^{\circ}45')=77^{\circ}15'$
+
+又$\because\quad \frac{c}{\sin\gamma}=\frac{a}{\sin\alpha}$
+
+$\therefore\quad c=\frac{a\sin\gamma}{\sin\alpha}=\frac{12\x \sin 77^{\circ}15'}{\sin 34^{\circ}}=\frac{12\x 0.9753}{0.5582}=20.93$
 \end{solution}
 
+如果在例6.34中，不限$\triangle ABC$是锐角三角形，那么$\beta$角就
+可能是钝角（图6.33中的$\angle AB'C$），这样$\beta$角就有两个解。
+对于已知$a$、$b$、$\alpha$解三角形这种情形，我们详细讨论如下：
+\begin{enumerate}
+
+
+\item 如果已知$\alpha$角是钝角或直角，那么必须$a>b$才能有
+解（为什么？），这时从$\sin\beta=\frac{b\sin\alpha}{a}$
+求$\beta$角的时候，只能
+取锐角的值，因此只有一个解。
+\item 如果已知的$\alpha$角是锐角，并且$a>b$或者$a=b$. 这时
+从$\sin\beta=\frac{b\sin\alpha}{a}$
+求$\beta$角的时候，也只能取锐角的值，因此都
+只有一个解（图6.34和图6.35）。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 3/0/B, 1/2/C}
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C)
+\tkzDrawPolygon(A,B,C)
+\node at (1.5,0)[below]{$c$};
+\node at (2,1)[right]{$a>b$};
+\node at (.5,1)[left]{$b$};
+\tkzDefPointBy[rotation= center C angle -100](B)
+\tkzGetPoint{C'}
+\tkzDrawArc[delta=10](C,C')(B)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 3/0/B, 1.5/2/C}
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C)
+\tkzDrawPolygon(A,B,C)
+\node at (1.5,0)[below]{$c$};
+\node at (.75,1)[left]{$b$};
+\node at (2.25,1)[right]{$a=b$};
+\tkzDrawArc[delta=10](C,A)(B)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
 
 
+\item 如果已知的$\alpha$角是锐角，并且$a<b$，我们再分下
+面三种情况来讨论：
+\begin{enumerate}
+    \item $a>b\sin \alpha$, 这时从$\sin\beta=\frac{b\sin\alpha}{a}$求得 $\sin\beta<1$, 
+    $\beta$可以取一个锐角的值和一个钝角的值，因此可以有两个解
+    （图6.36）。
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A, 4/0/B, 3/2.5/C, 2/0/B'}
+\tkzLabelPoints[below](A,B,B')
+\tkzLabelPoints[above](C)
+\draw[dashed](C)--node[fill=white]{$b\sin\alpha$}(3,0);
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(B',C)
+\node at (1.5,1.25)[left]{$b$};
+\node at (3.5,1.25)[right]{$\begin{array}{cc}
+    a>b\sin\alpha\\
+    a<b
+\end{array}$};
+\tkzDrawArc[delta=10](C,B')(B)
+\tkzMarkAngles[size=.35, mark=none](B,A,C C,B',A C,B,A)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+  \item $a=b\sin\alpha$, 这时从$\sin\beta=\frac{b\sin\alpha}{a}$
+    求得$\sin\beta=1$, 所以
+    $\beta$只能是直角，因此，只有一个解（图6.37）。
+\item $a<b\sin\alpha$, 这时从$\sin\beta=\frac{b\sin\alpha}{a}$
+    求得$\sin\beta>1$, 但是
+    一角的正弦值不能大于1, 因此没有解（图6.38）。
+\end{enumerate}
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 4/0/B, 4/3/C}
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C)
+\node at (2,1.5)[left]{$b$};
+\node at (4,1.5)[right]{$a=b\sin\alpha$};
+\tkzCompass(C,B)
+\tkzDrawPolygon(A,B,C)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 4/0/B, 3/2.5/C, 3.75/.5/D}
+\tkzLabelPoints[below](A)
+\tkzLabelPoints[above](C)
+\draw[dashed](C)--node[fill=white]{$b\sin\alpha$}(3,0);
+\node at (3.5,1.5)[right]{$a<b\sin\alpha$};
+\tkzCompass[delta=30](C,D)
+\tkzDrawSegments(A,C A,B C,D)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+上面所得的结果可以列成下表：
+\begin{center}
+\begin{tabular}{c|c|c}
+\hline
+& $\alpha\ge 90^{\circ}$ &$\alpha<90^{\circ}$\\
+\hline
+$a>b$& 一解&一解\\ \hline
+$a=b$&无解&一解\\
+\hline
+& & $a>b\sin\alpha$时，两解\\
+$a<b$ &无解 & $a=b\sin\alpha$时，一解\\
+& & $a<b\sin\alpha$时，无解\\
+\hline
+\end{tabular}
+\end{center}
 
 
 
+\begin{ex}
+\begin{enumerate}
+\item 已知$a=2,\quad b=3,\quad \alpha=30^{\circ}$, 解三角形。
+\item 已知$a=2,\quad b=3,\quad \beta=120^{\circ}$, 解三角形。
+\item 已知$b=3,\quad c=4,\quad \beta=45^{\circ}$, 解三角形。
+\end{enumerate}   
+\end{ex}
+
+\subsection{三角形的面积公式}
+在解题中，有时需要根据三角形的已知元素来计算它的
+面积，下面导出几个常用的求三角形面积的公式。
+
+\subsubsection{已知三角形的两边及其夹角，求面积}
+
+当已知三角形的两边及其夹角时，它的面积$S_{\triangle}$可表示
+成下面的公式：
+\[\begin{split}
+    S_{\triangle}&=\frac{1}{2} bc\sin\alpha\\
+S_{\triangle}&=\frac{1}{2} ac\sin\beta\\
+S_{\triangle}&=\frac{1}{2}ab\sin\gamma\\
+\end{split}\]
+
+\begin{proof}
+\begin{enumerate}
+    \item 当$\alpha$、$\beta$都为锐角时
+图（6.39），设$\overline{AB}$上的
+高$\overline{CD}=h$. 那么，
+\[S_{\triangle}=\frac{1}{2}ch\]
+在直角$\triangle ACD$中，$h=b\sin\alpha$. 
+代入上式得
+\[S_{\triangle}=\frac{1}{2}bc\sin\alpha\]
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 4/0/B, 3/2.5/C, 3/0/D}
+\tkzLabelPoints[below](A,B,D)
+\tkzLabelPoints[above](C)
+\tkzDrawPolygon(A,C,B)
+\tkzDrawSegments[dashed](C,D)
+\tkzMarkAngles[mark=none, size=.35](D,A,C C,B,D)
+\tkzLabelAngle[pos=.5](D,A,C){$\alpha$}
+\tkzLabelAngle[pos=.5](C,B,D){$\beta$}
+\tkzMarkRightAngle(B,D,C)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/D, 4/0/B, 0/2.5/C, 1.3/0/A}
+\tkzLabelPoints[below](A,B,D)
+\tkzLabelPoints[above](C)
+\tkzDrawPolygon(A,C,B)
+\tkzDrawSegments[dashed](C,D A,D) 
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\item 当$\alpha$为钝角时
+（图6.40），仍设$\overline{AB}$边上的高
+$\overline{CD}=h$, 那么：
+\[S_{\triangle}=\frac{1}{2}ch\]
+在直角$\triangle ACD$中，$h=b\sin(180^{\circ}-\alpha)=b\sin\alpha$ 
+
+$\therefore\quad S_{\triangle}=\frac{1}{2}bc\sin\alpha$
+
+当$\beta$为钝角时，同理也可证明：
+\[S_{\triangle}=\frac{1}{2}bc\sin\alpha\]
+\item 当$\alpha$为直角时，那么，
+\[S_{\triangle}=\frac{1}{2}bc \]
+但$\sin\alpha=\sin 90^{\circ}=1$
+
+$\therefore\quad S_{\triangle}=\frac{1}{2}bc\sin\alpha$仍然成立。
+
+同理可证：
+\[S_{\triangle}=\frac{1}{2} ac\sin\beta,\qquad 
+S_{\triangle}=\frac{1}{2}ab\sin\gamma\]
+\end{enumerate} 
+\end{proof}
+
+
+\subsubsection{已知三角形的三边求面积}
+
+如果已知三角形的三边，则
+\[S_{\triangle}=\sqrt{p(p-a)(p-b)(p-c)} \]
+其中：$p=\frac{1}{2}(a+b+c)$
+
+\begin{proof}
+    由余弦定理得：
+\[\cos\alpha=\frac{b^2+c^2-a^2}{2bc}\]
+因此：
+\[\begin{split}
+    \sin\alpha&=\sqrt{1-\cos^2\alpha}=\sqrt{1-\left(\frac{b^2+c^2-a^2}{2bc}\right)^2}\\
+    &=\sqrt{\left(1+\frac{b^2+c^2-a^2}{2bc}\right)\left(1-\frac{b^2+c^2-a^2}{2bc}\right)}\\
+    &=\sqrt{\frac{(b+c)^2-a^2}{2bc}\cdot \frac{a^2-(b-c)^2}{2bc}}\\
+    &=\frac{1}{2bc}\cdot \sqrt{(b+c+a)(b+c-a)(a+b-c)(a-b+c)}
+\end{split}\]
+
+令$p=\frac{1}{2}(a+b+c)$，则$2p=a+b+c$
+\[b+c-a=(a+b+c)-2a=2p-2a=2(p-a)\]
+同理：
+\[a+c-b=2(p-b),\qquad a+b-c=2(p-c)\]
+因此：
+\[\begin{split}
+\sin\alpha&=\frac{1}{2bc}\sqrt{16p(p-a)(p-b)(p-c)}\\
+&=\frac{2}{bc}\sqrt{p(p-a)(p-b)(p-c)}
+\end{split}\]
+
+由于$S_{\triangle}=\frac{1}{2}bc\sin\alpha$，因此：
+\[\begin{split}
+    S_{\triangle}&=\frac{1}{2}bc\x \frac{2}{bc}\sqrt{p(p-a)(p-b)(p-c)}\\
+    &=\sqrt{p(p-a)(p-b)(p-c)}
+\end{split}\]
+
+这个公式，我国叫做\textbf{三斜求积公式}，国外又叫做\textbf{海伦公
+式}。
+\end{proof}
+
+\subsubsection{已知三角形二角一夹边，求三角形的面积}
+
+如果已知三角形的二角一夹边，则
+\[\begin{split}
+S_{\triangle}&=\frac{a^{2} \sin \beta \cdot \sin \gamma}{2 \sin (\beta+\gamma)} \\
+S_{\triangle}&=\frac{b^{2} \sin \alpha \cdot \sin \gamma}{2 \sin (\alpha+\gamma)} \\
+S_{\triangle}&=\frac{c^{2} \sin \alpha \cdot \sin \beta}{2 \sin (\alpha+\beta)}
+    \end{split}\]
+
+\begin{proof}
+已知$S_{\triangle}=\frac{1}{2}bc\sin\alpha$，由正弦正理，
+\[b=\frac{a\sin \beta}{\sin\alpha},\qquad c=\frac{a\sin\gamma}{\sin\alpha}\]
+
+因此：
+\[S_{\triangle}=\frac{1}{2}\left(\frac{a\sin \beta}{\sin\alpha}\right)\cdot\left(\frac{a\sin\gamma}{\sin\alpha}\right)\cdot \sin\alpha=\frac{a^2\sin\beta\cdot \sin\gamma}{2\sin\alpha}\]
+但$\sin\alpha=\sin[180^{\circ}-(\beta+\gamma)]=\sin(\beta+\gamma)$
+
+$\therefore\quad S_{\triangle}=\frac{a^{2} \sin \beta \cdot \sin \gamma}{2 \sin (\beta+\gamma)}$
+
+同理可证明其它两个公式。
+\end{proof}
+
+
+\begin{ex}
+\begin{enumerate}
+    \item 在三角形中，已知
+\begin{enumerate}
+\item 两边长分别为4、7, 夹角是$40^{\circ}$,
+\item 三边长各为2、4、4.
+\item $\alpha=60^{\circ}$、$\beta=80^{\circ}$、$c=12$,
+\end{enumerate}
+    求它们的面积各等于多少？
+    \item 求边长等于$a$的等边三角形的面积。
+
+    \item $r$为$\triangle ABC$的外接圆的半径，求证：
+\[S_{\triangle}=2r \sin\alpha\cdot\sin\beta\cdot \sin\gamma\]
+
+\item 已知三角形的三边$a$、$b$、$c$, 且$p=\frac{1}{2}(a+b+c)$, 
+求证：内切圆半径
+\[r=\sqrt{\frac{(p-a)(p-b)(p-c)}{p}}\]
+
+\item 设$h_a$、$h_b$、$h_c$分别表示$\triangle ABC$的三边$\overline{BC}$、$\overline{CA}$、$\overline{AB}$
+上的高，求证：
+\[\begin{split}
+    h_a&=\frac{2}{a}\sqrt{p(p-a)(p-b)(p-c)}\\
+    h_b&=\frac{2}{b}\sqrt{p(p-a)(p-b)(p-c)}\\
+    h_c&=\frac{2}{c}\sqrt{p(p-a)(p-b)(p-c)}\\
+\end{split}\]
+\end{enumerate}
+\end{ex}
+
+\subsection{解三角形在测量中的应用}
+
+利用解三角形的原理，可
+以解许多实际测量问题。下面
+我们来研究如何计算不便测量
+的两点间的距离。
+
+测量工作者，为了测量远
+方某个目标$C$的距离（图6.41），
+总先选定适当长的基线
+$\overline{AB}$, 然后从基线两端$A$、$B$, 分别测
+得目标$C$的方向与$AB$的夹角为$\alpha$、$\beta$. 那么，根据基线$\overline{AB}$的
+长度和$\alpha$、$\beta$的值就可算出$C$点与$A$点、$B$点的距离。以及$C$点
+与基线$\overline{AB}$的距离，计算方法如下：
+
+$\because\quad \frac{\overline{AC}}{\sin\beta}=\frac{\overline{AB}}{\sin(\alpha+\beta)},\qquad \frac{\overline{BC}}{\sin\alpha}=\frac{\overline{AB}}{\sin(\alpha+\beta)}$
+
+$\therefore\quad \overline{AC}=\frac{\overline{AB}\sin\beta}{\sin(\alpha+\beta)},\qquad \overline{BC}=\frac{\overline{AB}\sin\alpha}{\sin(\alpha+\beta)}$
+
+设$\overline{CD}$是$\overline{AB}$边上的高且$\overline{CD}=x$, 则$\overline{AD}=x\cot\alpha$, $\overline{BD}=x\cot\beta$
+\[\overline{AB}=\overline{AD} +\overline{BD} =x(\cot\alpha +\cot\beta)\]
+
+$\therefore\quad x=\frac{\overline{AB}}{\cot\alpha +\cot\beta}$
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.4\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{0/0/A, 4/0/B, 2.5/2.5/C, 2.5/0/D}
+    \tkzLabelPoints[below](A,B,D)
+    \tkzLabelPoints[above](C)
+    \tkzDrawPolygon(A,C,B)
+    \tkzDrawSegments(C,D)
+    \tkzMarkAngles[mark=none, size=.35](D,A,C C,B,D)
+    \tkzLabelAngle[pos=.5](D,A,C){$\alpha$}
+    \tkzLabelAngle[pos=.5](C,B,D){$\beta$}
+    \tkzMarkRightAngle(B,D,C)
+    \node at (1.25,1.25)[left]{$b$};
+    \node at (3.25,1.25)[right]{$a$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.55\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\draw(0,0) circle (1.5);
+\tkzDefPoint(30:1.5){A}
+\tkzDefPoint(-30:1.5){B}
+\tkzDefPoints{0/0/O, 5/0/C}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments[dashed](A,O B,O)
+\tkzMarkAngles[mark=none, size=.3](B,A,C C,B,A)
+\tkzLabelAngle[pos=.6](B,A,C){$\alpha$}
+\tkzLabelAngle[pos=.6](C,B,A){$\beta$}
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](B)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
 
 
+在测量中，基线越长，量得越准确，测的精确度就越
+高。
 
+天文学家曾用了这个方法测出了地球和月亮间的距离。
+1671年两个法国天文学家拉让
+德和拉卡伊，一个在柏林，一
+个在好望角（这两个城市差不
+多位于同一子午线上），测出了
+$\alpha$、$\beta$的大小和$AB$的长度（图
+6.42）。从而确切地算出了地
+月平均距离为385400公里。
 
+在地球上，我们可使用的最长基线是地球的直径，由
+于地球绕太阳按椭圆形轨道运行，当我们要测量其它星球到
+地球的距离时，可使用的最长基线是地球椭圆轨道的长轴
+（图6.43）。
 
+\begin{figure}[htp]
+    \centering
+\includegraphics[scale=.6]{fig/6-43.png}
+    \caption{}
+\end{figure}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+从以上的分析我们知道，当我们应用解三角形原理在地
+球上测量地球与其它星球的距离时，可使用的基线是有限
+的，所以星球离地球越远、视角也越小，相对基线就越短，
+测的结果也就越不精确了。
 
 \begin{ex}
 \begin{enumerate}
@@ -1976,7 +2403,24 @@ $\therefore\quad \gamma\approx 32^{\circ}58'$
 \end{enumerate}
 \end{ex}
 
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[scale=.7]{fig/6-ti1.PNG}
+    \caption*{第1题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[scale=.7]{fig/6-ti2.PNG}
+    \caption*{第2题}
+    \end{minipage}
+    \end{figure}
 
+    \begin{figure}[htp]
+        \centering
+    \includegraphics[scale=.7]{fig/6-ti3.PNG}
+        \caption*{第3题}
+    \end{figure}
 
 \subsection*{习题6.3}
 \begin{enumerate}
@@ -2082,6 +2526,13 @@ $\odot (B,2-\sqrt{3})$、$\odot (c,1)$。
 $\odot A$分别与$\odot B$和$\odot C$相外
 切．$\angle BAC=60^{\circ}$, 求$\overline{BC}$
 的长和$\angle ACB$的度数。
+
+\begin{figure}[htp]
+    \centering
+\includegraphics[scale=.7]{fig/6-14ti.png}
+    \caption*{第14题}
+\end{figure}
+
 
 \item 外国船只除特许者外，不得进入离我海岸$d$海里以内的
 区域，设$A$和$B$是我们的两个观测站，$A$与$B$之间的距离为
