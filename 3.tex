@@ -1387,6 +1387,376 @@ $\angle A>\angle C$, $D$、$E$分别在$\overline{AB}$、
     \end{minipage}
     \end{figure}
 
+\subsection*{习题3.1}
+
+\begin{enumerate}
+    \item 已知：如图，$\overline{AD}=\overline{AE}$, $\overline{BD}=\overline{EC}$, 
+    求证：$\overline{DO}=\overline{EO}$.
+    \item 已知：如图，$\overline{AB}=\overline{AD}$, $AC$平分$\angle BAD$, $E$是$\overline{AC}$上一点。
+    求证：$\angle EBC=\angle EDC$.
+    \item 求证：等腰三角形两腰上的中线相等。
+    \item 已知：如图，$\angle B=\angle C$, $\overline{BD}=\overline{EC}$. 
+    求证：$\angle 1=\angle 2$.
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.31\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1.5/0/B, 1.5/0/C, -.5/2/D, .5/2/E, 0/3/A}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(B,E C,D)
+\tkzInterLL(C,D)(B,E)  \tkzGetPoint{O}
+\tkzLabelPoints[left](B,D)
+\tkzLabelPoints[right](C,E)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](O)
+
+
+    \end{tikzpicture}
+    \caption*{第1题}
+    \end{minipage}
+    \begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1.5/0/B, 1.5/0/D, 0/1.5/A, 0/-2/C, 0/.8/E}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(B,E A,C E,D)
+\tkzLabelPoints[left](B)
+\tkzLabelPoints[right](D)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](C)
+\tkzLabelPoints[below right](E)
+    \end{tikzpicture}
+    \caption*{第2题}
+    \end{minipage}
+        \begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1.5/0/B, 1.5/0/C, -.75/0/D, .75/0/E, 0/3/A}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(A,E A,D)
+\tkzLabelPoints[left](B)
+\tkzLabelPoints[right](C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](D,E)
+\tkzMarkAngles[mark=none, size=.3](C,D,A A,E,B)
+\tkzLabelAngle[pos=.5](C,D,A){1}
+\tkzLabelAngle[pos=.5](A,E,B){2}
+    \end{tikzpicture}
+    \caption*{第4题}
+    \end{minipage}
+    \end{figure}
+
+    \item 已知：如图，在四边形$ABCD$中，
+    $\overline{AD}=\overline{AB}$, $\overline{CD}=\overline{BC}$
+    
+    求证：$\angle 1=\angle 2$；$\angle 3=\angle 4$；$AC\bot DB$
+  
+    \item 如图，已知：$\angle 1=\angle 2$, $\angle 3=\angle 4$, 
+求证：$\overline{AB}=\overline{AC}$.
+\item 如图，已知：$\overline{BE}=\overline{ED}$, $\angle 1=\angle 2$.
+求证：$\overline{AB}=\overline{CD}$.
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{-2/0/A, 2/0/C, -1/1.5/D, -1/-1.5/B, -1/0/E}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[above](D)
+    \tkzLabelPoints[below](B)
+    \tkzLabelPoints[above right](E)
+    \tkzDrawSegments(A,C D,B)
+    \tkzMarkAngles[mark=none, size=.4](C,A,D D,C,A)
+    \tkzMarkAngles[mark=none, size=.5](B,A,C A,C,B)
+    \tkzLabelAngle[pos=.7](C,A,D){1}
+    \tkzLabelAngle[pos=.7](B,A,C){2}
+    \tkzLabelAngle[pos=.7](D,C,A){3}
+    \tkzLabelAngle[pos=.7](A,C,B){4}
+
+    \end{tikzpicture}
+    \caption*{第5题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+        \tkzDefPoints{-1.5/0/B, 1.5/0/C, 0/3.5/A, 0/1/O}
+        \tkzDrawPolygon(A,B,C)
+        \tkzLabelPoints[left](B)
+        \tkzLabelPoints[right](C)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[below](O)
+        \tkzDrawSegments(A,O B,O C,O)        
+        \tkzMarkAngles[mark=none, size=.4](C,B,O O,C,B)
+        \tkzMarkAngles[mark=none, size=.3](A,O,B)
+        \tkzLabelAngle[pos=.6](C,B,O){1}
+        \tkzLabelAngle[pos=.6](O,C,B){2}
+        \tkzLabelAngle[pos=.5](A,O,B){3}
+        \tkzMarkAngles[mark=none, size=.35](C,O,A)
+        \tkzLabelAngle[pos=.5](C,O,A){4}
+
+    \end{tikzpicture}
+    \caption*{第6题}
+    \end{minipage}
+    \end{figure}
+
+\item 在$\triangle ABC$中，$\overline{AB}=\overline{AC}$, $D$、$E$
+两点分别在$\overline{AB}$和$\overline{AC}$上，且$\overline{BE}$
+和$\overline{CD}$交于$O$点，$\overline{BD}=\overline{CE}$. 求证：$AO$平分$\angle BAC$.
+\item 在$\triangle ABC$中，$D$为$\overline{BC}$延长线上一点，且$\overline{CD}=\overline{AC}$, $F$
+是
+$\overline{AD}$中点，$\overline{CE}$是$\angle ACB$的平分线。求证$CE\bot CF$.
+
+\item 在$\triangle ABC$中，$\angle B=2\angle C$, $AD$平分$\angle A$, 交$\overline{BC}$于$D$点，
+求证：$\overline{AB}+\overline{BD}=\overline{AC}$.
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{-1.5/0/A, 1.5/0/C, -1/2/B, 1/2/D}
+    \tkzDrawPolygon(A,B,C)
+    \tkzDrawPolygon(A,D,C)
+    \tkzInterLL(B,C)(A,D) \tkzGetPoint{E}
+    \tkzLabelPoints[left](A)
+    \tkzLabelPoints[right](C)
+    \tkzLabelPoints[above](B,D,E)
+ 
+    \tkzMarkAngles[mark=none, size=.4](B,C,A C,A,D)
+    \tkzLabelAngle[pos=.6](C,A,D){1}
+    \tkzLabelAngle[pos=.6](B,C,A){2}
+
+    \end{tikzpicture}
+    \caption*{第7题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 3/1.5/D}
+\tkzDefPoint(70:3){A}
+\tkzDrawPolygon(A,B,C,D)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A,D)
+    \end{tikzpicture}
+    \caption*{第11题}
+    \end{minipage}
+    \end{figure}
+
+\item 如图，已知四边形$ABCD$中，
+$\overline{AB}=\overline{BC}$, $\overline{AD}>\overline{CD}$. 
+
+求证：$\angle BCD>\angle BAD$.
+\item 已知：$\triangle ABC$中，$D$是$\overline{AC}$上
+一点，且$\overline{BD}>\overline{BC}$. 
+
+求证：$\overline{AB}>\overline{AC}$.
+\item 三角形的一边等于2米，另一边等于8米，如果已知第三
+边能用被3整除的整数表示，求第三边。
+\item 已知：$\triangle ABC$在平面$\alpha$上，点$P\in\alpha$, 并且$P$在$\triangle ABC$
+的外部
+
+求证：$\overline{PA}+\overline{PB}+\overline{PC}>\frac{1}{2}(\overline{AB}+\overline{BC}+\overline{AC})$
+\item 已知：$\triangle ABC$在平面$\alpha$上，点$P\in\alpha$, 并且$P$在$\triangle ABC$
+的内部
+
+求证：$\overline{PA}+\overline{PB}+\overline{PC}<\overline{AB}+\overline{BC}+\overline{AC}$.
+\item 求证：三角形一边上的中线小于其他两边和的一半。
+\item 在两条公路$OX$和$OY$上，分别设邮筒$A$和$B$, 邮递员每
+天由邮局$P$到邮筒$A$、$B$取信，然后返回邮局。问$A$、$B$的
+位置确定在哪儿，才能使邮递员走的路程最短？
+
+\begin{figure}[htbp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{-2/0/X, 2/0/Y, .5/3/X1, -.5/3/Y1, 0/0/P}
+\tkzDefPointWith[linear, K=.5](X,X1) \tkzGetPoint{A}
+\tkzDefPointWith[linear, K=.3](Y,Y1) \tkzGetPoint{B}
+\tkzDrawPolygon(A,B,P)
+\tkzInterLL(X,X1)(Y,Y1)  \tkzGetPoint{O}
+\tkzDrawSegments(X,X1 Y,Y1)
+\tkzLabelPoints[below](X,Y,P)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[right](B,O)
+\end{tikzpicture}
+    \caption*{第17题}
+\end{figure}
+\end{enumerate}
+
+\section{平行线与内角和定理}
+
+\subsection{平行线}
+\begin{blk}
+    {定义}
+平面上两条直线被第三条直线所截，截得八个
+角，如图3.26, 其中的$\angle 1$和$\angle 5$, $\angle 4$和$\angle 8$, $\angle 2$和$\angle 6$, 
+$\angle 3$和$\angle 7$, 都叫做\textbf{同位角}，$\angle 4$和$\angle 6$, $\angle 3$和$\angle 5$都叫\textbf{内错
+角}，$\angle 4$和$\angle 5$, $\angle 3$和$\angle 6$都叫做\textbf{同旁内角}。
+\end{blk}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-2/2/A, 2/2.5/B, -2/0/C, 2/1.5/D, 0/-.5/F, 0/4/E}
+\tkzDrawSegments(A,B C,D E,F)
+\tkzInterLL(A,B)(E,F)  \tkzGetPoint{P}
+\tkzInterLL(C,D)(E,F)  \tkzGetPoint{Q}
+\tkzMarkAngles[mark=none, size=.4](B,P,E A,P,F D,Q,E C,Q,F)
+\tkzLabelAngle[pos=.6](B,P,E){1}
+\tkzLabelAngle[pos=.6](A,P,F){3}
+\tkzLabelAngle[pos=.6](D,Q,E){5}
+\tkzLabelAngle[pos=.6](C,Q,F){7}
+\tkzMarkAngles[mark=none, size=.3](E,P,A F,P,B E,Q,C F,Q,D)
+\tkzLabelAngle[pos=.5](E,P,A){2}
+\tkzLabelAngle[pos=.5](F,P,B){4}
+\tkzLabelAngle[pos=.5](E,Q,C){6}
+\tkzLabelAngle[pos=.5](F,Q,D){8}
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-2/2/A, 2/2/B, -2/0/C, 2/0/D, -1/-1/F, 1/3/E}
+\tkzDrawSegments(A,B C,D E,F)
+\tkzInterLL(A,B)(E,F)  \tkzGetPoint{P}
+\tkzInterLL(C,D)(E,F)  \tkzGetPoint{Q}
+\tkzMarkAngles[mark=none, size=.4](B,P,E A,P,F)
+\tkzLabelAngle[pos=.6](B,P,E){4}
+\tkzLabelAngle[pos=.6](A,P,F){3}
+\tkzLabelAngle[pos=.6](D,Q,E){2}
+\tkzMarkAngles[mark=none, size=.3](F,P,B D,Q,E)
+\tkzLabelAngle[pos=.5](F,P,B){1}
+\tkzLabelPoints[above](A,B,C,D)
+\tkzLabelPoints[below](Q)
+\tkzLabelPoints[above left](P)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+由平行线定义可知，两条直线平行的充要条件是这两条
+直线被第三条直线所截出的同位角相等。这就是说：
+\begin{enumerate}
+\item 如
+果同位角相等，则两条直线平行；   
+\item 如果已知两条直线平
+行，则同位角相等。 
+\end{enumerate}
+这就是平行线的判定方法和平行线的性
+质。以此为根据又可推知以下定理：
+
+\begin{blk}{定理}
+两条直线被第三条直所线截，如果
+内错角相等，或同旁内角互补，那么这两条
+直线平行。
+\end{blk}
+
+\begin{proof}
+   在图3.27中，设直线$AB$、$CD$被直线$PQ$所截。
+$\angle 2$、$\angle 3$是内错角，$\angle 1$、$\angle 2$是同旁内角。
+\begin{enumerate}
+    \item 如果已知$\angle 2=\angle 3$. 
+
+$\because\quad \angle 3=\angle 4$    （对顶角相等），
+
+$\therefore\quad \angle 2=\angle 4$（等量代换）。
+
+$\therefore\quad AB\parallel CD$（同位角相等，则两条直线平行）。
+
+\item 如果已知$\angle 1+\angle 2=180^{\circ}$, 
+则$\angle 2=180^{\circ}-\angle 1$（等量减等量差相等）。
+
+$\because\quad PQ$是直线（已知）
+
+$\therefore\quad \angle 4+\angle 1=180^{\circ}$.
+
+$\therefore\quad \angle 4=180^{\circ}-\angle 1$.
+
+$\therefore\quad \angle 2=\angle 4$（等量代换）。
+
+$\therefore\quad AB\parallel CD$（同位角相等，则两条直线平行）。  
+\end{enumerate}
+\end{proof}
+
+\begin{blk}{定理} 
+    平面上两条不相交的直线是这两条直线互相平行
+的充要条件。
+\end{blk}
+
+
+但是这个定理的证明比较麻烦，我们在这里就不证了，
+有兴趣的同学可以自己去证明它。
+
+\begin{blk}
+   {推论1} 平行于同一直线的两条直线平行。 
+\end{blk}
+
+已知：直线$a\parallel$直线$c$, 直线$b\parallel$直线$c$ (图3.28).
+ 求证：$a\parallel b$.
+
+\begin{proof}
+    若$a$不平行$b$, $a$与$b$一定相交，设交点为$P$, 那么
+过$P$点就有两条直线$a$、$b$平行于直线$c$, 但根据平行公理，
+这是不可能的，所以$a\parallel b$.
+\end{proof}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\begin{scope}
+    \foreach \x/\xtext in {0/c,1/b,2/a}
+    {
+        \draw(0,\x)--node[above]{$\xtext$}(3,\x);
+    }
+\end{scope}
+\begin{scope}[xshift=5cm]
+    \foreach \x/\xtext in {0/c,1/b,2/a}
+    {
+        \draw(0,\x)--node[above]{$\xtext$}(3,\x);
+    }
+\draw[dashed](3,1)--(4.5,1.5)node[right]{$P$}--(3,2);
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+上面这种证明方法，叫做反证法。我们先否定要证明的
+结论，然后引出不合理的结果，从而说明结论非成立不可。
+请同学们回想一下，我们在第二章讲基本逻辑语句的命题
+时，若原命题是“若$\alpha$, 则$\beta$”，那么它的逆否命题是“若
+非$\beta$, 则非$\alpha$.”我们知道这两个互为逆否的命题是同义
+的，上面的反证法就是当我们证明原命题有困难时，我们可
+去证它的逆否命题。
+
+\begin{blk}
+ {推论2} 过已知直线外一点，只可以引一条直线和已知
+直线垂直。   
+\end{blk}
+
+请同学们用反证法证明这个推论。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{example}
     
