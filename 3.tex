@@ -3239,42 +3239,673 @@ $\therefore\quad AD\parallel BC$ （同旁内角互补则两条直线平行）�
 这些都分别是平行四边形的充分必要条
 件。
 
+\begin{example}
+     已知：$\parallelogram ABCD$, 且$\angle A$、$\angle B$的平分线相交于
+$O$, 直线$BO$和直线$AD$相交于$E$(图3.52).
 
+求证：$\triangle AOB$是直角三角形；$\overline{OB}=\overline{OE}$.
+\end{example}
 
+\begin{proof}
+四边形$ABCD$是平行四边形，
+$\therefore\quad AD\parallel BC$, 即$AE\parallel BC$.
 
+$\therefore\quad \angle 2=\angle AEB$ （两条直线平行，内错角相等）。
 
+又$\because\quad BE$是$\angle ABC$的平分线（已知），
 
+$\therefore\quad \angle 1=\angle 2$（角平分线定义）。
 
+$\therefore\quad \angle 1=\angle AEB$（等量代换）。
 
+$\therefore\quad \triangle ABE$是等腰三角形（两个
+角相等的三角形是等腰三角形）。
 
+又$\because\quad AO$是$\angle DAB$的平分线（已知），
+
+$\therefore\quad AO$是$\overline{BE}$的垂直平分线。
+
+$\therefore\quad \triangle AOB$是直角三角形；$\overline{BO}=\overline{OE}$.
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 3/0/B, 4/2/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDefLine[bisector,normed](B,A,D) \tkzGetPoint{F}
+\tkzDefLine[bisector,normed](C,B,A)  \tkzGetPoint{G}
+\tkzInterLL(A,F)(B,G) \tkzGetPoint{O}
+\tkzInterLL(A,D)(B,O) \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(D,E B,E A,O)
+\tkzLabelPoints[left](A,D,E)
+\tkzLabelPoints[right](B,C,O)
+\tkzMarkAngles[size=.4, mark=none](C,B,E)
+\tkzMarkAngles[size=.3, mark=none](E,B,A)
+\tkzLabelAngle[pos=.6](C,B,E){2}
+\tkzLabelAngle[pos=.6](E,B,A){1}
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 4/0/B, 5/2.4/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(A,C B,D)
+\tkzDefPointBy[projection= onto B--D](A)  \tkzGetPoint{F}
+\tkzDefPointBy[projection= onto B--D](C)  \tkzGetPoint{G}
+\tkzDefPointBy[projection= onto A--C](B)  \tkzGetPoint{E}
+\tkzDefPointBy[projection= onto A--C](D)  \tkzGetPoint{H}
+\tkzDrawSegments(D,H E,B A,F C,G E,F G,H)
+\tkzDrawSegments[dashed](F,H E,G)
+\tkzInterLL(A,C)(B,D)  \tkzGetPoint{O}
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[right](B,C)
+\tkzLabelPoints[above](E,F)
+\tkzLabelPoints[below](G,H,O)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{example}
+    从$\parallelogram ABCD$的各顶点作对角线的垂线$AF$、$BE$、
+$CG$、$DH$, $E$、$F$、$G$、$H$是垂足（图3.53）。
+
+求证：$\overline{EF}=\overline{GH}$.
+\end{example}
+
+\begin{proof}
+    设$\overline{AC}$、$\overline{BD}$交于$O$点，连$\overline{FH}$, $\overline{EG}$.
+
+$\because\quad $四边形$ABCD$是平行四边形（已知），
+
+$\therefore\quad \overline{AD}=\overline{BC}$（平行四边形的对边相等），
+$AD\parallel BC$（平行四边形定义）。
+
+$\therefore\quad \angle ADF=\angle CBG$ （两条直线平行，内错角相等），
+
+又$\because\quad AF\bot BD,\quad CG\bot BD$（已知），
+
+$\therefore\quad \triangle AFD\cong \triangle CGB$ (AAS),
+
+$\therefore\quad \overline{DF}=\overline{BG}$
+
+又$\because\quad \overline{BO}=\overline{OD}$（平行四边形的对角线互相平分），
+
+$\therefore\quad \overline{FO}=\overline{GO}$ （等量减等量差相等）。
+
+同理，$\overline{HO}=\overline{OE}$.
+
+$\therefore\quad$ 四边形$FHGE$为平行四边形（对
+角线互相平分的四边形是平行四边形）。
+
+$\therefore\quad \overline{FE}=\overline{GH}$（平行四边形的对边相等）。
+\end{proof}
+
+\begin{blk}
+{定理} 连结三角形任意两边中点的线段平行于第三边，
+且等于第三边的一半。    
+\end{blk}
+
+已知：$D$、$E$分别为
+$\triangle ABC$的$\overline{AB}$和$\overline{AC}$边上
+的中点（图3.54）
+
+求证：$\overline{DE}\parallel \overline{BC}$, $\overline{DE}=\frac{1}{2}\overline{BC}$.
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/B, 3/0/C, 2/2.5/A}
+\tkzDefMidPoint(A,B) \tkzGetPoint{D}
+\tkzDefMidPoint(A,C) \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(D,E)
+\tkzDefPointsBy[translation= from D to A](C){F}
+\tkzDrawSegments[dashed](A,F E,F C,F C,D)
+\tkzLabelPoints[left](A,B,D)
+\tkzLabelPoints[right](C,F)
+\tkzLabelPoints[above](E)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{proof}
+ 在$\overline{DE}$的延长
+线上，截取$\overline{EF}=\overline{DE}$, 由
+于$\overline{AE}=\overline{EC}$, 
+
+$\therefore\quad $四边形$ADCF$是平行四边形
+（对角线互相平分的
+四边形是平行四边形）。
+
+$\therefore\quad CF\parallel AD$, 即$CF\parallel BD$.
+
+但，$\overline{CF}=\overline{AD},\quad \overline{AD}=\overline{BD}$,
+
+$\therefore\quad \overline{CF}=\overline{BD}$（等量代换），
+
+$\therefore\quad $四边形$BCFD$是平行四边形（一组对边平行且相
+等的四边形是平行四边形）。
+
+$\therefore\quad \overline{DF}\parallel \overline{BC}$, 即$\overline{DE}\parallel \overline{BC}$.
+
+由于$\overline{DE}=\frac{1}{2}\overline{DF}$, $\overline{DF}=\overline{BC}$（平行四边形的对边相等），
+
+$\therefore\quad \overline{DE}=\frac{1}{2}\overline{BC}$.
+\end{proof}
+
+\begin{blk}
+    {定义}
+连结三角形两边中点的线段，叫做\textbf{三角形的中位
+线}。
+\end{blk}
+
+上面的定理又叫做三角形\textbf{中位线定理}。
+
+\begin{blk}
+    {定义} 如果四边形只有一组对边平行，另一组对边不平
+行，这个四边形叫做\textbf{梯形}。平行的两边叫做梯形的\textbf{底}，不平
+行的两边叫做梯形的\textbf{腰}，两腰中点的连线，叫做梯形的\textbf{中位
+线}。两腰相等的梯形叫做\textbf{等腰梯形}。
+\end{blk}
+
+\begin{example}
+    梯形中位线平行于两底且等于两底和的一半。
+\end{example}
+
+已知：$\overline{EF}$是梯形$ABCD$的中位线（图3.55）。
+
+求证：$EF\parallel AD\parallel BC$，且$\overline{EF}=\frac{1}{2}(\overline{AD}+\overline{BC})$.
+
+\begin{proof}
+由同学自己完成（提示：射线$AF$交$\overline{BC}$的延长线
+    于$G$, 则$\overline{EF}$转化为$\triangle ABG$的中位线）。
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.8]
+\tkzDefPoints{0/0/B, 4/0/C, 1/3/A, 3/3/D}
+\tkzDefMidPoint(A,B)  \tkzGetPoint{E}
+\tkzDefMidPoint(C,D)  \tkzGetPoint{F}
+\tkzInterLL(A,F)(B,C) \tkzGetPoint{G}
+
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(E,F A,G)
+\tkzDrawSegments[dashed](C,G)
+\tkzLabelPoints[left](A,E,B)
+\tkzLabelPoints[below](C,G)
+\tkzLabelPoints[right](D,F)
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 3/3.5/A}
+\tkzDefMidPoint(A,B) \tkzGetPoint{P}
+\tkzDefMidPoint(A,C) \tkzGetPoint{N}
+\tkzDefMidPoint(C,B) \tkzGetPoint{M}
+\tkzInterLL(A,M)(B,N)  \tkzGetPoint{G}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(A,M B,N C,P)
+\tkzLabelPoints[left](P,B)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](M,C)
+\tkzLabelPoints[right](N,G)
+\tkzDefMidPoint(G,C) \tkzGetPoint{Q}
+\tkzDefMidPoint(G,B) \tkzGetPoint{H}
+\tkzDrawPolygon[dashed](P,N,Q,H)
+\tkzLabelPoints[below](Q,H)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
 
 \begin{example}
-    
+    三角形的三条中线相交于一点，这点和各边中点
+    的距离等于这边上中线的三分之一。
 \end{example}
+
+已知：$\overline{AM}$、$\overline{BN}$、$\overline{CP}$为$\triangle ABC$的三条中线（图3.56）
+
+求证：$\overline{AM}$、$\overline{BN}$、$\overline{CP}$相交于一点$G$, 且$\overline{GM}=\frac{1}{3}\overline{AM}$, $\overline{GN}=\frac{1}{3}\overline{BN}$, $\overline{GP}=\frac{1}{3}\overline{CP}$.
+
+\begin{proof}
+设$\overline{BN}$与$\overline{CP}$相交于$G$点，作$\overline{PN}$, 则$\overline{PN}=\frac{1}{2}\overline{BC}$, 
+$\overline{PN}\parallel \overline{BC}$（三角形中位线定理）。
+
+设$H$、$Q$分别为$\overline{BG}$、$\overline{CG}$的中点，则
+$\overline{HQ}=\frac{1}{2}\overline{BC}$, $\overline{HQ}\parallel\overline{BC}$（三角形中位线定理）。
+
+$\therefore\quad \overline{PN}=\overline{HQ}$（等量代换），
+$\overline{PN}\parallel \overline{HQ}$（平行于第三条直线的两条直线平行）。
+
+$\therefore\quad$ 四边形$PHQN$为平行四边形（一组对边平行且相等
+的四边形是平行四边形）。
+
+$\therefore\quad \overline{GH}=\overline{GN},\quad \overline{GP}=\overline{GQ}$（平行四边形的对角线相
+平分）
+
+但 $\overline{GH}=\overline{HB}$, $\overline{GQ}=\overline{CQ}$
+
+$\therefore\quad \overline{GN}=\overline{GH}=\overline{HB}=\frac{1}{3}\overline{BN}$，$\overline{GP}=\overline{GQ}=\overline{QC}=\frac{1}{3}\overline{CP}$.
+
+这样，中线$\overline{CP}$和中线$\overline{BN}$相交在这两条中线的三分之一
+处。用同样的推理又可证明中线$\overline{AM}$和中线$\overline{BN}$也相交在它
+们的三分之一处。即点$G$. 
+
+因此，$\overline{AM}$、$\overline{BN}$、$\overline{CP}$相交于$G$, 且$\overline{GM}=\frac{1}{3}\overline{AM}$, $\overline{GN}=\frac{1}{3}\overline{BN}$, $\overline{GP}=\frac{1}{3}\overline{CP}$.
+\end{proof}
+
+\begin{blk}
+    {定义} 三角形三条中线的交点叫做三角形的\textbf{重心}。
+\end{blk}
+
+\begin{example}
+    直角三角形的斜边的中点，与三个顶点的距离相等。
+\end{example}
+    
+已知：$\triangle ABC$中，
+$\angle ACB=90^{\circ}$, 
+$D$是$\overline{AB}$的中点
+（图3.57）。
+
+求证：$\overline{CD}=\overline{DA}=\overline{DB}$.
+
+\begin{proof}
+    取$\overline{BC}$的中点$E$, 连
+    结$\overline{DE}$,
+
+$\because\quad D$是$\overline{AB}$的中点，（已知）
+
+$\therefore\quad  \overline{DE}$是$\triangle ABC$的一条中位线。
+
+$\therefore\quad DE\parallel AC$（三角形中位线定理）。
+
+$\because\quad \angle ACB=90^{\circ}$（已知），
+
+$\therefore\quad \angle DEB=90^{\circ}$. （两条直线平行，则同位角相等），
+
+$\therefore\quad \angle DEB=\angle DEC$
+    
+又$\because\quad  \overline{DE}=\overline{DE},\quad \overline{BE}=\overline{EC}$
+
+$\therefore\quad \triangle BDE\cong \triangle CDE$ (SAS)
+
+$\therefore\quad \overline{CD}=\overline{DB}$. 但$\overline{DB}=\overline{DA}$,
+
+$\therefore\quad \overline{CD}=\overline{DB}=\overline{DA}$.
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 3/4/A}
+\tkzDefMidPoint(A,B) \tkzGetPoint{D}
+\tkzDrawPolygon(A,C,B)
+\tkzDrawSegments(C,D)
+\tkzDefPointBy[projection = onto B--C](D)\tkzGetPoint{E}
+\tkzDrawSegments[dashed](E,D)
+\tkzLabelPoints[below](B,E,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[left](D)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.2]
+\tkzDefPoints{0/0/B, 2/0/C, 2/2*1.732/A}
+\tkzDefMidPoint(A,B) \tkzGetPoint{D}
+\tkzDrawPolygon(A,C,B)
+\tkzDrawSegments[dashed](C,D)
+
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[left](D)
+\tkzMarkRightAngle[size=.3](A,C,B)
+\tkzMarkAngle[size=.5, mark=none](B,A,C)
+\tkzLabelAngle[pos=.7](B,A,C){$30^{\circ}$}
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{example}
+    在直角三角形中，$30^{\circ}$角的对边等于斜边的一
+半。
+\end{example}
+
+已知：$\triangle ABC$中，$\angle ACB=90^{\circ}$, $\angle A=30^{\circ}$（图3.58）
+
+求证：$\overline{BC}=\frac{1}{2}\overline{AB}$.
+
+\begin{proof}
+    取$\overline{AB}$的中点$D$. 连结
+    $\overline{CD}$, 则$\overline{CD}=\overline{DA}$(例3.29)
+
+$\because\quad \angle A=30^{\circ}$,
+
+$\therefore\quad \angle ACD=30^{\circ}$ （等腰三角形两底角相等）。
+
+又$\because\quad \angle B=90^{\circ} -30^{\circ} =60^{\circ}$ （直角三角形两锐角互余），
+
+$ \angle BDC=60^{\circ}$ （三角形的外角等于不相邻的两个
+    内角的和）。
+
+$\therefore\quad \triangle BCD$是正三角形（三内角相等的三角形是正三
+    角形）。
+
+$\therefore\quad  \overline{BC}= \overline{BD}=\frac{1}{3} \overline{AB}$.
+ \end{proof}
+
+以上两例的逆命题也是正确的，同学们可自己证明。   
+    
+\begin{blk}
+   {定义} 取两个已知点$A$、$O$, 连结$\overline{AO}$, 并延长$\overline{AO}$使
+$\overline{OA'}=\overline{AO}$, 这时我们说$A'$是$A$点关于$O$点的\textbf{中心对称点}；
+$A$、$A'$关于$O$点成\textbf{中心对称}；$O$点叫
+做两已知点$A$、$A'$的\textbf{对称中心}
+（图3.59）。 
+\end{blk}
+
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+        \draw[|-|](-2,0)node[below]{$A$}--(0,0)node[below]{$O$}--(2,0)node[below]{$A'$};
+        \draw(0,0)--(0,.1);
+            \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+对于任何一个已知图形上的一点，
+作出它关于某一点$O$的中心对称点，这些对称点的集合，构成
+了一个新的图形，这个新的图形叫做已知图形的关于$O$点的
+\textbf{中心对称形}，$O$点叫做这两个图形的\textbf{对称中心}。
+
+例如，已知$\triangle ABC$, 我们作顶点$A$、$B$、$C$关于$O$点的
+中心对称点$A',B',C'$, 容易证明$\triangle A'B'C'$就是
+$\triangle ABC$
+的关于对称中心$O$的中心对称形（图3.60）。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}
+        \tkzDefPoints{0/0/B, 1/1/A, 1/-1.5/C, 2.5/.6/O}
+\foreach \x in {A,B,C}
+{
+    \tkzDefPointWith[linear, K=2](\x,O) \tkzGetPoint{\x'}
+}
+\tkzLabelPoints[above](A,C')
+\tkzLabelPoints[below](C,O,A')
+\tkzLabelPoints[left](B)
+\tkzLabelPoints[right](B')
+\tkzDrawPolygon(A,B,C,O)
+\tkzDrawPolygon(A',B',C',O)
+\tkzDrawSegments(B,B' A,C A',C')
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 5/2.75/D}
+\tkzDefPointsBy[translation = from C to D](B){A}
+\tkzDefPointWith[linear, K=.3](B,C) \tkzGetPoint{P'}
+\tkzDefPointWith[linear, K=.3](D,A) \tkzGetPoint{P}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(A,C D,B P,P')
+\tkzInterLL(A,C)(B,D)  \tkzGetPoint{O}
+\tkzLabelPoints[above](P)
+\tkzLabelPoints[below](P')
+\tkzLabelPoints[left](A,B)
+\tkzLabelPoints[right](C,D,O)
+\tkzMarkAngles[mark=none, size=.45](A,P,O P,O,A P',O,C C,P',O)
+\tkzLabelAngle[pos=.7](A,P,O){3}
+\tkzLabelAngle[pos=.7](P,O,A){1}
+\tkzLabelAngle[pos=.7](P',O,C){2}
+\tkzLabelAngle[pos=.7](C,P',O){4}
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+从任意两个中心对称形的定义，我们很容易看出：
+
+\begin{blk}{}
+   任意两个中心对称形是全等形。 
+\end{blk}
+
+\begin{blk}
+   {定义} 如果一个图形上的每一点，关于某一点$O$的中心
+对称点都还在这个图形上，我们说这个图形是\textbf{中心对称形}，
+$O$点叫做图形的\textbf{对称中心}。 
+\end{blk}
+
+
+\begin{blk}
+    {定理} 平行四边形是中心对称形，它的对称中心是两条
+对角线的交点。
+\end{blk}
+
+已知：$\parallelogram ABCD$的对角线$\overline{AC}$、$\overline{BD}$相交于$O$点（图3.61）。
+
+求证：$\parallelogram ABCD$是中心对称形；$O$是对称中心。
+
+\begin{proof}
+    在$\parallelogram ABCD$上任取一点$P$, 设$P\in\overline{AD}$, 连结$\overline{PO}$, 
+延长交$\overline{BC}$于$P'$, 在$\triangle AOP$和$\triangle COP'$中，
+
+$\because\quad \overline{AO}=\overline{OC}$（平行四边形对角线互相平分），
+
+$\angle 1=\angle 2$（对顶角相等），$\angle 3=\angle 4$（两条直线平行，则内错角相等），
+
+$\therefore\quad \triangle AOP\cong \triangle COP'$ (AAS).
+
+$\therefore\quad \overline{PO}=\overline{OP'}$（全等三角形的对应边相等），
+
+$\therefore\quad P'$是$P$关于$O$点的中心对称点。
+
+由于上述$P$点是任意选取的，$P$点关于$O$的对称点$P'$也在
+$\parallelogram ABCD$上，所以$\parallelogram ABCD$是中心对称形。$O$点是对称中心。
+\end{proof}
+
+由中心对称形的定义，我们还可看出：
+
+平面上的中心对称形，绕着它的对称中心，在平面上旋
+转$180^{\circ}$ 后，它的新位置与原来位置重合。例如，我们把上例
+中的$\parallelogram ABCD$绕$O$点旋转$180^{\circ}$后，则$A$与$C$对换位置，$B$与$D$
+对换位置，这时$\parallelogram ABCD$与原来位置重合。
+
+\begin{blk}
+    {定义} 有一个角是直角的平行四边形叫做\textbf{矩形}或\textbf{长方
+形}。
+
+有一组邻边相等的平行四边形叫做\textbf{菱形}。
+
+有一组邻边相等并且有一个角是直角的平行四边形叫做
+\textbf{正方形}（图3.62）。
+\end{blk}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{0/0/A, 3/0/B, 3/2/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(A,C D,B)
+\tkzMarkRightAngle[size=.2](A,B,C)
+\node at (1.5,-.5){矩形};
+\end{scope}
+\begin{scope}[xshift=4cm, yshift=1cm]
+    \tkzDefPoints{0/0/A, 1.5/-1/B, 3/0/C, 1.5/1/D}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawSegments(A,C D,B)
+    \node at (1.5,-1.5){菱形};
+\end{scope}
+\begin{scope}[xshift=8cm]
+    \tkzDefPoints{0/0/A, 2/0/B, 2/2/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(A,C D,B)
+\tkzMarkRightAngle[size=.2](A,B,C)
+\node at (1,-.5){正方形};
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+根据定义可知；矩形、菱形、正方形都是平行四边形，
+所以它们都具有平行四边形的所有性质，另外它们还分别具
+有下列特殊性质：
+
+\begin{blk}
+    {推论1} 矩形的四个角都是直角，并且两条对角线相等。
+\end{blk}
+
+\begin{blk}
+{推论2} 菱形的四条边都相等，且对角线互相垂直并平
+分每双对角。
+\end{blk}
+
+这个推论的后半部分，就是我们在例3.9中所
+证的结论。
+
+\begin{blk}
+    {推论3} 正方形是矩形又是菱形。即
+\[\{\text{矩形}\}\cap \{\text{菱形}\}=\{\text{正方形}\}\]
+\end{blk}
+
+以上三个推论，同学们作为练习，自己证明。并思考上
+述三个推论的逆命题是否正确，并证明你的结论。
+
+由上面的三个推论，我们还可推知：
+
+矩形、菱形和正方形是中心对称形又是轴对称形。经过
+矩形对边中点的两条直线是它的两条对称轴；菱形两条对角
+线所在的直线是它的对称轴；正方形两条对角线和经过对边
+中点的两条直线是它的对称轴（图3.63）。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=.8]
+\begin{scope}
+\tkzDefPoints{0/0/A, 3/0/B, 3/2/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDefMidPoint(A,B) \tkzGetPoint{A'}
+\tkzDefMidPoint(C,B) \tkzGetPoint{B'}
+\tkzDefMidPoint(C,D) \tkzGetPoint{C'}
+\tkzDefMidPoint(A,D) \tkzGetPoint{D'}
+
+\tkzDrawLines(A',C' D',B')
+
+\end{scope}
+\begin{scope}[xshift=5cm, yshift=1cm]
+    \tkzDefPoints{0/0/A, 1.5/-1/B, 3/0/C, 1.5/1/D}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDrawLines(A,C D,B)
+
+\end{scope}
+\begin{scope}[xshift=10cm]
+    \tkzDefPoints{0/0/A, 2/0/B, 2/2/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawLines(A,C D,B)
+\tkzDefMidPoint(A,B) \tkzGetPoint{A'}
+\tkzDefMidPoint(C,B) \tkzGetPoint{B'}
+\tkzDefMidPoint(C,D) \tkzGetPoint{C'}
+\tkzDefMidPoint(A,D) \tkzGetPoint{D'}
+
+\tkzDrawLines(A',C' D',B')
+
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{example}
+    已知：$ABCD$是矩形，设各外角的平分线相交于
+    $E$、$F$、$G$、$H$(图3.64). 
+
+    求证：$EFGH$是正方形。
+\end{example}
+    
+\begin{proof}
+    
+
+
+
+
+
+
+
+    
+\end{proof}
+
+
+
+
+
+
+
+
+
+
 
 \begin{solution}
     
 \end{solution}
 
-\begin{example}
+
+
+
+
+\begin{proof}
     
-\end{example}
+\end{proof}
 
-\begin{solution}
+\begin{proof}
     
-\end{solution}
-\begin{example}
+\end{proof}
+
+\begin{proof}
     
-\end{example}
+\end{proof}
 
 
-\begin{solution}
+
+
+
+\begin{blk}
     
-\end{solution}
+\end{blk}
 
+\begin{blk}
+    
+\end{blk}
 
+\begin{blk}
+    
+\end{blk}
 
+\begin{blk}
+    
+\end{blk}
 
 
 \subsection{勾股定理}
