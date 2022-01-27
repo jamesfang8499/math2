@@ -375,3 +375,385 @@ $BE$、$CF$分别是$\triangle A'B'C'$的三边上的垂直平分线，由推论
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+    已知扇形的半径$r\approx 4.8$cm, 所含的圆心角是
+$42^{\circ}$, 求它的周长和面积（$\pi \approx 3.14$）.
+\end{example}
+
+\begin{solution}
+    设扇形的弧长为$\ell$, 则：
+    \[\ell=\frac{42\x3.14\x4.8}{180}\approx 3.5({\rm cm})\]
+$\therefore\quad $扇形的周长$=2r+\ell=2\x4.8+3.5=13.1$(cm).
+
+扇形的面积$=\frac{1}{2}\ell r=\frac{1}{2}\x3.5\x4.8\approx 8.4({\rm cm^2})$
+
+答：扇形周长约是13.1cm, 面积约为8.4${\rm cm^2}$.
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+\item 已知圆的周长$C\approx 48.5$cm, 求圆的半径$r$.
+\item 一列火车，火车头上的主动轮的直径约是1.2米，如果主
+动轮每秒钟转250次，那么，火车的速度是每小时约多少
+公里？
+\item 圆的半径约是8.2cm, 圆心角是$32^{\circ}30'$, 求圆心角所对
+的弧长。
+\item 已知扇形的半径是4.2cm, 所含的弧是$35^{\circ}$, 求它的周长
+和面积。
+\end{enumerate}
+\end{ex}
+
+\subsection*{习题4.4}
+\begin{enumerate}
+    \item 求作已知圆的外切正六边形。
+
+    \item 已知一边，求作正八边形。
+    \item 我国民间相传有正五边形的近似画法：“九五顶五九，八、五两边分”它的意义如图所示
+\begin{enumerate}
+    \item 按照图中注明的尺寸，计算这五边形各边的长。
+    \item 用这种方法作边长是30mm的正五边形。
+\end{enumerate}
+
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}[scale=.25, >=latex]
+\tkzDefPoints{-8/0/A, 8/0/B, -5/-9.5/C, 5/-9.5/D, 0/5.9/E}
+\tkzDrawPolygon(E,A,C,D,B)
+\draw[<->](A)--node[fill=white]{8寸}(0,0);
+\draw[<->](B)--node[fill=white]{8寸}(0,0);
+\draw(C)--node[above]{5寸}(0,-9.5);
+\draw(D)--node[above]{5寸}(0,-9.5);
+\draw[<->](E)--node[fill=white]{5.9寸}(0,0);
+\draw[<->](0,-9.5)--node[fill=white]{9.5寸}(0,0);
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\item 用全等的正多边形的砖铺地面，要砖与砖之间不留空隙，有哪几种正多边形的砖合用？
+\item 已知圆的半径为$r$. 求外切正三角形、外切正方形、外
+切正六边形的周长和面积。
+\item 求证：正三角形的边心距、半径和高的比是$1:2:3$.
+\item 已知圆的半径是$r$, 求证圆的内接正八多边形的周长是
+$8\sqrt{2-\sqrt{2}}r$, 面积是$2\sqrt{2}r^2$.
+\item 已知正三角形外接圆面积是100平方厘米，求它的内切
+圆面积。
+\item 有一圆管的外直径是150mm, 内直径是100mm, 求这圆
+管的横断面的面积和它的厚度。
+\item 已知一圆的半径是200mm, $AB$所对的圆心角是$45^{\circ}$, 求
+$\wideparen{AB}$长和扇形$OAB$的面积。
+\item 如图：$\triangle ABC$中，$\angle C=90^{\circ}$, $\wideparen{ACB}$是以$\overline{AB}$为直径的半
+圆，$\wideparen{ADC}$是以$\overline{AC}$为直径的半圆，$\wideparen{CEB}$是以$\overline{CB}$为直径
+的半圆。
+
+求证：I的面积$+$II的面积$=$III的面积。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.9]
+    \tkzDefPoints{0/0/A, 5/0/B, 3.2/2.4/C}
+    \tkzDrawSemiCircle[pattern=north west lines,diameter](A,C)
+\tkzDrawSemiCircle[pattern=north west lines,diameter](C,B)
+\tkzDrawSemiCircle[fill=white,diameter](A,B)
+\tkzDrawPolygon[pattern=north east lines](A,B,C)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C)
+\node at (3,1)[fill=white]{III};
+\node at (1,2.6)[fill=white]{I};
+\node at (5,1.5)[fill=white]{II};
+
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.3]
+\tkzDefPoints{0/0/A, 1.732/0/B, 0/-1.5/O_1, 1.732/-.5/O_2}
+\tkzDrawCircle[thick](O_1,A)  \tkzDrawCircle[thick](O_2,B)
+\draw(A)--node[left]{3}(O_1);
+\draw(B)--node[left]{1}(O_2);
+\tkzDefPointsBy[reflection = over O_1--O_2](A,B){A',B'}
+\tkzDrawSegments(A,B A',B')
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+\item 为了把半径是3cm和1cm的两根圆柱紧紧地捆扎在一
+起，绕一圈需要多少铅丝？
+\end{enumerate}
+
+\section*{复习题四}
+\begin{enumerate}
+    \item 已知两定点$A$、$B$, 分别以$A$、$B$为圆心，以同一的半
+径$r\; \left(r\ge \frac{1}{2}\overline{AB}\right)$
+作圆，求证这些等圆的交点都在$\overline{AB}$
+的垂直平分线上。
+\item 两圆的半径都是4cm, 并且一圆过另一圆的圆心，求这
+两圆的公共弦长。
+\item 已知$\overline{AB}$是$O$的直径，以$\overline{OB}$为直径作$O'$, 过$B$点
+作直线与$O$相交于$M$点，与$CO'$相交于$N$点。
+求证：$\overline{BN}=\overline{MN}$.
+\item 已知$\overline{CD}$是$\odot O$的直径，$A$为$\odot O$外一点，$AT$切圆于$T$
+点，如果切点$T$与$C$的连线平行于$AO$, 求证$AD$与$\odot O$相切。
+\item 以$O$为圆心作两个同心圆，已知$\overline{AB}$为小圆的直径，过
+$A$、$B$两点分别作小圆的切线交大圆于$C$、$D$两点：（使
+$C$、$D$分别在$\overline{AB}$的两侧），证明$C$、$O$、$D$三点共线。
+\item 若一圆的两条切线交成$60^{\circ}$角，圆的半径为$r$, 求交点到
+圆心的距离。若交角为$120^{\circ}$, 交点到圆心的距离又是多 
+少？
+\item 有一桥拱是圆弧$\wideparen{ACB}$, 桥的跨度$\overline{AB}=37.4$米，拱高
+$\overline{CD}=7.2$米，求拱圈的半径。
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-2.5/0.5/A_1, 2.5/0.5/B_1, -1.5/2.25/D_1, 1.5/2.25/C_1}
+\tkzDrawPolygon[pattern=bricks](A_1,B_1,C_1,D_1)
+\fill[white] (-1.75,0) arc (180:0:1.75);
+\tkzDefPoints{0/1.75/C, 0/.5/D, 0/0/O}
+\tkzInterLC(A_1,B_1)(O,C) \tkzGetPoints{A}{B}
+\tkzDrawSegments[dashed](A,B C,D)
+\tkzLabelPoints[below](A,B,D)
+\tkzLabelPoints[below right](C)
+\draw(C) arc (90:90-73.4:1.75);
+\draw(C) arc (90:90+73.4:1.75);
+    \end{tikzpicture}
+    \caption*{第7题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.5]
+\fill[pattern=north east lines](0,0) circle (1);
+\fill[white](-.5,.25) rectangle (.5,1.2);
+\draw(0,0) circle(1);
+\draw(0,0)--node[below]{$r$}(170:1);
+\foreach \x in {.25,0.866}
+{
+    \draw(0.5,\x)--(1.5,\x);
+}
+\draw(0,-1)--(1.5,-1);
+\draw[<->](1.3,.25)--node[fill=white]{$x$}(1.3,.866);
+\draw[<->](1.3,.25)--node[fill=white]{$b$}(1.3,-1);
+\draw(-.5,1.25)--(-.5,.25)--(.5,.25)--(.5,1.25);
+\draw[<->](-.5,1.15)--node[fill=white]{$a$}(.5,1.15);
+
+    \end{tikzpicture}
+    \caption*{第8题}
+    \end{minipage}
+    \end{figure}
+
+\item 如图，一工件的断面，$a$、$b$、$r$为已知，求
+$x$.
+\item 已知$\overline{AB}$为一半圆的直径，直线$\ell$与半圆相切于$C$点，
+$\overline{CD}\bot\overline{AB}$于$D$点，$\overline{AM}\bot \ell$于$M$点，$\overline{BN}\bot \ell$于$N$点。
+
+求证：$\overline{MC}=\overline{NC}$；$\overline{CD}^2=\overline{AM}\cdot \overline{BN}$.
+
+\item 已知$\odot O_1$与$\odot O_2$外切于$A$点，一直线与$\odot O_1$和$\odot O_2$分
+别相切于$T_1$、$T_2$两点，并与连心线$O_1O_2$相交于$S$点，
+
+求证：$\overline{SA}^2=\overline{ST_1}\cdot \overline{ST_2}$.
+\item 已知$\overline{MN}$为一圆的直径，过圆外一点$D$作$\overline{DA}\bot \overline{MN}$于
+$A$点交圆于$C$点，
+$\overline{DN}$交圆于$P$, $\overline{MP}$交$\overline{AD}$于$B$, 求
+证：$\overline{AC}^2=\overline{AB}\cdot \overline{AD}$（提示：先证$\overline{AB}\cdot \overline{AD}=\overline{AM}\cdot 
+\overline{AN}$）。
+\item 过两相交圆的公弦上的一点$P$, 作一条直线交一圆于
+$A$、$B$两点与另一圆相交于$C$、$D$两点，
+求证：$\overline{AC}:\overline{CP}=\overline{BD}:\overline{BP}$.
+\item 设$\overline{AB}$是一圆的直径，由$A$、$B$两点作弦$\overline{AC}$及$\overline{BD}$
+相交
+于$E$点，求证：$\overline{AE}\cdot \overline{AC}+\overline{BE}\cdot \overline{BD}=\overline{AB}^2$.
+
+（提示，过$E$作$EP\bot AB$于$P$, 寻找共圆点，利用圆幂
+定理）
+\item 在$\triangle ABC$中，$\angle A$的外角平分线与此三角形的外接圆
+相交于$D$, 求证 $\overline{BD}=\overline{CD}$.
+\item 假设两圆互相外切，求证以两圆心之间线段作直径的圆
+必与前两圆的外公切线相切。
+\item 知直角$\triangle ABC$, $\angle C=90^{\circ}$, 过$\overline{AC}$
+边上一点$D$, 作斜
+边$\overline{AB}$的垂线交斜边于$E$点，交它的外接圆于$G$点，交
+$\overline{BC}$的延长线于$F$点，
+求证：$\overline{EG}^2=\overline{EA}\cdot \overline{EB}$；$\overline{EG}^2=\overline{ED}\cdot \overline{EF}$.
+\item 求证正三角形内的任一点到三边的距离和等于一边上的
+高。
+\item 求证：圆内接正$n$边形内任一点到各边的距离和等于$n$
+倍边心距。
+\item 已知等边$\triangle ABC$内接于$\odot O$, $P$为$\wideparen{BC}$上任一点. 
+求证：$\overline{PA}=\overline{PB}+\overline{PC}$.
+\item 从圆外一点$P$, 作这个圆的切线$PA$, $A$是切点，再从$P$
+点引圆的割线与圆相交于$B$、$C$, 设$\angle P$的平分线与$\overline{AB}$、$\overline{AC}$
+的交点分别是$D$、$E$. 
+
+求证：$\frac{\overline{DB}}{\overline{AB}}+\frac{\overline{EC}}{\overline{AC}}=1$
+
+\item 已知$\odot O$与$\odot O'$相离，连心线与$\odot O$和$\odot O'$的交点顺
+次是$A$、$B$、$C$、$D$, 直线$PP'$分别与$\odot O$和$\odot O'$相切于
+$P$、$P'$点，求证：$\overline{PP'}^2=\overline{AC}\cdot \overline{BD}$.
+\end{enumerate}

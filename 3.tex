@@ -3844,68 +3844,1039 @@ $\parallelogram ABCD$上，所以$\parallelogram ABCD$是中心对称形。$O$�
 
     求证：$EFGH$是正方形。
 \end{example}
-    
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/B, 3/0/C, 3/2/D, 0/2/A}
+\tkzDrawPolygon[thick](A,B,C,D)
+\tkzDrawLines[add=0 and .5, dashed](B,A A,D D,C C,B)
+\tkzDefPointWith[linear, K=1.5](B,A)  \tkzGetPoint{A'}
+\tkzDefPointWith[linear, K=1.5](A,D)  \tkzGetPoint{D'}
+\tkzDefPointWith[linear, K=1.5](D,C)  \tkzGetPoint{C'}
+\tkzDefPointWith[linear, K=1.5](C,B)  \tkzGetPoint{B'}
+
+\tkzDefLine[bisector](D,A,A') \tkzGetPoint{A''}
+\tkzDefLine[bisector](C,D,D') \tkzGetPoint{D''}
+\tkzDefLine[bisector](B,C,C') \tkzGetPoint{C''}
+\tkzDefLine[bisector](A,B,B') \tkzGetPoint{B''}
+\tkzInterLL(A,A'')(D,D'')  \tkzGetPoint{H}
+\tkzInterLL(D,D'')(C,C'')  \tkzGetPoint{G}
+\tkzInterLL(B,B'')(C,C'')  \tkzGetPoint{F}
+\tkzInterLL(A,A'')(B,B'')  \tkzGetPoint{E}
+\tkzDrawPolygon[thick](E,F,G,H)
+\tkzInterLL(A,E)(C,B)  \tkzGetPoint{P}
+\tkzDrawSegments[dashed](E,P P,B)
+
+\tkzLabelPoints[above](H,D)
+\tkzLabelPoints[below](P,F,B)
+\tkzLabelPoints[left](E,A)
+\tkzLabelPoints[right](G,C)
+
+\tkzMarkAngles[mark=none, size=.4](E,A,B A,B,E D,A,H B,C,F F,B,C H,D,A B,P,E)
+\tkzLabelAngle[pos=.6](E,A,B){1}
+\tkzLabelAngle[pos=.6](A,B,E){2}
+\tkzLabelAngle[pos=.6](D,A,H){3}
+\tkzLabelAngle[pos=.6](B,C,F){4}
+\tkzLabelAngle[pos=.6](F,B,C){5}
+\tkzLabelAngle[pos=.6](H,D,A){6}
+\end{tikzpicture} 
+    \caption{}
+\end{figure}
+
+
 \begin{proof}
+延长$\overline{AE}$、$\overline{CB}$交于$P$点，
+
+$\because\quad ABCD$是矩形，
+
+$\therefore\quad AD\parallel BC$,
+
+$\therefore\quad \angle P=\angle 3$（两条直线平行同位角相等）。
+
+又$\because\quad \angle 3=\angle 4=45^{\circ}$ （矩形外角的一半是$45^{\circ}$），
+
+$\therefore\quad EH\parallel FG$（内错角相等两条直线平行）。
+
+同理：$EF\parallel HG$
+
+$\therefore\quad $四边形$EFGH$是平行四边形
+
+$\because\quad \angle 1=\angle 2=45^{\circ}$, （矩形外角的一半是$45^{\circ}$），
+
+$\therefore\quad \angle AEB=90^{\circ}$，并且$\overline{AE}=\overline{BE}$（两个角相等的三角形是等腰三角形），
+
+又$\because\quad \angle 3=\angle 5=\angle 4=\angle 6$, $\overline{AD}=\overline{BC}$（矩形的对边相等），
+
+$\therefore\quad \triangle AHD\cong BFC$（ASA）.
+
+$\therefore\quad \overline{AH}=\overline{BF}$（全等三角形的对应边相等）。
+
+$\therefore\quad \overline{AE}+\overline{AH}=\overline{BE}+\overline{BF}$（等量加等量和相等）。    
+
+即：$\overline{EH}=\overline{EF}$，因此，四边形$EFGH$是正方形（正方形定
+义）
+\end{proof}
+
+\begin{ex}
+\begin{enumerate}
+    \item $E$、$F$是$\parallelogram ABCD$对角线$\overline{BD}$上的两点，且$\overline{BE}=\overline{DF}$,  求证：$\overline{AE}=\overline{CF}$.
+    \item 已知$\parallelogram ABCD$中，$E$、$F$是$\overline{BD}$上的两点，且$\angle BAE=\angle DCF$.  求证：$\overline{BE}=\overline{DF}$.
+\item 已知：在$\parallelogram ABCD$中，$E$、$F$分别是$\overline{AB}$、$\overline{CD}$上的点，且$\overline{BE}=\overline{DF}$. 求证：$\overline{BF}\parallel\overline{DE}$
+
+\item 已知：$\parallelogram ABCD$中$E$、$F$是$\overline{BD}$上的两点，且$\overline{BE}=\overline{DF}$. 求证：四边形$AECF$是平行四边形.
+\item 已知：$E$、$F$是$\parallelogram ABCD$的对边$\overline{AB}$、$\overline{CD}$的中点，$\overline{EF}$
+与$\overline{AC}$相交于$O$. 求证：$\overline{AO}=\overline{CO}$.
+\item 求证：对角线相等的平行四边形是矩形。
+\item 求证：对角线互相垂直的平行四边形是菱形。
+\item 已知：$E$、$F$、$G$分别是$\triangle ABC$三边上的中点。
+求证：四边形$AEFG$是平行四边形。
+\item 已知：等腰$\triangle ABC$, $\overline{AB}=\overline{AC}$, $E$、$F$、$G$是三边上的中点。求证：四边形$AEFG$是菱形。
     
+\item 证明：顺次连结任意四边形四边的中点所成的四边形是
+平行四边形。
+\item 顺次连结平行四边形四边中点所成的四边形是什么图
+形？证明你的结论。
+\item 顺次连结短形四边中点所成的四边形是什么图形？证明
+你的结论。
+\item 顺次连结菱形四边中点所成的四边形是什么图形？证明
+你的结论。
+\item 顺次连结正方形各边中点所成的四边形是什么图形？证
+明你的结论。
+\item 证明：三角形的三边中点间的线段把三角形分为四个全
+等形。
+\item 证明：等腰梯形的两底角相等。
+\item 证明：等腰梯形的两条对角线相等。
+\item 等腰梯形的腰等于中位线，周长为24cm. 求腰长。
+\item 已知梯形$ABCD$中，$\overline{AD}\parallel \overline{BC}$, $\overline{BC}=2\overline{AD}$，$AF\parallel CD$交$\overline{BD}$于$O$点，$\overline{CD}=6$cm, 求$\overline{OF}$的长度。
+
+\item 已知：正方形$ABCD$, $E$、$F$、$G$、$H$分别在$\overline{AB}$、$\overline{BC}$、$\overline{CD}$、$\overline{DA}$上，并且$\overline{AE}=\overline{BF}=\overline{CG}=\overline{DH}$, 求证：四边形
+$EFGH$是正方形。
+\end{enumerate}
+\end{ex}
+
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 4.5/2/D}
+\tkzDefPointsBy[translation=from C to D](B){A}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDefPointWith[linear, K=.3](B,D) \tkzGetPoint{E}
+\tkzDefPointWith[linear, K=.3](D,B) \tkzGetPoint{F}
+\tkzDrawSegments(B,D A,E C,F)
+\tkzLabelPoints[above](A,D,F)
+\tkzLabelPoints[below](B,E,C)
+    \end{tikzpicture}
+    \caption*{第1、2题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+  \tkzDefPoints{0/0/A, 3/0/B, 4/2/C}
+\tkzDefPointsBy[translation=from B to C](A){D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDefPointWith[linear, K=.45](C,D) \tkzGetPoint{F}
+\tkzDefPointWith[linear, K=.45](A,B) \tkzGetPoint{E}
+\tkzDrawSegments(D,E F,B)
+\tkzLabelPoints[above](C,D,F)
+\tkzLabelPoints[below](B,E,A)    
+    \end{tikzpicture}
+    \caption*{第3题}
+    \end{minipage}
+    \end{figure}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{0/0/B, 3/0/C, 4/2.5/D}
+    \tkzDefPointsBy[translation=from C to D](B){A}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDefPointWith[linear, K=.3](B,D) \tkzGetPoint{E}
+    \tkzDefPointWith[linear, K=.3](D,B) \tkzGetPoint{F}
+    \tkzDrawSegments(B,D)
+    \tkzDrawPolygon(A,F,C,E)
+    \tkzLabelPoints[above](A,D,F)
+    \tkzLabelPoints[below](B,E,C)
+    \end{tikzpicture}
+    \caption*{第4题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+        \tkzDefPoints{0/0/A, 3/0/B, 4/2/C}
+        \tkzDefPointsBy[translation=from B to C](A){D}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzDefPointWith[linear, K=.5](C,D) \tkzGetPoint{F}
+        \tkzDefPointWith[linear, K=.5](A,B) \tkzGetPoint{E}
+        \tkzDrawSegments(A,C E,F)
+        \tkzLabelPoints[above](C,D,F)
+        \tkzLabelPoints[below](B,E,A)   
+        \tkzInterLL(A,C)(E,F) \tkzGetPoint{O}
+        \tkzLabelPoints[right](O) 
+    \end{tikzpicture}
+    \caption*{第5题}
+    \end{minipage}
+    \end{figure}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 2.4/2.5/A}
+\tkzDefMidPoint(A,B) \tkzGetPoint{E}
+\tkzDefMidPoint(A,C) \tkzGetPoint{G}
+\tkzDefMidPoint(C,B) \tkzGetPoint{F}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(E,F F,G)
+\tkzLabelPoints[below](B,F,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[left](E)
+\tkzLabelPoints[right](G)
+    \end{tikzpicture}
+    \caption*{第8题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+        \tkzDefPoints{0/0/B, 3/0/C, 1.5/2.5/A}
+        \tkzDefMidPoint(A,B) \tkzGetPoint{E}
+        \tkzDefMidPoint(A,C) \tkzGetPoint{G}
+        \tkzDefMidPoint(C,B) \tkzGetPoint{F}
+        \tkzDrawPolygon(A,B,C)
+        \tkzDrawSegments(E,F F,G)
+        \tkzLabelPoints[below](B,F,C)
+        \tkzLabelPoints[above](A)
+        \tkzLabelPoints[left](E)
+        \tkzLabelPoints[right](G)
+    \end{tikzpicture}
+    \caption*{第9题}
+    \end{minipage}
+    \end{figure}
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 3/2/D, 1/2/A, 2/0/E}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments[dashed](D,E)
+\tkzLabelPoints[below](B,C,E)
+\tkzLabelPoints[above](A,D)
+\tkzMarkAngles[size=.4, mark=none](C,B,A D,C,B)
+
+    \end{tikzpicture}
+    \caption*{第16题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+        \tkzDefPoints{0/0/B, 4/0/C, 3/2/D, 1/2/A}
+\tkzDefMidPoint(B,C) \tkzGetPoint{F}
+        \tkzDrawPolygon(A,B,C,D)
+        \tkzDrawSegments(A,F B,D)
+        \tkzInterLL(A,F)(B,D) \tkzGetPoint{O}
+        \tkzLabelPoints[below](B,C,F)
+        \tkzLabelPoints[above](A,D)     
+        \tkzLabelPoints[left](O)     
+    \end{tikzpicture}
+    \caption*{第19题}
+    \end{minipage}
+    \end{figure}
 
 
 
 
+\subsection{等分线段}
+
+\begin{blk}
+ {平行线等分线段定理} 如果一组平行线在一条直线上截
+出一组等长的线段，那么在任一条与这组平行线相交的直线
+上也被截为一组等长的线段。   
+\end{blk}
+
+已知：$\ell_1\parallel \ell_2\parallel \ell_3$, 直线$m$与$\ell_1$、$\ell_2$、$\ell_3$分别相交于$A_1,A_2,A_3$且$\overline{A_1A_2}=\overline{A_2A_3}$；任一条直线$n$分别与$\ell_1$、$\ell_2$、$\ell_3$相交于$B_1,B_2,B_3$（图3.65）。
+
+求证：$\overline{B_1B_2}=\overline{B_2B_3}$.
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=1.5]
+\tkzDefPoints{-2/1/A, 2/1/B, -2/2/A', 2/2/B', -2/3/A'', 2/3/B''}
+\tkzDrawLines(A,B A',B' A'',B'')
+\tkzDefPoints{-.5/4/m, 1/4/n, -2.5/0/M', 2/0/N'}
+
+\tkzDrawSegments(m,M' n,N')
+\tkzInterLL(m,M')(A'',B'')  \tkzGetPoint{A_1}
+\tkzInterLL(m,M')(A',B')  \tkzGetPoint{A_2}
+\tkzInterLL(m,M')(A,B)  \tkzGetPoint{A_3}
+\tkzInterLL(n,N')(A'',B'')  \tkzGetPoint{B_1}
+\tkzInterLL(n,N')(A',B')  \tkzGetPoint{B_2}
+\tkzInterLL(n,N')(A,B)  \tkzGetPoint{B_3}
+
+\tkzLabelPoints[above left](A_1,A_2,A_3)
+\tkzLabelPoints[above right](B_1,B_2,B_3)
+\tkzLabelPoints[above](m,n)
+\node at (3,1){$\ell_3$};
+\node at (3,2){$\ell_2$};
+\node at (3,3){$\ell_1$};
+
+\tkzDefPoints{-1.2/1/C_2}
+\tkzDefPointsBy[translation= from A_2 to A_1](C_2){C_1}
+\tkzLabelPoints[below](C_1,C_2)
+\tkzDrawSegments(A_1,C_1 A_2,C_2)
+\tkzMarkAngles[mark=none, size=.3](C_2,A_3,A_1 C_1,A_2,A_1 A_3,A_2,C_2  A_3,A_1,C_1)
+\tkzLabelAngle[pos=.4](C_2,A_3,A_1){4}
+\tkzLabelAngle[pos=.4](C_1,A_2,A_1){3}
+\tkzLabelAngle[pos=.4](A_3,A_2,C_2){2}
+\tkzLabelAngle[pos=.4](A_3,A_1,C_1){1}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{proof}
+过$A_1$、$A_2$分别作直线$n$的平行线$A_1C_1$、$A_2C_1$,与
+$\ell_2$、$\ell_3$分别交于$C_1,C_2$两点。在$\triangle A_1A_2C_1$和$\triangle A_2A_3C_2$中，
+
+$\because\quad \overline{A_1A_2}= \overline{A_2A_4}$（已知），
+$\ell_1\parallel \ell_2\parallel \ell_3$（已知）。$A_1C_1\parallel n_1$,  $A_2C_2\parallel n$,
+
+$\therefore\quad A_1C_1\parallel A_2C_2$（平行于第三条直线的两条直线平行）。
+
+$\therefore\quad \angle 1=\angle 2,\quad \angle 3=\angle 4$（两条直线平行同位角相等）。
+
+$\therefore\quad \triangle A_1A_2C_1\cong \triangle A_2A_3C_2$ (ASA).
+
+$\therefore\quad A_1C_1=A_2C_2$ （全等三角形的对应边相等）。
+但四边形$A_1C_1B_2B_1$和$A_2C_2B_3B_2$都是平行四边形，由于
+平行四边形对边相等，
+
+$\therefore\quad \overline{A_1C_1}=\overline{B_1B2}$, $\overline{A_2C_2}=\overline{B_2B_3}$.
+
+$\therefore\quad \overline{B_1B_2}=\overline{B_2B_3}$ （等量代换）。
+\end{proof}    
+
+\begin{blk}
+    {推论} 经过三角形一边中点并和另一边平行的直线，平分第三边（图3.66）。
+\end{blk}
+
+应用平行线等分线段定理可以用直尺和圆规任意等分一
+条线段。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 2/3/A, 0/3/D, 3.54/3/E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments[dashed](E,D)
+\tkzDefMidPoint(A,B) \tkzGetPoint{G}
+\tkzDefMidPoint(A,C) \tkzGetPoint{H}
+\tkzDrawSegments(G,H)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A,5/0/B, 4.5/2.8/C}
+
+\foreach \x/\xtext in {1/D,2/E,3/F,4/G,5/H}
+{
+    \tkzDefPointWith[linear, K=\x/6](A,C)  \tkzGetPoint{\xtext}
+}
+\foreach \x/\xtext in {1/D_1,2/E_1,3/F_1,4/G_1}
+{
+    \tkzDefPointWith[linear, K=\x/5](A,B)  \tkzGetPoint{\xtext}
+}
+\foreach \x in {D,E,F,G}
+{
+    \tkzDrawSegments(\x,\x_1)
+}
+\tkzDrawSegments(B,H A,B A,C)
+\tkzLabelPoints[below](A,D_1,E_1,F_1,G_1,B)
+\tkzLabelPoints[above](D,E,F,G,H,C)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{example}
+    已知：$\overline{AB}$（图3.67）。
+
+求作：$\overline{AB}$上的点$D_1$、$E_1$、$F_1$、$G_1$，使$\overline{AD}_1=\overline{D_1E_1}=\overline{E_1F_1}=\overline{F_1G_1}=\overline{G_1B}$（将$\overline{AB}$五等分）。
+
+作法：
+\begin{enumerate}
+    \item  作射线$AC$,
+    \item  在射线$AC$上截取$\overline{AD}=\overline{DE}=\overline{EF}=\overline{FG}=\overline{GH}$,
+    \item  连结$B$、$H$,
+    \item  过各分点$D$、$E$、$F$、$G$分别作$BH$的平行线交
+$\overline{AB}$于$D_1$、$E_1$、$F_1$、$G_1$, 则$D_1$、$E_1$、$F_1$、$G_1$把$\overline{AB}$五等分。
+\end{enumerate}
+
+证明：略。
+\end{example}
+
+\begin{ex}
+\begin{enumerate}
+    \item 任划一条$\overline{AB}$, 把它三等分。
+    \item 任划一条$\overline{CD}$, 把它五等分。
+\end{enumerate}
+\end{ex}
+
+\subsection*{习题3.3}
+\begin{enumerate}
+    \item 已知：梯形$ABCD$中，$\angle B=90^{\circ}$, $AD\parallel BC$, $\overline{CD}=12$cm, $\angle BCD=30^{\circ}$, 求一腰$\overline{AB}$之长。
+\item 已知：矩形$ABCD$中，$\overline{AB}=2\overline{AD}$, $E\in \overline{CD}$, $\angle DAE=60^{\circ}$.
+
+求证：$\angle CBE=15^{\circ}$
+\item 已知：四边形$ABCD$中，$E$、$F$、$G$、$H$分别是$\overline{AB}$、$\overline{AC}$、
+$\overline{CD}$、$\overline{BD}$的中点。
+
+求证：四边形$EFGH$是平行四边形。
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 1.6/2.5/A, 3.6/3/D}
+\tkzDefMidPoint(A,B)  \tkzGetPoint{E}
+\tkzDefMidPoint(A,C)  \tkzGetPoint{F}
+\tkzDefMidPoint(C,D)  \tkzGetPoint{G}
+\tkzDefMidPoint(D,B)  \tkzGetPoint{H}
+\tkzDrawPolygon(A,B,C,D) \tkzDrawPolygon(E,F,G,H)
+\tkzDrawSegments(B,D A,C)
+\tkzLabelPoints[right](C,D,G)
+\tkzLabelPoints[left](E,B)
+\tkzLabelPoints[above](H,A)
+\tkzLabelPoints[below](F)
+    \end{tikzpicture}
+    \caption*{第3题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.4]
+\tkzDefPoints{0/0/B, 2/0/C, 2/2/D, 0/2/A}
+\tkzDefPointWith[linear, K=1.4](B,C)  \tkzGetPoint{E}
+\tkzDefPointWith[linear, K=.4](C,D) \tkzGetPoint{F}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments[dashed](C,E)
+\tkzDrawSegments(B,F D,E)
+\tkzLabelPoints[right](F)
+\tkzLabelPoints[above](A,D)
+\tkzLabelPoints[below](B,C,E)
+    \end{tikzpicture}
+    \caption*{第4题}
+    \end{minipage}
+    \end{figure}
+
+\item 已知：$E$是正方形$ABCD$的边$\overline{BC}$的延长线上的一点，
+且$\overline{CE}=\overline{CF}$
+求证：$\overline{DE}=\overline{BF}$；$DE\bot BF$.
+
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 1.5/0/M, 2.2/2/A}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(A,M)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](B,M,C)
+\tkzDefSquare(B,A)
+\tkzGetPoints{D}{E}
+\tkzDefSquare(A,C)
+\tkzGetPoints{F}{G}
+\tkzLabelPoints[left](D,E)
+\tkzLabelPoints[right](F,G)
+\tkzDrawSegments(D,G)
+\tkzDrawPolygon(A,B,E,D)
+\tkzDrawPolygon(A,C,F,G)
+    \end{tikzpicture}
+    \caption*{第5题}
+\end{figure}
+
+\item 已知：$\overline{AM}$是$\triangle ABC$的中线，四边形$ABED$, $ACFG$都
+是正方形。
+
+求证：$\overline{AM}=\frac{1}{4}\overline{DG}$.
+
+（提示：延长$\overline{AM}$到$N$, 使$\overline{MN}=\overline{AM}$, 考虑$\triangle ADG$与
+$\triangle ABN$的关系）
+\item 试证：对角线相等且互相平分的四边形是矩形。
+\item 已知：$ABCD$为平行四边形，且$\overline{AE}=\overline{EB}$, $\overline{AF}=\overline{FD}$,
+
+求证：$\overline{BK}=\overline{KL}=\overline{LD}$（提示：连$\overline{AC}$, 在$\triangle ABC$中应用重心定理）
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 3/0/B, 4/2/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDefMidPoint(A,D) \tkzGetPoint{F}
+\tkzDefMidPoint(A,B) \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(B,D C,F C,E)
+\tkzInterLL(B,D)(C,F)  \tkzGetPoint{L}
+\tkzInterLL(B,D)(C,E)  \tkzGetPoint{K}
+
+\tkzLabelPoints[below](A,E,B)
+\tkzLabelPoints[above](C,D,L)
+\tkzLabelPoints[left](F)
+\tkzLabelPoints[right](K)
+    \end{tikzpicture}
+    \caption*{第7题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B}
+\tkzDefPoint(25:2){C}
+\tkzDefPoint(65:1.9){A}
+
+\tkzDrawPolygon(A,B,C)
+\tkzDefEquilateral(B,A)  \tkzGetPoint{D}
+\tkzDrawPolygon(A,B,D)
+\tkzDefEquilateral(A,C)  \tkzGetPoint{E}
+\tkzDrawPolygon(A,C,E)
+\tkzDefEquilateral(B,C)  \tkzGetPoint{F}
+\tkzDrawPolygon(F,C,B)
+\tkzDrawPolygon(A,E,F,D)
+\tkzLabelPoints[below](C,B)
+\tkzLabelPoints[above](A,D,F,E)
+
+
+    \end{tikzpicture}
+    \caption*{第8题}
+    \end{minipage}
+    \end{figure}
+
+\item 在$\triangle ABC$的外侧，以$\overline{AB}$、$\overline{AC}$为边分别作正三角形$ABD$
+和$ACE$, 在内侧以$BC$为边作正$\triangle BCF$.
+
+求证：四边形$AEFD$为平行四边形。
+\item 过平行四边形$ABCD$的对角线$\overline{AC}$和$\overline{BD}$的交点$O$作一直
+线，交$\overline{BC}$、$\overline{AD}$于$E$、$F$, 已知$\overline{BE}=2$米，$\overline{AF=2.8}$米，求$\overline{BC}$的长。
+\item 已知：$E$是正方形$ABCD$的对角线$\overline{AC}$上的一点，$\overline{CE}=\overline{BC}$, 过$E$作$EF\bot \overline{AC}$交$\overline{AB}$于$F$.
+
+求证：$\overline{AE}=\overline{EF}=\overline{FB}$.
+
+\item 设$P$点是正方形$ABCD$的$\overline{CD}$上的一点，$\angle BAP$的平分
+线与$\overline{BC}$的交点为$Q$, 那么$\overline{AP}=\overline{DP}+\overline{BQ}$.
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 3/3/D, 0/3/A, 3/2.2/P}
+\tkzDefLine[bisector](P,A,B) \tkzGetPoint{P'}
+\tkzInterLL(A,P')(B,C) \tkzGetPoint{Q}
+\tkzDrawSegments(A,P A,Q)
+\tkzDrawPolygon(A,B,C,D)
+\tkzLabelPoints[below](C,B,Q)
+\tkzLabelPoints[above](A,D)
+\tkzLabelPoints[right](P)
+    \end{tikzpicture}
+    \caption*{第11题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+        \tkzDefPoints{0/0/A, 4/0/B, 2.5/2.5/C, 0.8/2.5/D}
+        \tkzDrawPolygon(A,B,C,D)
+\tkzDefMidPoint(A,C)  \tkzGetPoint{E}
+\tkzDefMidPoint(B,D)  \tkzGetPoint{F}
+\tkzDrawSegments(A,C B,D E,F)
+\tkzInterLL(C,F)(A,B) \tkzGetPoint{M}
+\tkzDrawSegments[dashed](C,M)
+
+\tkzLabelPoints[below](A,M,B)
+\tkzLabelPoints[above](C,D)
+\tkzLabelPoints[right](F)
+\tkzLabelPoints[left](E)
+    \end{tikzpicture}
+    \caption*{第12题}
+    \end{minipage}
+    \end{figure}
+
+\item 已知：梯形$ABCD$中，$AB\parallel CD$, $E$、$F$分别是$\overline{AC}$、
+$\overline{BD}$的中点，
+
+求证：$EF\parallel AB\parallel DC$；$\overline{EF}=\frac{1}{2}(\overline{AB}-\overline{DC})$
+
+（提示：引$\overline{CF}$交$\overline{AB}$于$M$, 先证明$\triangle CFD\cong \triangle MFB$）
+\item 有一个角是直角的梯形叫\textbf{直角梯形}，在直角梯形$ABCD$
+中，$AD\parallel BC$, $\angle A=90^{\circ}$, $\angle D=45^{\circ}$, $\overline{CD}$的垂直
+平分线交$\overline{CD}$于$E$, 交$\overline{BA}$的延长线于$F$, 若$\overline{AD}=a$, 求
+$\overline{BF}$的长。
+\item 在$\triangle ABC$中，$\overline{AB}=\overline{AC}$, $E$是$\overline{AB}$中点，$D$在$\overline{AB}$的延
+长线上，且$\overline{BD}=\overline{AB}$, 求证：$\overline{CE}=\frac{1}{2}\overline{CD}$.
+\item 在四边形$ABCD$中，对角线$\overline{AC}$、$\overline{BD}$相交于$E$, 且$\overline{AC}=\overline{BD}$, $M$、$N$分别是$\overline{BC}$、$\overline{AD}$中点，$\overline{MN}$分别交$\overline{AC}$、
+$\overline{BD}$于$F$、$G$, 求证$\overline{EF}=\overline{EG}$.
+\item 已知：$\overline{BD}$是直角三角形$ABC$的斜边$\overline{AC}$上的中线，过
+$A$点作$AQ\parallel DB$交$\overline{CB}$延长线于$Q$.
+
+求证：$\overline{AQ}=\overline{AC}$.
+
+\end{enumerate}
+
+
+\section{面积与勾股定理}
+
+
+\subsection{面积的基本性质和面积单位}
+在第一章里我们已经谈到长度，角度的概念，现在让我
+们再来分析一下“面积”这个基本的几何量。度量面积通常
+取边长为一个长度单位的正方形做面积单位。例如，我们把
+每边长为一厘米的正方形的面积叫做一平方厘米。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+    \draw(0,0) rectangle (3,3);
+    \draw[|<->|](0,-.35)--node[fill=white]{单位长}(3,-.35);
+    \draw[|<->|](3.7,0)--node[fill=white]{单位长}(3.7,3);
+\end{scope}
+\begin{scope}[xshift=6cm]
+    \draw(0,0) rectangle (1,1);
+    \node at (.5,1.2){1厘米};
+    \node at (1.5, .5){1厘米};
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+度量图形面积的大小，实际上就是求出这个图形包含多
+少个面积单位。也就是求这个图形所含单位面积的量数，这
+个量数是个正实数。
+
+由面积单位的直观含义，我们可看到面积这个几何量应
+该具有下列基本性质：
+\begin{enumerate}
+\item 设$R$和$R'$是两个可以完全叠合的“平面区域”
+（图3.69），即$R$和$R'$的形状大小完全一致，则$R$和$R'$的
+面积显然相等。
+\begin{figure}[htp]
+    \centering
+\includegraphics[scale=.8]{fig/3-69.png}
+    \caption{}
+\end{figure}
+\begin{figure}[htp]
+    \centering
+\includegraphics[scale=.8]{fig/3-70.png}
+    \caption{}
+\end{figure}
+\item 面积的可加性：设区域$R_1$, $R_2$是由区域$R$分割而
+成（图3.70），或者说区域$R_1$、$R_2$拼成区域$R$, 则$R$的面
+积为$R_1$, $R_2$的面积之和。
+\item 设区域$T$是区域$R$的一部分，也就是区域$R$包含区
+域$T$, 则有：$T$的面积$<R$的面积（图3.71）。例如在图
+3.72中，正方形$ABCD$的面积$<$圆的面积$<$正方形$A'B'C'D'$
+的面积。
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[scale=.8]{fig/3-71.png}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A', 3/0/B', 3/3/C', 0/3/D', 1.5/1.5/O}
+\tkzDefMidPoint(A',B') \tkzGetPoint{B}
+\tkzDefMidPoint(A',D') \tkzGetPoint{A}
+\tkzDefMidPoint(C',B') \tkzGetPoint{C}
+\tkzDefMidPoint(C',D') \tkzGetPoint{D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawPolygon(A',B',C',D')
+\tkzDrawCircle(O,B)
+\tkzLabelPoints[left](D',A,A')
+\tkzLabelPoints[right](C',C,B')
+\tkzLabelPoints[above](D)
+\tkzLabelPoints[below](B)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+\begin{blk}{定义}
+如果两个平面图形的面积相等，我们说它们是等
+积图形。  
+\end{blk}
+
+以后我们说两条线段的积或比，都是指它们的长度的积
+或比；我们说两个图形面积的比是这两个图形面积所对应的实数比。
+
+\begin{ex}
+\begin{enumerate}
+    \item 请同学自己填写下面常用的面积单位：
+\begin{enumerate}
+\item     一平方公里($\rm km^2$)$=\underline{\qquad\qquad}$平方米($\rm m^2$)
+\item     一平方米($\rm m^2$)$=\underline{\qquad\qquad}$平方分米($\rm dm^2$)
+\item    一平方分米($\rm dm^2$)$=\underline{\qquad\qquad}$平方厘米($\rm cm^2$)
+\item 一平方厘米($\rm cm^2$)$=\underline{\qquad\qquad}$平方毫米($\rm mm^2$)
+\end{enumerate}
+
+    \item 工程技术人员通常用“加半移三”的办法把平方米数换
+    算成亩数，即把平方米数加上它的一半，小数点再向左移
+    三位即得亩数，请同学把上面这段话用代数式表达出来，
+    并给出证明。
+    \item 把下列各平方米数用口算化成亩。
+\[ 4500{\rm m^2};\quad     6000{\rm m^2};\quad     380{\rm m^2};
+ \quad    28000{\rm m^2}\]
+\end{enumerate}
+\end{ex}
+
+\subsection{长方形面积}
+长方形的一组邻边分别叫做长和宽。
+
+设长方形$ABCD$(图3.73), 长$\overline{AB}=a$, 宽$\overline{AC}=b$, 
+则长方形面积$=$长$\x$宽$=ab$.
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\tkzDefPoints{0/0/A, 4/0/B, 4/3/C, 0/3/D}
+\tkzDrawPolygon(A,B,C,D)
+\draw(0,1)--(4,1);  \draw(0,2)--(4,2);
+\draw(1,0)--(1,3);  \draw(2,0)--(2,3);  \draw(3,0)--(3,3);
+\fill[pattern=north east lines](0,0) rectangle (1,1);
+\tkzLabelPoints[left](A,D)
+\tkzLabelPoints[above right](C)
+\tkzLabelPoints[below right](B)
+\draw[|<->|](0,-.3)--node[fill=white]{$a$}(4,-.3);
+\draw[|<->|](4.3,0)--node[fill=white]{$b$}(4.3,3);
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+上面这个公式，同学们在小学就已经学过了。虽然如
+此，我们不妨问问同学：你们知道这个公式成立的理由吗？可
+能会有许多同学觉得这个问题太简单了，其实要严格证明这
+个公式并不那么简单。当$a,b$是正整数时，的确是对的。例
+如，$a=4$, $b=3$, 那么$\overline{AB}$的长正好是4个单位长，$\overline{BC}$长正
+好是3个单位长，$ABCD$正好被12个单位正方形填满。可
+是，$\overline{AB}$、$\overline{BC}$的长不见得都能用整数表示，甚至有的线段长
+不能用有理数来表示，那么上述公式当$a$、$b$不是正整数时是
+否还成立呢：所以长方形面积的讨论并不是同学想像的那么
+简单，以至我们现在还不能严格证明它。下面我们仅对$a$、
+$b$都是整数或都是分数时加以证明。
+
+\begin{enumerate}
+    \item  $a=n$, $b=m$, $n$、$m$为正整数，长方形$ABCD$可
+    分成$n\x m$个单位正方形，所以面积为$n\cdot m=a\cdot b$
+    \item  $a$、$b$都是分数，不防设它们的分母相同，设
+$a=\frac{m}{n}$, $b=\frac{\ell}{n}$，
+    这时两个分数单位都是$\frac{1}{n}$单位长，$a=m$个$\frac{1}{n}$，$b=\ell$个$\frac{1}{n}$。
+
+    我们把长度单位等分为$n$段（图3.74），单位正方形
+    被分割为$n^2$个边长为$\frac{1}{n}$
+    长度单位的小正方形。所以边长为$\frac{1}{n}$的小单位正方形面积是原单位正方形面积的$\frac{1}{n^2}$，
+    长方形的长$a$为$m$
+    个$\frac{1}{n}$长，宽为$\ell$个$\frac{1}{n}$
+    长，我们把长方形$ABCD$
+    分割成$m\x \ell$个边长为$\frac{1}{n}$
+    的小正方形（图3.75），所以该
+    长方形面积为$m\x\ell$个（$\frac{1}{n^2}$单位面积），即$\frac{m}{n}\cdot\frac{\ell}{n}$个单
+    位面积。所以长方形面积$=a\cdot b=\frac{m}{n}\cdot\frac{\ell}{n}$
+ \item $a$、$b$都是实数时，长方形的面积仍等于长$\x$宽。
+    这到高中我们才能证明它。
+\end{enumerate}
 
 
 
-    
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.4\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.7]
+    \draw [help lines] grid (5,5);
+    \fill[pattern = north east lines](0,0) rectangle (1,1);
+\draw[|<->|](-1,0)--node[fill=white]{单位长}(-1,5);
+\draw[|<->|](0,-.3)--node[below]{$\frac{1}{n}$}(1,-.3);
+\node at (3,-.5){$n=5$};
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.55\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.6]
+      \draw [help lines] grid (9,4);
+      \fill[pattern = north east lines](0,0) rectangle (1,1);
+\node at (0,0)[left]{$A$};\node at (0,4)[left]{$D$};
+\node at (9,0)[below right]{$B$};\node at (9,4)[above right]{$C$};
+\draw[|<->|](0,-.2)--node[below]{$\frac{m}{n}\; \left(\frac{9}{5}\right)$}(9,-.2);
+\draw[|<->|](9.2,0)--node[right]{$\frac{\ell}{n}\; \left(\frac{4}{5}\right)$}(9.2,4);
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+    有了长方形面积公式后，一些其它与长方形有关连的图
+    形的面积就很容易求得。
+
+    平行四边形的一边叫底，这条边与其对边之间的公垂线
+    段叫做高。
+
+\begin{blk}
+    {定理}
+平行四边形的面积等于底$\x$高.
+\end{blk}
+
+已知：平行四边形$ABCD$中，设底$\overline{AB}=a$, 高$\overline{BE}=h$（图3.76）
+
+求证：$\parallelogram ABCD$的面积$=a\cdot h$.
+
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}
+\tkzDefPoints{0/0/C, 3/0/D, 4/2/A}
+\tkzDefPointsBy[translation = from D to A](C){B}
+\tkzDefPointBy[projection = onto C--D](B)  \tkzGetPoint{E}
+\tkzDefPointsBy[translation = from B to A](E){F}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments[dashed](B,E A,F D,F)
+\tkzLabelPoints[below](C,E,D,F)
+\tkzLabelPoints[above](B,A)
+\fill[pattern=north east lines](B)--(C)--(E)--(B);
+\fill[pattern=north east lines](A)--(D)--(F)--(A);        
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{proof}
+    引$AF\bot AB$交$CD$的延长线于$F$, 
+    则$AF\parallel BE$, 四边形$ABEF$是矩形。
+
+    在直角三角形$ADF$与$BCE$中，
+
+$\because\quad \overline{AF}=\overline{BE},\quad \overline{AD}=\overline{BC}$,
+
+$\therefore\quad     \triangle ADF\cong \triangle BCE$
+
+$\therefore\quad \triangle ADF$的面积$=\triangle BCE$的面积（性质1）
+
+$\therefore\quad \parallelogram ABCD$的面积$=\triangle CBE$的面积$+$四边形$ABED$的面积，（性质2）
+
+$\therefore\quad \parallelogram ABCD$的面积$=\triangle ADF$的面积$+$四边形$ABED$的面积$=$矩形$ABEF$的面积$=a\cdot h$.
 \end{proof}
 
 
+\begin{blk}
+    {推论1} 等底等的平行四边形等积
+\end{blk}
 
+\begin{blk}
+    {推论2} 任何两个平行四边形面积的比等于其底与高的
+积的比。
+\end{blk}
 
+\begin{blk}
+    {推论3}
+等底平行四边形的面积的比等于其高的比。
+\end{blk}
 
+\begin{blk}
+    {推论4} 等高的平行四边形面积的比，等于其底的比。
+\end{blk}
 
+从三角形某顶点向对边作高，则对边就叫做底。
 
+\begin{blk}
+    {定理} 三角形的面积等于底$\x$高的一半.
+\end{blk}
 
+已知：$\triangle ABC$中底$\overline{AB}=a$, $\overline{AB}$边上的高$\overline{CE}=h$（图3.77）。
 
+求证：$\triangle ABC$的面积$=\frac{1}{2}ah$.
 
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A, 3/0/B, 1/2/C}
+\tkzDefPointsBy[translation = from A to C](B){D}
+\tkzDefPointBy[projection = onto A--B](C)    \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments[dashed](C,D B,D)
+\tkzDrawSegments(C,E)
+\tkzMarkRightAngle[size=.24](C,E,B)
+\tkzLabelPoints[below](A,B,E)
+\tkzLabelPoints[above](C,D)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
 
 \begin{proof}
-    
+    引$BD\parallel AC$, $CD\parallel AB$, $CD$、$BD$交于$D$, （图3.77）
+则$ABDC$为平行四边形。
+
+但$\parallelogram ABDC$的面积$=a\cdot h$,
+
+$\parallelogram ABDC$的面积$=2\x\triangle ABC$的面积，
+
+$\therefore\quad \triangle ABC$的面积$=\frac{1}{2}ah$.
 \end{proof}
+
+\begin{blk}
+   {推论1} 等底等高的三角形等积。
+\end{blk}
+
+\begin{blk}
+    {推论2}
+任何两个三角形面积的比等于底与高的积的
+比。
+\end{blk}
+
+
+\begin{blk}
+    {推论3} 等底的三角形的面积的比等于其高的比；等高
+的三角形的面积的比等于其底的比。
+\end{blk}
+
+梯形两底之间的任一条公垂线段都叫做\textbf{梯形的高}。
+
+\begin{blk}
+    {定理}梯形的面积等于两底和与高的积的一半。
+\end{blk}
+
+请同学给出证明。
+
+\begin{blk}
+{推论} 梯形的面积等于高与它的中位线的积。
+\end{blk}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 3/0/B, 2.5/1.5/C, 1/1.5/D, 1/0/E}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(D,E)
+\tkzMarkRightAngle[size=.2](D,E,A)
+\node at (1.5,0)[below]{$b$};
+\node at (1.75,1.5)[above]{$a$};
+\node at (1,.75)[right]{$h$};
+\tkzDrawSegments[dashed](B,D)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 1.5/0/B, 2.5/1.4/C, 1/2.5/D, -.8/1.6/E}
+\tkzDrawPolygon(A,B,C,D,E)
+\tkzDefLine[parallel=through E](D,A) \tkzGetPoint{E'}
+\tkzDefLine[parallel=through C](D,B) \tkzGetPoint{C'}
+\tkzInterLL(E,E')(A,B) \tkzGetPoint{F}
+\tkzInterLL(C,C')(A,B) \tkzGetPoint{G}
+\tkzDrawSegments[dashed](E,F D,A D,B C,G)
+\tkzDrawLines(F,G)
+\tkzDrawSegments(D,F D,G)
+\tkzLabelPoints[below](A,B,G,F)
+\tkzLabelPoints[above](C,D,E)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{example}
+    已知：五边形$ABCDE$(图3.79).
+
+    求作：一个三角形和五边形$ABCDE$等积。
+\end{example}
+
+作法：作$\overline{DB}$、$\overline{DA}$, 过顶点$C$、$E$, 引$CG$和$EF$, 分
+别平行于$DB$和$DA$, 直线$AB$分别交$CG$和$EF$于$G$、$F$两
+点，则$\triangle DFG$为所求的三角形。
 
 \begin{proof}
-    
+    $\because\quad \triangle DBC$的面积$=\triangle DBG$的面积，
+    $\triangle DAE$的面积$=\triangle DFA$的面积（等底等高）。
+
+因此：
+\[\begin{split}
+    \text{五边形$ABCDE$的面积}&=(\triangle DAB+\triangle DAE+\triangle DBC)\text{的面积}\\
+&=(\triangle DAB+\triangle DFA+\triangle DBG)\text{的面积}\\
+&=\triangle DFG\text{的面积}
+\end{split}\]
 \end{proof}
 
-\begin{proof}
-    
-\end{proof}
+\begin{rmk}
+    本题解法不是唯一的（想想为什么？）
+\end{rmk}
+
+\begin{ex}
+\begin{enumerate}
+    \item 求证：如果两个三角形有公共底边，它们的另一对顶点
+    同在底边的一条平行线上，那么这两个三角形等积。
+    \item 求证：平行四边形的两条对角线将它分成四个等积三角
+    形。
+    \item 求证：如果两个三角形有两边对应相等，并且它们的夹
+    角互补，那么这两个三角形等积.
+    \item 证明一梯形两底的中点间的线段分梯形为两个等积形。
+    \item 已知一等腰直角三角形的斜边是18米，求它的面积。
+    \item 经过$\parallelogram ABCD$的对角线$\overline{AC}$上的一点$P$作两条边的平行线
+    $\overline{EF}$, $\overline{GH}$（如图），则$\parallelogram GBEP$和$\parallelogram FPHD$等积。
+    \item 经过$\parallelogram ABCD$的顶点$D$的任一直线设与$\overline{BC}$、$\overline{AB}$或者它
+    们的延长线分别交于$Q$、$P$, 则$\triangle ABQ$和$\triangle PQC$等积。
+    \item 求作一直角三角形和已知正方形等积。
+    \item 求作一个三角形和已知矩形等积。
+    \item 求作一个三角形和已知四边形等积。
+    \item 求作一等腰三角形和已知不等边三角形等积。
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 3.7/2.3/D}
+\tkzDefPointsBy[translation = from C to D](B){A}
+\tkzDefPointWith[linear, K=.3](A,C) \tkzGetPoint{P}
+\tkzDefPointWith[linear, K=.3](A,D) \tkzGetPoint{F}
+\tkzDefPointWith[linear, K=.3](A,B) \tkzGetPoint{G}
+\tkzDefPointWith[linear, K=.3](D,C) \tkzGetPoint{H}
+\tkzDefPointWith[linear, K=.3](B,C) \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(E,F G,H A,C)
+\tkzLabelPoints[left](A,G,B)
+\tkzLabelPoints[right](D,H,C)
+\tkzLabelPoints[above](F)  \tkzLabelPoints[below](E)
+\tkzLabelPoints[below left](P)
+    \end{tikzpicture}
+    \caption*{第6题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+        \tkzDefPoints{0/0/B, 3/0/C, 3.6/1.7/D}
+        \tkzDefPointsBy[translation = from C to D](B){A}
+        \tkzDrawPolygon(A,B,C,D)
+\tkzDefPointWith[linear, K=.3](B,C) \tkzGetPoint{Q}
+\tkzInterLL(D,Q)(A,B)  \tkzGetPoint{P}
+\tkzDrawSegments(B,P C,P P,D A,Q)
+\tkzLabelPoints[left](A,B,P)
+\tkzLabelPoints[right](D,C)
+\tkzLabelPoints[above](Q)
+    \end{tikzpicture}
+    \caption*{第7题}
+    \end{minipage}
+    \end{figure}
 
 
-
-
-
-\begin{blk}
-    
-\end{blk}
-
-\begin{blk}
-    
-\end{blk}
-
-\begin{blk}
-    
-\end{blk}
-
-\begin{blk}
-    
-\end{blk}
 
 
 \subsection{勾股定理}
@@ -3920,6 +4891,190 @@ $\parallelogram ABCD$上，所以$\parallelogram ABCD$是中心对称形。$O$�
 这就是说以3、4为边长的两个正方形的面积的和正好等
 于以5为边长的正方形的面积（图3.81）
 
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.35\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.8]
+\draw(0,0)node[below]{$C$}--node[below]{勾}(3,0)node[below]{$B$}--node[right]{弦}(0,4)node[above]{$A$}--node[left]{股}(0,0);
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.58\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.6]
+\tkzDefPoints{0/0/B, 3/0/C, 0/4/A}
+\tkzLabelPoints[below left](B)
+\tkzLabelPoints[below right](C)
+\tkzLabelPoints[above](A)
+
+\tkzInit[xmin=0,xmax=3,ymin=-3, ymax=0]
+\tkzGrid
+\tkzDefSquare(B,A)  \tkzGetPoints{A'}{B'}
+\tkzDrawPolygon[thick](A,B,B',A')
+\tkzInit[xmin=-4,xmax=0,ymin=0, ymax=4]
+\tkzGrid
+\tkzDefSquare(C,B)  \tkzGetPoints{B''}{C'}
+\tkzDrawPolygon[thick](C,B,B'',C')
+\tkzDefSquare(A,C)  \tkzGetPoints{A''}{C''}
+\tkzDrawPolygon[thick](A,C,A'',C'')
+\foreach \x in {1,2,3,4}
+{
+    \tkzDefPointWith[linear, K=\x/5](A,C) \tkzGetPoint{A\x}
+    \tkzDefPointWith[linear, K=\x/5](C'',A'') \tkzGetPoint{C\x}
+    \tkzDefPointWith[linear, K=\x/5](C,A'') \tkzGetPoint{B\x}
+    \tkzDefPointWith[linear, K=\x/5](A,C'') \tkzGetPoint{D\x}
+}
+
+\foreach \x in {1,2,3,4}
+{
+    \tkzDrawSegments[gray](A\x,C\x)
+    \tkzDrawSegments[gray](B\x,D\x)
+}
+
+\node at (1.5,0)[above]{3};
+\node at (0,2)[right]{4};
+\node at (1.5,2)[left]{5};
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+由“勾三股四弦五”可以归纳出一般规律：
+
+\begin{blk}
+   {勾股定理} 直角三角形中，两条直角边的平方和等于斜
+边的平方。 
+\end{blk}
+
+已知：直角三角形中，勾长是$a$, 股长是$b$, 斜边长是$c$
+（图3.82）。
+
+求证：$a^2+b^2=c^2$.
+
+\begin{proof}
+    以$a+b$为边长作正方形$ABCD$, 在$\overline{AB}$、$\overline{BC}$、
+$\overline{CD}$、$\overline{DA}$各边上分别截取$\overline{AE}=\overline{BF}=\overline{CG}=\overline{DH}=a$, 于是，
+$\overline{EB}=\overline{FC}=\overline{GD}=\overline{HA}=b$. 因为$\angle A=\angle B=\angle C=\angle D=90^{\circ}$
+所以，$\triangle AEH\cong \triangle BFE\cong \triangle CGF\cong \triangle DHG$（图3.82）.
+
+并且，这四个全等的直角三角形的斜边全是$c$. 又因为直角
+三角形中的两锐角互余，所以：
+\[\alpha+\beta=90^{\circ}\]
+但$\alpha+\beta+\gamma=180^{\circ}$
+
+$\therefore\quad \gamma=90^{\circ}$.
+
+由正方形的定义可知四边形$EFGH$是正方形。正方形
+$ABCD$的面积是$(a+b)^2$或$4\x\frac{1}{2}ab+c^2$.
+
+所以
+\[(a+b)^2=4\x\frac{1}{2}ab+c^2\]
+展开得：\[a^2+2ab+b^2=2ab+c^2\]
+即
+\[a^2+b^2=c^2\]
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.38\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 3/3/D}
+\tkzDefPointsBy[translation = from C to D](B){A}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDefPointWith[linear, K=.4](A,B)\tkzGetPoint{E}
+\tkzDefPointWith[linear, K=.4](B,C)\tkzGetPoint{F}
+\tkzDefPointWith[linear, K=.4](C,D)\tkzGetPoint{G}
+\tkzDefPointWith[linear, K=.4](D,A)\tkzGetPoint{H}
+\tkzDrawPolygon(E,F,G,H)
+\tkzLabelPoints[left](A,B,E)
+\tkzLabelPoints[right](C,D,G)\tkzLabelPoints[above](H)
+\tkzLabelPoints[below](F)
+\tkzMarkAngles[mark=none, size=.4](H,E,A B,E,F)
+\tkzMarkAngles[mark=none, size=.5](F,E,H)
+\tkzLabelAngle[pos=.6](H,E,A){$\alpha$}
+\tkzLabelAngle[pos=.6](B,E,F){$\beta$}
+\tkzLabelAngle[pos=.8](F,E,H){$\gamma$}
+\node at (.6,0)[below]{$a$};
+\node at (2.4,0)[below]{$b$};
+\node at (3,.6)[right]{$a$};
+\node at (3,2.4)[right]{$b$};
+\node at (2.4,3)[above]{$a$};
+\node at (.9,3)[above]{$b$};
+\node at (0,2.4)[left]{$a$};
+\node at (0,.9)[left]{$b$};
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.58\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{0/0/A, 2.5/0/C, 1.6/1.2/B}
+\tkzDefSquare(A,B)  \tkzGetPoints{H}{K}
+\tkzDefSquare(B,C)  \tkzGetPoints{F}{G}
+\tkzDefSquare(C,A)  \tkzGetPoints{E}{D}
+\tkzLabelPoints[above](H,B,G)
+\tkzLabelPoints[below](D,E)
+\tkzLabelPoints[left](A,K)
+\tkzLabelPoints[right](C,F)
+\tkzDrawPolygon(A,B,H,K)
+\tkzDrawPolygon(A,C,D,E)
+\tkzDrawPolygon(C,B,G,F)
+\tkzDrawPolygon[pattern=north east lines](A,C,K)
+\tkzDrawPolygon[pattern=north west lines](A,B,E)
+\tkzDefPointBy[projection = onto D--E](B) \tkzGetPoint{L}
+\tkzInterLL(B,L)(A,C)  \tkzGetPoint{I}
+\tkzLabelPoints[below left](L,I)
+\tkzDrawSegments(B,L)
+\tkzMarkRightAngle[size=.23](B,L,D)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+我国古代算学家对这个定理作了各种证明，上面的证法
+只是其中的一种。作为例子，我们再介绍一种勾股定理的欧
+几里得的证法。
+
+
+如图3.83所示，在$\triangle ABC$中，$\angle ABC=90^{\circ}$. 以
+$\triangle ABC$的各边为一边，分别在$\triangle ABC$的外侧作正方形
+$AEDC$, $BCFG$, $ABHK$. 引$BL\bot ED$, 分别交$\overline{ED}$、$\overline{AC}$
+于$L$、$I$, 则$BL\parallel AE$.
+
+作$\overline{KC}$、$\overline{BE}$.
+
+$\because\quad \overline{AB}=\overline{AK},\quad \overline{AC}=\overline{AE},\quad \angle KAC=\angle EAB$,
+
+$\therefore\quad \triangle ABE\cong \triangle AKC$ （SAS）
+
+$\because\quad \triangle ABE$与矩形$AELI$等底等高，
+$\triangle AKC$与正方形$ABHK$等底等高，
+
+$\therefore\quad \triangle ABE$的面积$=\frac{1}{2}$矩形$AELI$的面积
+
+$\triangle AKC$的面积$=\frac{1}{2}$正方形$ABHK$的面积。
+
+$\therefore\quad $矩形$AELI$的面积$=$正方形$ABHK$的面积。
+
+同理可证：矩形$CILD$的面积$=$正方形$BCFG$的面积。
+
+但：正方形$AEDC$的面积$=$矩形$AELI$的积$+$矩形$CILD$的面积。
+
+$\therefore\quad $正方形$AEDC$的面积$=$正方形$ABHK$的面积$+$正方形
+$BCFG$的面积。
+即
+\[\overline{AC}^2=\overline{AB}^2+\overline{BC}^2\]
+这就证明了勾股定理。
+
+比较这两种证法，我们看到我国古代的证明法用了代数
+知识：$(a+b)^2=a^2+2ab+b^2$, 比较简捷明了，而古希
+腊的证法，要用到等积变形，比较复杂。
+
+勾股定理揭示了直角三角形三边之间的关系，如果知道
+了直角三角形任意两边的长度，应用勾股定理便可计算出第
+三边的长。
 
 
 
@@ -3934,3 +5089,604 @@ $\parallelogram ABCD$上，所以$\parallelogram ABCD$是中心对称形。$O$�
 
 
 
+
+
+
+\begin{blk}
+    
+\end{blk}
+
+
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{blk}
+    
+\end{blk}
+
+\begin{blk}
+    
+\end{blk}
+\begin{proof}
+    
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{实习作业}
+\begin{enumerate}
+    \item 在田野里选择有障碍物的两点（如两棵树），用这节介绍
+    的方法测量它们之间的距离。
+    \item 选择一块多边形空地，测绘它的平面图并求出它的面积。
+\end{enumerate}
+
+\subsection*{习题3.5}
+\begin{enumerate}
+    \item 在$\triangle ABC$中，已知$\overline{BC}=36$cm, 高$\overline{AD}=30$cm, 在距
+    离$\overline{BC}$边10cm的地方作一条平行于$BC$的直线，交$\overline{AB}$
+    于$E$, 交$\overline{AC}$于$F$, 求$\overline{EF}$的长。
+    \item 已知梯形两底的长为36cm和60cm, 高为32cm, 求这个梯
+    形两腰延长线的交点到两底的距离各是多少？
+    \item 两个相似三角形对应边的比是$7:5$, 第一个三角形的周长
+    是14cm, 求另一个三角形的周长。
+    \item 已知$\triangle ABC\backsim \triangle A'B'C$, $\triangle A'B'C'$的面积是$\triangle ABC$
+    面积的4倍，并且$\overline{AB}=4$cm, $\overline{BC}=7$cm, $\overline{AC}=8$cm, 求
+    $\triangle A'B'C'$各边的长。
+    \item 已知梯形$ABCD$的面积为90平方厘米，两底$\overline{AB}$、$\overline{CD}$的长各
+    为12厘米和8厘米，延长梯形两腰相交于$M$点，求$\triangle MDC$
+    的面积。
+    \item 设$AD$是$\triangle ABC$的中线，一条与
+    $\overline{BC}$边平行的直线与
+    $\overline{AB}$、$\overline{AD}$、$\overline{AC}$的交点分别为$P$、$Q$、$R$, 那么$\overline{PQ}=\overline{QR}$
+    \item 过梯形$ABCD$的对角线$AC$、$BD$的交点$E$, 作两底的平
+    行线，与两腰$\overline{AB}$、$\overline{CD}$分别相交于$M$、$N$, 求证：
+    $\overline{ME}=\overline{EN}$.
+    \item 在梯形$ABCD$中，作与两底互相平行的直线，交两腰
+    $\overline{AB}$、$\overline{CD}$于$P$、$Q$两点，与对角线的交点是$R$、$S$, 那么
+    $\overline{PR}=\overline{SQ}$
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{-2/0/B, 2/0/C, 1/2.5/D, -1/2.5/A}
+    \tkzInterLL(A,C)(B,D)  \tkzGetPoint{E}
+\tkzDrawSegments(A,C B,D)
+\tkzDrawPolygon(A,B,C,D)
+
+\tkzDefPointWith[linear, K=.3333](A,B)  \tkzGetPoint{M}
+\tkzDefPointWith[linear, K=.3333](D,C)  \tkzGetPoint{N}
+\tkzLabelPoints[left](A,B,M)
+\tkzLabelPoints[right](C,D,N)
+\tkzLabelPoints[below](E)
+\tkzDrawSegments(M,N)
+    \end{tikzpicture}
+    \caption*{第7题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+        \tkzDefPoints{-2/0/B, 2/0/C, 1/2.5/D, -1/2.5/A}
+    \tkzDrawSegments(A,C B,D)
+    \tkzDrawPolygon(A,B,C,D)
+
+\tkzDefPointWith[linear, K=.7](A,B)  \tkzGetPoint{P}
+\tkzDefPointWith[linear, K=.7](D,C)  \tkzGetPoint{Q}
+\tkzInterLL(A,C)(P,Q)  \tkzGetPoint{S}
+\tkzInterLL(P,Q)(B,D)  \tkzGetPoint{R}
+\tkzLabelPoints[below](R,S)
+\tkzLabelPoints[left](A,B,P)
+\tkzLabelPoints[right](C,D,Q)
+\tkzDrawSegments(P,Q)
+    \end{tikzpicture}
+    \caption*{第8题}
+    \end{minipage}
+    \end{figure}
+
+\section*{复习题三}
+\begin{enumerate}
+    \item 已知不共线三点，能不能作一个等边三角形，使这三个
+    点分别在三边上？
+    \item 求证：三角形的三条角平分线相交于一点。
+    \item 求证：等腰三角形底边上任意一点到两腰的距离的和一
+    定。它等于什么？如果在底边的延长线上取点，你能得出
+    合什么结论？
+    \item $O$点是等边三角形内任一点，试证明：$O$点到三边距离的
+    和与$O$点的位置无关，这个和等于什么？
+    \item 已知四边形，求这样一点，使这点到各顶点的距离的和
+    为最小。
+    \item 已知梯形$ABCD$中，$\overline{AD}\parallel\overline{BC}$, $\angle B=90^{\circ}$, 
+    $\angle C=60^{\circ}$, 腰$\overline{CD}=42$cm, 求另一腰$\overline{AB}$等于多少厘米？
+    \item 从平行四边形$ABCD$的各顶点到形外一条直线作垂线
+    $AE$、$BF$, $CG$、$DH$, 设$E$、$F$、$G$、$H$为垂足。求证：
+    $\overline{AE}+\overline{CG}=\overline{BF}+\overline{DH}$.
+    \item 如果两正方形对角线相等，那么这两个正方形全等。
+\item 已知一边和一条对角线，求作矩形。
+\item 已知高，求作等边三角形。
+\item 如图，$DE\parallel BC$, $BE$、$CD$相交于$F$, 射线$AF$和$\overline{BC}$
+相交于$G$. 求证：$\overline{BG}=\overline{CG}$.
+\item 如图，已知：$\triangle ABC$中$DE\parallel CA$, $DF\parallel BA$.
+
+求证：$\frac{\overline{DE}}{\overline{AC}}+\frac{\overline{DF}}{\overline{AB}}=1$
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 3/3.5/A}
+\tkzDefPointWith[linear, K=.6](A,B)  \tkzGetPoint{D}
+\tkzDefPointWith[linear, K=.6](A,C)  \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(D,E C,D B,E)
+\tkzInterLL(C,D)(B,E)  \tkzGetPoint{F}
+\tkzInterLL(A,F)(B,C)  \tkzGetPoint{G}
+\tkzDrawSegments(A,G)
+\tkzLabelPoints[left](D,B)
+\tkzLabelPoints[right](E,C,F)
+\tkzLabelPoints[below](G)
+\tkzLabelPoints[above](A)
+    \end{tikzpicture}
+    \caption*{第11题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+        \tkzDefPoints{0/0/B, 4/0/C, 1.5/3/A}
+        \tkzDrawPolygon(A,B,C)
+        \tkzDefPointWith[linear, K=.6](A,B)  \tkzGetPoint{E}
+        \tkzDefPointWith[linear, K=.6](C,A)  \tkzGetPoint{F}
+        \tkzDefPointWith[linear, K=.6](C,B)  \tkzGetPoint{D}
+\tkzDrawSegments(D,E D,F)
+\tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[left](E)
+\tkzLabelPoints[right](F)
+\tkzLabelPoints[above](A)
+    \end{tikzpicture}
+    \caption*{第12题}
+    \end{minipage}
+    \end{figure}
+
+\item 已知：$D$、$D'$是$\triangle ABC$的$\overline{BC}$边上两点，$\overline{BD}=\overline{D'C}$, 
+$\overline{DE}$, $\overline{D'E'}$和$\overline{AC}$平行，并交$\overline{AB}$于$E,E'$, $\overline{DF}$, $\overline{D'F'}$ 和$AB$
+平行交$\overline{AC}$于$F$、$F'$, 求证：$E'F\parallel EF'$.
+\item 已知：$E$是正方形$ABCD$的$\overline{AB}$边上的一点，
+$\overline{AE}=\frac{1}{n}\overline{AB}$, $\overline{DE}$和$\overline{AC}$相交于$F$. 求证；$\overline{AF}=\frac{1}{n+1}\overline{AC}$.
+\item 如图，已知
+$\overline{EF}\parallel \overline{BC}$, $\overline{FD}\parallel\overline{AB}$, $\overline{AE}=6.4$厘米，
+$\overline{BE}=7.2$厘米，$\overline{CD}=9$厘米，
+求四边形$BDFE$的周长。
+\item 已知$\triangle ABC$的三边是
+$\overline{AB}=11$cm, $\overline{BC}=6$cm,
+$\overline{AC}=7$cm, $\overline{AD}$, $\overline{AD'}$分别是$\angle A$和它的外角平分线，求
+$\overline{DD'}$的长。
+\item 已知$P$是$\angle A$内的一个定点，求经过$P$作一条直线，分
+别交$\angle A$的两边于$B$、$C$, 使$\overline{AB}:\overline{AC}=3:2$.
+\item $OC$是$\angle AOB$内的一条射线，求证从$OC$上任意两 点到
+$\angle AOB$的两边的距离的比一定。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 2.3/2/A}
+\tkzDefPointWith[linear, K=.4](A,B) \tkzGetPoint{E}
+\tkzDefPointWith[linear, K=.4](A,C) \tkzGetPoint{F}
+\tkzDefPointWith[linear, K=.6](C,B) \tkzGetPoint{D}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(E,F D,F)
+\tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[left](E)
+\tkzLabelPoints[right](F)
+\tkzLabelPoints[above](A)
+    \end{tikzpicture}
+    \caption*{第15题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 3/3/A}
+\tkzDefPointWith[linear, K=.45](A,B) \tkzGetPoint{D}
+\tkzDefPointWith[linear, K=.55](A,C) \tkzGetPoint{F}
+\tkzDefPointWith[linear, K=.45](C,B) \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(E,F D,E)
+\tkzLabelPoints[below](B,C,E)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[right](F)
+\tkzLabelPoints[above](A)
+    \end{tikzpicture}
+    \caption*{第19题}
+    \end{minipage}
+    \end{figure}
+
+\item 如图，$D$、$E$、$F$分别是$\triangle ABC$的边$\overline{AB}$、$\overline{BC}$、$\overline{CA}$
+上的点，$ADEF$
+是菱形，$\overline{AB}=14$cm, $\overline{BC}=12$cm, $\overline{AC}=10$cm, 求$\overline{BE}$和$\overline{EC}$
+的长。
+
+\item 已知：$E$是平行四边形
+$ABCD$的边$\overline{DA}$延长线上的一点，$\overline{EC}$交$\overline{AB}$于$G$, 交对角线$\overline{DB}$于$F$.
+
+求证：$\overline{FC}^2=\overline{FG}\cdot \overline{FE}$
+\item 设$\overline{AB}$的中点为$M$, 从$\overline{AB}$上另一点$C$向直线$AB$的一
+侧引线段$\overline{CD}$. 令$\overline{CD}$的中点为$N$, $\overline{BD}$的中点为$P$, $\overline{MN}$
+的中点为$Q$, 求证：直线$PQ$平分$\overline{AC}$.
+\item 已知梯形的面积是$Q$, 上下底的比是$\frac{m}{n}$，
+求两腰的延长线和上底所组成的三角形的面积。
+\item 在直角三角形$ABC$中，$\overline{AD}$是斜边$\overline{BC}$上的高，作
+$DE\bot AB$, $DF\bot AC$, $E,F$是垂足.
+
+求证：$\frac{\overline{BE}}{\overline{CF}}=\frac{\overline{AC}^3}{\overline{AB}^3}$
+
+\item 如图，已知$\overline{OM}:\overline{MP}=\overline{ON}:\overline{NR}$, 
+求证：$\triangle PQR$是等腰三角形。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.8]
+\tkzDefPoints{0/0/O, 3/0/R, 4/3/N}
+\tkzDefPointWith[linear, K=.4](O,N) \tkzGetPoint{M}
+\tkzDefPointWith[linear, K=1.6](N,R) \tkzGetPoint{Q}
+\tkzInterLL(O,R)(M,Q)  \tkzGetPoint{P}
+\tkzLabelPoints[right](N,R,Q)
+\tkzLabelPoints[left](O,M)
+\tkzLabelPoints[below](P)
+\tkzDrawPolygon(O,N,R)
+\tkzDrawPolygon(N,Q,M)
+    \end{tikzpicture}
+    \caption*{第24题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 2.4/3.5/A, 5/0/X, 4/.5/X1}
+\tkzInterLL(X,X1)(A,C)  \tkzGetPoint{Y}
+\tkzInterLL(X,X1)(A,B)  \tkzGetPoint{Z}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(X,B,Z)
+\tkzLabelPoints[right](Y)
+\tkzLabelPoints[left](A,Z)
+\tkzLabelPoints[below](B,C,X)
+    \end{tikzpicture}
+    \caption*{第25题}
+    \end{minipage}
+    \end{figure}
+
+\item $\triangle ABC$被一条直线所截，设与三边的交点为$X$、$Y$、$Z$, 
+
+试证：$\frac{\overline{BX}}{\overline{XC}}\cdot \frac{\overline{CY}}{\overline{YA}}\cdot \frac{\overline{AZ}}{\overline{ZB}}=1$
+
+\item 设$O$是$\triangle ABC$内任一点，射线$AO$、$BO$、$CO$与对边
+的交点分别是$X$、$Y$、$Z$, 那么
+$\frac{\overline{BX}}{\overline{XC}}\cdot \frac{\overline{CY}}{\overline{YA}}\cdot \frac{\overline{AZ}}{\overline{ZB}}=1$
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{0/0/B, 4/0/C, 2.9/3.2/A, 2.5/1.5/O}
+\tkzInterLL(A,O)(B,C)  \tkzGetPoint{X}
+\tkzInterLL(B,O)(A,C)  \tkzGetPoint{Y}
+\tkzInterLL(C,O)(B,A)  \tkzGetPoint{Z}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(A,X B,Y C,Z)
+\tkzLabelPoints[right](Y)
+\tkzLabelPoints[left](A,Z)
+\tkzLabelPoints[below](B,C,X)
+\tkzLabelPoints[below left](O)
+    \end{tikzpicture}
+    \caption*{第26题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 2.6/0/C, 2.4/3.5/A, 5/0/D, 4/.25/X1}
+\tkzInterLL(D,X1)(A,C)  \tkzGetPoint{E}
+\tkzInterLL(D,X1)(A,B)  \tkzGetPoint{F}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(D,B,F)
+\tkzLabelPoints[right](E)
+\tkzLabelPoints[left](A,F)
+\tkzLabelPoints[below](B,C,D)      
+    \end{tikzpicture}
+    \caption*{第27题}
+    \end{minipage}
+    \end{figure}
+
+\item 从$\triangle ABC$的一边$\overline{BC}$的延长线上的一点$D$, 引直线与
+其它二边$\overline{AC}$、$\overline{AB}$相交于$E$、$F$, 若$\angle AEF=\angle AFE$, 则$\overline{BD}:\overline{CD}=\overline{BF}:\overline{CE}$.
+
+
+\item 在$\triangle ABC$之边$\overline{AB}$、$\overline{AC}$上取$E$、$F$两点，使$\overline{EB}=2\overline{EA}$, $\overline{AF}=2\overline{FC}$, 延长$\overline{EF}$、$\overline{BC}$交于$H$, 求$\overline{BH}:\overline{CH}$.
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{0/0/B, 4/0/C, 3/3/A}
+\tkzDefPointWith[linear, K=0.333](A,B) \tkzGetPoint{E}
+\tkzDefPointWith[linear, K=0.333](C,A) \tkzGetPoint{F}
+\tkzInterLL(B,C)(E,F)  \tkzGetPoint{H}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(E,H C,H)
+\tkzLabelPoints[right](F)
+\tkzLabelPoints[left](A,E)
+\tkzLabelPoints[below](B,C,H)  
+    \end{tikzpicture}
+    \caption*{第28题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+        \tkzDefPoints{0/0/A, 2/0/B, 4/0/D, 2.8/3/C}
+\tkzDrawPolygon(A,B,C)
+\tkzDefPointWith[linear, K=.45](C,A) \tkzGetPoint{E}
+\tkzInterLL(D,E)(B,C)  \tkzGetPoint{F}
+\tkzLabelPoints[right](F)
+\tkzLabelPoints[left](C,E)
+\tkzLabelPoints[below](B,A,D)  
+\tkzDrawSegments(E,D B,D)
+    \end{tikzpicture}
+    \caption*{第29题}
+    \end{minipage}
+    \end{figure}
+
+\item 在$\triangle ABC$中，$\overline{AB}<\overline{AC}$, 延长$\overline{AB}$至$D$, 使$\overline{BD}=\overline{AB}$, 在$\overline{AC}$上取$E$点，使$\overline{CE}=\overline{BD}$, 连接$\overline{DE}$与$\overline{BC}$交于
+$F$, 则$\overline{AB}:\overline{AC}=\overline{EF}:\overline{FD}$.
+
+\item 延长$\triangle ABC$的$\overline{BC}$边至$D$, 使$\overline{CD}=\overline{BC}$, 从$D$点引直
+线通过$\overline{AC}$的中点$E$, 与$\overline{AB}$边相交于$F$, 求$\overline{FE}:\overline{ED}$.
+\item 从$\triangle ABC$的底边$\overline{BC}$中点
+$D$引直线，与过顶点$A$平行
+$BC$的直线相交于$G$, 与$\overline{BA}$
+的延长线相交于$E$, 又与$AC$
+相交于$F$, 求证：$\overline{DF}:\overline{FG}=\overline{DE}:\overline{EG}$.
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{0/0/B, 2/0/C, 4/0/D, 2.2/3.5/A}
+    \tkzDrawPolygon(A,B,C)
+    \tkzDefMidPoint(A,C)  \tkzGetPoint{E}
+    \tkzInterLL(D,E)(B,A)  \tkzGetPoint{F}
+    \tkzLabelPoints[right](E)
+    \tkzLabelPoints[left](A,F)
+    \tkzLabelPoints[below](B,C,D)   
+    \tkzDrawSegments(C,D D,F)
+    
+    \end{tikzpicture}
+    \caption*{第30题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.8]
+    \tkzDefPoints{0/0/B, 2/0/D, 4/0/C, 1.6/2.5/A, 3.5/2.5/X1, 2.2/1/X2}
+    \tkzDrawPolygon(A,B,C)
+    \tkzInterLL(D,X2)(B,A)  \tkzGetPoint{E}
+    \tkzInterLL(D,X2)(X1,A)  \tkzGetPoint{G}
+    \tkzInterLL(D,X2)(C,A)  \tkzGetPoint{F}
+    \tkzLabelPoints[right](F)
+    \tkzLabelPoints[left](A,E)
+    \tkzLabelPoints[above right](G)
+    \tkzLabelPoints[below](B,C,D)   
+    \tkzDrawSegments(A,X1 A,E E,D)
+    \end{tikzpicture}
+    \caption*{第31题}
+    \end{minipage}
+    \end{figure}
+
+
+
+\end{enumerate}
