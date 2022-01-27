@@ -5076,26 +5076,518 @@ $BCFG$的面积。
 了直角三角形任意两边的长度，应用勾股定理便可计算出第
 三边的长。
 
+\begin{example}
+    已知：直角$\triangle ABC$, $\angle B=90^{\circ}$, $AB=12$cm,
+$BC=5$cm (图3.84).
+
+求：$\overline{AC}$之长。
+\end{example}
+
+
+\begin{solution}
+    设$\overline{AC}$的长为$x$cm, 根据勾股定理：
+\[x^2=5^2+12^2\quad \Rightarrow\quad x^2=169\]
+$\because\quad x>0,\qquad \therefore\quad x=13({\rm cm})$
+\end{solution}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.6]
+\tkzDefPoints{0/0/B, 2.5/0/C, 0/6/A}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](B,C)
+\tkzMarkRightAngle[size=.3](A,B,C)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.6]
+\tkzDefPoints{0/0/B, -2/0/C, 0/5/A}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[above right](A,B)
+\tkzLabelPoints[above left](C)
+\tkzMarkRightAngle[size=.3](A,B,C)
+\fill[pattern=north east lines](-3.5,-.4) rectangle (1,0);
+\draw(-3.5,0)--(1,0);
+\tkzDrawLine[add=0 and .3](B,A)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{example}
+    将长为5米的梯子$\overline{AC}$斜靠在墙上，$\overline{BC}$长为2米，
+求地面到梯子上端高$\overline{AB}$之长（精确到0.01米）（图3.85）.
+\end{example}
 
 
 
+\begin{solution}
+    设$\overline{AB}$的长为$x$（米），由于$\triangle ABC$是直角三角
+形，且以$\overline{AC}$为斜边；根据勾股定理有，
+\[x^2+2^2=5^2 \quad \Rightarrow\quad x^2=25-4=21\]
+
+$\because\quad x>0$
+
+$\therefore\quad x=\sqrt{21}\approx 4.58$（米）。
+
+答：地面到梯子上端高$\overline{AB}$之长约
+等于4.58米。
+\end{solution}
+
+\begin{blk}
+    {勾股定理逆定理} 如果三角形的三
+边$a$、$b$、$c$满足条件$a^2+b^2=c^2$, 那$c$边所对的角是直角。
+\end{blk}
+
+
+\begin{proof}
+设$\triangle ABC$的三边满足$a^2+b^2=c^2$(图3.86). 
+另作一个直角三角形$A'B'C'$，使$\angle C'=90^{\circ}$, $\overline{B'C'}=a$,
+$\overline{A'C'}=b$. 根据勾股定理，
+\[\overline{A' B'}^2=a^2+b^2\]
+但
+\[\overline{A'B'}^2=c^2\]
+
+$\therefore\quad \overline{A'B'}=c$.
+
+$\therefore\quad \triangle ABC\cong \triangle A'B'C'$ (SAS)
+
+$\therefore\quad \angle C=\angle C'=90^{\circ}$
+\end{proof}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=.7]
+\begin{scope}
+\draw(0,0)node[below]{$B$}--node[below]{$a$}(3,0)node[below]{$C$}--node[right]{$b$}(3,4)node[above]{$A$}--node[left]{$c$}(0,0);
+\end{scope}
+\begin{scope}[xshift=6cm]
+    \draw(0,0)node[below]{$B'$}--node[below]{$a$}(3,0)node[below]{$C'$}--(3,4)node[above]{$A'$}--node[left]{$c$}(0,0);
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{blk}
+    {广义勾股定理} 平行四边形两条对角线的平方和等于它
+的四边的平方和，或等于相邻两边平方和的二倍。
+\end{blk}
+
+已知：平行四边形$ABCD$ (图3.87). 
+
+求证：$\overline{AC}^2+\overline{BD}^2=\overline{AB}^2+\overline{BC}^2+\overline{CD}^2+\overline{DA}^2=2\left(\overline{AB}^2+\overline{BC}^2\right)$
+
+\begin{proof}
+    设$\angle B$为锐角，分别由$A$、$D$向边$\overline{BC}$及其延长线
+    作垂线$AE$、$DF$.
+
+$\because\quad \overline{AB}=\overline{CD},\quad \angle B=\angle DCF,\quad \angle AEB=\angle DFC=90^{\circ}$,
+
+$\therefore\quad \triangle ABE\cong \triangle DCF$ (AAS)
+
+    在直角三角形$ABE$、$ACE$、$DBF$中，由勾股定理可以得到：
+\begin{align}
+    \overline{AB}^2&=\overline{AE}^2+\overline{BE}^2\\
+    \overline{AC}^2&=\overline{AE}^2+\overline{EC}^2=\overline{AE}^2+\left(\overline{BC}-\overline{BE}\right)^2\\
+    \overline{BD}^2&=\overline{BF}^2+\overline{DF}^2=\left(\overline{BC}+\overline{CF}\right)^2+\overline{DF}^2
+\end{align}
+$(3.2)+(3.3)$得：
+\[\begin{split}
+    \overline{AC}^2+\overline{BD}^2&=\left(\overline{BC}-\overline{BE}\right)^2+\left(\overline{BC}+\overline{CF}\right)^2+2\overline{AE}^2\\
+    &=2\left(\overline{BC}^2+\overline{BE}^2+\overline{AE}^2\right)\\
+    &=2\left(\overline{BC}^2+\overline{AB}^2\right)\\
+    &=\overline{AB}^2+\overline{BC}^2+\overline{CD}^2+\overline{DA}^2
+\end{split}\]
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 4/2/D}
+\tkzDefPointsBy[translation = from C to D](B){A}
+\tkzDefPointBy[projection = onto B--C](A)  \tkzGetPoint{E}
+\tkzDefPointBy[projection = onto B--C](D)  \tkzGetPoint{F}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments[dashed](A,E D,F)
+\tkzDrawSegments(A,C B,D C,F)
+\tkzMarkRightAngles[size=.2](A,E,B D,F,C)
+\tkzMarkAngles[size=.3, mark=none](C,B,A F,C,D)
+
+\tkzLabelPoints[below](B,E,C,F)
+\tkzLabelPoints[above](A,D)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 3/2/D, 0/2/A}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(A,C B,D)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A,D)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+当平行四边形为矩形时（图3.88），由于矩形两条对
+角线相等，上面的关系式转化为：
+\[2\overline{AC}^2=2\left(\overline{AB}^2+\overline{BC}^2\right)\]
+即
+\[\overline{AC}^2=\overline{AB}^2+\overline{BC}^2\]
+这恰好符合勾股定理。因
+此，一般平行四边形对角线与边的关系可看成广义勾股定理。
+    
+\begin{example}
+    已知：$\triangle ABC$的三边长$\overline{BC}=a$, $\overline{AC}=b$, $\overline{AB}=c$（图3.89）。
+
+求：三角形三边上中线长$m_a$、$m_b$、$m_c$.
+\end{example}
+
+
+\begin{solution}
+    以$\triangle ABC$的边$\overline{AB}$, $\overline{AC}$为邻边作平行四边形$ABDC$, 
+对角线$\overline{AD}$、$\overline{BC}$相交于$M$, 则$\overline{AM}$为$\triangle ABC$中$\overline{BC}$边上
+的中线，它为$\overline{AD}$长的一半，由广义勾股定理知：
+\[\overline{AD}^2+\overline{BC}^2=2\left(\overline{AB}^2+\overline{AC}^2\right)\]
+即
+\[4\overline{AM}^2+a^2=2(b^2+c^2)\]
+$\therefore\quad \overline{AM}^2=\frac{1}{4}\x [2(b^2+c^2)-a^2]$
+\[AM=\frac{1}{2}\sqrt{2(b^2+c^2)-a^2}\]
+即：$m_a=\frac{1}{2}\sqrt{2(b^2+c^2)-a^2}$
+
+同理可得：
+\[m_b=\frac{1}{2}\sqrt{2(a^2+c^2)-b^2},\qquad m_c=\frac{1}{2}\sqrt{2(a^2+b^2)-c^2}\]
+\end{solution}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 2/2/A}
+\tkzDefPointsBy[translation = from A to C](B){D}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments[dashed](B,D C,D A,D)
+\tkzInterLL(A,D)(B,C)   \tkzGetPoint{M}
+\tkzLabelPoints[below](D,B,M,C)
+\tkzLabelPoints[above](A)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+      \tkzDefPoints{0/0/C, 2.5/0/B, 0/3/A}
+      \tkzDrawPolygon(A,B,C)
+      \tkzLabelPoints[below](B,C)
+      \tkzLabelPoints[above](A)
+    \end{tikzpicture}
+    \caption*{第1题}
+    \end{minipage}
+    \end{figure}
 
 
 
+\begin{ex}
+\begin{enumerate}
+    \item 在$\triangle ABC$中，$\angle C$是直角。
+    \begin{enumerate}
+        \item 已知$\overline{BC}=6$, $\overline{AC}=8$, 求$\overline{AB}$之长。
+        \item 已知$\overline{AB}=25$, $\overline{BC}=14$, 求$\overline{AC}$之长。
+        \item 已知$\overline{AC}=13$, $\overline{AB}=19$, 求$\overline{BC}$之长。
+    \end{enumerate}
+    
+    
+    \item 已知等腰直角三角形的直角边长是$a$, 求底边。
+    \item 正方形一边长为10寸，求对角线长。
+    \item 矩形相邻两边为$a$、$b$时，求对角线长。
+    \item 已知等边三角形的边长为$a$, 求等边三角形一边上的高和
+    这等边三角形的面积。
+    \item 求出对角线为$d$的正方形的边长。
+    \item 作一个三角形，使三边长为3cm, 4cm, 5cm, 边长为
+    5cm的边所对的角是不是直角？为什么？
+    \item 设三角形的三边等于下列各组數，判断各三角形是否是
+    直角三角形：
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item 7、8、10;
+        \item 3、5、4;
+        \item 5、12、13;
+        \item 4、8、10.
+    \end{enumerate}
+\end{multicols}
+    \item 用勾股定理证明：斜边和一直角边对应相等的两直角三
+    角形全等。
+    \item 已知一等边三角形的高是$4\sqrt{3}$, 求面积。
+    \item 等腰三角形的腰长是20厘米，底长是32厘米，求它的面
+    积。
+    \item 在$\triangle ABC$中关系式$\overline{AC}^2+\overline{BC}^2=\overline{AB}^2$是$\angle C=90^{\circ}$的
+    什么条件？
+\end{enumerate}
+\end{ex}
 
+\subsection*{习题3.4}
+\begin{enumerate}
+    \item 把梯形分割成直角三角形，矩形。由直角三角形、矩形
+    的面积公式推导出梯形的面积公式。
+    \item 如果过一个四边形的各顶点分别引直线平行于它的对角
+    线，则由这些直线所组成的平行四边形的面积是已知四
+    边形面积的2倍。
+    \item 在直角三角形的各边上，分别向外侧作一个正方形，连
+    结每相邻的两个正方形的最近的两个顶点，得三个三角
+    形等积。
+    \item 已知：$a$、$b$、$c$分别为直角三角形勾、股、弦长，
+    \begin{enumerate}
+        \item $a=3$, $b=4$, 求$c$.
+        \item $c=25$, $b=14$, 求$a$.
+     \item $a=13$, $c=19$, 求$b$.
+    \end{enumerate}
 
+    \begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=2]
+\tkzDefPoints{-1/0/B_1, 0/0/A, -1/1/B_2}
+\tkzDefPoint(180-80.26:1.732){B_3}
+\tkzDefPoint(180-110.26:2){B_4}
+\tkzDefPoint(180-136.82:2.236){B_5}
+\tkzDrawSegments(A,B_1 A,B_2 A,B_3 A,B_4 A,B_5)
 
+\tkzLabelPoints[above](B_3,B_4,B_5)
+\tkzLabelPoints[left](B_1,B_2)
+\tkzLabelPoints[right](A)
 
+\draw(B_1)--node[left]{1}(B_2);
+\draw(B_2)--node[above]{1}(B_3);
+\draw(B_3)--node[above]{1}(B_4);
+\draw(B_4)--node[above]{1}(B_5);
 
+\end{tikzpicture}    
+    \caption*{第5题}
+\end{figure}
 
+\item 象图中那样作出一系列的
+直角三角形，$\overline{AB_2}$、$\overline{AB_3}$、
+$\overline{AB_4}$、$\overline{AB_5}$分别是$\overline{AB_1}$的
+多少倍？
+\item 设$P$是矩形$ABCD$内的一点，则
+$\overline{PA}^2+\overline{PC}^2=\overline{PB}^2+\overline{PD}^2$.
 
+\item 设$P$是等腰直角三角形$ABC$的斜边$\overline{BC}$上的任意一点，
+求证$\overline{BP}^2+\overline{CP}^2=2\overline{AP}^2$
+\item 三角形的三边长分别是2cm、3cm、4cm, 求三条中线的
+长。
+\item 一矩形的两边分别是16米和12米，在它的对角线上作一
+个三角形与这个矩形等积。并求出所作三角形的高（按
+1:400画图）。
+\item 一菱形两条对角线之和是24尺，它们的比是3:5, 求菱形
+的面积。
+\item 菱形的周长为16cm, 其中一个内角为$150^{\circ}$, 求它的面
+积。
+\item 菱形的周长为20cm, 面积是24cm, 求它的对角线的
+长。
+\item 在等腰梯形$ABCD$中，$AB\parallel CD$, $\angle A=60^{\circ}$, $BD$平分$\angle B$, 且梯形周长为20cm, 求梯形的面积。
+\end{enumerate}
 
+\section{相似形}
+\subsection{成比例的线段}
+
+\begin{blk}
+  {定义} 用同样的长度单位去量两条已知线段，所得量数
+的比叫做两条线段的比。它是一个正实数。  
+\end{blk}
+
+例如，$\overline{AB}=4$厘米，$\overline{CD}=2$厘米，
+则 $\overline{AB}:\overline{CD}=4:2=2:1$.
+
+上式也可写成：
+\[\frac{\overline{AB}}{\overline{CD}}=\frac{4}{2}=\frac{2}{1}\]
+$\overline{AB}$叫做比的\textbf{前项}，$\overline{CD}$叫做比的\textbf{后项}。
+
+根据分数的基本性质可知，两条线段的比和选择的长度
+单位无关。
 
 
 \begin{blk}
-    
+    {定义}
+四条线段$a$、$b$、$c$、$d$, 如果满足等式$a:b=c:d$
+（或$\frac{a}{b}=\frac{c}{d}$），
+就说这\textbf{四条线段成比例}。$a$、$b$、$c$、$d$分别叫做
+比例第一、二、三、四项。第一和第四两项叫做\textbf{比例外项}，
+第二第三两项叫做\textbf{比例内项}。
 \end{blk}
 
+\begin{blk}
+    {定义}
+三条线段$a$、$b$、$c$, 如果满足等式$a:b=b:c$
+（或$\frac{a}{b}=\frac{b}{c}$），$b$就叫做$a$、$c$的\textbf{比例中项}，$c$叫做$a$、$b$的
+\textbf{比例第三项}。
+\end{blk}
+
+成比例的量有下面几条重要性质（下面所有字母都代表
+不等于0的数）。
+
+\begin{blk}{性质1：比例的基本性质}
+\[\frac{a}{b}=\frac{c}{d}\quad \Rightarrow\quad ad=bc\]    
+\end{blk}
+
+\begin{blk}{性质3：反比定理}
+    \[\frac{a}{b}=\frac{c}{d}\quad \Rightarrow\quad \frac{b}{a}=\frac{d}{c}\]       
+\end{blk}
+
+\begin{blk}{性质3：更比定理}
+    \[\frac{a}{b}=\frac{c}{d}\quad \Rightarrow\quad \frac{a}{c}=\frac{b}{d}\] 
+\end{blk}
+
+\begin{blk}{性质4：合比定理}
+    \[\frac{a}{b}=\frac{c}{d}\quad \Rightarrow\quad \frac{a+b}{b}=\frac{c+d}{d}\] 
+\end{blk}
+
+\begin{blk}{性质5：分比定理}
+    \[\frac{a}{b}=\frac{c}{d}\quad \Rightarrow\quad \frac{a-b}{b}=\frac{c-d}{d}\] 
+\end{blk}
+
+\begin{blk}{性质6：等比定理}
+    \[\frac{a}{b}=\frac{c}{d}=\frac{e}{f}=\cdots=\frac{r}{s}\quad \Rightarrow\quad \frac{a+c+e+\cdots+r}{b+d+f+\cdots+s}=\frac{a}{b}=\frac{c}{d}=\cdots=\frac{r}{s}\] 
+其中：$b+d+f+\cdots+s\ne 0$
+\end{blk}
+
+我们只证明1和6，其余定理作为练习，同学
+们自己证明。
+
+\begin{proof}
+证明性质1：
+\begin{enumerate}
+    \item 先证$\frac{a}{b}=\frac{c}{d}$是$ad=bc$的充分条件。
+
+    因为已知$\frac{a}{b}=\frac{c}{d}$，所以两边同乘以$bd$, 即得$ad=bc$.
+\item     再证$\frac{a}{b}=\frac{c}{d}$是$ad=bc$的必要条件。
+
+因为已知$ad=bc$, 所以两边同除以$bd$, 即得$\frac{a}{b}=\frac{c}{d}$。
+\end{enumerate}
+
+由(a)、(b)所以有：
+\[\frac{a}{b}=\frac{c}{d}\quad \Rightarrow\quad ad=bc\]    
+
+证明性质6：
+
+设$\frac{a}{b}=\frac{c}{d}=\frac{e}{f}=\cdots=\frac{r}{s}=k$，则
+\[a=bk, c=dk, e=fk, \ldots, r=sk\] 
+将上面诸式相加得：
+\[a+c+e+\cdots+r=k(b+d+f+\cdots+s)\]
+因为$b+d+f+\cdots+s\ne 0$，所以
+\[\begin{split}
+    \frac{a+c+e+\cdots+r}{b+d+f+\cdots+s}&=k\\
+    &=\frac{a}{b}=\frac{c}{d}=\frac{e}{f}\\
+    &=\cdots=\frac{r}{s}
+\end{split}
+    \]
+\end{proof}
+
+
+\begin{example}
+    已知：在图3.90中，
+$\frac{\overline{AE}}{\overline{AD}}=\frac{\overline{BE}}{\overline{BC}}$
+
+求证：$\frac{\overline{AD}}{\overline{AE}}=\frac{\overline{BC}}{\overline{BE}}$; $\frac{\overline{AE}}{\overline{ED}}=\frac{\overline{BE}}{\overline{EC}}$; $\frac{\overline{AE}}{\overline{BE}}=\frac{\overline{ED}}{\overline{EC}}$
+\end{example}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/C, 4/0/D, 2/2.5/A, 4.5/2.5/B}
+\tkzInterLL(A,D)(B,C)  \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,E)
+\tkzDrawPolygon(C,D,E)
+\tkzLabelPoints[below](C,D)
+\tkzLabelPoints[above](A,B)
+\tkzLabelPoints[right](E)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{proof}
+\begin{enumerate}
+    \item $\because\quad \frac{\overline{AE}}{\overline{AD}}=\frac{\overline{BE}}{\overline{BC}}$
+    
+    $\therefore\quad \frac{\overline{AD}}{\overline{AE}}=\frac{\overline{BC}}{\overline{BE}}$ （反比定理）
+
+    \item $\because\quad \frac{\overline{AD}}{\overline{AE}}=\frac{\overline{BC}}{\overline{BE}}$
+    
+    $\therefore\quad \frac{\overline{AD}-\overline{AE}}{\overline{AE}}=\frac{\overline{BC}-\overline{BE}}{\overline{BE}}$（分比定理）
+
+    即：$\frac{\overline{ED}}{\overline{AE}}=\frac{\overline{EC}}{\overline{BE}}$
+
+    $\therefore\quad \frac{\overline{AE}}{\overline{ED}}=\frac{\overline{BE}}{\overline{EC}}$ （反比定理）
+
+    \item $\because\quad \frac{\overline{AE}}{\overline{AD}}=\frac{\overline{BE}}{\overline{BC}}$
+    
+$\therefore\quad \frac{\overline{AE}}{\overline{BE}}=\frac{\overline{ED}}{\overline{EC}}$（更比定理）
+\end{enumerate}
+\end{proof}
+
+
+
+\begin{ex}
+\begin{enumerate}
+    \item 证明反比、更比、合比、分比定理。
+    \item 求下列各数的比例中项。
+\begin{multicols}{3}
+    \begin{enumerate}
+        \item 3、27;
+        \item 5、5;
+        \item 2、32.
+    \end{enumerate}
+\end{multicols}
+\item 已知$ab=cd$, 试写出以$b$为首项的比例式，这样的比例式
+    能有几个？
+    \item 已知：$\frac{\overline{AB}}{\overline{AD}}=\frac{\overline{AC}}{\overline{AE}}$
+
+    求证：$\frac{\overline{AD}}{\overline{AB}}=\frac{\overline{AE}}{\overline{AC}}$; $\frac{\overline{AD}}{\overline{DB}}=\frac{\overline{AE}}{\overline{EC}}$; $\frac{\overline{AD}}{\overline{AE}}=\frac{\overline{DB}}{\overline{EC}}$
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/B, 4/0/C, 2.45/3/A}
+\tkzDefPointWith[linear, K=.6](A,B)  \tkzGetPoint{D}
+\tkzDefPointWith[linear, K=.6](A,C)  \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(D,E)
+
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[right](E)
+\end{tikzpicture}
+    \caption*{第4题}
+\end{figure}
+
+
+\subsection{相似和相似比}
+在前面，我们对比例线段有了明确的理解，现在我们进
+一步研究相似图形的性质。
+
+例如，图3.91所示的用不同比例尺绘成的同一机械零
+件图就是相似的图形。
+
+\begin{blk}
+    {定义} 如果两个多边形的角对应相等，对应边成比例。
+这两个多边形叫做\textbf{相似多边形}。
+\end{blk}
+
+
+
+
+\begin{example}
+    
+\end{example}
 
 
 \begin{solution}
@@ -5110,12 +5602,84 @@ $BCFG$的面积。
 \begin{blk}
     
 \end{blk}
+
+
+
+\begin{blk}
+    
+\end{blk}
+
+\begin{blk}
+    
+\end{blk}
+
+\begin{blk}
+    
+\end{blk}
+
+\begin{blk}
+    
+\end{blk}
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{solution}
+    
+\end{solution}
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+\begin{example}
+    
+\end{example}
+
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}
+\begin{example}
+    
+\end{example}
+
+
+\begin{blk}
+    
+\end{blk}
 \begin{proof}
     
 \end{proof}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
 
 
@@ -5135,118 +5699,184 @@ $BCFG$的面积。
 
 
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{example}
+    
+\end{example}
 
 
 
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{solution}
+    
+\end{solution}
 
 
 
