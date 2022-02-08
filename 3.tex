@@ -5582,96 +5582,847 @@ $\therefore\quad \frac{\overline{AE}}{\overline{BE}}=\frac{\overline{ED}}{\overl
 这两个多边形叫做\textbf{相似多边形}。
 \end{blk}
 
+\begin{figure}[htp]
+    \centering
+\includegraphics[scale=.6]{fig/3-91.png}
+    \caption{}
+\end{figure}
 
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}
+\begin{scope}
+    \tkzDefPoints{0/0/A,3/0/B, 3.4/3/C, -.5/2.3/D}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzLabelPoints[below](A,B)
+    \tkzLabelPoints[above](C,D)
+\end{scope}
+\begin{scope}[xshift=6cm, scale=.8]
+    \tkzDefPoints{0/0/A',3/0/B', 3.4/3/C', -.5/2.3/D'}
+    \tkzDrawPolygon(A',B',C',D')
+    \tkzLabelPoints[below](A',B')
+    \tkzLabelPoints[above](C',D')
+\end{scope}        
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
 
-
-\begin{example}
-    
-\end{example}
-
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{blk}
-    
-\end{blk}
-
-\begin{blk}
-    
-\end{blk}
-
-
-
-\begin{blk}
-    
-\end{blk}
-
-\begin{blk}
-    
-\end{blk}
-
-\begin{blk}
-    
-\end{blk}
+例如，图3.92中，四边形$ABCD$与四边形$A'B'C'D'$
+中，$\angle A=\angle A'$、$\angle B=\angle B'$、$\angle C=\angle C'$、$\angle D=\angle D'$, 
+并且$\overline{AB}:\overline{A'B'}=\overline{BC}:\overline{B'C'}=\overline{CD}:\overline{C'D'}=\overline{DA}:\overline{D'A'}$, 则
+这两个四边形相似。记作“四边形$ABCD\backsim$四边形
+$A'B'C'D'$. 
 
 \begin{blk}
-    
+    {定义} 相似多边形（包括相似三角形）对应边的比叫做
+它们的\textbf{相似比}（也叫放大率或缩小率）。相似比等于1的多
+边形显然是全等形。在图3.92中四边形$ABCD$对四边形
+$A'B'C'D'$的相似比等于5:4.
 \end{blk}
 
+\begin{ex}
+\begin{enumerate}
+    \item 所有等边三角形相似吗？为什么？
+    \item 所有菱形相似吗？为什么？
+    \item 所有矩形相似吗？为什
+    么？
+    \item 所有正方形相似吗？为什么？
+    \item 把一个矩形纸片的四周剪去一
+    个等宽的边，得到一个小矩形
+    纸片，那么这大、小两个矩形
+    相似吗？
+\end{enumerate}
+\end{ex}
 
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\draw(0,0) rectangle (3,3);
+\draw(.5,.5) rectangle (3-.5,3-.5);
+\draw[dashed](.5,0)--(.5,.5)--(0,.5);
+\draw[dashed](3-.5,0)--(3-.5,.5)--(3,.5);
+\draw[dashed](.5,3)--(.5,3-.5)--(0,3-.5);
+\draw[dashed](3-.5,3)--(3-.5,3-.5)--(3,3-.5);
+\end{tikzpicture}
+    \caption*{第5题}
+\end{figure}
 
+\subsection{相似三角形}
+研究相似形是以三角形为基础的。因此，我们主要研究
+相似三角形。
 
-\begin{example}
-    
-\end{example}
+在第一章中，我们已经用实验方法得出了：“\textbf{如果一个
+三角形的两个角和另一个三角形的两个角对应相等，那么这
+两个三角形相似}”。这实际上是判定两个三角形相似的一个
+判定定理。但是现在我们还不能用演绎法严格地证明它，严
+格的证明到了高中才能进行。下面我们只在某些特殊情况
+下对这个定理作些证明。
 
-\begin{solution}
-    
-\end{solution}
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}
+\begin{scope}
+    \tkzDefPoints{0/0/A,6/0/B, 4/4/C}
+    \tkzDrawPolygon(A,B,C)
 
+\tkzDefPointWith[linear, K=.333](A,B)  \tkzGetPoint{B'}
+\tkzDefPointWith[linear, K=.333](A,C)  \tkzGetPoint{C'}
+\tkzDefPointWith[linear, K=.333](B,C)  \tkzGetPoint{A'}
+\tkzDefPointWith[linear, K=.667](A,B)  \tkzGetPoint{B''}
+\tkzDefPointWith[linear, K=.667](A,C)  \tkzGetPoint{C''}
+\tkzDefPointWith[linear, K=.667](B,C)  \tkzGetPoint{A''}
+\tkzDrawSegments[dashed](C',A' B',A'' C'',B'' B'',A' C'',A'')
+\tkzDrawSegments(C',B')
+    \tkzLabelPoints[below](B',B)
+    \tkzLabelPoints[above](C',C)
+\tkzLabelPoint[below](A){$A(A')$}
+\end{scope}
+\begin{scope}[xshift=7cm, scale=.333]
+    \tkzDefPoints{0/0/A',6/0/B', 4/4/C'}
+    \tkzDrawPolygon(A',B',C')
+    \tkzLabelPoints[below](A',B')
+    \tkzLabelPoints[above](C')
+\end{scope}        
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
 
-\begin{solution}
-    
-\end{solution}
-\begin{example}
-    
-\end{example}
+已知：$\triangle ABC$和$\triangle A'B'C'$中，$\angle A=\angle A'$,
+$\angle B=\angle B'$（图3.93）
 
+求证：$\triangle ABC\backsim \triangle A'B'C'$.
 
-\begin{solution}
-    
-\end{solution}
-\begin{example}
-    
-\end{example}
-
-
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-\begin{example}
-    
-\end{example}
-
-
-\begin{blk}
-    
-\end{blk}
 \begin{proof}
+\begin{equation}
+    \angle A=\angle A',\quad \angle B=\angle B' \quad \Rightarrow\quad \angle C=\angle C'
+\end{equation}
     
+又根据移形公理，我们移动$\triangle A'B'C'$, 使$A'$与$A$重
+合，$A'B'$落在$AB$上，因为$\angle A=\angle A'$所以$\overline{A'C'}$, 落在$\overline{AC}$
+上。由于$\angle B=\angle B'$, 所以$BC\parallel B'C'$（为什么？），又由
+三角形的全等条件（SAS）可知$\triangle A'B'C'\cong \triangle AB'C'$.
+这时，如果
+
+\begin{enumerate}
+    \item $\overline{AB}$恰好是$\overline{A'B'}$的整数倍，即
+\[\overline{AB}=n\overline{A'B'}\]
+我们把$\overline{AB}$等分成$n$段（图3.93中$n=3$）和$\overline{AB'}$等长的
+线段。然后过各分点分别作$BC$的平行线和$AC$的平行线，
+由平行线等分线段定理可知这两组平行线也分别把$\overline{BC}$和$\overline{AC}$
+分成了$n$段相等的线段。
+
+由平行四边形对边相等这一性质可知；$\overline{BC}$上被$n$等分的
+每一线段和$\overline{B'C'}$相等，$\overline{AC}$上被$n$等分的每一线段也和$\overline{A'C'}$
+相等。因此有：
+\[\overline{BC}=n\overline{B'C'},\qquad \overline{AC}=n\overline{A'C'}\]
+这时：
+\begin{equation}
+    \frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{CA}}{\overline{C'A'}}=n
+\end{equation}
+由(3.4)、(3.5)可知：
+当$\overline{AB}$是$\overline{A'B'}$的整数倍时，我们证明了
+$\triangle ABC\backsim \triangle A'B'C'$.
+\item $\overline{AB}$是$\overline{A'B'}$的有理数倍，即$\overline{AB}=\frac{m}{\ell}\overline{AB'}$（图3.94中$\ell=2,\; m=7$）
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/A,6/0/B, 4/3/C}
+    \tkzDrawPolygon(A,B,C)
+\foreach \x in {1,2,3,...,6}
+{
+    \tkzDefPointWith[linear, K=\x/7](A,B) \tkzGetPoint{B\x}
+    \tkzDefPointWith[linear, K=\x/7](A,C) \tkzGetPoint{C\x}
+    \tkzDefPointWith[linear, K=\x/7](C,B) \tkzGetPoint{A\x}
+    \tkzDrawSegments({B\x},{C\x} {B\x},{A\x})
+}
+\tkzLabelPoint[below](B1){$B''$}
+\tkzLabelPoint[below](B2){$B'$}
+\tkzLabelPoint[above](C1){$C''$}
+\tkzLabelPoint[above](C2){$C'$}
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C)
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+那么一定存在$\overline{AB''}$使$\overline{A'B'}=\ell \overline{AB''}$, $\overline{AB}=m\cdot \overline{AB''}$。
+这时，我们可把$\overline{AB}$等分为$m$段，过各分点分别引$AC$和$BC$
+的平行线，由平行线等分线段定理，这两组平行线分别把
+$\overline{BC}$和$\overline{AC}$等分为$m$段，这时我们可以证明：
+\[\begin{split}
+    \overline{AC}&=m\overline{AC''}=\frac{m}{\ell}\overline{AC'}\\
+    \overline{BC}&=m\overline{B''C''}=\frac{m}{\ell}\overline{B'C'}
+\end{split}\]
+因此：
+\begin{equation}
+    \frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{AC}}{\overline{A'C'}}=\frac{m}{\ell}
+\end{equation}
+由(3.5)、(3.6)可知：
+当$\overline{AB}$是$\overline{A'B'}$的有理数倍时，我们也证明了
+$\triangle ABC\backsim \triangle A'B'C'$.
+\end{enumerate}
+\end{proof}
+
+\begin{blk}
+    {推论} 平行于三角形一边的直线，截三角形其他两边所
+得的三角形与原三角形相似。
+\end{blk}
+
+利用上述定理和推论又可推出以下两个相似三角形的判
+定定理：
+
+\begin{blk}
+    {定理1}
+如果一个三角形的三边和另一个三角形的三边
+成比例，那么这两个三角形相似。
+\end{blk}
+
+\begin{blk}
+    {定理2}
+如果一个三角形的两边和另一个三角形的两边
+成比例，并且夹角相等，那么这两个三角形相似。
+\end{blk}
+
+先证定理1.
+
+已知：$\triangle ABC$和$\triangle A'B'C'$中，
+$\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{AC}}{\overline{A'C'}}$
+（图3.95）.
+
+求证：$\triangle ABC\backsim \triangle A'B'C'$
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\begin{scope}[scale=.6]
+    \tkzDefPoints{0/0/B', 4/0/C', 3/3/A'}
+\tkzDrawPolygon(A',B',C')
+\tkzLabelPoints[below](B',C')
+\tkzLabelPoints[above](A')
+\end{scope}
+\begin{scope}[xshift=4cm]
+    \tkzDefPoints{0/0/B, 4/0/C, 3/3/A}
+    \tkzDrawPolygon(A,B,C)
+    \tkzLabelPoints[below](B,C)
+    \tkzLabelPoints[above](A)
+\tkzDefPointWith[linear, K=.6](A,B)\tkzGetPoint{D}
+\tkzDefPointWith[linear, K=.6](A,C)\tkzGetPoint{E}
+\tkzDrawSegments[dashed](D,E)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[right](E)
+
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{proof}
+    设$\overline{AB}>\overline{A'B'}$, 在$\overline{AB}$上取一点$D$, 使$\overline{AD}=\overline{A'B'}$, 过
+$D$作$DE\parallel BC$交$\overline{AC}$于$E$, 则$\triangle ADE\backsim \triangle ABC$
+
+已知$\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{AC}}{\overline{A'C'}}$，但$\overline{A'B'}=\overline{AD}$，因此：
+\[\frac{\overline{AB}}{\overline{AD}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{AC}}{\overline{A'C'}}\]
+
+又$\because\quad \frac{\overline{AB}}{\overline{AD}}=\frac{\overline{AC}}{\overline{AE}}=\frac{\overline{BC}}{\overline{DE}}$（相似三角形的对应边成比例）
+
+$\therefore\quad  \frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{BC}}{\overline{DE}},\quad \frac{\overline{AC}}{\overline{A'C'}}=\frac{\overline{AC}}{\overline{AE}}$
+
+$\therefore\quad \overline{B'C'}=\overline{DE},\quad \overline{A'C'}=\overline{AE}$
+
+又$\because\quad \overline{A'B'}=\overline{AD}$
+
+$\therefore\quad \triangle ADE\cong \triangle A'B'C'$
+
+$\therefore\quad \triangle ABC\backsim \triangle A'B'C'$
+\end{proof}
+
+现在证明定理2.
+
+已知：在$\triangle ABC$和$\triangle A'B'C'$中，
+$\angle A=\angle A'$, 并且$\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{AC}}{\overline{A'C'}}$
+（图3.96）.
+
+求证：$\triangle ABC\backsim \triangle A'B'C'$.
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\begin{scope}[scale=.6]
+    \tkzDefPoints{0/0/B', 4/0/C', 3/3/A'}
+\tkzDrawPolygon(A',B',C')
+\tkzLabelPoints[below](B',C')
+\tkzLabelPoints[above](A')
+\end{scope}
+\begin{scope}[xshift=4cm]
+    \tkzDefPoints{0/0/B, 4/0/C, 3/3/A}
+    \tkzDrawPolygon(A,B,C)
+    \tkzLabelPoints[below](B,C)
+    \tkzLabelPoints[above](A)
+\tkzDefPointWith[linear, K=.6](A,B)\tkzGetPoint{D}
+\tkzDefPointWith[linear, K=.6](A,C)\tkzGetPoint{E}
+\tkzDrawSegments[dashed](D,E)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[right](E)
+
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{proof}
+设$\overline{AB}>\overline{A'B'}$, 在$\overline{AB}$
+上取一点$D$, 
+使$\overline{AD}=\overline{A'B'}$, 过$D$作$DE\parallel BC$交$\overline{AC}$于$E$, 则$\triangle ABC\backsim \triangle ADE$
+
+已知$\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{AC}}{\overline{A'C'}}$，
+但$\overline{AD}=\overline{A'B'}$, 因此：
+\[\frac{\overline{AB}}{\overline{AD}}=\frac{\overline{AC}}{\overline{A'C'}}\]
+
+又$\because\quad \frac{\overline{AB}}{\overline{AD}}=\frac{\overline{AC}}{\overline{AE}}$
+
+$\therefore\quad \frac{\overline{AC}}{\overline{A'C'}}=\frac{\overline{AC}}{\overline{AE}}$
+
+$\therefore\quad \overline{A'C'}=\overline{AE}$
+
+由于$\angle A=\angle A',\quad \overline{A'B'}=\overline{AD}$,
+
+$\therefore\quad \triangle ADE\cong \triangle A'B'C'$.
+
+$\therefore\quad \triangle ABC\backsim \triangle A'B'C'$.
 \end{proof}
 
 \begin{example}
+    已知：$\triangle ABC$中，$\angle C=90^{\circ}$, $D$是$\overline{AC}$上一点. 
+    $DE\bot AB$交$\overline{AB}$于$E$点（图3.97）.
+
+    求证：$\overline{AD}\cdot \overline{AC}=\overline{AE}\cdot \overline{AB}$.
+\end{example}
+
+\begin{analyze}
+    要证明$\overline{AD}\cdot \overline{AC}=\overline{AE}\cdot \overline{AB}$成立，只须证明
+$\frac{\overline{AD}}{\overline{AB}}=\frac{\overline{AE}}{\overline{AC}}$
+    即可，为此，只要证明$\triangle AED\backsim \triangle ACB$就行了。
+\end{analyze}
+
+\begin{proof}
+$\because\quad DE\bot AB$
+
+$\therefore\quad \angle AED=90^{\circ}$.
+
+又：$\because\quad  \angle C=90^{\circ}$,
+
+$\therefore\quad \angle AED=\angle C$.
+
+又：$\because\quad \angle A=\angle A$
+
+$\therefore\quad \triangle AED\backsim \triangle ACB$
+
+$\therefore\quad \frac{\overline{AD}}{\overline{AB}}=\frac{\overline{AE}}{\overline{AC}}$
+
+$\therefore\quad \overline{AD}\cdot \overline{AC}=\overline{AE}\cdot \overline{AB}$ 
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.8]
+\tkzDefPoints{0/0/B, 3/0/C, 3/4/A, 3/1.5/D}
+\tkzDefPointBy[projection = onto A--B](D) \tkzGetPoint{E}
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[left](E)
+\tkzLabelPoints[right](D)
+\tkzLabelPoints[above](A)
+\tkzDrawSegments(D,E A,B B,C C,A)
+\tkzMarkRightAngles[size=.15](A,E,D A,C,B)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 3/0/B, 3.5/2/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDefPointWith[linear, K=1.4](D,C)  \tkzGetPoint{G}
+\tkzInterLL(A,G)(C,B)  \tkzGetPoint{F}
+\tkzInterLL(A,G)(D,B)  \tkzGetPoint{E}
+\tkzLabelPoints[below](A,B,E)
+\tkzLabelPoints[right](F)
+\tkzLabelPoints[above](C,D,G)
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(C,G A,G B,D)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+\begin{example}
+    已知：$\parallelogram{ABCD}$中，$G$是$\overline{DC}$边延长线上的一
+点，$AG$分别交$\overline{BD}$、$\overline{BC}$于$E$、$F$(图3.98).
+
+求证：$\frac{\overline{EF}}{\overline{AE}}=\frac{\overline{AE}}{\overline{EG}}$
+\end{example}
+
+\begin{analyze}
+    要证明$\frac{\overline{EF}}{\overline{AE}}=\frac{\overline{AE}}{\overline{EG}}$成立，但显然找不到含有这四
+    条线段的两个相似三角形，因此，我们必须寻求第三个比，使它和上述比例式中的两个比相等，这个比就是$\frac{\overline{EB}}{\overline{ED}}$，因此
+    如果证明了以下两个比例式：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\frac{\overline{EF}}{\overline{EA}}=\frac{\overline{EB}}{\overline{ED}}$
+    \item $\frac{\overline{EA}}{\overline{EG}}=\frac{\overline{EB}}{\overline{ED}}$
+\end{enumerate}
+\end{multicols}
+那么本题也就得证了。
+\end{analyze}
+
+\begin{proof}
+$\because\quad $四边形$ABCD$是平行四边形，
+
+$\therefore\quad AD\parallel BC$,
+
+$\therefore\quad \angle ADB=\angle FBD$.
+
+又$\because\quad \angle DEA=\angle BEF$,
+
+$\therefore\quad \triangle ADE\backsim \triangle FBE$，因此：
+\begin{equation}
+    \frac{\overline{EF}}{\overline{EA}}=\frac{\overline{BE}}{\overline{ED}}
+\end{equation}
+同理，
+\begin{equation}
+    \frac{\overline{EA}}{\overline{EG}}=\frac{\overline{EB}}{\overline{ED}}
+\end{equation}
+由(3.7)、(3.8)就有：$\frac{\overline{EF}}{\overline{EA}}=\frac{\overline{EA}}{\overline{EG}}$
+\end{proof}
+
+\begin{example}
+    比例规原理：比例规是根据相似三角形原理制作
+的，利用比例规可以很快地把一条不太长的线段分成若干等
+分，或者按一定比例来放大或缩小已知的线段。
+
+比例规是由两条等长的腿$\overline{AD}$和$\overline{BC}$(图3.99)构成的，
+两腿的两端是尖的，两腿中间有一条纵沟，沟内装有可以滑动并且可以固定在
+沟内任何地方的螺丝钉（$O$），按槽边刻度选择点，可以使
+$\frac{\overline{AO}}{\overline{OD}}=\frac{\overline{BO}}{\overline{OC}}$等于不
+同的比值，如果我们要把一条线段三等
+分，把螺丝固定在刻度3的地方，那么
+$\frac{\overline{AO}}{\overline{OD}}=\frac{\overline{BO}}{\overline{OC}}=3$，由于$\angle AOB=\angle COD$，
+
+$\therefore\quad \triangle AOB\backsim \triangle COD$
+
+$\therefore\quad \overline{CD}=\frac{1}{3}\overline{AB}$
+
+用$\overline{CD}$去截要分的线段$\overline{AB}$, 就可以把它三等分。
+\end{example}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.38\textwidth}
+    \centering
+\includegraphics[scale=.6]{fig/3-99.png}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.58\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\begin{scope}[scale=.5]
+\tkzDefPoints{0/0/B', 3/0/C', 3/4/A'}
+\tkzDrawPolygon(A',B',C')
+\tkzLabelPoints[below](B',C')
+\tkzLabelPoints[above](A')
+\tkzMarkRightAngles[size=.2](A',C',B')
+\end{scope}
+\begin{scope}[xshift=3cm, scale=.7]
+    \tkzDefPoints{0/0/B, 3/0/C, 3/4/A}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[below](B,C)
+\tkzMarkRightAngles[size=.2](A,C,B)
+\tkzLabelPoints[above](A)
+\end{scope}
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{example}
+    如果一个直角三角形的斜边和一条直角边与另一
+个直角三角形的斜边和一条直角边成比例，那么这两个直角
+三角形相似。
+
+已知：$\triangle ABC$和$\triangle A'B'C'$中，
+$\angle C=\angle C'=90^{\circ}$, $\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{AC}}{\overline{A'C'}}$（图3.100）.
+
+求证：$\triangle ABC\backsim \triangle A'B'C'$
+\end{example}
+
+\begin{proof}
+设$\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{AC}}{\overline{A'C'}}=k$，那么：
+\[\overline{AB}=k\overline{A'B'},\qquad \overline{AC}=k\overline{A'C'}\]
+\[\overline{BC}=\sqrt{\overline{AB}^2-\overline{AC}^2}=\sqrt{k^2\left(\overline{A'B'}^2-\overline{A'C'}^2\right)}=k\overline{B'C'}\]
+则：$\frac{\overline{BC}}{\overline{B'C'}}=k$
+
+$\therefore\quad \frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{AC}}{\overline{A'C'}}=\frac{\overline{BC}}{\overline{B'C'}}$
+
+$\therefore\quad \triangle ABC\backsim \triangle A'B'C'$
+\end{proof}
+
+\begin{ex}
+\begin{enumerate}
+    \item 根据下面条件，判断$\triangle ABC$和$\triangle DEF$是否相似？如果相
+    似，指出对应边和对应角。
+\begin{enumerate}
+    \item $\angle A=70^{\circ},\quad \angle B=50^{\circ};\quad \angle D=60^{\circ},\quad \angle E=50^{\circ}$
+    \item $\overline{AB}=2{\rm cm},\quad \overline{BC}=3{\rm cm},\quad \angle B=50^{\circ}$; 
+    
+    $\overline{DE}=4{\rm cm},\quad \overline{EF}=6{\rm cm},\quad \angle E=50^{\circ}$.
+    \item $\overline{AB}=0.8{\rm cm},\quad \overline{BC}=2{\rm cm},\quad \overline{AC}=4.5{\rm cm}$; 
+    
+    $\overline{DE}=2.4{\rm cm},\quad \overline{EF}=6{\rm cm},\quad \overline{FD}=1.5{\rm cm}$.
+\end{enumerate}
+
+    \item 求证：顶角相等的两个等腰三角形相似。
+    \item 求证：顺次连结三角形各边中点所得的三角形与原三角形
+    ，相似，并求出相似比。
+    \item 已知：$\overline{BD}$、$\overline{CE}$是$\triangle ABC$的两条高线，
+    求证：$\overline{AB}\cdot \overline{CE}=\overline{BD}\cdot \overline{AC}$.
+
+\item 在$\parallelogram{ABCD}$中，$P$是对角线$\overline{AC}$上的一点，过$P$引直线交
+$\overline{AD}$于$G$, 交$\overline{BC}$于$H$, 又分别与$\overline{BA}$和$\overline{DC}$的延长线交于
+$E$、$F$.
+
+求证：$\frac{\overline{PE}}{\overline{PF}}=\frac{\overline{PG}}{\overline{PH}}$.
+
+\item 已知：$\triangle ABC$中，$\angle A=90^{\circ}$, $\overline{AD}$是$\overline{BC}$上的高，
+求证：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\overline{AB}^2=\overline{BD}\cdot \overline{BC}$,  
+    \item $\overline{AC}^2=\overline{CD}\cdot \overline{BC}$, 
+    \item $\overline{AD}^2=\overline{BD}\cdot \overline{DC}$, 
+    \item $\overline{AB}^2+\overline{AC}^2=\overline{BC}^2$.
+\end{enumerate}
+\end{multicols}
+（注意： 本题的(a)(b)(c)给我们提供了求两
+条已知线段的比例中项的依据。而(d)是应用相似三角形再
+次证明了勾股定理。）
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/B, 4/0/C, 1.5/3/A}
+\tkzDefPointBy[projection= onto A--C](B)\tkzGetPoint{D}
+\tkzDefPointBy[projection= onto A--B](C)\tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(B,D C,E)
+\tkzMarkRightAngles[size=.15](A,E,C A,D,B)
+\tkzLabelPoints[left](E,B)
+\tkzLabelPoints[right](C,D)
+\tkzLabelPoints[above](A)
+
+\end{tikzpicture}
+    \caption*{第4题}
+\end{figure}
+
+\subsection{平行截割定理}
+要划一个多边形的相似形，往往要利用平行线，这一小
+节我们就来学习平行截割定理。
+
+\begin{blk}
+    {定理} 平行于三角形的一边并且和其他两边相交的直
+线，将其他两边分成比例线段。
+\end{blk}
+
+已知：$\triangle ABC$中，$\overline{DE}\parallel \overline{BC}$交$\overline{AB}$于$D$; 交$\overline{AC}$于$E$ (图
+3.101).
+
+求证：$\frac{\overline{AD}}{\overline{DB}}=\frac{\overline{AE}}{\overline{EC}}$
+
+\begin{proof}
+$\because\quad  \overline{DE}\parallel \overline{BC}$
+
+$\therefore\quad \triangle ADE\backsim \triangle ABC$
+
+$\therefore\quad \frac{\overline{AB}}{\overline{AD}}=\frac{\overline{AC}}{\overline{AE}},\qquad \frac{\overline{AB}-\overline{AD}}{\overline{AD}}=\frac{\overline{AC}-\overline{AE}}{\overline{AE}}$
+
+即：$\frac{\overline{BD}}{\overline{AD}}=\frac{\overline{EC}}{\overline{AE}}$
+
+$\therefore\quad \frac{\overline{AD}}{\overline{DB}}=\frac{\overline{AE}}{\overline{EC}}$
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 3/3/A}
+\tkzDefPointWith[linear, K=.6](A,B) \tkzGetPoint{D}
+\tkzDefPointWith[linear, K=.6](A,C) \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(D,E)
+\tkzLabelPoints[left](D,B)
+\tkzLabelPoints[right](C,E)
+\tkzLabelPoints[above](A)
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-3/1/C', 3/1/F', -3/2/B', 3/2/E', -3/3/A', 3/3/D'}
+\tkzDefPoints{-.5/4/L, -2/0/L'}
+\tkzDefPoints{.5/4/M, 2/0/M'}
+\tkzInterLL(L,L')(A',D')  \tkzGetPoint{A}
+\tkzInterLL(L,L')(B',E')  \tkzGetPoint{B}
+\tkzInterLL(L,L')(C',F')  \tkzGetPoint{C}
+\tkzInterLL(M,M')(A',D')  \tkzGetPoint{D}
+\tkzInterLL(M,M')(B',E')  \tkzGetPoint{E}
+\tkzInterLL(M,M')(C',F')  \tkzGetPoint{F}
+\tkzDrawLines[add=.3 and .3](A,D B,E C,F A,C D,F)
+\tkzLabelPoints[above left](A,B,C)
+\tkzLabelPoints[above right](D,E,F)
+\tkzDefPointsBy[translation = from A to D](B,C){G,H}
+\tkzLabelPoints[above left](G,H)
+\tkzDrawSegments[dashed](D,H)
+\tkzLabelPoint[left](L){$\ell$}
+\tkzLabelPoint(M){$m$}
+
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+
+把上述定理推广就得到平行截割定理。
+
+\begin{blk}
+    {平行截割定理} 三条或三条以上的平行线，截任意两条
+直线，所截出的对应线段成比例。
+\end{blk}
+
+已知：$AD$、$BE$、$CF$三
+条直线互相平行，并且与任意
+二直线$\ell$、$m$
+分别交于$A$、$B$、$C$
+和$D$、$E$、$F$各点（图3.102）.
+
+求证：$\frac{\overline{AB}}{\overline{BC}}=\frac{\overline{DE}}{\overline{EF}}$
+
+\begin{proof}
+    过$D$点引$\ell$的平行线与直线$BE$、$CF$分别交于$G$、
+$H$两点。
+则$$\frac{\overline{DG}}{\overline{GH}}=\frac{\overline{DE}}{\overline{EF}}$$
+
+又$\because\quad $四边形$ABGD$和四边形$BCHG$都是平行四边形。
+
+$\therefore\quad\overline{DG}=\overline{AB},\quad \overline{GH}=\overline{BC}$
+
+$\therefore\quad \frac{\overline{AB}}{\overline{BC}}=\frac{\overline{DE}}{\overline{EF}} $
+\end{proof}
+
+平行截割定理的逆定理也成立。下面的定理是平行截割
+定理的逆定理的特殊情况，一般情况请同学们自己推证。
+
+\begin{blk}
+    {定理} 一直线若将三角形的两边分成比例线段，则这条
+直线平行于三角形的第三边。
+\end{blk}
+
+\begin{example}
+    已知：直线$DE$截$\triangle ABC$的$\overline{AB}$边于$D$点，截$\overline{AC}$于$E$
+点，并且$\frac{\overline{AD}}{\overline{DB}}=\frac{\overline{AE}}{\overline{EC}}$（图3.103）.
+
+求证：$DE\parallel BC$.
+\end{example}
+
+
+\begin{proof}
+过$D$点引$DE'\parallel BC$, 交$\overline{AC}$于$E'$点，则
+\[\frac{\overline{AD}}{\overline{DB}}=\frac{\overline{AE'}}{\overline{E'C}}\]
+但已知$\frac{\overline{AD}}{\overline{DB}}=\frac{\overline{AE}}{\overline{EC}}$
+
+$\therefore\quad \frac{\overline{AE'}}{\overline{E'C}}=\frac{\overline{AE}}{\overline{EC}}$，
+由合比定理得
+\[\frac{\overline{AC}}{\overline{E'C}}=\frac{\overline{AC}}{\overline{EC}}\]
+
+$\therefore\quad \overline{E'C}=\overline{EC}$
+
+因为$E'$和$E$都在$\overline{AC}$上，所以$E$和$E'$重合，$\overline{DE'}$和$\overline{DE}$
+重合，因此
+$DE\parallel BC$.
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.38\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 3/3/A}
+\tkzDefPointWith[linear, K=.6](A,B) \tkzGetPoint{D}
+\tkzDefPointWith[linear, K=.6](A,C) \tkzGetPoint{E}
+\tkzDefPointWith[linear, K=.4](A,C) \tkzGetPoint{E'}
+\tkzDrawSegments[dashed](D,E')
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(D,E)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[right](E,E')
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](B,C)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.58\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.8]
+\begin{scope}
+\draw[thick](0,0)--node[above]{$c$}(2,0);
+\draw[thick](0,1)--node[above]{$b$}(1.5,1);
+\draw[thick](0,2)--node[above]{$a$}(1.75,2);
+\end{scope}
+\begin{scope}[xshift=2.5cm]
+\tkzDefPoints{0/0/A, 5/0/C, 4.5/3/B}
+\tkzDefPointWith[linear, K=.35](A,B) \tkzGetPoint{D}
+\tkzDefPointWith[linear, K=.6](A,B) \tkzGetPoint{E}
+\tkzDefPointWith[linear, K=.5](A,C) \tkzGetPoint{F}
+\tkzDefPointsBy[translation= from D to E](F){G'}
+\tkzInterLL(E,G')(A,C) \tkzGetPoint{G}
+\tkzDrawSegments(A,B A,C D,F E,G)
+\tkzLabelPoints[below](A,F,G,C)
+\tkzLabelPoints[above](D,E,B)
+\tkzLabelSegment[above](A,D){$a$}
+\tkzLabelSegment[above](E,D){$b$}
+\tkzLabelSegment[below](A,F){$c$}
+\end{scope}
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+\begin{example}
+    已知：线段$a$、$b$、$c$.
+
+    求作：$a$、$b$、$c$的比例第四项。
+
+    作法：如图3.104所示
+\begin{enumerate}
+    \item 取一点$A$, 作$\angle BAC$,
+    \item 在边$AB$上依次截取$\overline{AD}=a$, $\overline{DE}=b$, 在边$AC$上
+    截取$\overline{AF}=c$,
+    \item 作
+    $\overline{DF}$, 作$EG\parallel DF$交$AC$于$G$点，$\overline{FG}$就是所求
+    的$a$、$b$、$c$的比例第四项。
+\end{enumerate}
+\end{example}    
+
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
     
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
 
 \begin{example}
     
@@ -5681,23 +6432,21 @@ $\therefore\quad \frac{\overline{AE}}{\overline{BE}}=\frac{\overline{ED}}{\overl
     
 \end{example}
 
+\begin{example}
+    
+\end{example}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{example}
+    
+\end{example}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{solution}
+    
+\end{solution}
 
 \begin{example}
     
@@ -5706,64 +6455,20 @@ $\therefore\quad \frac{\overline{AE}}{\overline{BE}}=\frac{\overline{ED}}{\overl
 \begin{example}
     
 \end{example}
-
-\begin{example}
+\begin{solution}
     
-\end{example}
+\end{solution}
 
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
 
 \begin{example}
     
 \end{example}
 
 
+\begin{solution}
+    
+\end{solution}
+
 
 
 \begin{solution}
@@ -5786,57 +6491,6 @@ $\therefore\quad \frac{\overline{AE}}{\overline{BE}}=\frac{\overline{ED}}{\overl
     
 \end{solution}
 
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
 
 \begin{solution}
     
@@ -5896,30 +6550,180 @@ $\therefore\quad \frac{\overline{AE}}{\overline{BE}}=\frac{\overline{ED}}{\overl
 
 
 
+当放缩尺绕着固定点$S$转动时，四边形$ABCD$的形状和
+位置虽然随时改变，但各边的长不变，因此它始终是一个平
+行四边形。根据上面所说的可以知道，不管$A$点移动到什么
+地方，$S$、$A$、$E$总在一条直线上，$A$、$E$在$SC$的同旁，
+并且$\frac{\overline{SE}}{\overline{SA}}=\frac{\overline{SC}}{\overline{SD}}$
+
+我们可以预先把螺丝钉固定在适当的小孔$B$和$D$处，使$\frac{\overline{SC}}{\overline{SD}}$
+等于我们所需要的比$k$, 于是把装在$A$处的尖针依照已
+有的图形描绘，在$E$处的铅笔就画出一个和原图形相似并且
+放大了$k$倍的图形。如果在$E$处装上一针，依照已有的图形描
+画，而在$A$处装上铅笔，那么$A$处铅笔画出的图形也和原图
+形相似，但是把它缩小了$k$倍。
+
+前面我们研究了相似多边形和位似形，下面我们给出任
+意两个相似图形的一般定义。
+
+\begin{blk}
+    {定义}
+如果两个图形$T$和$T'$上的点一一对应，并且图形
+$T'$上任意一个线段$\overline{A'B'}$和$T$上与之对应的线段$\overline{AB}$的长度的
+比等于一个常数$k$, 则称\textbf{图形$T$和$T'$相似}，表示作“$T\backsim T'$”，
+$k$叫作\textbf{$T'$对$T$的相似比}（也叫放大率或缩小率）。
+\end{blk}
+
+实际生活中，相似形的例子是很多的，它们都符合土述
+相似形的定义。例如某地方的地图上任意两点间的线段和这
+个地方实际相对应的两点之间线段长度的比等于同一常数
+——比例尺。
+
+还可以证明，\textbf{任意两个位似图形都是相似形，且位似比
+的绝对值等于相似比}。
 
 
+\begin{ex}
+\begin{enumerate}
+    \item 以五边形为例，证明相似多边形的对角线的比等于相似比。
+    \item 已知相似多边形的相似比，周长的比，面积比中的一个，
+    填写其它两个：
+\begin{center}
+\begin{tabular}{c|cccccccc}
+    \hline
+    相似比 &    2&    5&    0.01&    0.005\\
+    \hline
+    周长比&&&&&    10&   $\tfrac{1}{30}$\\
+    \hline
+    面积比&&&&&&&    10000&    0.000001\\
+    \hline
+\end{tabular}
+\end{center}
+
+\item 任何两个相似形都是位似形吗？任何两个位似形都相似
+吗？
+\item 要作一多边形和已知多边形相似，并且使周长扩大三倍，
+对应边应当怎样？要使周长缩小5倍呢？要使面积扩大4倍
+呢？要使面积缩小9倍呢？
+\item 如图：$O$是平行四边形对角线上一点，$HF$、$EG$经过$O$
+点，并且分别和$\overline{AB}$、$\overline{BC}$平行。
+求证：
+\begin{enumerate}
+    \item $\parallelogram{AEOH}\backsim \parallelogram OFCG \backsim \parallelogram ABCD$;
+    \item $\parallelogram OFCG\text{的
+面积}:\parallelogram AEOH\text{的面积}:\parallelogram ABCD\text{的面积}=\overline{OC}^2:\overline{OA}^2:\overline{AC}^2$
+\end{enumerate}
+
+\item 求作一个五边形和已知五边
+形相似，并且相似比等于2.5
+\item 求作一个五边形和已知五边形位
+似，并且位似比等于$-\frac{3}{2}$.
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A, 4/0/B, 5/3/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDefPointWith[linear, K=.6](A,C) \tkzGetPoint{O}
+\tkzDefPointWith[linear, K=.6](A,D) \tkzGetPoint{H}
+\tkzDefPointWith[linear, K=.6](B,C) \tkzGetPoint{F}
+\tkzDefPointWith[linear, K=.6](D,C) \tkzGetPoint{G}
+\tkzDefPointWith[linear, K=.6](A,B) \tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(A,C H,F G,E)
+\tkzLabelPoints[below](A,E,B)
+\tkzLabelPoints[above](D,G,C)
+\tkzLabelPoints[left](H)
+\tkzLabelPoints[right](F)
+\tkzLabelPoints[below right](O)
+\end{tikzpicture}
+    \caption*{第5题}
+\end{figure}
+
+\subsection{相似测量}
+\subsubsection{测量地面上中间有障碍物的两点间距离}
+要测量地面上中间有障碍物的$A$、$B$两点间的距离（图
+3.117），可以按照下面的步骤进行。
+
+\begin{enumerate}
+    \item 在地面上选择适当的一点$C$作为测站（要使从$C$到
+$A$, 从$C$到$B$的距离可以直接量得），在$A$、$B$两点各插一根
+标杆，把平板仪放在$C$点，使平板成水平，把地面上的$C$点
+用移点器移到固定在平板上的图纸上，得到$C$点的对应点
+$C'$, 在$C'$点插一根小针。
+\item 在平板上，把照准器的尺的边靠紧插在$C'$点的小
+针，照准地面上$CA$和$CB$的方向，在图纸上描出对应的方向
+线。
+\item 量出$\overline{CA}$和$\overline{CB}$的实距长度，按照预定的比例尺
+缩小，在图纸上按照缩小后的长度，分别在对应的方向线上
+截取线段$\overline{C'A'}$和$\overline{C'B'}$, 定出$A'$、$B'$两点。
+\item 量出图纸上$\overline{A'B'}$的长度，再按照原来预定的比例
+尺把$\overline{A'B'}$的长度放大，若放大率（即比例尺）等于$k$, 则
+$\overline{AB}=\frac{1}{k}\overline{A'B'}$.
+\end{enumerate}
+
+\begin{figure}[htp]
+    \centering
+\includegraphics[scale=.6]{fig/3-117.png}
+    \caption{}
+\end{figure}
+
+\subsubsection{测绘具有多边形形状地段的平面图}
+要测绘多边形$ABCDE$形状地块的平面（图3.118），
+可以按照下面的步骤进行。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\tkzDefPoint(0,0){S'}
+\tkzDefPoint(-150:1){A'}
+\tkzDefPoint(-35:1.1){B'}
+\tkzDefPoint(60:1.5){C'}
+\tkzDefPoint(100:.8){D'}
+\tkzDefPoint(135:1.6){E'}
+\tkzDefPointWith[linear, K=3.5](S',A') \tkzGetPoint{A}
+\tkzDefPointWith[linear, K=3.5](S',B') \tkzGetPoint{B}
+\tkzDefPointWith[linear, K=3.5](S',C') \tkzGetPoint{C}
+\tkzDefPointWith[linear, K=3.5](S',D') \tkzGetPoint{D}
+\tkzDefPointWith[linear, K=3.5](S',E') \tkzGetPoint{E}
+
+\tkzDrawPolygon(A,B,C,D,E)
+\tkzDrawPolygon(A',B',C',D',E')
+\tkzDrawSegments[dashed](S',A S',B S',C S',D S',E)
+\tkzLabelPoints[above](C,D,E,C',D',E')
+\tkzLabelPoints[below](A,B,A',B')
+\tkzLabelPoints[right](S')
+
+\draw[thick](-2.3,-1.2) rectangle (1.8,2);
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
 
 
+\begin{enumerate}
+    \item 把平板仪放在地面上的适当一点$S$, 要从$S$能直接
+看到插在多边形各顶点的标杆，并且在$S$点能直接量得从$S$
+到各顶点的距离，使平板成水平，平板上放图纸，把地面
+上的$S$点用移点器移到图纸上，得到$S$点的对应点$S'$（图
+上$S$和$S'$重合），在$S'$点插一根小针。
 
+\item 在图纸上，划出和地面上$SA,SB,SC,SD$和
+$SE$方向相同的射线。
+\item 在地面上测量出$\overline{SA}$、$\overline{SB}$、$\overline{SC}$、$\overline{SD}$和$\overline{SE}$各线段
+的实际长度，并且按照预定的比例尺缩小成线段$\overline{S'A'}$、
+$\overline{S'B'}$、$\overline{S'C'}$、$\overline{S'D'}$和$\overline{S'E'}$, 然后在图纸上各条对应的方
+向射线上分别截得$\overline{S'A'}$、$\overline{S'B'}$、$\overline{S'C'}$、$\overline{S'D'}$和$\overline{S'E'}$, 再
+作$\overline{A'B'}$、$\overline{B'C'}$、$\overline{C'D'}$、$\overline{D'E'}$、$\overline{E'A'}$, 所得多边形
+$A'B'C'D'E'$就是地面上多边形$ABCDE$按照预定比例尺
+缩小的平面图。
+\end{enumerate}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+要计算多边形$ABCDE$的面积，可先计算出平面图形
+$A'B'C'D'E'$的面积，然后乘以原比例尺的平方的倒数，
+算出实际地块的面积。
 
 
 
