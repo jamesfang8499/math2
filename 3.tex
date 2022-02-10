@@ -6320,235 +6320,777 @@ $DE\parallel BC$.
 \end{enumerate}
 \end{example}    
 
+\begin{proof}
+$\because\quad DF\parallel EG$,
 
+$\therefore\quad \frac{\overline{AD}}{\overline{DE}}=\frac{\overline{AF}}{\overline{FG}}$
+即：
+\[\frac{a}{b}=\frac{c}{\overline{FG}}\]
 
-\begin{solution}
+$\therefore\quad \overline{FG}$就是所求的$a$、$b$、$c$的比例第四项。
+
     
-\end{solution}
+\end{proof}
 
 \begin{example}
-    
+   把已知线段分为两部分，使它们的比等于3:2.
+
+已知：$\overline{AB}$(图3.105).
+
+求作：$\overline{AB}$上一点$X$, 使$\overline{AX}:\overline{XB}=3:2$
+
+作法：
+\begin{enumerate}
+    \item 以$A$点为端点作射线$AC$和射线$AB$成$\angle BAC$, 在
+    $AC$上截取$\overline{AD}=3$个单位长，$\overline{DF}=2$个单位长（单位长可任
+    取）。
+\item 连结$F$、$B$, 过$D$作
+    $DX\parallel FB$, 交$\overline{AB}$于$X$, $X$
+    就是所求的点。
+\end{enumerate}
 \end{example}
 
+\begin{proof}
+$\because\quad DX\parallel FB$，（作图）
+
+$\therefore\quad \frac{\overline{AX}}{\overline{XB}}=\frac{\overline{AD}}{\overline{DF}}=\frac{3}{2}$.
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 4/0/B, 3/2/F}
+\tkzDefPointWith[linear, K=.6](A,F)\tkzGetPoint{D}
+\tkzDefPointWith[linear, K=1.2](A,F)\tkzGetPoint{C}
+\tkzDefPointWith[linear, K=.6](A,B)\tkzGetPoint{X}
+\tkzDrawPolygon(A,B,F)
+\tkzDrawSegments(D,X C,F)
+\tkzLabelPoints[below](A,X,B)
+\tkzLabelPoints[above](D,F,C)
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.8]
+\tkzDefPoints{0/0/B, 4/0/C, 3/2/A}
+\tkzDefLine[bisector,normed](B,A,C)
+\tkzGetPoint{A'}
+\tkzInterLL(A,A')(B,C)  \tkzGetPoint{D}
+\tkzDefPointsBy[translation = from D to C](A){A''}
+\tkzInterLL(A,B)(A'',C)  \tkzGetPoint{E}
+\tkzDrawSegments[dashed](A,E C,E)
+\tkzDrawSegments(A,B C,A A,D B,C)
+\tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[above](A,E)
+\tkzMarkAngle[mark=none, size=.4](D,A,C)
+\tkzMarkAngle[mark=none, size=.5](B,A,D)
+\tkzLabelAngle[pos=.7](D,A,C){2}
+\tkzLabelAngle[pos=.7](B,A,D){1}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
 \begin{example}
-    
+    三角形内角平分线定理：三角形一个内角的平分
+线分它的对边成两条线段，这两条线段和它们相邻的两边成
+比例。
+
+已知：$\overline{AD}$是$\triangle ABC$的$\angle BAC$的平分线（图3.106）.
+
+求证：$\frac{\overline{BD}}{\overline{DC}}=\frac{\overline{AB}}{\overline{AC}}$.
 \end{example}
 
-\begin{solution}
-    
-\end{solution}
+\begin{proof}
+作$CE\parallel DA$交$BA$的延长线于$E$.
 
+$\because\quad AD$平分$\angle BAC$,
+
+$\therefore\quad \angle 1=\angle 2$.
+
+又$\because\quad \angle 1=\angle AEC$, $\angle 2=\angle ACE$,
+
+$\therefore\quad \angle ACE=\angle AEC$.
+
+$\therefore\quad \overline{AE}=\overline{AC}$.
+
+$\because\quad AD\parallel EC$,
+
+$\therefore\quad \frac{\overline{BD}}{\overline{DC}}=\frac{\overline{BA}}{\overline{AE}}\quad \Rightarrow \quad \frac{\overline{BD}}{\overline{DC}}=\frac{\overline{AB}}{\overline{AC}}$
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, yscale=.6]
+\tkzDefPoints{0/0/l6, 4/0/l3, 0/2/l5, 4/2/l2, 0/3.5/l4, 4/3.5/l1}
+\tkzDrawSegments(l6,l3 l5,l2 l4,l1)
+\foreach \x in {1,2,3}
+{
+    \node at (l\x) [right]{$\ell_\x$};
+}
+\tkzDefPoints{1/5/D', 2.5/-1/E', 3.5/5/A', 1.5/-1/B'}
+\tkzInterLL(D',E')(l1,l4) \tkzGetPoint{D}
+\tkzInterLL(D',E')(l2,l5) \tkzGetPoint{E}
+\tkzInterLL(D',E')(l3,l6) \tkzGetPoint{F}
+\tkzInterLL(A',B')(l1,l4) \tkzGetPoint{A}
+\tkzInterLL(A',B')(l2,l5) \tkzGetPoint{B}
+\tkzInterLL(A',B')(l3,l6) \tkzGetPoint{C}
+\tkzLabelPoints[above left](A,B,C,D,E)
+\tkzLabelPoints[above right](F)
+\tkzDrawSegments(D',E' A',B')
+\tkzLabelPoint[above](D'){$n$}
+\tkzLabelPoint[above](A'){$m$}
+
+    \end{tikzpicture}
+    \caption*{第1题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 3/3/A}
+\tkzDefPointWith[linear, K=.6](A,B)\tkzGetPoint{D}   
+\tkzDefPointWith[linear, K=.6](A,C)\tkzGetPoint{E}
+\tkzDefPointsBy[translation = from C to E](D){F'}
+\tkzInterLL(E,F')(A,B)  \tkzGetPoint{F}
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[left](D,F)
+\tkzLabelPoints[right](E)
+\tkzLabelPoints[above](A)
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(C,D E,F D,E)
+    \end{tikzpicture}
+    \caption*{第2题}
+    \end{minipage}
+    \end{figure}
+
+\begin{figure}[htp]\centering
+  \begin{minipage}[t]{0.48\textwidth}
+  \centering
+\begin{tikzpicture}[>=latex, scale=.9]
+\tkzDefPoints{0/0/B', 3/0/A', 1.3/3/A, 2.3/3/B}
+\tkzInterLL(A,A')(B,B')  \tkzGetPoint{O}
+\tkzDrawPolygon(A,B,O)
+\tkzDrawPolygon(A',B',O)
+\tkzLabelPoints[right](A',B,O)
+\tkzLabelPoints[left](A,B')
+
+  \end{tikzpicture}
+  \caption*{第3题}
+  \end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+  \centering
+  \begin{tikzpicture}[>=latex, scale=.9]
+    \tkzDefPoints{0/0/B, 4/0/C, 3/3/A}
+\tkzDefPointWith[linear, K=.65](A,B)\tkzGetPoint{D}   
+\tkzDefPointWith[linear, K=.65](A,C)\tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(D,E)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[right](E)
+\tkzLabelPoints[above](A)
+  \end{tikzpicture}
+  \caption*{第4题}
+  \end{minipage}
+  \end{figure}
+
+\begin{figure}[htp]\centering
+  \begin{minipage}[t]{0.48\textwidth}
+  \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 4/0/B, 4.5/3/C}
+\tkzDefPointWith[linear, K=.65](A,B)\tkzGetPoint{F}   
+\tkzDefPointWith[linear, K=.65](A,C)\tkzGetPoint{E}
+\tkzDefPointsBy[translation = from B to F](E){D'}
+\tkzInterLL(D',F)(A,C)  \tkzGetPoint{D}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(D,F E,F B,E)
+\tkzLabelPoints[below](A,B,F)
+\tkzLabelPoints[above](D,E,C)
+  \end{tikzpicture}
+  \caption*{第5题}
+  \end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+  \centering
+  \begin{tikzpicture}[>=latex, scale=.8]
+\tkzDefPoints{0/0/A', 4/0/B', 1.8/-1/C', 1.6/3/O}
+\tkzDefPointWith[linear, K=.6](O,A')\tkzGetPoint{A}   
+\tkzDefPointWith[linear, K=.6](O,B')\tkzGetPoint{B}   
+\tkzDefPointWith[linear, K=.6](O,C')\tkzGetPoint{C}   
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(A',B',C')
+\tkzDrawSegments(O,A' O,B' O,C')
+\tkzLabelPoints[below](A',B',C')
+\tkzLabelPoints[above](O)
+\tkzLabelPoints[left](A)
+\tkzLabelPoints[right](B)
+\tkzLabelPoints[below right](C)
+
+
+  \end{tikzpicture}
+  \caption*{第6题}
+  \end{minipage}
+  \end{figure}
+
+\begin{ex}
+\begin{enumerate}
+    \item 如图，已知$\ell_1\parallel \ell_2\parallel \ell_3$, $\ell_1,\ell_2,\ell_3$分别截直线
+    $m$、$n$于$A$、$B$、$C$和$D$、$E$、$F$点，并且
+    $\overline{AB}=3$cm, $\overline{BC}=4$cm, 
+    $\overline{DE}=2$cm, 求$\overline{EF}$和$\overline{DF}$的
+    长。
+
+\item 已知：$\triangle ABC$中，$\overline{DE}\parallel \overline{BC}$, $\overline{EF}\parallel \overline{CD}$. 
+求证：$\overline{AD}^2=\overline{AF}\cdot \overline{AB}$.
+
+\item 如图：$AB\parallel A'B'$,
+\begin{enumerate}
+\item 设$\overline{BO}:\overline{OB'}=1:2$, $\overline{A'B'}=5$cm, 求$\overline{AB}$的长。
+\item 设$\overline{BO}=2$cm, $\overline{BB'}=5.3$cm, $\overline{AB}=2.3$cm, 求$\overline{A'B'}$的长。
+\item 设$\overline{AB}=1.2$cm, $\overline{A'B'}=3$cm, $\overline{BB'}=3.5$cm, 
+求$\overline{OB}$、$\overline{OB'}$的长。
+\end{enumerate}
+
+\item 已知：$\overline{DE}\parallel \overline{BC}$, $\overline{DE}=2$cm, $\overline{BC}=3$cm, 
+$\overline{BD}=1.5$cm. 
+求$\overline{AB}$的长。
+\item 如图，已知：$DF\parallel BE$, $EF\parallel BC$, 
+求证：$\frac{\overline{AD}}{\overline{DE}}=\frac{\overline{AE}}{\overline{EC}}$.
+
+\item 如图，已知：$AC\parallel A'C'$, $BC\parallel B'C'$
+
+求证：$\frac{\overline{OA}}{\overline{AA'}}=\frac{\overline{OB}}{\overline{BB'}}$；$AB\parallel A'B'$.
+\item 如图，已知：$D$点是$\overline{BC}$中点，$\angle ADB$和$\angle ADC$的平分线分
+别交$\overline{AB}$, $\overline{AC}$于$E$、$F$. 
+求证：$EF\parallel BC$.
+
+\item 三角形$ABC$中，$\angle B$、$\angle C$的平分线分别交$\overline{AC}$、$\overline{AB}$于$D$、$E$, 如果$ED\parallel BC$, 则$\triangle ABC$为等腰三角形。
+\item 已知：$\overline{AD}$是$\triangle ABC$中$\angle BAC$的外角平分线，交$\overline{BC}$的延
+长线于$D$点，
+求证：$\frac{\overline{BD}}{\overline{CD}}=\frac{\overline{AB}}{\overline{AC}}$.
+\end{enumerate}
+\end{ex}
+    
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 2.2/2.5/A}
+\tkzDefMidPoint(B,C)\tkzGetPoint{D}
+\tkzDefLine[bisector](A,D,B) \tkzGetPoint{E'}
+\tkzDefLine[bisector](A,D,C) \tkzGetPoint{F'}
+\tkzInterLL(A,B)(D,E')\tkzGetPoint{E}
+\tkzInterLL(A,C)(D,F')\tkzGetPoint{F}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(D,E,F)
+\tkzDrawSegments(A,D)
+\tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[left](E)
+\tkzLabelPoints[right](F)
+    \end{tikzpicture}
+    \caption*{第7题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 2.5/0/C, 3.5/2/A}
+\tkzDefPointWith[linear, K=1.3](B,A) \tkzGetPoint{A'}
+\tkzDrawSegments(A,C B,A')
+\tkzDefLine[bisector](C,A,A') \tkzGetPoint{D'}
+\tkzInterLL(B,C)(A,D')  \tkzGetPoint{D}
+\tkzDrawSegments(A,D B,D)
+\tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[above](A)
+\tkzMarkAngle[mark=none, size=.35](D,A,A')
+\tkzMarkAngle[mark=none, size=.4](C,A,D)
+
+    \end{tikzpicture}
+    \caption*{第9题}
+    \end{minipage}
+    \end{figure}
+
+\subsection{相似三角形的性质}
+相似三角形除对应角相等，对应边成比例外，还有下列
+一些性质：
+
+\begin{blk}
+    {定理}
+\begin{enumerate}
+    \item 相似三角形周长的比等于它们的相似比。
+    \item 相似三角形对应高的比等于它们的相似比。
+    \item 相似
+三角形面积的比等于它们的相似比的平方。
+\end{enumerate}
+\end{blk}
+
+已知：$\triangle ABC\backsim \triangle A'B'C'$, $\overline{BC}$的对应边是$\overline{B'C'}$, 
+$\overline{AD}\bot \overline{BC}$, $\overline{A'D'}\bot \overline{B'C'}$ (图3.107).
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\begin{scope}[scale=.7]
+\tkzDefPoints{0/0/B', 4/0/C', 3/0/D', 3/3/A'}
+\tkzDrawPolygon(A',B',C')
+\tkzDrawSegments(A',D')
+\tkzMarkRightAngles[size=.15](A',D',B')
+\tkzLabelPoints[below](C',D',B')
+\tkzLabelPoints[above](A')
+\end{scope}    
+\begin{scope}[xshift=4cm]
+    \tkzDefPoints{0/0/B, 4/0/C, 3/0/D, 3/3/A}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(A,D)
+\tkzMarkRightAngles[size=.15](A,D,B)
+\tkzLabelPoints[below](C,D,B)
+\tkzLabelPoints[above](A)
+\end{scope} 
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+求证： \begin{enumerate}
+    \item $\frac{\overline{AB} + \overline{BC} +\overline{CA}}{\overline{A'B'} + \overline{B'C'} +\overline{C'A'}}=\frac{\overline{BC}}{\overline{B'C'}}$
+    \item $\frac{\overline{AD}}{\overline{A'D'}}=\frac{\overline{BC}}{\overline{B'C'}}$
+    \item $\frac{\triangle ABC\text{面积}}{\triangle A'B'C'\text{面积}}=\left(\frac{\overline{BC}}{\overline{B'C'}}\right)^2$
+\end{enumerate}
+
+\begin{proof}
+\begin{enumerate}
+    \item $\because\quad \triangle ABC\backsim \triangle A'B'C'$, $\overline{BC}$和$\overline{B'C'}$为对应边，
+    设相似比为$k$，则
+\[\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{CA}}{\overline{C'A'}}=k\]
+
+$\therefore\quad \overline{AB}=k\overline{A'B'},\quad  \overline{BC}=k\overline{B'C'},\quad \overline{CA}= k\overline{C'A'}$
+
+$\therefore\quad \overline{AB}+\overline{BC}+\overline{CA}=k\left(\overline{A'B'}+\overline{B'C'}+\overline{C'A'}\right)$
+
+$\therefore\quad \frac{\overline{AB} + \overline{BC} +\overline{CA}}{\overline{A'B'} + \overline{B'C'} +\overline{C'A'}}=k=\frac{\overline{BC}}{\overline{B'C'}}$
+
+\item $\because\quad \triangle ABC\triangle A'B'C'$, $B$与$B'$是对应顶点，
+
+$\therefore\quad \angle B=\angle B'$
+
+    又$\because\quad \overline{AD}\bot \overline{BC},\quad \overline{A'D'}\bot \overline{B'C'}$
+
+$\therefore\quad \angle ADB=\angle A'D'B'=90^{\circ}$.
+
+$\therefore\quad \triangle ABD\backsim \triangle A'B'D'$.
+
+$\therefore\quad \frac{\overline{AD}}{\overline{A'D'}}=\frac{\overline{AB}}{\overline{A'B'}}$，而$\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}$
+
+$\therefore\quad \frac{\overline{AD}}{\overline{A'D'}}=\frac{\overline{BC}}{\overline{B'C'}}$
+
+\item $\because\quad \triangle ABC\backsim \triangle A'B'C'$
+
+$\therefore\quad \frac{\overline{AD}}{\overline{A'D'}}=\frac{\overline{BC}}{\overline{B'C'}}$
+
+\[\begin{split}
+\frac{\triangle ABC\text{面积}}{\triangle A'B'C'\text{面积}}
+=\frac{\frac{1}{2}\overline{BC}\cdot \overline{AD}}{\frac{1}{2}\overline{B'C'}\cdot \overline{A'D'}}&=\frac{\overline{BC} }{\overline{B'C'}}\cdot\frac{\overline{AD}}{\overline{A'D'}}\\
+&=\frac{\overline{BC} }{\overline{B'C'}}\cdot\frac{\overline{BC} }{\overline{B'C'}}=\left(\frac{\overline{BC}}{\overline{B'C'}}\right)^2    
+\end{split}\]
+\end{enumerate}
+\end{proof}
+
+
+同样可以证明相似三角形的对应中线、对应角平分线的比等于它们的相似比。
 
 \begin{example}
-    
+    我们应用相似三角形面积比的性质，可再次证明
+勾股定理。
+
+已知：$\triangle ABC$中，$\angle C=90^{\circ}$(图3.108).
+
+求证：$\overline{AC}^2+\overline{BC}^2=\overline{AB}^2$
 \end{example}
 
-\begin{solution}
-    
-\end{solution}
-\begin{example}
-    
-\end{example}
+\begin{proof}
+    作斜边$\overline{AB}$上的高$\overline{CD}$，易证
+$    \triangle ACD\backsim \triangle CBD\backsim \triangle ABC$.
 
-\begin{solution}
-    
-\end{solution}
+$\therefore\quad \frac{\triangle ACD\text{面积}}{\triangle ABC\text{面积}}=\frac{\overline{AC}^2}{\overline{AB}^2},\quad \frac{\triangle CBD\text{面积}}{\triangle ABC\text{面积}}=\frac{\overline{BC}^2}{\overline{AB}^2}$
 
-\begin{example}
-    
-\end{example}
+    等式两边相加得：
+\[ \frac{\triangle ACD\text{面积}+\triangle CBD\text{面积}}{\triangle ABC\text{面积}} =\frac{\overline{AC}^2+\overline{BC}^2}{\overline{AB}^2}\]
 
-\begin{solution}
-    
-\end{solution}
+$\because\quad \triangle ACD\text{面积}+\triangle CBD\text{面积}=\triangle ABC\text{面积}$
 
+$\therefore\quad \frac{\overline{AC}^2+\overline{BC}^2}{\overline{AB}^2}=1$
 
-\begin{example}
-    
-\end{example}
+$\therefore\quad  \overline{AC}^2+\overline{BC}^2=\overline{AB}^2$
+\end{proof}
 
-\begin{solution}
-    
-\end{solution}
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 5/0/B, 3.2/2.4/C, 3.2/0/D}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments[dashed](C,D)
+\tkzMarkRightAngles[size=.2](C,D,A A,C,B)
+\tkzLabelPoints[below](A,D,B)
+\tkzLabelPoints[above](C)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.7]
+\tkzDefPoints{0/0/B, 6/0/C, 2/4/A, 2/0/D}
+\tkzDefPointWith[linear, K=.4](A,B) \tkzGetPoint{P}
+\tkzDefPointWith[linear, K=.4](A,C) \tkzGetPoint{N}
+\tkzDefPointBy[projection= onto B--C](P) \tkzGetPoint{L}
+\tkzDefPointBy[projection= onto B--C](N) \tkzGetPoint{M}
+\tkzLabelPoints[below](B,L,D,M,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[left](P)
+\tkzLabelPoints[right](N)
+\tkzInterLL(P,N)(A,D) \tkzGetPoint{E}
+\tkzLabelPoints[above right](E)
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(P,N P,L N,M A,D)
+\tkzMarkRightAngles[size=.2](P,L,C A,D,C N,M,C)
 
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{example}
-    
-\end{example}
-
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{example}
-    
-\end{example}
-
-
-\begin{solution}
-    
-\end{solution}
-
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
 \begin{example}
-    
+    在图3.109中，已知正方形$PLMN$顶点$L$和$M$在
+    $\triangle ABC$的$\overline{BC}$边上，顶点$N$和$P$分别在边$\overline{AC}$和边$\overline{AB}$上，$\overline{BC}=12$cm, $\overline{BC}$上的高$\overline{AD}=8$cm, 
+    求这个正方形的边长，并正确地作出这个正方形。
 \end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item 设$\overline{AD}$和$\overline{PN}$相交于$E$,
+
+$\because\quad PN\parallel BC$
+
+$\therefore\quad \triangle APN\backsim \triangle ABC$.
+
+$\because\quad \overline{AD}$是$\triangle ABC$的$\overline{BC}$边上的高，
+$\overline{AE}$是$\triangle APN$的$\overline{PN}$边上的高，
+
+$\therefore\quad \frac{\overline{AE}}{\overline{AD}}=\frac{\overline{PN}}{\overline{BC}}$（相似三角形对应高的比等于相似比）。
+
+设正方形的边长为$X$厘米，
+那么，$\overline{PN}=X$厘米，$\overline{AE}=\overline{AD}-\overline{ED}=(8-X)$厘米，
+
+$\therefore\quad \frac{8-X}{8}=\frac{X}{12}$.
+
+解这个方程得$X=4.8$. 即正方形$PLMN$的边长为4.8厘米。
+\item 在$\triangle ABC$的$\overline{BC}$边上的高$\overline{AD}$上截$\overline{DE}=4.8$cm, 
+过$E$作$PN\parallel BC$和$\overline{AB}$、$\overline{AC}$分别交于$P$、$N$两点，过$P$、$N$
+分别作$\overline{BC}$的垂线$\overline{PL}$、$\overline{NM}$; $L$、$M$是垂足，则四边形$PLMN$
+即为所求的正方形。
+\end{enumerate}
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 已知$\triangle ABC\backsim \triangle A'B'C'$, $\overline{AB}$与$\overline{A'B'}$是对应边，
+    $\triangle ABC$的周长是125cm, $\overline{A'B'}=12$cm, $\overline{B'C'}=17$cm,  
+    $\overline{C'A'}=21$cm, 
+求三角形$ABC$各边的长。
+\item 两个相似三角形最长边各是35cm和14cm, 它们周长的
+差是60cm, 求它们的周长。
+\item 求证：
+\begin{enumerate}
+    \item 相似三角形对应中线的比等于它们的相似比。
+    \item 相似三角形对应角平分线的比等于它们的相似比。
+\end{enumerate}
+\end{enumerate}
+\end{ex}
+    
+\subsection{相似多边形}
+如何判断两个多边形相似呢？我们的办法是把多边形分
+成三角形来讨论。
+
+\begin{blk}
+   {多边形相似的判定定理} 由同数个排列顺序相同的相似
+三角形所拼成的两个多边形相似。 
+\end{blk}
+
+我们以五边形为例进行证明。
+
+已知：$\triangle ABC\backsim A'B'C'$, $\triangle ACD\backsim A'C'D'$, $\triangle ADE\backsim \triangle A'D'E'$ (图3.110), 并且$A$、$B$、
+$C$、$D$、$E$的对应顶点分别为$A'$、$B'$、$C'$、$D'$、
+$E'$.
+
+求证：多边形$ABCDE\backsim $多边形$A'B'C'D'E'$.
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\begin{scope}[rotate=110]
+\tkzDefPoint(90:2){A}
+\tkzDefPoint(90-72:2){E}
+\tkzDefPoint(90+72:2){B}
+\tkzDefPoint(90-144:2){D}
+\tkzDefPoint(90+144:2){C}
+\tkzDrawPolygon(A,B,C,D,E)
+\tkzDrawSegments(A,D A,C)
+\tkzDefPoints{0/0/O}
+\tkzAutoLabelPoints[center=O](A,B,C,D,E)
+\end{scope}
+\begin{scope}[xshift=5cm, rotate=150]
+    \tkzDefPoint(90:1){A'}
+\tkzDefPoint(90-72:1){E'}
+\tkzDefPoint(90+72:1){B'}
+\tkzDefPoint(90-144:1){D'}
+\tkzDefPoint(90+144:1){C'}
+\tkzDrawPolygon(A',B',C',D',E')
+\tkzDrawSegments(A',D' A',C')
+\tkzDefPoints{0/0/O}
+\tkzAutoLabelPoints[center=O](A',B',C',D',E')
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+\begin{proof}
+$\because\quad \triangle ABC\backsim \triangle A'B'C'$, $A$、$B$、$C$的对应顶点
+是$A'$、$B'$、$C'$,
+
+$\therefore\quad \angle B=\angle B',\quad \angle BCA=\angle B'C'A',\quad  \frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{AC}}{\overline{A'C'}}$
+
+又$\because\quad \triangle ACD\backsim \triangle A'C'D'$
+
+$\therefore\quad \angle ACD=\angle A'C'D',\quad \frac{\overline{AC}}{\overline{A'C'}}=\frac{\overline{CD}}{\overline{C'D'}}$
+
+$\therefore\quad \angle BCA+\angle ACD=\angle B'C'A'+\angle A'C'D'$
+
+即：$\angle C=\angle C',\quad \frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{CD}}{\overline{C'D'}}$
+
+同理可证：$\angle D=\angle D'$, $\angle E=\angle E'$, $\angle A=\angle A'$
+\[\frac{\overline{CD}}{\overline{C'D'}}=\frac{\overline{DE}}{\overline{D'E'}}=\frac{\overline{EA}}{\overline{E'A'}}\]
+则多边形$ABCDE$与多边形$A'B'C'D'E'$的对应角相
+等，对应边成比例。
+
+$\therefore\quad$ 多边形$ABCDE\backsim $多边形$A'B'C'D'E'$.
+\end{proof}
+
+作为练习，同学们自己证明相似多边形的几条性质。
+\begin{blk}
+    {定理} 经过两个相似多边形的一对对应顶点的全部对角。
+线，把两个多边形分成同数个并且顺序相同（或相反）的相
+似三角形。
+\end{blk}
+
+\begin{blk}
+   {定理} 相似多边形周长的比等于它们的相似比，相似多
+边形面积的比等于它们相似比的平方。 
+\end{blk}
 
 \begin{example}
-    
+    求作一个四边形和已知四边形相似，且相似比等于
+    2.
+
+    已知：四边形$ABCD$ (图3.111).
+
+    求作：四边形$A'B'C'D'$四边形$ABCD$并且相似比
+等于2.
+
+作法：
+\begin{enumerate}
+    \item 在四边形$ABCD$内任取一点$O$作射线
+$OA$、$OB$、$OC$、$OD$.
+\item 在射线$OA$上截取、
+$\overline{OA'}=2\overline{OA}$, 在射线$OB$上
+截取$\overline{OB'}=2\overline{OB}$, 在射线
+$OC$上截取$\overline{OC'}=2\overline{OC}$, 在
+射线$OD$上截取$\overline{OD'}=2\overline{OD}$. 
+顺次作$\overline{A'B'}$、$\overline{B'C'}$、$\overline{C'D'}$、$\overline{D'A'}$, 
+则四边形$A'B'C'D'$即为所求作的四边形。
+\end{enumerate}
 \end{example}
 
-\begin{example}
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A', 5/0/B', 3.5/2.6/C', 1.5/2.5/D', 2.5/1.2/O}
+\foreach \x in {A,B,C,D}
+{
+    \tkzDefMidPoint(O,\x') \tkzGetPoint{\x}
+    \tkzDrawSegments(O,\x')
+}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawPolygon(A',B',C',D')
+\tkzLabelPoints[below](A,B,A',B',O)
+\tkzLabelPoints[above](C,D,C',D')
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{proof}
+由于$\frac{\overline{OA'}}{\overline{OA}}=\frac{\overline{OB'}}{\overline{OB}}=\frac{\overline{OC'}}{\overline{OC}}=\frac{\overline{OD'}}{\overline{OD}}=\frac{2}{1}$
+
+$\therefore\quad AB\parallel A'B',\quad BC\parallel B'C',\quad 
+CD\parallel C'D',\quad DA\parallel D'A'$
+
+$\therefore\quad \triangle OAB\backsim \triangle OA'B'$，$ 
+\triangle OBC\backsim \triangle OB'C'$，$ 
+\triangle OCD\backsim \triangle OC'D'$，$ 
+\triangle ODA\backsim \triangle OD'A'$
+
+$\therefore\quad $四边形 $A'B'C'D'\backsim $四边形 $ABCD$(由同数个排列顺序相同的相似三角形拼成的两个多边形相似）。
+并且：
+\[\frac{\overline{A'B'}}{\overline{AB}}=\frac{\overline{B'C'}}{\overline{BC}}=\frac{\overline{C'D'}}{\overline{CD}}=\frac{\overline{D'A'}}{\overline{DA}}=\frac{\overline{OA'}}{\overline{OA}}=\frac{2}{1}\]
+$\therefore\quad $四边形$A'B'C'D'$为所求作的四边形。
+\end{proof}
+
+由上面的作图题可以看出，用这样方法所作的多边形不
+仅和原多边形相似，并且对应边平行，对应顶点联线相交于
+一点，我们把具有这样位置关系的两个多边形叫做\textbf{位似形}，
+把$O$点叫做\textbf{位似中心}。
+
+下面我们给位似图形下个一般的定义。
+
+\begin{blk}
+    {定义} 如果两个图形$F$和$F'$上的点一一对应，并且符合下
+列两个条件：
+\begin{enumerate}
+    \item 连结每对对应点的直线都经过同一点$O$；
+    \item 对任意一对对应点$A$和$A'$都有$\frac{\overline{OA'}}{\overline{OA}}=k,\; (k\ne 0)$
+\end{enumerate}
+那么这两个图形$F$和$F'$叫做\textbf{位似形}，$O$点叫做这
+两个图形的\textbf{位似中心}，$k$叫做\textbf{位似比}。这时图形$F$变换到图
+形$F'$叫做\textbf{位似变换}。
+\end{blk}
+
+在图3.112所示的两个位似图形上的对应点，（如$A$与
+$A'$）在位似中心（$O$）的同侧，我们称这种位似形为\textbf{顺位似
+形}，位似中心为\textbf{顺位似中心}。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[rotate=10]
+\tkzDefPoints{0/0/A, 2/0/B, 1.6/1.4/C, .6/1.4/D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDefPoints{-2/.5/O}
+\foreach \x in {A,B,C,D}
+{
+    \tkzDefPointWith[linear, K=2.1](O,\x) \tkzGetPoint{\x'}
+    \tkzDrawSegments(O,\x')
+}
+\tkzDrawPolygon(A',B',C',D')
+\tkzLabelPoints[below](A,A',B,B')
+\tkzLabelPoints[above](C,C',D,D')
+\tkzLabelPoints[left](O)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[rotate=10]
+    \tkzDefPoints{0/0/A, 2/0/B, 1.6/1.4/C, .6/1.4/D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDefPoints{3/.5/O}
+\foreach \x in {A,B,C,D}
+{
+    \tkzDefPointWith[linear, K=3.2](\x,O) \tkzGetPoint{\x'}
+    \tkzDrawSegments(\x,\x')
+}
+\tkzDrawPolygon(A',B',C',D')
+\tkzLabelPoints[below](A,C',B,D',O)
+\tkzLabelPoints[above](C,A',D,B')
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+在图3.113所示的两个位似图形上的对应点（如$A$与
+$A'$）在位似中心（$O$）的两侧，我们称这种位似形为\textbf{逆位
+似形}，位似中心为\textbf{逆位似中心}。
     
-\end{example}
+为清楚地区别这两种位似形，在位似形的定义中我们
+规定：位似比$\frac{\overline{OA'}}{\overline{OA}}=k$
+中的线段$\overline{OA'}$和$\overline{OA}$的第一个端点
+字母必须先写表示位似中心的字母$O$, 这样一来，实际上线
+段$\overline{OA'}$、$\overline{OA}$就是有方向的了。如果把$\overline{OA}$所在的半直线的方
+向定为正向，那么$\overline{OA}$反向延长线的方向就是负向了。因此，
+顺位似时，$\overline{OA'}$、$\overline{OA}$同向，我们就说$\frac{\overline{OA'}}{\overline{OA}}=k>0$; 逆
+位似时，$\overline{OA'}$、$\overline{OA}$反向，我们就说
+$\frac{\overline{OA'}}{\overline{OA}}=k<0$. 于是位
+似比既可是正数也可是负数了。
 
-\begin{solution}
-    
-\end{solution}
+作一个图形的位似形，位似中心可以任意选择，例如可
+以选在多边形的内部（图3.111），可以选在多边形的外部
+（图3.112或图3.113），也可以选在多边形的边上或顶点
+处（图3.114和图3.115）等等。
 
-\begin{example}
-    
-\end{example}
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+    \tkzDefPoints{0/0/A, 2/0/B, 1.6/1.4/C, .6/1.4/D}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDefPoints{1.2/0/O}
+    \foreach \x in {A,B,C,D}
+    {
+        \tkzDefPointWith[linear, K=2.1](O,\x) \tkzGetPoint{\x'}
+    }
+    \tkzDrawPolygon(A',B',C',D')
+    \tkzDrawSegments(O,D' O,C')
+    \tkzLabelPoints[below](A,A',B,B',O)
+    \tkzLabelPoints[above](C',D')
+    \tkzLabelPoints[left](D)
+    \tkzLabelPoints[right](C)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 2/0/B, 1.6/1.4/C, .6/1.4/D}
+    \tkzDrawPolygon(A,B,C,D)
+    \tkzDefPoints{0/0/O}
+    \foreach \x in {B,C,D}
+    {
+        \tkzDefPointWith[linear, K=2.1](O,\x) \tkzGetPoint{\x'}
+    }
+    \tkzDrawPolygon(A,B',C',D')
+    \tkzDrawSegments(O,C')
+    \tkzLabelPoints[below](B,B',O)
+    \tkzLabelPoints[above](C',D')
+    \tkzLabelPoints[left](D,A)
+    \tkzLabelPoints[right](C)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
-\begin{solution}
-    
-\end{solution}
+把一个图形放大或缩小，常常使用放缩尺，放缩尺是根
+据位似形原理做成的。
 
-\begin{example}
-    
-\end{example}
+放缩尺如图3.116所示，是由两两平行的四条直尺所组
+成的，在$A$、$B$、$C$、$D$处用螺丝钉连接起来，组成平行四
+边形$ABCD$, 它的各边可以分别绕着顶点转动。
 
-\begin{example}
-    
-\end{example}
-\begin{solution}
-    
-\end{solution}
+\begin{figure}[htp]
+    \centering
+\includegraphics[scale=.7]{fig/3-116.png}
+    \caption{}
+\end{figure}
 
+先把$S$固定在图板上的某一处，在$A$处装上尖针，在$E$
+处安上铅笔，直尺上$\overline{CS}=\overline{CE}$, $\overline{DS}=\overline{DA}$.
 
-\begin{example}
-    
-\end{example}
+因为等腰三角形$SDA$的$\angle DSA=\angle CSE$，
+又因为$S$、$D$、$C$共线，所以$\overline{SA}$重合在$\overline{SE}$上，因此$S$、$A$、$E$
+在同一条直线上。
 
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+因为$DA\parallel CE$, 所以$\frac{\overline{SE}}{\overline{SA}}=\frac{\overline{SC}}{\overline{SD}}$.
 
 当放缩尺绕着固定点$S$转动时，四边形$ABCD$的形状和
 位置虽然随时改变，但各边的长不变，因此它始终是一个平
