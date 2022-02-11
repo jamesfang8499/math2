@@ -1539,20 +1539,791 @@ $\ell_1\bot \ell_2$于$O$点。符号“$\bot$”读作“垂直
 	
 \end{example}
 
+\begin{solution}
+    
+\end{solution}
+
+
 \begin{example}
 	
 \end{example}
 
+\begin{solution}
+    
+\end{solution}
+
 \begin{example}
 	
 \end{example}
 
 
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
 
 
 
 
 
+\begin{blk}
+	
+\end{blk}
+
+\begin{blk}
+	
+\end{blk}
+
+\begin{blk}
+	
+\end{blk}
+
+\begin{blk}
+	
+\end{blk}
 
 
 
+
+\begin{example}
+	
+\end{example}
+
+\begin{solution}
+	
+\end{solution}
+
+
+\begin{example}
+	
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+	
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+	
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+	\item 已知线段$a,b$, 求作一线段等于$a+b$; $a-b\; (a>b)$.
+	\item 任意画一个$\triangle ABC$, 利用它的三边之长再画一个三角形
+$A'B'C'$, 使得$\triangle A'B'C'\cong \triangle ABC$.
+	\item 先任意画一个$\angle \alpha$, 再画一个$\angle \beta$, 使得$\angle \beta=\angle\alpha$.
+	\item 任意
+	画一个$\angle ABC$, 试作$\angle ABC$的平分线。
+	\item 已
+	知$\angle \alpha$ (小于$180^{\circ}$), 和两条线段$m,n$, 求作一个
+	$\triangle 
+	ABC$, 使得$\angle A=\angle \alpha$, $\overline{AB}=m$, $\overline{AC}=n$.
+	\item 已知$\overline{AB}$, 作$\overline{AB}$的垂直平分线。
+	\item 已知$\triangle ABC$, 过$A,B,C$分别作$\overline{BC}$, $\overline{AC}$, $\overline{AB}$所在的
+	直线的垂线。
+	\item 画一个平角$\angle AOB$, 再将$\angle AOB$二等分，四等分。
+	\item 将$\overline{AB}$四等分。
+	\item 过$\triangle ABC$各顶点分别作对边的平行线。
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/B, 2/0/C, 3.5/2.5/A}
+\tkzDrawLines(A,C A,B)
+\tkzDrawLines[add=.5 and 1](B,C)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[right](A)
+\end{tikzpicture}
+	\caption*{第7题}
+\end{figure}
+
+\subsection*{习题1.5}
+\begin{enumerate}
+	\item 作一个角等于：$\angle\alpha+\angle \beta$；$\angle\alpha-\angle \beta$.
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A, 2/0/B, 1.5/1.2/C}
+\tkzDrawSegments(A,B A,C)
+\tkzDefPoints{4/0/A', 5.5/0/B', 5.5/1.3/C'}
+\tkzDrawSegments(A',B' A',C')
+
+\tkzMarkAngles[mark=none, size=.4](B,A,C B',A',C')
+\tkzLabelAngle[pos=.6](B,A,C){$\alpha$}
+\tkzLabelAngle[pos=.6](B',A',C'){$\beta$}
+\end{tikzpicture}
+	\caption*{第1题}
+\end{figure}
+	\item 作一个三角形，使其两个角分别等于$\angle\alpha$、$\angle \beta$, $\angle \alpha$
+	的对边等于已知线段$a$.
+	\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 2/0/B, 1.5/1.2/C}
+	\tkzDrawSegments(A,B A,C)
+	\tkzDefPoints{4/0/A', 5.5/0/B', 5.5/1.3/C'}
+	\tkzDrawSegments(A',B' A',C')
+	
+	\tkzMarkAngles[mark=none, size=.4](B,A,C B',A',C')
+	\tkzLabelAngle[pos=.6](B,A,C){$\alpha$}
+	\tkzLabelAngle[pos=.6](B',A',C'){$\beta$}
+
+	\draw(0,2)--node[above]{$a$}(2.5,2);
+\end{tikzpicture}
+	\caption*{第2题}
+\end{figure}
+
+	（提示：先设法作出要作的三角形的第三个角，然后再
+	利用基本作图题4的方法作图）
+
+	\item 作一个三角形的各边的垂直平分线，看是否相交于一点。
+	\item 作一个三角形的三个内角的平分线，看是否交于一点。
+	\item $P$是$\triangle ABC$内一点，过$P$作三边的垂线。
+	\item 试作下列花纹图形：
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[scale=.7]
+\begin{scope}
+\draw(0,0) rectangle (2,2);
+\draw(2,0) rectangle (4,2);
+\draw(4,0) rectangle (6,2);
+
+\foreach \x in {0,2,4}
+{
+	\draw(\x+1,0)--(\x+1,2);
+	\draw(\x,0) arc (-90:90:1);
+	\draw(\x,0) arc (180:0:1);
+	\draw(\x,2) arc (90:-90:1);
+	\draw(\x,2) arc (180:360:1);
+    \draw(\x+2,0) arc (270:90:1);
+}
+\draw(0,1)--(6,1);
+
+\end{scope}
+
+\begin{scope}[xshift=10cm]
+\tkzDefPoints{0/0/A, 2/0/B,1/1.732/C}
+\foreach \x in {A,B,C}
+{
+	\draw(\x) circle (1);
+}
+\tkzDrawPolygon[fill=white](A,B,C)
+\end{scope}
+\begin{scope}[xshift=2cm, yshift=-3cm]
+	\draw(0,0)circle(2);
+\draw(30:2) arc (90:210:2);
+\draw(30:2) arc (-30:-150:2);
+\draw(-30:2) arc (-90:-210:2);
+\draw(-30:2) arc (30:150:2);
+\draw(90:2) arc (30:-90:2);
+\draw(-90:2) arc (-30:90:2);
+
+\end{scope}
+
+\begin{scope}[xshift=6cm, yshift=-3cm]
+\draw(2,0)circle(2);
+\foreach \x in {1,2,3}
+{
+	\draw(0,0) arc (180:0:\x/2);
+	\draw(4,0) arc (0:-180:\x/2);
+}
+\draw(0,0)--(4,0);
+\end{scope}
+
+\begin{scope}[xshift=14cm, yshift=-3cm]
+	\draw(0,0)circle(2);
+\draw(-2,0)--(2,0);
+\draw(0,-2)--(0,2);
+\foreach \x in {0,2}
+{
+	\draw(\x-2,0) arc (-180:0:.5);
+	\draw(\x-1,0) arc (180:0:.5);
+	\draw(0,\x) arc (90:270:.5);
+	\draw(0,\x-1) arc (90:-90:.5);
+}
+\end{scope}
+\end{tikzpicture}
+	\caption*{第6题}
+\end{figure}
+\end{enumerate}
+
+\section*{小结}
+
+在这一章实验几何中，我们对于常见、常用的空间的某
+些基本概念如位置、通路、方向、全等、相似等作了分析，
+从而确立了一系列的几何概念如点、直线、平面；射线、
+角、平行；长度、角度、全等形、相似形等等。我们还通过
+观察与实验，分析与归纳，从而总结出空间的一些性质如
+“两点确定一条直线”、“不共线三点确定一个平面”等
+等，这些都是以后进一步研究几何学的基础，为了便于以后
+查看，我们把本章所述的几何概念和性质列举如下\footnote{基本作图题就不再列出了。}：
+
+\subsection*{点、直线、平面及其相互关系}
+
+\begin{blk}
+	{概念} 点是位置的反映；线是通路的反映；线段是两点
+间的最短通路；直线是线段向两端无限延伸而得到的图形。
+\end{blk}
+
+\begin{blk}
+	{性质}
+\begin{enumerate}
+	\item 两点确定一条直线。
+	\item 当一个平面包含两个点$A$、$B$时，它也就包含整条直线$AB$.
+	\item 空间不共线三点确定一个平面。
+	\item 两个相交平面的交线是一条直线，对于空间一条
+	给定的直线，存在着无数个包含这条直线的平面。
+\end{enumerate}
+\end{blk}
+
+\subsection*{射线、角、平行与三角形}
+
+\begin{blk}
+	{概念} 直线上一点一旁的部分叫做射线。一条以点$A$为
+端点的射线表示由$A$点出发的一个方向；以同一点为端点的
+两条射线所组成的图形叫做角，它体现了这两条射线所表示
+的两个方向之间的差别；同一平面上的两条直线被一条直线
+所截，如果同位角相等，就称这两条直线互相平行；两个形
+状和大小完全相同的图形叫做全等形，两个平面图形全等的
+实践检验方法就是它们完全重合；两个形状相同大小不一定
+相同的图形叫做相似形；两个多边形相似的条件是它们的角
+对应相等，对应边成比例。
+\end{blk}
+
+\begin{blk}{性质}
+\begin{enumerate}
+	\item 两条线段全等的唯一条件就是它们的长度相
+	等。
+	\item 两个角全等的唯一条件就是它们的角度相等。
+	再者，在平面内给定一条射线$AB$和$\angle \alpha$, 在直线$AB$两侧
+	分别存在着唯一的一条射线$AC$和$AC'$, 使得$\angle BAC=
+	\angle BAC'=\angle\alpha$
+	\item 三角形的三个内角和是一个平角。
+	\item 过直线$\ell$外一点$P$只有一条直线和$\ell$平行。
+	\item 在同一平面内，过已知点作已知直线的垂线只
+	有一条。
+	\item 两个三角形如果有两边一夹角分别对应相等，
+	它们就全等（SAS）.
+	\item 两个三角形如果有两角一夹边分别对应相等，
+	它们就全等（ASA）.
+	\item 两个三角形如果三条边分别对应相等，它们就
+	全等（SSS）.
+	\item 两个三角形如果有两个角对应相等，它们就相
+	似。
+	\end{enumerate}
+\end{blk}
+
+\section*{复习题一}
+\begin{enumerate}
+	\item $A$、$B$、$C$、$D$是依此顺序位于一条直线上的四个点，并
+且$\overline{AB}=\overline{BD}$, $\overline{BC}=\overline{CD}$, 把下列各组线段的长度关系，
+分别用式子表示：
+\begin{multicols}{3}
+\begin{enumerate}
+	\item $\overline{AB}$和$\overline{BC}$
+	\item $\overline{AB}$和$\overline{AD}$
+	\item $\overline{AD}$和$\overline{CD}$
+\end{enumerate}
+\end{multicols}
+
+\item 射线$AB$和射线$BA$所表示的方向是否相同？
+\item 两点间的距离是什么？一点到一条直线的距离是什么？
+\item 在四边形$ABCD$内找一点$P$, 使得$P$点到$A$、$B$、$C$、$D$
+四顶点的距离之和最短？你猜想这一点在什么位置？并用
+线是两点间的最短通路来说明你的猜想？
+\item 在$\triangle ABC$中，如果$\overline{AB}=\overline{AC}$, 并且$P_1$、$P_2$是$\overline{BC}$上任
+意两点，那么：
+\begin{enumerate}
+\item 量出$P_1$点到$\overline{AB}$、$\overline{AC}$两边的距离之和；
+\item 量出$P_2$点到$\overline{AB}$、$\overline{AC}$两边的距离之和；
+\item 比较一下(a)与(b)所得的结果，你能作出什么
+猜想？
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 2.5/-.2/C, 3/1/D, 2/1.5/A}
+\tkzDrawPolygon(A,B,C,D)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[right](D)
+\tkzLabelPoints[above](A)   
+	\end{tikzpicture}
+	\caption*{第4题}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 1.5/2/A, .7/0/P_1, 1.7/0/P_2}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[below](B,C,P_1,P_2)
+\tkzLabelPoints[above](A)   
+\tkzDrawPoints(P_1,P_2)
+
+	\end{tikzpicture}
+	\caption*{第5题}
+	\end{minipage}
+	\end{figure}
+
+\item 在一个平面上三条直线的位置关系有几种情况？
+\item 长24cm的线段，被分成不相等的四部分，首尾两部分
+的中点间的距离是20cm, 求中间两部分中点间的距离是多
+少厘米？
+\item 如果时针和分针组成$7^{\circ}30'$的角，而分针指着
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item 3;
+		\item 9
+	\end{enumerate}
+\end{multicols}
+那么现在是几点钟？
+\item 两个角度数的比为7:3, 差为$72^{\circ}$, 这两个角是否互为
+补角？
+\item 如图，已知$\angle ABC$和$\angle CBD$互为补角，$EB\bot AB$, $\angle ABC=92^{\circ}$, $BF$是$\angle CBD$的平分线，求$\angle EBF$是多少
+度？
+\item 已知$\angle AOB$被$OC$分成两部分，这两部分的差是$30^{\circ}$, 
+$\angle AOB$的平分线是$OM$, 求$\angle COM$的度数。
+\item 五个点$A$、$B$、$C$、$D$、$E$排列在一条直线上，而且$D$点
+在$A$点右边4m的地方，$C$点在$E$点右边5m的地方，又$B$
+点在$E$点左边5m的地方，$B$点在$A$点左边4m的地方，
+问：
+\begin{enumerate}
+	\item 正好在中间的是那个点？
+	\item $D$点在$E$点右边
+多少米远的地方？
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1/0/A, 0/0/B, 3/0/D, 0/3/E}
+\tkzDefPoint(88:3){C}
+\tkzDrawLine[bisector](C,B,D)  \tkzGetPoint{F'}
+\tkzDefPointWith[linear, K=2](B,F')  \tkzGetPoint{F}
+\tkzDrawSegments(A,D B,E B,C B,F)
+\tkzLabelPoints[below](A,B,D)
+\tkzLabelPoints[right](C,F)
+\tkzLabelPoints[left](E)
+	\end{tikzpicture}
+	\caption*{第10题}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+		\tkzDefPoints{-2/0/A, 0/0/O, 2/0/B}
+\tkzDefPoint(70:2.5){C}
+\tkzDrawLine[bisector](C,O,B)  \tkzGetPoint{E'}
+\tkzDrawLine[bisector](A,O,C)  \tkzGetPoint{D'}
+\tkzDefPointWith[linear, K=1.56](O,E')  \tkzGetPoint{E}\tkzDefPointWith[linear, K=2](O,D')  \tkzGetPoint{D}
+\tkzLabelPoints[below](A,B,O)
+\tkzLabelPoints[right](C,E)
+\tkzLabelPoints[left](D)
+\tkzDrawSegments(A,B D,O C,O E,O)
+	\end{tikzpicture}
+	\caption*{第13题}
+	\end{minipage}
+	\end{figure}
+
+\item 已知$\angle AOC$和$\angle COB$互为补角，$OD$、$OE$分别是
+$\angle AOC$和$\angle COB$的平分线，那么
+\begin{enumerate}
+	\item $OD$是否垂直$OE$？为什么？
+	\item $\angle AOD$与$\angle BOE$是否互余？为什么？
+\end{enumerate}
+
+\item 在已知$\triangle ABC$中，$\angle B=\angle C$, $\angle A=4\angle B$, 问$\angle A$, $\angle B$、$\angle C$各等于多少度？
+\item 已知$\triangle ABC$中，$\angle A:\angle B:\angle C=1:2:3$, 求$\angle A$、
+$\angle B$、$\angle C$各等于多少度？
+\item 在$\triangle ABC$中，$\angle A=60^{\circ}$, $\angle B=\angle C$, 如果$\angle B$、$\angle C$
+的平分线相交于$O$点，问$\angle BOC$等于多少度？
+\item 已知如图，在$\triangle ABC$中，
+$\overline{BA}\bot \overline{AC}$, $\overline{AD}\bot \overline{BC}$, $\angle BAD=30^{\circ}$, 求$\angle x$, $\angle y$, $\angle z$的
+度数？
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[scale=1.4]
+	\tkzDefPoints{0/0/B, 4/0/C, 1/1.732/A, 1/0/D}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(A,D)
+\tkzMarkRightAngle[size=.15](A,D,C)
+\tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[above](A)
+\tkzMarkAngles[mark=none, size=.3](C,B,A B,A,D A,C,B)
+\tkzMarkAngles[mark=none, size=.25](D,A,C)
+\tkzLabelAngle[pos=.4](C,B,A){$y$}
+\tkzLabelAngle[pos=.6](B,A,D){$30^{\circ}$}
+\tkzLabelAngle[pos=.4](A,C,B){$z$}
+\tkzLabelAngle[pos=.4](D,A,C){$x$}
+
+\end{tikzpicture}
+	\caption*{第17题}
+\end{figure}
+
+\item 求图中$\angle\alpha$, $\angle\beta$的大小。
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{0/0/A, 2/0/B, -1/0/A', 4/0/B'}
+\tkzDefPoint(70:4){C}
+\tkzDrawSegments(A,C B,C)
+\tkzDrawLines[add=.5 and .5](A,B)
+\tkzMarkAngles[mark=none, size=.3](C,A,A' B',B,C)
+\tkzMarkAngles[mark=none, size=.4](A,C,B)
+\tkzLabelAngle[pos=.6](C,A,A'){$110^{\circ}$}
+\tkzLabelAngle[pos=.6](B',B,C){$100^{\circ}$}
+\tkzLabelAngle[pos=.6](A,C,B){$\alpha$}
+\end{scope}
+\begin{scope}[xshift=5cm]
+\tkzDefPoints{0/0/B, 3/0/C, 1.2/2.6/A, 2.7/1/D, -1/0/B', 4/0/C'}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawLines[add=.25 and .25](C,B)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[right](D)
+\tkzMarkAngles[mark=none, size=.3](A,B,B' C',C,D A,D,C B,A,D)
+\tkzLabelAngle[pos=.6](A,B,B'){$120^{\circ}$}
+\tkzLabelAngle[pos=.6](C',C,D){$100^{\circ}$}
+\tkzLabelAngle[pos=.6](A,D,C){$\beta$}
+\tkzLabelAngle[pos=.6](B,A,D){$88^{\circ}$}
+
+
+\end{scope}
+\end{tikzpicture}
+	\caption*{第18题}
+\end{figure}
+
+\item 已知$\triangle ABC$中，$\angle ABC=90^{\circ}$, 当$A$点和$B$点相重合
+折叠时，设折痕为$\overline{DE}$, 那么$\angle EBC=\angle C$, 为什么？
+\item 已知如图，直线$EF$, $GH$和直线$MN$相交于$A,B$, $AC$
+平分$\angle MAF$, $BD$平分$\angle ABH$, 并且$\angle MAF=\angle ABH$, 问：
+\begin{enumerate}
+	\item $EF$与$GH$是否平行？为什么？
+	\item $AC$与$BD$是否平行？为什么？
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 3/0/C, 0/4/A}
+\tkzDefMidPoint(A,B)\tkzGetPoint{D}
+\tkzDefMidPoint(A,C)\tkzGetPoint{E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon[pattern=north east lines](B,D,E)
+\tkzLabelPoints[right](E)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+
+	\end{tikzpicture}
+	\caption*{第19题}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1/1/G, 3/1/H, -1/2.5/E, 3/2.5/F, -.5/0/N, 2/4/M}
+\tkzDrawSegments(E,F G,H M,N)
+\tkzInterLL(E,F)(M,N)  \tkzGetPoint{A}
+\tkzInterLL(G,H)(M,N)  \tkzGetPoint{B}
+\tkzLabelPoints[left](E,G)
+\tkzLabelPoints[right](F,H)
+\tkzLabelPoints[above left](A,B)
+\tkzLabelPoints[above](M)
+\tkzLabelPoints[below](N)
+\tkzDefLine[bisector, normed](M,A,F) \tkzGetPoint{C'}
+\tkzDefLine[bisector, normed](M,B,H) \tkzGetPoint{D'}
+\tkzDefPointWith[linear,K=2](A,C')\tkzGetPoint{C}
+\tkzDefPointWith[linear,K=2](B,D')\tkzGetPoint{D}
+\tkzDrawSegments(A,C B,D)
+\tkzLabelPoints[right](C,D)
+	\end{tikzpicture}
+	\caption*{第20题}
+	\end{minipage}
+	\end{figure}
+
+	\item 已知如图，并且$\angle 1=\angle 2$, 那么$\ell$是否平行$m$？为什
+么？
+\item 已知：
+\begin{enumerate}
+	\item $\overline{AB}=5$cm, $\overline{AC}=38$cm, $\angle A=54^{\circ}$
+	\item $\overline{AB}=4$cm, $\angle A=42^{\circ}$, $\angle B=58^{\circ}$
+	\item $\overline{AB}=2.5$cm, $\overline{BC}=3.4$cm, $\overline{CA}=4$cm
+	\item $\angle C=90^{\circ}$, $\overline{CA}=3$cm, $\overline{AB}=5$cm
+\end{enumerate}
+求作$\triangle ABC$.
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1/1/G, 3/1/H, -1/2.5/E, 3/2.5/F, -.5/0/N, 2/4/M}
+\tkzDrawSegments(E,F G,H M,N)
+\tkzInterLL(E,F)(M,N)  \tkzGetPoint{A}
+\tkzInterLL(G,H)(M,N)  \tkzGetPoint{B}
+\node at (F)[right]{$\ell$};
+\node at (H)[right]{$m$};
+\tkzMarkAngles[size=.3, mark=none](M,A,E M,B,G N,A,F)
+\tkzLabelAngle[pos=.6](M,A,E){3}
+\tkzLabelAngle[pos=.6](M,B,G){2}
+\tkzLabelAngle[pos=.6](N,A,F){1}
+	\end{tikzpicture}
+	\caption*{第21题}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/3.5/A, -1.5/0/D, 1.5/0/E}
+\tkzDefPointWith[linear, K=.6](A,D)\tkzGetPoint{B}
+\tkzDefPointWith[linear, K=.6](A,E)\tkzGetPoint{C}
+\tkzLabelPoints[left](B,D)
+\tkzLabelPoints[right](C,E)
+\tkzLabelPoints[above](A)
+\tkzDrawPolygon(A,D,C)
+\tkzDrawPolygon(A,B,E)
+	\end{tikzpicture}
+	\caption*{第23题}
+	\end{minipage}
+	\end{figure}
+
+\item 已知如图，如果$\overline{AB}=\overline{AC}$, $\overline{AD}=\overline{AE}$, 那么$\triangle ADC$
+与$\triangle AEB$是否全等？为什么？
+
+\item 已知如图，如果$\overline{AB}=\overline{DC}$, $\overline{AC}=\overline{DB}$, 那么$\triangle ABC$与
+$\triangle DCB$是否全等？为什么？
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/.8/B, 0/-.8/C, 2.5/1.5/A, 2.5/-1.5/D}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(D,B,C)
+\tkzLabelPoints[left](B,C)
+\tkzLabelPoints[right](A,D)
+	\end{tikzpicture}
+	\caption*{第24题}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/3/A, -1.5/0/B, 1.5/0/C, -.5/0/D, .5/0/E}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(A,D,E)
+\tkzLabelPoints[below](B,C,D,E)
+\tkzLabelPoints[above](A)
+\tkzMarkAngles[mark=none, size=.26](C,B,A A,C,B A,D,B C,E,A)
+\tkzLabelAngle[pos=.4](C,B,A){1}
+\tkzLabelAngle[pos=.4](A,C,B){2}
+\tkzLabelAngle[pos=.4](A,D,B){3}
+\tkzLabelAngle[pos=.4](C,E,A){4}
+	\end{tikzpicture}
+	\caption*{第25题}
+	\end{minipage}
+	\end{figure}
+
+	\item 已知如图，$\angle 1=\angle 2$, $\angle 3=\angle 4$, $\overline{BE}=\overline{CD}$, 问：
+\begin{enumerate}
+	\item $\triangle ABD$与$\triangle ACE$是否全等？为什么？
+	\item $\triangle ABE$与$\triangle ACD$是否全等？为什么？
+\end{enumerate}
+
+\item 任画一个$\triangle ABC$, 再画一个$\triangle A'B'C'$, 使$\triangle A'B'C'\cong \triangle ABC$, 想想看能有几种画法？
+\item 任画一个四边形$ABCD$, 怎样画一个四边形$A'B'C'D'$
+与四边形$ABCD$全等？（用叠合法检验）
+\item 已知如图$\overline{AC}\bot \overline{BC}$, $\overline{FD}\bot \overline{AB}$, $\angle A=\angle F$, 问：$\triangle ABC$
+与$\triangle FED$是否相似？为什么？
+\item 已知如图，在$\triangle ABC$中，$\overline{BA}\bot \overline{AC}$, $\overline{AD}\bot \overline{BC}$, 问：
+\begin{enumerate}
+	\item $\triangle ABD$与$\triangle CAD$是否相似？为什么？
+	\item $\triangle ABD$与$\triangle CBA$是否相似？为什么？
+	\item $\triangle ACD$与$\triangle BCA$是否相似？为什么？
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 4/3/A}
+\tkzDefPointWith[linear, K=.3](A,B) \tkzGetPoint{E}
+\tkzDefPointsBy[translation = from C to E](B){F'}
+\tkzDefPointWith[linear, K=.5](E,F') \tkzGetPoint{F}
+\tkzDefPointBy[projection = onto A--B](F) \tkzGetPoint{D}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(D,E,F)
+\tkzMarkRightAngles[size=.2](F,D,E A,C,B)
+\tkzLabelPoints[below](B,C,E,D)
+\tkzLabelPoints[left](F)
+\tkzLabelPoints[right](A)
+
+	\end{tikzpicture}
+	\caption*{第28题}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1.3]
+\tkzDefPoints{0/0/B, 4/0/C, 1/1.732/A, 1/0/D}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(A,D)
+\tkzMarkRightAngles[size=.15](A,D,C B,A,C)
+\tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[above](A)
+	\end{tikzpicture}
+	\caption*{第29题}
+	\end{minipage}
+	\end{figure}
+
+\item 过$\triangle ABC$的三个顶点，分别作对边的平行线，两两分
+别交于$D$、$E$、$F$三点，试通过观察猜想、检验，你能对
+$\triangle ABC$与$\triangle DEF$的关系作出哪些结论？
+\item 观察下列各图，归纳出$n$边形对角线条数的公式。（提
+示：注意$n$边形边数与每一个顶点所引出的对角线数的关
+系）
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[scale=1.3]
+\begin{scope}
+\node at (1,-.5){(1)};
+\tkzDefPoints{0.2/0/A, 1.2/0/B, .9/1.2/C}
+\tkzDrawPolygon(A,B,C)
+
+\end{scope}
+	\begin{scope}[xshift=2cm]
+\node at (1,-.5){(2)};
+\tkzDefPoints{0.2/0/A, 1.2/0/B, 1.8/.6/C,.7/1.2/D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(A,C B,D)
+\end{scope}
+\begin{scope}[xshift=4.5cm]
+\node at (.5,-.5){(3)};
+\tkzDefPoints{0.2/0/A, 1.2/0/B, 1.6/.8/C,.7/1.2/D, -.2/.7/E}
+\tkzDrawPolygon(A,B,C,D,E)
+\tkzDrawSegments(A,C A,D B,D B,E C,E)
+\end{scope}
+\begin{scope}[xshift=7cm]
+\node at (.5,-.5){(4)};
+\tkzDefPoints{0.2/0/A, 1.2/0/B, 1.6/.6/C,1.2/1.2/D, .2/1.2/E, -.2/.6/F}
+\tkzDrawPolygon(A,B,C,D,E,F)
+\tkzDrawSegments(A,C A,D A,E B,D B,E B,F C,E C,F D,F)
+
+
+\end{scope}
+\end{tikzpicture}
+	\caption*{第31题}
+\end{figure}
+
+边数$n:\; 3,4,5,6,\ldots$
+
+对角线总条数$S:\; 0,2,5,9,\ldots$
+
+\item 今有$n$个球队参加比赛，规定每两队各赛一场，求比赛
+总场数的公式。（参看下图，可以利用31题的结果）
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[scale=1.3]
+\begin{scope}
+	\node at (1,-.5){(1)};
+\tkzDefPoints{.8/0/A, 1.2/1.5/B}
+\tkzDrawSegments(A,B)
+\tkzDrawPoints(A,B)
+\end{scope}
+\begin{scope}[xshift=2cm]
+	\node at (.5,-.5){(2)};
+	\tkzDefPoints{0/0/A, .6/1.5/B, 1.2/0/C}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPoints(A,B,C)
+\end{scope}
+\begin{scope}[xshift=4cm]
+	\node at (.5,-.5){(3)};
+	\tkzDefPoints{0/0/A, 1.2/0/B, 1/1.5/C, .2/1.5/D}
+	\tkzDrawPolygon(A,B,C,D)
+	\tkzDrawPoints(A,B,C,D)
+	\tkzDrawSegments(A,C B,D)
+\end{scope}
+\begin{scope}[xshift=6cm]
+	\node at (.5,-.5){(4)};
+	\tkzDefPoints{0.2/0/A, 1.2/0/B, 1.6/.8/C,.7/1.2/D, -.2/.7/E}
+\tkzDrawPolygon(A,B,C,D,E)
+\tkzDrawSegments(A,C A,D B,D B,E C,E)
+\tkzDrawPoints(A,B,C,D,E)
+\end{scope}
+\end{tikzpicture}
+	\caption*{第32题}
+\end{figure}
+
+参加比赛的队数 $n:\; 2,3,4,5,\ldots$
+比赛的总场数 $\ell:\; 1,3,6,10,\ldots$
+
+\end{enumerate}
