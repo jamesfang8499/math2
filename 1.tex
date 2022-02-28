@@ -1518,83 +1518,1153 @@ $\therefore\quad \angle COB=140^{\circ}$
 $\ell_1\bot \ell_2$于$O$点。符号“$\bot$”读作“垂直
 于”。
 
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\tkzDefPoints{-2/1.5/A, 1/-1/B, -1.5/-1/C}
+\tkzDefPointBy[projection = onto A--B](C)  \tkzGetPoint{O}
+\tkzDrawLine[add=0 and 1](C,O)
+\tkzDefPointWith[linear, K=1.5](C,O)  \tkzGetPoint{D}
+\tkzDrawSegments(A,B)
+\tkzLabelPoints[right](O)
+\tkzLabelPoint[left](A){$\ell_1$}
+\tkzLabelPoint[left](C){$\ell_2$}
+\tkzMarkRightAngles[size=.2](A,O,D)
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+
 因为三角板中有一个角是直角，
 所以可以用三角板来画垂线。
 
-
-
-
-
-
 \begin{example}
+	过已知点$A$, 画已知直线$\ell$的垂线。
 	
 \end{example}
 
 \begin{solution}
-	
+\begin{enumerate}
+	\item $A$点在直线$\ell$上
+	\item $A$点在直线$\ell$外
+\end{enumerate}
+过$A$点画直线$\ell$的垂线的方法如图1.39所示。
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+\includegraphics[scale=.6]{fig/1-39-1.png}
+	\caption*{过直线$\ell$上一点$A$划$\ell$的垂线}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+\includegraphics[scale=.6]{fig/1-39-2.png}
+	\caption*{过直线$\ell$外一点$A$划$\ell$的垂线}
+	\end{minipage}
+	\caption{}
+	\end{figure}
 \end{solution}
 
+问题1：实际画一画，过已知直线上或直线外一点，画
+这条直线的垂线能画几条？
 
-\begin{example}
-	
-\end{example}
+问题2：如图1.40, $P$点是直线$AB$外一点，$PC\bot AB$
+于$C$点，$D$、$E$都是直线$AB$上的点，连结$\overline{PD}$、$\overline{PE}$, 量一量
+$\overline{PC}$、$\overline{PD}$、$\overline{PE}$哪一条最短？
 
-\begin{solution}
-    
-\end{solution}
+通过上面的实践，我们可以得出垂线的下列性质：
 
-
-\begin{example}
-	
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{example}
-	
-\end{example}
-
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-
-
-\begin{blk}
-	
+\begin{blk}{}
+	\begin{enumerate}
+	\item 过一点作一条直线的垂线，只能作一条。
+	\item 从直线外一点和这条直线上各点所引的线段中，垂直
+	线段最短。
+\end{enumerate}
 \end{blk}
+
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-2.5/0/A, 2.5/0/B, 0/0/C, 0/2/P, -2/0/D, 1.5/0/E, -1/0/F}
+\tkzDrawSegments(A,B P,D P,C P,F P,E)
+\tkzLabelPoints[below](A,B,C,D,E)
+\tkzLabelPoints[above](P)
+\tkzMarkRightAngle[size=.2](P,C,B)
+	\end{tikzpicture}
+	\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-2/0/C, 2/0/D,0/0/B,0/2/A}
+\tkzDrawSegments(C,D A,B)
+\tkzLabelPoints[below](B)
+\tkzLabelPoints[above](A)
+\tkzMarkRightAngle[size=.2](A,B,D)
+\node at (D)[right]{$\ell$};
+	\end{tikzpicture}
+	\caption{}
+	\end{minipage}
+	\end{figure}
+
+过直线外一点画这条直线的垂线，这点到垂足间的线段
+的长度叫做这点到这条直线的\textbf{距离}。
+
+例如，从直线$\ell$外一点$A$, 向直线$\ell$画垂线，设垂足为
+$B$, 那么$\overline{AB}$的长度就是点$A$到直线$\ell$的距离（图1.41）.
+
+\subsubsection{三角形的内角和}
+
+我们观察手中的一副三角板（图1.42），它们的大小
+形状都不相同；其中一个三角板的三个角和另一个三角板的
+三个角之间的大小，虽然都有一个直角，但其余的两对角的
+大小是不一样的，如果我们把每个三角形三个角的大小各自
+加起来：
+\[\begin{split}
+90^{\circ}+45^{\circ}+45^{\circ}&=180^{\circ}\\
+90^{\circ}+60^{\circ}+30^{\circ}&=180^{\circ}	
+\end{split}\]
+
+结果发现两个三角板的三个角的和都相同，都等于
+$180^{\circ}$.
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{0/0/A, 3/0/B, 0/3/C}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelAngle[pos=.4](B,A,C){$90^{\circ}$}
+\tkzLabelAngle[pos=.7](C,B,A){$45^{\circ}$}
+\tkzLabelAngle[pos=.7](A,C,B){$45^{\circ}$}
+\tkzDefTriangleCenter[centroid](A,B,C)
+\tkzGetPoint{G}
+\draw(G) circle(.2);
+
+\end{scope}
+\begin{scope}[xshift=3cm]
+\tkzDefPoints{0/3/A, 2.5*1.732/3/B, 2.5*1.732/0.5/C}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelAngle[pos=.4](A,B,C){$90^{\circ}$}
+\tkzLabelAngle[pos=.6](B,C,A){$60^{\circ}$}
+\tkzLabelAngle[pos=.75](C,A,B){$30^{\circ}$}
+\tkzDefTriangleCenter[centroid](A,B,C)
+\tkzGetPoint{G}
+\draw(G) circle(.2);
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+
+这样，我们自然地会想到：任何一个三角形的三个角的
+和等于多少度？是否也等于$180^{\circ}$？
+
+同学们在纸上任意画两个三角形，形状、大小都不要
+一样，但要认真仔细地画，边要画得直，笔道要越细越好。
+然后用量角器去量它们的各角，把每一个三角形的三个角的
+度数加起来，如果得到的两个结果相差很大，就再仔细地量
+一量、算一算，如果得到的两个结果相差极为微小，而且都
+极其接近$180^{\circ}$, 那么我们又会想到：如果在量的过程中没出
+现误差，是否任何一个三角形的三个角的和都等于$180^{\circ}$?
+
+带着这个问题，我们不妨这样来设想，因为$180^{\circ}$角即平
+角，它的两边合成一条直线，如果三角形三个角的大小的和
+等于$180^{\circ}$，那么这三个角拼合起来就应该得到一个平角。因
+此我们可以按照这个设想，再来检验三角形三个角的和是否
+为一个平角，即$180^{\circ}$角。
+
+\begin{figure}[htp]
+	\centering
+\includegraphics[scale=.7]{fig/1-43.png}
+	\caption{}
+\end{figure}
+
+先用硬纸板仔细地剪出一个三角形（如图1.43(1)），
+然后在桌上放一把直尺（图1.43(2)）；再沿着1.43(1)中
+任意画的虚线把三个角（记作$\angle 1$, $\angle 2$, $\angle 3$）剪下来；最
+后按图1.43(2)所示，把$\angle 1$, $\angle 2$, $\angle 3$拼合起来放在直
+尺的边上，结果，作为$\angle 1$, $\angle 2$, $\angle 3$之和的角的两边恰好
+和直尺的边密合。
+
+通过以上实践，我们便总结出实验的结果，这就是：
+
+\begin{blk}{}
+三角形的三个角的和是$180^{\circ}$.	
+\end{blk}
+
+\begin{example}
+	已知如图1.44, $\triangle ABC$中，$\angle A=55^{\circ}$, $\angle B=48^{\circ}$. 
+$BD\bot AC$于$D$点。求$\angle DBC$的度数。
+\end{example}
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/B, 3/0/C, 2.5/2.6/A}
+\tkzDefPointBy[projection = onto A--C](B) \tkzGetPoint{D}
+\tkzDrawSegments(B,D A,B B,C C,A)
+\tkzLabelPoints[left](B)
+\tkzLabelPoints[right](D,C)
+\tkzLabelPoints[above](A)
+\tkzMarkRightAngle[size=.2](B,D,C)
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{solution}
+$\because\quad $三角形的三个角之和是$180^{\circ}$
+
+$\therefore\quad \angle A+\angle ABC+\angle C=180^{\circ}$
+
+$\therefore\quad \angle C=180^{\circ}-\angle A-\angle ABC
+=180^{\circ}-55^{\circ}-48^{\circ}=77^{\circ}$.
+
+又$\because\quad BD\bot AC$于$D$点，
+
+$\therefore\quad \angle BDC=90^{\circ}$
+
+$\therefore\quad \angle DBC=180^{\circ}-\angle C-\angle BDC
+=180^{\circ}-77^{\circ}-90^{\circ}=13^{\circ}$.
+\end{solution}
+
+\subsection*{练习}
+\begin{enumerate}
+	\item 看图在各题的（\qquad）中填入适当的角：
+\begin{enumerate}
+	\item $\angle ABD=\angle ABC+(\qquad )$
+	\item $\angle CBE-\angle DBE=(\qquad)$
+	\item $\angle ABE-\angle CBD=\angle ABC+(\qquad)$
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/B, 3/0/D, 2.5/1/E, 2.5/-.8/C, 2.5/-1.5/A}
+\tkzDrawSegments(B,E B,D B,C B,A)
+\tkzLabelPoints[right](A,C,D,E)
+\tkzLabelPoints[left](B)
+\end{tikzpicture}
+	\caption*{第1题}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/O, 3/0/A, -1.4/2.2/B}
+\tkzDrawSegments(O,A O,B)
+\tkzLabelPoints[below](O,A)
+\tkzLabelPoints[above](B)
+\tkzMarkAngles[mark=none, size=.3](A,O,B)
+	\end{tikzpicture}
+	\caption*{第4题}
+	\end{minipage}
+	\end{figure}
+\item 什么是平角、直角、锐角、钝角？指出下列图中的锐角、直角
+	和钝角。
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+	\tkzDefPoints{0/0/O, -.5/2/A, .5/2/B}
+	\tkzDrawSegments(A,O B,O)
+	\tkzMarkAngles[mark=none, size=.7](B,O,A)
+	\tkzLabelAngle[pos=1.2](B,O,A){1}
+\end{scope}	
+\begin{scope}[xshift=3cm]
+	\tkzDefPoints{0/2/O, 0/0/A, -2/2/B}
+	\tkzDrawSegments(A,O B,O)
+	\tkzMarkAngles[mark=none, size=.4](B,O,A)
+	\tkzLabelAngle[pos=.6](B,O,A){2}
+\end{scope}	
+\begin{scope}[xshift=4cm]
+	\tkzDefPoints{0/1/O, 2/1.75/A, 2/.25/B}
+	\tkzDrawSegments(A,O B,O)
+	\tkzMarkAngles[mark=none, size=.4](B,O,A)
+	\tkzLabelAngle[pos=.6](B,O,A){3}
+\end{scope}	
+\begin{scope}[xshift=8.5cm]
+	\tkzDefPoints{0/1.5/O, 1.75/.5/A, -1.75/.5/B}
+	\tkzDrawSegments(A,O B,O)
+	\tkzMarkAngles[mark=none, size=.3](B,O,A)
+	\tkzLabelAngle[pos=.5](B,O,A){4}
+\end{scope}	
+\end{tikzpicture}
+	\caption*{第2题}
+\end{figure}
+
+\item 分别指出，时针和分针在下列哪个时间组成锐角、钝角、
+直角和平角。
+\begin{multicols}{3}
+\begin{enumerate}
+	\item 4点
+	\item 6点
+	\item 9点
+	\item 1点30分
+	\item 2点5分
+\end{enumerate}
+\end{multicols}
+
+\item 什么叫两个角互补？如果
+已知$\angle AOB$, 试画出
+$\angle AOB$的补角。
+\item 什么叫两个角互为余角？
+如果$\angle \alpha+\angle \beta=$直角，那么说“$\angle \alpha$是余角”，“$\angle\beta$是余角”，对
+吗？怎样才是正确的说法？
+\item 用量角器分别量出下列各角的度数。
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{0/0/O}
+\tkzDefPoint(-15:3){A}
+\tkzDefPoint(10:3){B}
+\tkzMarkAngles[size=.5, mark=none](A,O,B)
+\tkzLabelAngle[pos=.8](A,O,B){1}
+\tkzDrawSegments(A,O B,O)
+\end{scope}
+\begin{scope}[xshift=7cm]
+	\tkzDefPoints{0/0/O}
+\tkzDefPoint(15:2.5){A}
+\tkzDefPoint(160:2.5){B}
+\tkzMarkAngles[size=.3, mark=none](A,O,B)
+\tkzDrawSegments(A,O B,O)
+\tkzLabelAngle[pos=.5](A,O,B){2}
+\end{scope}
+\begin{scope}[xshift=2cm, yshift=-1.5cm]
+	\tkzDefPoints{0/0/O}
+\tkzDefPoint(-140:2.5){A}
+\tkzDefPoint(-50:2.5){B}
+\tkzMarkAngles[size=.3, mark=none](A,O,B)
+\tkzLabelAngle[pos=.5](A,O,B){3}
+\tkzDrawSegments(A,O B,O)
+\end{scope}
+\begin{scope}[xshift=7cm, yshift=-3.5cm]
+	\tkzDefPoints{0/0/O}
+\tkzDefPoint(85:2.5){A}
+\tkzDefPoint(120:2.5){B}
+\tkzMarkAngles[size=.4, mark=none](A,O,B)
+\tkzLabelAngle[pos=.6](A,O,B){4}
+\tkzDrawSegments(A,O B,O)
+\end{scope}
+\end{tikzpicture}
+	\caption*{第6题}
+\end{figure}
+
+\item 用量角器分别画出$45^{\circ}$, $72^{\circ}$, $90^{\circ}$, $134^{\circ}$的角。
+\item 什么叫对顶角？下列各图中有没有对顶角？如果有，把
+它们写出来。
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{0/1.5/O, -1.5/1.5+1/A, -1.5/1.5-1/B, 1.3/1.5-.5/A', 1.3/1.5+.5/B'}
+\tkzDrawSegments(A,O B,O A',O B',O)
+\tkzMarkAngles[mark=none, size=.4](A,O,B A',O,B')
+\tkzLabelAngle[pos=.6](A,O,B){1}
+\tkzLabelAngle[pos=.6](A',O,B'){2}
+\node at (0,0){(1)};
+\end{scope}
+\begin{scope}[xshift=4cm]
+\node at (0,0){(2)};
+\tkzDefPoints{-1.5/.5/A, 1.5/.5/B, 0/.5/O, -1.2/1.5/A', 1.4/1.5/B'}
+\tkzDrawSegments(A,B O,A' O,B')
+\tkzMarkAngles[mark=none, size=.5](A',O,A B,O,B')
+\tkzLabelAngle[pos=.7](A',O,A){1}
+\tkzLabelAngle[pos=.7](B,O,B'){2}
+\end{scope}
+\begin{scope}[xshift=8cm]
+\node at (0,0){(3)};
+\tkzDefPoints{-1.5/.4/A, -1.5/1.8/C, 0/1/O, 1.5/.2/D, 1.5/1.6/B, 2/1/E}
+\tkzDrawSegments(A,B C,D O,E)
+\tkzLabelPoints[left](A,C)
+\tkzLabelPoints[right](B,D)
+\tkzLabelPoints[below](O)
+\tkzMarkAngles[mark=none, size=.45](C,O,A)
+\tkzMarkAngles[mark=none, size=.65](D,O,E)
+\tkzMarkAngles[mark=none, size=.7](E,O,B)
+\tkzMarkAngles[mark=none, size=.3](B,O,C)
+\tkzLabelAngle[pos=.6](C,O,A){1}
+\tkzLabelAngle[pos=.9](D,O,E){2}
+\tkzLabelAngle[pos=.9](E,O,B){3}
+\tkzLabelAngle[pos=.5](B,O,C){4}
+\end{scope}
+\end{tikzpicture}
+	\caption*{第8题}
+\end{figure}
+
+\item 已知（如图）直线$AB$和$CD$相交于$O$点，$\angle AOC=50^{\circ}20'$, 
+求$\angle BOD$、$\angle COB$和$\angle AOD$.
+
+\item 计算下列各题：
+\begin{enumerate}
+	\item $3^{\circ}25'18''+24^{\circ}39'24''$
+	\item $64^{\circ}27'15''-28^{\circ}37'35''$
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-2/.2/C, 2/-.2/D, -1.5/-1.5/A, 1.5/1.5/B}
+\tkzInterLL(A,B)(C,D)\tkzGetPoint{O}
+\tkzLabelPoints[left](C,A)
+\tkzLabelPoints[right](B,D)
+\tkzLabelPoints[below](O)
+\tkzDrawSegments(A,B C,D)
+    \end{tikzpicture}
+    \caption*{第9题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 4/0/B, 2/0/Q}
+\tkzDefPoints{0/1/C, 4/3/D, 1/1.5/P}
+\tkzDrawSegments(A,B C,D)
+\tkzLabelPoint[right](B){$m$}
+\tkzLabelPoint[right](D){$\ell$}
+\tkzLabelPoints[below](Q)
+\tkzLabelPoints[above](P)
+\tkzDrawPoints(P,Q)
+    \end{tikzpicture}
+    \caption*{第16题}
+    \end{minipage}
+    \end{figure}
+
+\item 化下列单名数为复名数（度、分、秒）。
+\[1.25^{\circ};\quad 0.8^{\circ};\quad 3.21^{\circ};\quad (1\tfrac{1}{2})^{\circ};\quad (2\tfrac{1}{3})^{\circ}\]
+\item 化下列复名数为单名数（度）。
+\[5^{\circ}30';\quad 12^{\circ}36'12'';\quad 38^{\circ}4'5''\]
+\item 求$23.26^{\circ}$、$15^{\circ}20'15''$的角的补角的大小。
+\item 求$48^{\circ}15'$、$72.9^{\circ}$的角的余角的大小。
+\item 什么是两点间的距离？什么
+是直线外一点到这条直线的距
+离？
+
+
+
+\item 已知：（如图）$P$在直线$\ell$上，$Q$在直线$m$上，试量出：
+\begin{enumerate}
+\item $P$、$Q$两点间的距离；
+\item $P$到直线$m$的距离；
+\item $Q$点到直线$\ell$的距离。
+\end{enumerate}
+\item 已知如图，用三角板：
+\begin{enumerate}
+\item 过$A$点画出直线$BC$的垂线；
+\item 过$B$点画出直线$AC$的垂线；
+\item 过$C$点画出直线$AB$的垂线。
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{.5/0/B, 2/0/C, 3/2/A}
+\tkzDrawLines[add=.5 and .9](B,C)
+\tkzDrawLines[add=0 and .5](A,C)
+\tkzDrawSegments(A,B)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+    \end{tikzpicture}
+    \caption*{第17题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.3]
+\tkzDefPoints{0/0/A, 3/0/B, 3.8/0/C, 2.5/2/D}
+\tkzDrawPolygon(A,C,D)
+\tkzDrawSegments(B,D)
+\tkzMarkAngles[mark=none, size=.3](C,A,D D,B,A A,D,B D,C,A)
+\tkzLabelAngle[pos=.5](C,A,D){1}
+\tkzLabelAngle[pos=.5](D,B,A){2}
+\tkzLabelAngle[pos=.5](A,D,B){3}
+\tkzLabelAngle[pos=.5](D,C,A){5}
+\tkzMarkAngles[mark=none, size=.5](B,D,C)
+\tkzLabelAngle[pos=.7](B,D,C){4}
+
+
+    \end{tikzpicture}
+    \caption*{第19题}
+    \end{minipage}
+    \end{figure}
+
+\item 已知$\triangle ABC$中，$\angle A=70^{\circ}$, $\angle B=60^{\circ}$, 求$\angle C$.
+\item 如图，$\angle 1=35^{\circ}$, $\angle 2=78^{\circ}$, 求$\angle 3$的大小，自$\angle 3$的顶
+点画一条射线和$\angle 1$的一条边相交，并且使$\angle 4=16^{\circ}$.
+
+问：$\angle 5$比$\angle 2$少多少度？
+
+\item 怎样从“三角形三个内角和等于$180^{\circ}$”推算出四边形的
+四个内角的和，五边形五个内角的和，六边形六个内角的
+和各等于多少度？
+\item 如果分别延长$\triangle ABC$的三边$AB$、$BC$、$CA$得到$\angle 1$、
+$\angle 2$和$\angle 3$, 那么$\angle 1+\angle 2+\angle 3=?$
+\item 如果顺次延长四边形ABCD的各边，得到$\angle 1$、$\angle 2$、$\angle 3$和
+$\angle 4$, 那么，请你根据21题的计算结果猜想一下这四个角之
+和可能是多少度？然后再计算一下$\angle 1+\angle 2+\angle 3+\angle 4=?$
+来验证一下你的猜想是否正确。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 2/0/C, 1.5/1.5/A}
+\tkzDrawPolygon(A,B,C)
+\tkzDefPointWith[linear, K=1.5](C,A) \tkzGetPoint{A'}
+\tkzDefPointWith[linear, K=1.5](B,C) \tkzGetPoint{C'}
+\tkzDefPointWith[linear, K=1.5](A,B) \tkzGetPoint{B'}
+\tkzDrawSegments[dashed](A,A' B,B' C,C')
+\tkzLabelPoints[left](B)
+\tkzLabelPoints[right](A)
+\tkzLabelPoints[below](C)
+\tkzMarkAngles[mark=none, size=.3](B',B,C C',C,A A',A,B)
+\tkzLabelAngle[pos=.5](B',B,C){1}
+\tkzLabelAngle[pos=.5](C',C,A){2}
+\tkzLabelAngle[pos=.5](A',A,B){3}
+    \end{tikzpicture}
+    \caption*{第21题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 1.8/0/C, 0.2/1.8/A, 2.5/1.8/D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDefPointWith[linear, K=1.5](D,C) \tkzGetPoint{C'}
+\tkzDefPointWith[linear, K=1.5](B,A) \tkzGetPoint{A'}
+\tkzDefPointWith[linear, K=1.5](C,B) \tkzGetPoint{B'}\tkzDefPointWith[linear, K=1.5](A,D) \tkzGetPoint{D'}
+\tkzDrawSegments[dashed](A,A' B,B' C,C' D,D')
+\tkzMarkAngles[mark=none, size=.3](C,D,D' B,C,C' A,B,B' D,A,A')
+\tkzLabelAngle[pos=.5](C,D,D'){1}
+\tkzLabelAngle[pos=.5](B,C,C'){2}
+\tkzLabelAngle[pos=.5](A,B,B'){3}
+\tkzLabelAngle[pos=.5](D,A,A'){4}
+
+    \end{tikzpicture}
+    \caption*{第22题}
+    \end{minipage}
+    \end{figure}
+
+
+\end{enumerate}
+
+
+\subsection{角度和平行}
+
+在前面的讨论中，我们已经明确了沿着一个固定方向一
+直走，所经过的路线就是一条射线。如图1.45所示，射线
+$AB$和射线$A'B'$分别表示起点为$A$和$A'$的两个方向。连结
+$A$、$A'$再延长得射线$AA'$, 于是射线$AC$和射线$A'C'$是相
+同的两个方向；$\angle CAB$表示射线$AB$和$AC$这两个方向的差
+别，$\angle C'A'B'$表示射线$A'B'$和$A'C'$这两个方向的差别。
+如果$\angle CAB=\angle C'A'B'$, 显然射线$AB$和$A'B'$的方向就是
+相同的。
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 2/0/B, .5/-1.5/A', 2.5/-1.5/B'}
+\tkzDefPointWith[linear, K=2](A,A')\tkzGetPoint{D}
+\tkzLabelPoints[left](A,A')
+\tkzLabelPoints[right](B,B')
+\tkzDrawSegments[->](A,B A,A' A',D A',B')
+\tkzMarkAngles[mark=none, size=.4,->](A',A,B D,A',B')
+\tkzLabelSegment[left](A,A'){$C$}
+\tkzLabelSegment[left](D,A'){$C'$}
+
+	\end{tikzpicture}
+	\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+	  \tkzDefPoints{0/0/A, 2.5/0/B, .5/-1/A', 3/-1.8/B'}
+\tkzDefPointWith[linear, K=3](A,A')\tkzGetPoint{D}
+\tkzLabelPoints[left](A,A')
+\tkzLabelPoints[right](B,B')
+\tkzDrawSegments[->](A,B A,A' A',D A',B')
+\tkzMarkAngles[mark=none, size=.4](A',A,B D,A',B')
+\tkzLabelSegment[left](A,A'){$C$}
+\tkzLabelSegment[left](D,A'){$C'$}
+
+
+	\end{tikzpicture}
+	\caption{}
+	\end{minipage}
+	\end{figure}
+
+
+我们把$\angle CAB$和$\angle C'A'B'$这样位置的角叫做\textbf{同位角}。如图1.46所示。
+
+连结同一平面内的射线$AB$和$A'B'$的端点$A$、$A'$后，如
+果得到的同位角相等（图1.45）即$\angle CAB=\angle C'A'B'$, 
+我们就说射线$AB$和$A'B'$互相平行。同样地，如果同一平面
+内的两条直线$\ell$和$\ell'$被另一条直线$AA'$截出的同位角相等
+（图1.47），我们就说直线$\ell$和$\ell'$\textbf{互相平行}。记作$\ell\parallel \ell'$。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1/0/a, 3/0/b, -.5/2/a', 3.5/2/b'}
+\tkzDefPoints{2/3/B, .5/-.5/B'}
+\tkzInterLL(a,b)(B,B') \tkzGetPoint{A'}
+\tkzInterLL(a',b')(B,B') \tkzGetPoint{A}
+\tkzLabelPoints[above left](A,A')
+\tkzMarkAngles[size=.35, mark=none](b,A',A b',A,B)
+\tkzLabelPoint[left](a){$\ell'$}
+\tkzLabelPoint[left](a'){$\ell$}
+\tkzDrawSegments(a,b a',b' B,B')
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1/0/a, 3/0/b, -1/2/a', 3/2/b'}
+\tkzDefPoints{1/2/A', -.5/0/A, 2.5/0/B}
+\tkzLabelPoint[right](b){$\ell$}
+\tkzLabelPoint[right](b'){$\ell'$}
+\tkzDrawSegments(a,b a',b')
+\tkzDefPointWith[linear, K=1.5](A,A') \tkzGetPoint{C}
+\tkzDefPointWith[linear, K=1.5](B,A') \tkzGetPoint{D}
+\tkzDrawLines[dashed, add=.3 and .5](A,A' B,A')
+\tkzMarkAngles[size=.35, mark=none](B,A,A' A',B,A b',A',C D,A',a')
+\tkzLabelAngle[pos=.55](B,A,A'){1}
+\tkzLabelAngle[pos=.55](A',B,A){3}
+\tkzLabelAngle[pos=.55](b',A',C){2}
+\tkzLabelAngle[pos=.55](D,A',a'){4}
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[below left](A')
+
+
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+
+
+\begin{example}
+	在纸上画一条直线记为$\ell$, 在$\ell$外任意取一点$A'$
+（图1.48），怎样在纸上过$A'$画一条直线和$\ell$平行？
+\end{example}
+
+\begin{solution}
+根据同位角相等，两条直线就平行，这一平行线的
+意义，我们在直线$\ell$上先取一点$A$, 再连结出直线$AA'$, 然后
+量出$\angle 1$的大小，并用量角器划出$\angle 2=\angle 1$, 这时$\angle 2$的另一条
+边所在直线$\ell'$就是$\ell$的平行线。如果在$\ell$上另取一点$B$, 仍用画
+同位角$\angle 4=\angle 3$的方法画出过点$A'$和直线$\ell$平行的直线，
+结果这条直线仍然是$\ell'$。
+
+同样地，如果在直线$\ell$上另取点$C$、$D$、……（图中没有
+画出）而后分别按上面的方法画出过点$A'$和$\ell$的平行线，结
+果这条直线还是$\ell'$。
+
+通过画图，我们得到：
+\begin{blk}{}
+	过已知直线$\ell$外的一点$P$只有一条直线和$\ell'$平行。
+\end{blk}
+\end{solution}
+
+\begin{example}
+	教室里的长方形黑板的对边是不是平行线？为什
+么（图1.49）？
+\end{example}
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/A, 4/0/B, 4/2.5/C, 0/2.5/D, 5.5/0/E, 0/4/F}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments[dashed](B,E D,F)
+\tkzMarkRightAngles[size=.2](A,B,C B,C,D C,D,A D,A,B)
+\tkzMarkRightAngles[size=.3](E,B,C C,D,F)
+\tkzLabelSegment[left](A,D){$b$}
+\tkzLabelSegment[below](A,B){$a$}
+\tkzLabelSegment[right](B,C){$b'$}
+\tkzLabelSegment[above](C,D){$a'$}
+\tkzLabelAngle[pos=.5](A,D,C){1}
+\tkzLabelAngle[pos=.5](B,A,D){2}
+\tkzLabelAngle[pos=.5](C,B,A){3}
+\tkzLabelAngle[pos=.5](D,C,B){4}
+\tkzLabelAngle[pos=.7](C,D,F){$1'$}
+\tkzLabelAngle[pos=.7](E,B,C){$3'$}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{solution}
+由小学数学课中我们
+已知长方形的各角都是直角，
+如图，长方形的$\angle 1$、$\angle 2$、
+$\angle 3$、$\angle 4$都是直角。
+
+因为$\angle 1'$是$\angle 1$的补角，所
+以$\angle 1'$也是直角，于是同位角
+$\angle 1'=\angle 2$, 因此长方形的对边$a\parallel a'$. 
+
+同样，同位角$\angle 3'=\angle 2$, 因此另一对边$b\parallel b'$. 
+\end{solution}
+
+我们学习了平行线的意义之后，进一步考虑平面上两条
+直线$\ell$, $m$有几种可能的位置关系呢？参看图1.50, 同学们
+自己归纳出结论。
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{0/0/A, 3/0/B, 3.5/1.5/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDrawPolygon(A,B,C,D)
+\draw(.5,.5)--(2.5,.5)node[right]{$m$};
+\draw(.5,1)--(2.5,1)node[right]{$\ell$};
+
+\end{scope}
+\begin{scope}[xshift=4cm]
+	\tkzDefPoints{0/0/A, 3/0/B, 3.5/1.5/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDefPoints{.8/1.2/A, 3/.5/B, .8/.4/C, 3/1.2/D}
+\tkzInterLL(A,B)(C,D)\tkzGetPoint{P}
+\tkzLabelPoints[below](P)
+\tkzLabelPoint[left](A){$\ell$}
+\tkzLabelPoint[left](C){$m$}
+\tkzDrawSegments(A,B C,D)
+\end{scope}
+\begin{scope}[xshift=8cm]
+	\tkzDefPoints{0/0/A, 3/0/B, 3.5/1.5/C}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDefPoints{1/.8/P', 1.5/.8/P, 2.5/.8/Q}
+\tkzDrawLine(P',Q)
+\tkzDrawPoints(P,Q)
+\tkzLabelPoints[above](P,Q)
+\tkzLabelPoint[above left](P'){$\ell$}
+\tkzLabelPoint[below left](P'){$m$}
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+
+\begin{ex}
+\begin{enumerate}
+	\item 如图，在同一平面内，直线$m$和$\ell$垂直于$A$点，直线$\ell$和$m$
+	垂线于$A'$点，直线$\ell$和$\ell'$平行吗？为什么？
+	\item 如图，先把三角板的一边$a$和直线$\ell$密合；再用直尺和三角
+	板的另一边$b$密合；固定直尺，推动三角板使$b$总和直尺
+	密合，当$a$过$P$点时，沿$a$画直线$\ell'$, 那么$\ell'\parallel \ell$. 为什么？
+	\item 已知直线$AB$外一点$C$, 过$C$点划一条直线和$AB$平行。
+	\item 两条平行直线是否可以确定一个平面？
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/a, 3/0/b, 0/2/a', 3/2/b', 1.5/3.5/m, 1.5/-1.5/n}
+\tkzInterLL(m,n)(a,b)  \tkzGetPoint{A}
+\tkzInterLL(m,n)(a',b')  \tkzGetPoint{A'}
+\tkzDrawSegments(a,b a',b' m,n)
+\tkzLabelPoints[below left](A,A')
+\tkzMarkRightAngles[size=.2](m,A',b' m,A,b)
+\tkzLabelPoint[left](a){$\ell$}
+\tkzLabelPoint[left](a'){$\ell'$}
+\tkzLabelPoints[above](m)
+    \end{tikzpicture}
+    \caption*{第1题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 3.5/0/D, 2.5/0/B, .9/1.2/C, 1/.5/O}
+\tkzDefPointWith[linear, K=1.5](A,C)\tkzGetPoint{A'}      
+\tkzDefPointsBy[translation = from A to A'](B,C,D,O){B',C',D',O'}
+\draw(O) circle(.15);
+\draw(O') circle(.15);
+\tkzDrawSegments(A,D B,C A,C)
+\tkzDrawSegments(A',D' B',C' A',C')
+\tkzLabelPoint[right](D){$\ell$}
+\tkzLabelPoint[right](D'){$\ell'$}
+\tkzDrawLines[very thick](A,C')
+\tkzDefPoints{-.1/.1/a}
+\tkzDefPointsBy[translation = from A to a](C'){c}
+\tkzDrawLines[very thick](a,c)
+\tkzLabelSegment[below](A,B){$a$};
+\tkzLabelSegment[below](A',B'){$a$};
+\tkzLabelSegment[right](A,C){$b$};
+\tkzLabelSegment[right](A',C'){$b$};
+\tkzDefPoints{2/1.8/P}
+\tkzDrawPoints(P)
+\tkzLabelPoints[below](P)
+
+    \end{tikzpicture}
+    \caption*{第2题}
+    \end{minipage}
+    \end{figure}
+
+\subsection*{习题1.2}
+\begin{enumerate}
+	\item 用度、分、秒表示下列各角：
+\begin{multicols}{3}
+\begin{enumerate}
+	\item $\frac{1}{2}$直角
+	\item  $\frac{1}{4}$直角
+	\item $1\frac{1}{4}$直角
+	\item $48.45^{\circ}$
+\item 	$58.19^{\circ}$
+\item $384600''$
+\end{enumerate}
+\end{multicols}
+\item 计算下列式子：
+\begin{multicols}{2}
+\begin{enumerate}
+\item $38^{\circ}24'+54^{\circ}43'$
+\item $180^{\circ}-99^{\circ}48'$
+\item $52^{\circ}13'-27^{\circ}58'$
+\item $24^{\circ}3'\x 15$
+\item $200^{\circ}45'\div 5$
+\item $144^{\circ}\div 12^{\circ}$
+\item $18^{\circ}33'\div 4$
+\item $315^{\circ}5'\div 14^{\circ}8'$
+\end{enumerate}
+\end{multicols}
+
+\item 检验图中两条直线$OA$, $O'A'$是否平行。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\draw(0,0)node[left]{$O'$}--(3,0)node[right]{$A'$};
+\draw(0,1.5)node[left]{$O$}--(3,1.5)node[right]{$A$};
+    \end{tikzpicture}
+    \caption*{第3题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A, 2/1.5/B, -.1/1.8/C}
+\tkzDefPointBy[projection = onto A--B](C) \tkzGetPoint{D}
+\tkzDefPointWith[linear, K=2](C,D) \tkzGetPoint{E}
+\tkzDrawSegments(A,B C,E)
+    \end{tikzpicture}
+    \caption*{第4题}
+    \end{minipage}
+    \end{figure}
+
+\item 检验图中的两条直线是否垂直。
+\item 回答下列问题：
+\begin{enumerate}
+\item 钝角与锐角的差一定比直角大吗？举例说明。
+\item 两个锐角的和会不会大于直角？会不会大于或等于
+平角？
+\item 两个钝角的和会不会大于或等于一个周角。
+\end{enumerate}
+
+\item 下面的说法対不对？为什么？
+\begin{enumerate}
+\item 锐角的余角是锐角。
+\item 锐角的补角是锐角。
+\item 直角的补角是直角。
+\item 两个角如果互余，这两个角都是锐角。
+\item 一个锐角和一个钝角一定互为补角。
+\item 两个角如果互补，一定是一个角为锐角一个角为钝
+角。
+\item 一个锐角加上一个锐角，还是一个锐角。
+\item 两个锐角不能互为补角。
+\item 一个钝角减去一个比它小的钝角，差是锐角。
+\end{enumerate}
+
+\item 一个角的补角是它的3倍，求这个角的度数。
+\item 一个角的余角是它的3倍，求这个角的度数。
+\item 一个角是它的补角的4, 求这个角是多少度？
+\item 两个角的度数比为7:2, 它们的差是$50^{\circ}$, 求这两个角
+的度数。
+\item 两条直线相交有一个角是$20^{\circ}$, 求其余各角。
+\item 已知$AB$是直线，$O$点在$AB$上，直线$CO\bot DO$, 那么
+$\angle 1$与$\angle 2$互余吗？为什么？
+\item 如图，试：
+\begin{enumerate}
+\item 过$B$点画直线$AD$的垂线？
+\item 过$D$点画直线$BC$的垂线？
+\item 过$O$点画直线$BD$的垂线？
+\end{enumerate}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-2.5/0/B, 2.5/0/A, 0/0/O}
+\tkzDefPoint(40:2){C}
+\tkzDefPoint(130:2){D}
+\tkzLabelPoints[below](A,B,O)
+\tkzLabelPoints[above](C,D)
+\tkzMarkAngles[mark=none, size=.35](A,O,C D,O,B)
+\tkzLabelAngle[pos=.55](A,O,C){1}
+\tkzLabelAngle[pos=.55](D,O,B){2}
+\tkzDrawSegments(A,B C,O D,O)
+    \end{tikzpicture}
+    \caption*{第12题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{2.5/0/B, 0/0/A, 4/2/C, 2.5/1/O}
+\tkzDefPointsBy[translation = from B to C](A){D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments(B,D)
+\tkzLabelPoints[right](O,B,C)
+\tkzLabelPoints[left](A,D)
+\tkzDrawPoints(O)
+    \end{tikzpicture}
+    \caption*{第13题}
+    \end{minipage}
+    \end{figure}
+
+
+\item 下面的说法对不对？说明理由。
+\begin{enumerate}
+\item 可能有三个角都是锐角的三角形。
+\item 可能有二个角都是直角的三角形。
+\item 不可能有一个角是直角，另一个角是钝角的三角形。
+\item 可能有一个角是钝角，其余两个角都是锐角的三角
+形。
+\end{enumerate}
+\end{enumerate}
+
+\section{全等和叠合}
+
+\subsection{全等形}
+两个形状和大小完全相同的图形，叫做全等形。如图
+1.51(1)中，三角形II和I面积的大小相等但形状不同；
+III和I的形状相同但大小又不等；IV和I的形状和大小都不
+一样，只有V和I的形状和大小完全相同。三角形I和V
+是全等的。又如图1.51(2)中，三棱锥$\rm I'$和$\rm II'$形状相同
+但大小不等；
+$\rm III'$和$\rm II'$体积的大小相等但形状又不同。只有
+$\rm IV'$和$\rm II'$的形状和大小完全相同。三棱锥$\rm II'$和$\rm IV'$是全等
+的。
+
+
+
+
+
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+	\item 由地图上的比例尺，计算由北京到天津，北京到上海，北京到广州的实际距离是多少公里？
+	\item 把下面的正方形的边长放大3倍，画在作业纸上.
+	\item 把下面的长方形各边长缩小到原长的$\frac{1}{3}$，画在作业纸上.
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\draw(0,0) rectangle (1,1); 
+	\end{tikzpicture}
+	\caption*{第2题}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+\draw(0,0) rectangle (2,1.2); 
+	\end{tikzpicture}
+	\caption*{第3题}
+	\end{minipage}
+	\end{figure}
+
+\subsection{相似三角形}
+由多边形相似的特征性质可知，如果两个三角形的各角
+对应相等，且对应边成比例，那么这两个三角形相似。但实
+际上，当我们要判定两个三角形是否相似时，并不要求对上
+条件一一验证。例如，我们作$\triangle ABC$和$\triangle A'B'C'$, 使
+$\angle A=\angle A'$, $\angle B=\angle B'$, 于是$\angle C=\angle C'$. 这时我们就看
+到两个三角形的形状就完全相同
+了，我们还可以多画几组三角形，
+使每组三角形的两个角对应地相等
+（第三个角自然也相等），不难看
+出每组三角形的形状也都是相同的，这就使我们猜测：是否有下面
+的结论：
+
+\begin{blk}{}
+	如果一个三角形的两个角和另一个三角形的两个角对应
+相等，那么这两个三角形相似。
+\end{blk}
+
+\begin{figure}[htp]
+	\centering
+	\begin{tikzpicture}[scale=.6]
+\begin{scope}
+\tkzDefPoints{0/0/B, 3/0/C,1.5/4/A}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+\end{scope}
+\begin{scope}[xshift=5cm]
+	\tkzDefPoints{0/0/C', 3/0/B',1.5/4/A'}
+	\tkzDrawPolygon(A',B',C')
+	\tkzLabelPoints[below](B',C')
+	\tkzLabelPoints[above](A')
+\end{scope}	
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+在这里，让我们来做些实验，对于上面的观察所得到的
+结论的正确性作进一步的检验。
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[scale=.5]
+	\begin{scope}
+\tkzDefPoints{0/0/A,3/0/B, 2/2/C}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C)
+\end{scope}
+\begin{scope}[xshift=4.5cm]
+\tkzDefPoints{0/0/A',9/0/B', 6/6/C'}
+\tkzDrawPolygon(A',B',C')
+\tkzLabelPoints[below](A',B')
+\tkzLabelPoints[above](C')
+\tkzDefPointWith[linear, K=.333](A',B') \tkzGetPoint{M_1}
+\tkzDefPointWith[linear, K=.667](A',B') \tkzGetPoint{M_2}
+
+\tkzDefPointWith[linear, K=.333](A',C') \tkzGetPoint{M_1'}
+\tkzDefPointWith[linear, K=.667](A',C') \tkzGetPoint{M_2'}
+
+\tkzDefPointWith[linear, K=.333](C',B') \tkzGetPoint{M_1''}
+\tkzDefPointWith[linear, K=.667](C',B') \tkzGetPoint{M_2''}
+\tkzDrawSegments(M_2'',M_1' M_1'',M_2' M_1,M_1' M_2,M_2' M_1'',M_1 M_2'',M_2)
+\tkzInterLL(M_1'',M_1)(M_2,M_2') \tkzGetPoint{O}
+\tkzLabelPoints[below](M_1,M_2,O)
+\tkzLabelPoints[left](M_1',M_2')
+\tkzLabelPoints[right](M_1'',M_2'')
+\end{scope}
+\begin{scope}[xshift=15cm]
+\tkzDefPoints{0/0/A'',3/0/B, 2/2/C}
+\tkzDefPointWith[linear, K=2](A'',B) \tkzGetPoint{B''}
+\tkzDefPointWith[linear, K=2](A'',C) \tkzGetPoint{C''}
+\tkzDrawPolygon(A'',B'',C'')
+\tkzDefMidPoint(C'',B'') \tkzGetPoint{D}
+\tkzDrawPolygon(D,B,C)
+\tkzLabelPoints[above](C'')
+\tkzLabelPoints[below](A'', B'')
+
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+在图1.62中，若$\triangle ABC$和$\triangle A'B'C'$的两个角对应相
+等，（$\angle A=\angle A'$、$\angle B=\angle B'$）而且$\overline{A'B'}=3\overline{AB}$, 
+显然
+第三个角也必相等（$\angle C=\angle C'$）, 如果我们能说明
+$\overline{A'C'}=3\overline{AC}$, $\overline{B'C'}=3\overline{BC}$, 那么$\triangle ABC$和$\triangle A'B'C'$就
+相似了。下面我们通过作图、测量作些实验。
+
+先把$\overline{A'B'}$三等分成和$\overline{AB}$相等的线段，然后通过分点
+${M_1}$和$M_2$作$\overline{B'C'}$和$\overline{A'C'}$
+的平行线，设这些平行线与
+$\overline{A'C'}$和$\overline{B'C'}$分别相交于$M_1'$、$M_2'$, $M_1''$、$M_2''$，通过测
+量得知，
+\[\overline{A'M_1'}=\overline{M_1'M_2'}=\overline{M_2'C'},\quad \overline{B'M_2''}=\overline{M_2''M_1''}
+=\overline{M_1''C'}\]
+而且还发现$\overline{M_1M_1''}$，$\overline{M_2M_2'}$、$\overline{M_1'M_2''}$相
+交于一点$O$, 并且
+\[\begin{split}
+	\overline{M_2'M_1''}&=\overline{M_1'O}=\overline{OM''_2}=\overline{A'M_1}\\
+	\overline{M_1M_1'}&=\overline{M_2O}=\overline{OM_2'}=\overline{B'M_3''}\\
+	\overline{M_2M_2''}&=\overline{M_1O}=\overline{OM_1''}=\overline{A'M_1'}
+\end{split}\]
+这样，由两个三角形的全等条件（SSS）可知
+$\triangle ABC$被分割成的九个小三角形全等。这就说明了$\overline{A'C'}=3\overline{AC}$, $\overline{B'C'}=3\overline{BC}$. 这就是说$\triangle ABC\backsim \triangle A'B'C'$.
+
+假如$\triangle ABC$和$\triangle A'B'C'$有两个角对应地相等。
+（$\angle A'=\angle A''$, $\angle B'=\angle B''$）
+且$\frac{\overline{A'B'}}{\overline{A''B''}}=\frac{3}{2}$
+，即$\overline{A'B'}=\frac{3}{2}\overline{A''B''}$，
+这时我们是否能够推断：
+$\overline{A'C'}=\frac{3}{2}\overline{A''C''}$, $\overline{B'C'}=\frac{3}{2}\overline{B''C''}$呢？
+
+由于$\triangle A''B''C''$和$\triangle ABC$的三个角对应地相等（
+$\angle A=\angle A''$, $\angle B=\angle B'$, $\angle C=\angle C'$），而且$\overline{A''B''}=2\overline{AB}$，
+那么由上面的说明，就有$\overline{A''C''}=2\overline{AC}$, $\overline{B''C''}=2\overline{BC}$. 
+即：
+\[\begin{split}
+	\overline{A'B'}&=3\overline{AB}=\frac{3}{2}\overline{A''B''}\\
+	\overline{A'C'}&=3\overline{AC}=\frac{3}{2}\overline{A''C''}\\
+ \overline{B'C'}&=3\overline{BC}=\frac{3}{2}\overline{B''C''}
+\end{split}
+	\]
+这就说明了$\triangle ABC\backsim \triangle A'B'C'$.
+
+在两个相似三角形中，相等的角叫做\textbf{对应角}，相等的角
+所对的边叫做\textbf{对应边}。两个相似三角形的\textbf{对应角相等，对应
+边成比例}。
+
+我们所猜想的“两个三角形的两个角若对应地相等，则
+这两个三角形相似。”通过上面的检验；在相似比为整数或
+分数时是成立的。但两个线段长度的比还可能是无理数，这
+个问题在这里不深入讨论了。从上面的讨论中，我们还可发
+现：
+\[\begin{split}
+	\frac{\triangle A'B'C'\text{的面积} }{\triangle ABC\text{的面积}}&=\frac{9}{1}=\left(\frac{3}{1}\right)^2\\
+	\frac{\triangle A'B'C'\text{的面积} }{\triangle A''B''C''\text{的面积}}&=\frac{9}{4}=\left(\frac{3}{2}\right)^2\\
+\end{split}\]
+即：\textbf{如果两个三角形相似，则它们的面积的比等于相似
+比的平方}。
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{blk}
 	
