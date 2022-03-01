@@ -2454,38 +2454,610 @@ $\rm III'$和$\rm II'$体积的大小相等但形状又不同。只有
 $\rm IV'$和$\rm II'$的形状和大小完全相同。三棱锥$\rm II'$和$\rm IV'$是全等
 的。
 
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{0/0/A, 2/0/B, 1.5/1/C}
+\tkzDrawPolygon(A,B,C)
+\node at (1.3,.5){I};
+\end{scope}
+\begin{scope}[xshift=2.3cm]
+	\tkzDefPoints{0/0/A, 2/0/B, 1.3/1/C}
+\tkzDrawPolygon(A,B,C)
+\node at (1.3,.5){II};
+\end{scope}
+\begin{scope}[scale=1.3, xshift=3.5cm]
+	\tkzDefPoints{0/0/A, 2/0/B, 1.5/1/C}
+\tkzDrawPolygon(A,B,C)
+\node at (1.2,.5){III};
+\node at (1,-.5){(1)};
+\end{scope}
+\begin{scope}[xshift=7.5cm]
+	\tkzDefPoints{0/0/A, 1.5/0/B, 1/1.5/C}
+\tkzDrawPolygon(A,B,C)
+\node at (.8,.7){IV};
+\end{scope}
+\begin{scope}[xshift=9.5cm]
+	\tkzDefPoints{0/0/A, 2/0/B, 1.5/1/C}
+\tkzDrawPolygon(A,B,C)
+\node at (1.3,.5){V};
+\end{scope}
+\begin{scope}[yshift=-2.5cm]
+	\tkzDefPoints{0/0/A, 2/0/B, 1.3/1.2/C, 1.6/-.5/D}
+	\tkzDrawPolygon(A,D,B,C)
+	\tkzDrawSegments[dashed](A,B)
+	\tkzDrawSegments(C,D)
+\node at (1.1,.5){$\rm I'$};
+\end{scope}
+\begin{scope}[yshift=-2.5cm,xshift=3cm]
+	\tkzDefPoints{0/0/A, 2/0/B, 1.1/1.1/C, 1.3/-.6/D}
+	\tkzDrawPolygon(A,D,B,C)
+	\tkzDrawSegments[dashed](A,B)
+	\tkzDrawSegments(C,D)
+	\node at (1.1,.5){$\rm II'$};
+	\node at (3,-1){(2)};
+\end{scope}
+\begin{scope}[yshift=-2.5cm,xshift=6cm]
+	\tkzDefPoints{0/0/A, 2/0/B, 0.7/1.1/C, 1.3/-.6/D}
+	\tkzDrawPolygon(A,D,B,C)
+	\tkzDrawSegments[dashed](A,B)
+	\tkzDrawSegments(C,D)
+	\node at (.9,.5){$\rm III'$};
+\end{scope}
+\begin{scope}[yshift=-2.5cm,xshift=9cm]
+	\tkzDefPoints{0/0/A, 2/0/B, 1.1/1.1/C, 1.3/-.6/D}
+	\tkzDrawPolygon(A,D,B,C)
+	\tkzDrawSegments[dashed](A,B)
+	\tkzDrawSegments(C,D)
+	\node at (1.1,.5){$\rm IV'$};
+\end{scope}
 
+\end{tikzpicture}
+	\caption{}
+\end{figure}
 
+我们用符号，“$\cong$”表示全等。在图中就有：
+\begin{center}
+	三角形I$\cong$三角形V;\qquad 三棱锥II$'\cong$三棱锥IV$'$
+\end{center}
 
+对于平面上两个图形（简称平面图形），要看一看他们
+是否全等，实践检验的方法，常常是看它能否叠合。能叠合
+的就全等。
 
+显然，两条线段$\overline{AB}$和$\overline{A'B'}$能叠合的唯一条件就是它
+们等长：$\overline{AB}=\overline{A'B'}$.
 
+在角的度量的讨论中，我们实际就是用叠合来说明两个
+角的大小相等的意义的，这也就是说两个角$\angle A$和$\angle A'$能
+叠合的唯一条件就是它们的大小相等：$\angle A=\angle A'$.
 
+如果$\triangle ABC$和$\triangle A'B'C'$全等（图1.52），这就是说它
+们能叠合。因而他们的边和角便分别相等（也说全等形的对
+应边相等、对应角相等）：
+\begin{figure}[htp]
+	\centering
+	\begin{tikzpicture}[scale=.8]
+	\begin{scope}
+\tkzDefPoints{0/0/B, 3/0/C, 2/1.8/A}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+\end{scope}
+\begin{scope}[xshift=4cm]
+\tkzDefPoints{0/0/B', 3/0/C', 2/1.8/A'}
+\tkzDrawPolygon(A',B',C')
+\tkzLabelPoints[below](B',C')
+\tkzLabelPoints[above](A')
+\end{scope}
+\begin{scope}[xshift=8cm]
+\tkzDefPoints{0/0/B'', 3/0/C'', 1/1.8/A''}
+\tkzDrawPolygon(A'',B'',C'')
+\tkzLabelPoints[below](B'',C'')
+\tkzLabelPoints[above](A'')
+\end{scope}	
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
 
+\[\begin{split}
+\overline{AB}=\overline{A''C''},&\quad \overline{BC}=\overline{B''C''},\quad \overline{CA}=\overline{B''A''}\\
+\angle A=\angle A'',&\quad \angle B=\angle C'',\quad \angle C=\angle B''
+\end{split}\]
+
+\subsection{三角形全等的条件}
+由上面对两个全等三角形的分析，知道了两个三角形如
+果全等，它们的对应边、对应角都分别相等。反过来说，如
+果两个三角形的各边对应相等，对应角也分别相等，那么这
+两个三角形便能叠合，它们就是全等三角形。
+
+下面我们来研究两个三角形的全等条件。
+
+\begin{enumerate}
+	\item 如图1.53中，$\angle A=\angle A'$, $\overline{AB}=\overline{A'B'}$, 
+$\overline{AC}=\overline{A'C'}$. 那么可以使$\overline{A'B'}$叠合在$\overline{AB}$上，从而$\angle A'$可以
+和$\angle A$叠合，同时$\overline{A'C'}$也就叠合在$\overline{AC}$上了。这样一来，由
+于点$B'$落在点$B$上，点$C'$落在点$C$上，那么根据“两点只确定
+一条直线”这个基本性质，直线$B'C'$便叠合在直线$BC$上，
+自然$\overline{B'C'}$和$\overline{BC}$也就叠合在一起，于是$\triangle ABC$和$\triangle A'B'C'$
+便完全叠合，它们也就全等了。
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+	\tkzDefPoints{0/0/A, 3/0/B, 2/2/C}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C)
+\end{scope}
+\begin{scope}[xshift=5cm, rotate=-116]
+	\tkzDefPoints{-3/0/A', 0/0/B', -1/2/C'}
+\tkzDrawPolygon(A',B',C')
+\tkzLabelPoints[below](C',B')
+\tkzLabelPoints[above](A')
+\end{scope}	
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+由此可见，检验两个三角形是否全等时，不必分别的检
+验它们的各边是否对应相等、各对应角是否相等，而是检验出
+两条边和所夹的角分别相等就可判定这两个三角形全等了。
+这种判定两个三角形全等的条件，记作（SAS）条件。
+
+\item 与此相仿，如上图中$\angle A=\angle A'$, $\overline{AB}=\overline{A'B'}$, 
+$\angle B=\angle B'$, 也可以先使$\overline{A'B'}$叠合在$\overline{AB}$上，再让$\triangle A'B'C'$
+落在$\triangle ABC$所在平面上，因为$\angle A'=\angle A$, $\angle B'=\angle B$, 所
+以$\angle A'$和$\angle A$, $\angle B'$和$\angle B$分别叠合；这样，直线$A'B'$和
+$AC$, $B'C'$和$BC$也就分别叠合了，由于“两条直线相交只有
+一个交点”。因此，点$A'$必落在点$A$上，于是$\triangle A'B'C'$和
+$\triangle ABC$就完全叠合了，因此它们全等。这就是说两角和夹边
+对应相等的两个三角形全等。这种判定两个三角形全等的条
+件，记作（ASA）条件。
+
+\item 再有，如果一个三角形的三条边的长度确定了，通
+过观察和实验我们可以发现这个三角形的形状和大小就不会
+改变了（图1.54(1)）。而一个四边形如果四条边的长度
+确定了，它的形状和大小却是可以改变的（图1.54(2)）。
+我们把三角形的这种特性叫做三角形的\textbf{稳定性}。
+\begin{figure}[htp]
+	\centering
+\includegraphics[scale=.6]{fig/1-54.png}
+	\caption{}
+\end{figure}
+
+这样，一个三角形$ABC$的三边和另一个三角形$A'B'C'$
+的三边如果对应地相等，即$\overline{AB}=\overline{A'B'}$, $\overline{BC}=\overline{B'C'}$, $\overline{AC}=\overline{A'C'}$, 那么由三角形的稳定性，这两个三角形的对应角也
+必相等。即$\angle A=\angle A'$, $\angle B=\angle B'$, $\angle C=\angle C'$. 因此，
+这两个三角形就全等。这种判定三角形全等的条件，记作
+（SSS）条件。
+\end{enumerate}
 
 \begin{example}
-    
+    在图1.55中，如果已知
+$\overline{AB}=\overline{DC}$, $\overline{AC}=\overline{DB}$, $\triangle ABC$和
+$\triangle DCB$全等吗？为什么？
 \end{example}
 
 \begin{solution}
-    
+	在$\triangle ABC$和$\triangle DCB$中，
+由于：
+\begin{align*}
+	\overline{AB}&=\overline{DC}  \tag{已知}\\
+	\overline{AC}&=\overline{DB} \tag{已知}\\
+	\overline{BC}&=\overline{BC}  \tag{公共边}	
+\end{align*}
+$\therefore\quad \triangle ABC\cong \triangle DCB$ (SSS).
 \end{solution}
 
 
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-2/0/B, 2/0/C, -1.5/2/A, 1.5/2/D}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegments(C,D B,D)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A,D)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1, rotate=10]
+\tkzDefPoints{-2/0/B, 2/0/C, 0/3/A}
+\tkzDefPointWith[linear, K=.4](A,B)\tkzGetPoint{D}
+\tkzDefPointWith[linear, K=.4](A,C)\tkzGetPoint{E}
+\tkzDrawPolygon(A,B,E)
+\tkzDrawPolygon(A,C,D)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[left](D)
+\tkzLabelPoints[right](E)
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
 \begin{example}
-    
+    在图1.56中已知$\overline{AD}=\overline{AE}$, $\overline{AB}=\overline{AC}$, 那么
+$\triangle ABE$和$\triangle ACD$全等吗？为什么？
 \end{example}
+
 \begin{solution}
-    
+	在$\triangle ABE$和$\triangle ACD$中，
+	由于：
+\begin{align*}
+	\overline{AD}&=\overline{AE}  \tag{已知}\\
+	\overline{AB}&=\overline{AC} \tag{已知}\\
+	\angle A&=\angle A  \tag{公共角}	
+\end{align*}
+$\therefore\quad \triangle ABE\cong \triangle ACD$ (SAS).
 \end{solution}
 
+\begin{ex}
+\begin{enumerate}
+	\item 根据图填写下列空白：
+\begin{enumerate}
+	\item $\angle A$是\underline{\qquad }与\underline{\qquad }的夹角，也是\underline{\qquad }的对角。
+	\item $\angle B$是\underline{\qquad }与\underline{\qquad }的夹角，也是\underline{\qquad }的对角。
+	\item $\angle C$是\underline{\qquad }与\underline{\qquad }的夹角，也是\underline{\qquad }的对角。
+\end{enumerate}
+
+	\item 什么叫全等形？什么是全等三角形？两个全等三角形的对
+	应边和对应角有什么关系？
+	\item 在图中，如果已知$\overline{AB}=\overline{AC}$, $\overline{BD}=\overline{DC}$, 那么$\triangle ABD$与
+	$\triangle ACD$全等吗？为什么？
+
+\item 写出上题中$\triangle ABD$和$\triangle ACD$的对应边和对应角。
+\item 用量角器和刻度尺，作出适合以下条件的三角形：
+\begin{enumerate}
+	\item $\overline{AB}=55{\rm mm},\quad \overline{AC}=34{\rm mm},\quad \angle A=80^{\circ}$
+\item $\overline{BC}=45{\rm mm},\quad \angle B=50^{\circ},\quad \angle C=100^{\circ}$
+\item $\overline{BC}=27{\rm mm},\quad \overline{BA}=39{\rm mm},\quad \overline{AC}=30{\rm mm}$
+\item $\overline{AC}=50{\rm mm},\quad \angle A=95^{\circ},\quad \angle B=40^{\circ}$
+\end{enumerate}
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/B, 3/0/C, 2/2.5/A}
+	\tkzDrawPolygon(A,B,C)
+	\tkzLabelPoints[below](B,C)
+	\tkzLabelPoints[above](A)
+\end{tikzpicture}
+    \caption*{第1题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+	\begin{tikzpicture}
+		\tkzDefPoints{0/0/B, 3/0/C, 1.5/2.3/A, 1.5/0/D}
+		\tkzDrawPolygon(A,B,C)
+		\tkzLabelPoints[below](B,C,D)
+		\tkzLabelPoints[above](A)
+		\tkzMarkRightAngles[size=.2](A,D,C)
+		\tkzDrawSegments(A,D)
+	\end{tikzpicture}
+    \caption*{第3题}
+    \end{minipage}
+    \end{figure}
+
+\subsection*{习题1.3}
+\begin{enumerate}
+	\item 写出下列各三角形中的全等三角形。
+\begin{center}
+\begin{tikzpicture}
+\begin{scope}[rotate=50]
+\tkzDefPoints{0/0/B, 2.5/0/A}
+\tkzDefPoint(82.1:4){C}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[above](A,C)
+\tkzLabelPoints[below](B)
+\tkzLabelSegment[above](A,C){10cm}
+\tkzLabelSegment[left](B,C){8cm}
+\tkzLabelSegment[right](A,B){5cm}
+\end{scope}
+\begin{scope}[xshift=5cm, yshift=3cm, rotate=-130]
+	\tkzDefPoints{0/0/E, 2.5/0/D}
+\tkzDefPoint(82.1:4){F}
+\tkzDrawPolygon(D,E,F)
+\tkzLabelPoints[above](E)
+\tkzLabelPoints[below](D,F)
+\tkzLabelSegment[below](D,F){10cm}
+\tkzLabelSegment[right](E,F){8cm}
+\tkzLabelSegment[left](D,E){5cm}
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+	\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{0/0/H, 2.5/0/I}
+\tkzDefPoint(60:4){G}
+\tkzDrawPolygon(H,I,G)
+\tkzLabelPoints[below](H,I)
+\tkzLabelPoints[above](G)
+\tkzLabelSegment[below](H,I){5cm}
+\tkzLabelSegment[left](H,G){8cm}
+\tkzMarkAngles[size=.4, mark=none](I,H,G)
+\tkzLabelAngle[pos=.7](I,H,G){$60^{\circ}$}
+\end{scope}
+\begin{scope}[xshift=6cm]
+	\tkzDefPoints{0/0/L, -2.5/0/K}
+\tkzDefPoint(120:4.23){J}
+\tkzDrawPolygon(J,K,L)
+\tkzLabelPoints[below](K,L)
+\tkzLabelPoints[above](J)
+\tkzLabelSegment[below](K,L){5cm}
+\tkzLabelSegment[left](K,J){8cm}
+\tkzMarkAngles[size=.4, mark=none](J,L,K)
+\tkzLabelAngle[pos=.7](J,L,K){$60^{\circ}$}
+\end{scope}
+\begin{scope}[xshift=10cm, yshift=2cm, rotate=70]
+	\tkzDefPoints{0/0/N, -2.5/0/O}
+\tkzDefPoint(120:4){M}
+\tkzDrawPolygon(M,N,O)
+\tkzLabelPoints[below](O)
+\tkzLabelPoints[above](M,N)
+\tkzLabelSegment[right](N,O){5cm}
+\tkzLabelSegment[above](M,N){8cm}
+\tkzMarkAngles[size=.4, mark=none](M,N,O)
+\tkzLabelAngle[pos=.7](M,N,O){$60^{\circ}$}
+\end{scope}
+	\end{tikzpicture}
+	\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=.8]
+\begin{scope}
+\tkzDefPoints{0/0/S, 5.2/3/T, 5.73/0/V}
+\tkzLabelPoints[below](S,V)
+\tkzLabelPoints[above](T)
+\tkzLabelSegment[left](S,T){12cm}
+\tkzMarkAngles[size=.8, mark=none](V,S,T)
+\tkzMarkAngles[size=.4, mark=none](S,T,V)
+\tkzLabelAngle[pos=1.2](V,S,T){$30^{\circ}$}
+\tkzLabelAngle[pos=.7](S,T,V){$70^{\circ}$}
+\tkzDrawPolygon(S,T,V)
+\end{scope}
+\begin{scope}[xshift=7cm]
+	\tkzDefPoints{0/0/Q, 4.96/2.865/P, 6/0/R}
+\tkzLabelPoints[below](Q,R)
+\tkzLabelPoints[above](P)
+\tkzLabelSegment[below](Q,R){12cm}
+\tkzMarkAngles[size=.8, mark=none](R,Q,P)
+\tkzMarkAngles[size=.4, mark=none](P,R,Q)
+\tkzLabelAngle[pos=1.2](R,Q,P){$30^{\circ}$}
+\tkzLabelAngle[pos=.7](P,R,Q){$70^{\circ}$}
+\tkzDrawPolygon(P,R,Q)
+\end{scope}
+\end{tikzpicture}
+\end{center}
+
+\begin{tikzpicture}[scale=.8]
+	\tkzDefPoints{0/0/X, 0.53/3/Z, 5.73/0/Y}
+\tkzLabelPoints[below](X,Y)
+\tkzLabelPoints[above](Z)
+\tkzLabelSegment[right](Y,Z){12cm}
+\tkzMarkAngles[size=.8, mark=none](Z,Y,X)
+\tkzMarkAngles[size=.4, mark=none](Y,X,Z)
+\tkzLabelAngle[pos=1.2](Z,Y,X){$30^{\circ}$}
+\tkzLabelAngle[pos=.7](Y,X,Z){$70^{\circ}$}
+\tkzDrawPolygon(Z,Y,X)
+\end{tikzpicture}
+
+\item 指出下列哪些情况$\triangle ABC$和$\triangle A'B'C'$是全等的。
+\begin{enumerate}
+\item $\overline{AB}=\overline{A'B'},\quad \angle B=\angle B',\quad \angle A=\angle A'$
+\item $\overline{AB}=\overline{A'B'},\quad \overline{AC}=\overline{A'C'}, \quad \angle A=\angle A'$
+\item $\overline{AB}=\overline{A'B'},\quad \overline{BC}=\overline{B'C'},\quad \overline{AC}=\overline{A'C'}$
+\item $\angle A=\angle A',\quad \angle B=\angle B',\quad \angle C=\angle C'$
+\item $\overline{AB}=\overline{A'B'},\quad  \angle B=\angle B',\quad \angle C=\angle C'$
+\item $\overline{AB}=\overline{A'B'},\quad \overline{BC}=\overline{B'C'},\quad \angle A=\angle A'$
+\end{enumerate}
+
+\item 如图，画一条线段$\overline{AB}=5$cm, 画$\angle BAC=30^{\circ}$, $\angle ABD=30^{\circ}$连$CD$交$AB$于$M$点，如果$M$点恰好是$AB$的
+中点，那么$\triangle AMC$和$\triangle BMD$全等吗？为什么？
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/A}
+\tkzDefPoint(70:2){C}
+\tkzDefPoint(40:2.5){M}
+\tkzDefPointWith[linear,K=2](A,M) \tkzGetPoint{B}
+\tkzDefPointWith[linear,K=2](C,M) \tkzGetPoint{D}
+\tkzLabelPoints[below](A,M,D)
+\tkzLabelPoints[above](B,C)
+\tkzMarkAngles[mark=none, size=.5](M,A,C M,B,D)
+\tkzDrawPolygon(M,A,C)
+\tkzDrawPolygon(M,B,D)
+\tkzLabelAngle[pos=.8](M,A,C){$30^{\circ}$}
+\tkzLabelAngle[pos=.8](M,B,D){$30^{\circ}$}
+
+    \end{tikzpicture}
+    \caption*{第3题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\includegraphics[scale=.6]{fig/4ti.png}
+    \caption*{第4题}
+    \end{minipage}
+    \end{figure}
+
+\item 要测量河的宽度$\overline{AB}$, 在岸上先作一条线段$\overline{AA'}$垂直于
+$\overline{AB}$, 并且取$\overline{AA'}$的中点$C$, 过$A'$作$A'E\bot AA'$, 沿$A'E$
+的方向前进到点$B'$, 测得$B'$、$C$、$B$恰好成一直线，那么
+量出哪一条线段的长就可知道河宽$\overline{AB}$？ 为什么？
+
+
+\item 试举出一些日常生活中应用三角形稳定性的实例。
+\item 通过度量，指出下列各图中全等的三角形。
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{-1.5/0/B, 1.5/0/C, -.8/2/A, .8/2/D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzInterLL(A,C)(B,D)  \tkzGetPoint{O}
+\tkzLabelPoints[below](B,C,O)
+\tkzLabelPoints[above](A,D)
+\tkzDrawSegments(A,C B,D)
+\end{scope}
+\begin{scope}[xshift=4cm]
+	\tkzDefPoints{-1.5/0/F, 1.5/0/G, -1.5/2/E, 1.5/2/H}
+\tkzDrawPolygon(E,F,G,H)
+\tkzInterLL(E,G)(F,H)  \tkzGetPoint{P}
+\tkzLabelPoints[below](F,G,P)
+\tkzLabelPoints[above](E,H)
+\tkzDrawSegments(E,G F,H)
+\end{scope}
+\begin{scope}[xshift=8cm]
+	\tkzDefPoints{-1.5/0/N, 1.5/0/R, 2.5/2/S, -.5/2/M}
+\tkzDrawPolygon(M,N,R,S)
+\tkzInterLL(M,R)(N,S)  \tkzGetPoint{Q}
+\tkzLabelPoints[below](N,R,Q)
+\tkzLabelPoints[above](M,S)
+\tkzDrawSegments(M,R N,S)
+\end{scope}
+\end{tikzpicture}
+	\caption*{第6题}
+\end{figure}
+\end{enumerate}
+
+
+\section{相似和相似比}
+
+\subsection{相似形}
+在日常生活和生产实践中，我们经常看到和用到形状相
+同但大小不一定相同的图形、例如地图、测量图、放大和缩
+小的照片等，虽然图形的大小有了变化，但都保持原来的形
+状。我们把这一类形状相同，大小不一定相同的图形叫做\textbf{相
+似形}。下面以多边形为例，来研究一下相似图形的一些重要
+性质。
+\begin{figure}[htp]
+	\centering
+	\begin{tikzpicture}[scale=.7]
+\begin{scope}
+	\tkzDefPoints{0/0/B, 3/0/C, 0/3/A, 3/3/D}
+	\tkzLabelPoints[below](B,C)
+	\tkzLabelPoints[above](A,D)
+	\tkzDrawPolygon(A,B,C,D)
+\end{scope}
+\begin{scope}[xshift=7cm]
+	\tkzDefPoints{0/0/B', 2/0/C', 0/2/A', 2/2/D'}
+	\tkzLabelPoints[below](B',C')
+	\tkzLabelPoints[above](A',D')
+	\tkzDrawPolygon(A',B',C',D')
+\end{scope}		
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+我们观察所有正方形，发现它们的形状都是相同的，在
+图1.57中的两个正方形$ABCD$和$A'B'C'D'$中，它们的角
+对应地相等，它们的边虽不一样长，但对应边的比都是相等
+的：
+\[\frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{CD}}{\overline{C'D'}}=\frac{\overline{DA}}{\overline{D'A'}}\]
+
+在图1.58中，长方形和正方形相比较，虽然它们的角
+对应地相等，但边长不成比例，因此形状也就不相同了。
+
+在图1.59中，让两个四边形边长的比都是1:1, 但各角
+不对应地相等，形状也就不同。
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\draw (0,0)rectangle(2,3);
+\draw (2.5,0)rectangle(3.75,1.25);
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1/0/A, 1/0/B, 0/1.3/C, 0/-1.3/D}
+\tkzDrawPolygon(A,D,B,C)
+		\draw (-3.3,-.8)rectangle(-1.5,1); 
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+	通过以上的观察分析，我们可推测，两个多边形相似的
+	特征是：\textbf{对应角相等，对应边成比例}。
+
+	两个相似多边形对应边的比叫做\textbf{相似比}，也叫做\textbf{放大率}
+	或\textbf{缩小率}。
+
+	如果把一个多边形的边长放大或缩小相同的倍数，并且
+	对应角保持不变，那么所得的图形就和原图形相似。如图
+	1.57中的正方形$ABCD$可看成正方形$A'B'C'D'$的角保持
+	不变，边长放大$\frac{3}{2}$倍而得到的与$A'B'C'D'$相似的图形。
+
+	我们用符号“$\backsim$”表示两个图形相似，就可写成：正方
+	形$ABCD\backsim$正方形$A'B'C'D'$.
+
+	很明显，全等形是相似比等于1的相似形，所以全等形
+	是相似形的特殊情况。
 
 \begin{example}
-    
+	在比例尺为1:50000的地图上，长度12cm的实际距离是多少公里？
 \end{example}
 
+\begin{solution}
+$\because\quad \frac{\text{图距}}{\text{实距}}=\text{比例尺}$
+
+$\therefore\quad \text{实距}=\frac{\text{图距}}{\text{比例尺}}=\frac{12{\rm cm}}{\frac{1}{50000}}=12\x 50000{\rm cm}=6{\rm km}$
+\end{solution}
+
+\begin{example}
+	在比例尺为1:500000的地图
+上有四个点$A$、$B$、$C$、$D$, $\overline{AB}=2{\rm cm}$,
+$\overline{BC}=3{\rm cm}$, $\overline{CD}=4{\rm cm}$, $\overline{DA}=5{\rm cm}$. 
+求四边形$ABCD$在地面上的实际周长
+是多少公里？
+\end{example}
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/A, 2/0/B, 3/2/C, .5/4/D}
+\tkzDrawPolygon(A,B,C,D)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C,D)
+\end{tikzpicture}
+	\caption{}
+\end{figure}
 
 \begin{solution}
-    
+	设$A$、$B$、$C$、$D$各点在地面上
+的对应点分别是$A'$、$B'$、$C'$、$D'$. 因
+为地图上的四边形$ABCD$与地面上的四
+边形$A'B'C'D'$是相似形，并且相似比为1:500000.
+
+$\therefore\quad \frac{\overline{AB}}{\overline{A'B'}}=\frac{\overline{BC}}{\overline{B'C'}}=\frac{\overline{CD}}{\overline{C'D'}}=\frac{\overline{DA}}{\overline{D'A'}}=\frac{1}{500000}$
+
+$\therefore\quad \overline{A'B'}=500000\overline{AB},\quad \overline{B'C'}=500000\overline{BC},\quad \overline{C'D'}=500000\overline{CD},\quad \overline{D'A'}=500000\overline{DA}$
+
+因此：
+\[\begin{split}
+	\overline{A'B'}+\overline{B'C'}+\overline{C'D'}+\overline{D'A'}&=500000\left(\overline{AB}+\overline{BC}+\overline{CD}+\overline{DA}\right)\\
+	&=500000(2+3+4+5) {\rm cm}\\
+	&=500000\x 14{\rm cm}=70{\rm km}
+\end{split}\]
+答：四边形$ABCD$在地面上的实际周长是70公里。
 \end{solution}
 
 \begin{ex}
@@ -2655,44 +3227,127 @@ $\angle A=\angle A''$, $\angle B=\angle B'$, $\angle C=\angle C'$），而且$\o
 比的平方}。
 
 
+\begin{example}
+	在图1.63中的两个三角形相似吗？
+\end{example}
 
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}[rotate=-20]
+\tkzDefPoints{0/0/B, 3/0/C}
+\tkzDefPoint(80:3.48){A}
+\tkzDrawPolygon(A,B,C)
+\tkzMarkAngles[mark=none, size=.4](C,B,A B,A,C)
+\tkzLabelAngle[pos=.7](C,B,A){$80^{\circ}$}
+\tkzLabelAngle[pos=.7](B,A,C){$45^{\circ}$}
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
 
+\end{scope}
+\begin{scope}[xshift=5cm, scale=.7, rotate=-20]
+	\tkzDefPoints{0/0/B', 3/0/C'}
+\tkzDefPoint(80:3.48){A'}
+\tkzDrawPolygon(A',B',C')
+\tkzMarkAngles[mark=none, size=.7](A',C',B' B',A',C')
+\tkzLabelAngle[pos=1](A',C',B'){$55^{\circ}$}
+\tkzLabelAngle[pos=1](B',A',C'){$45^{\circ}$}
+\tkzLabelPoints[below](B',C')
+\tkzLabelPoints[above](A')
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
 
+\begin{solution}
+	$\triangle ABC$中
 
+$\because\quad \angle A=45^{\circ},\quad \angle B=80^{\circ}$
 
+又$\because\quad $三角形的三个角之和为$180^{\circ}$, 
 
+$\therefore\quad \angle C=55^{\circ}$，这样$\angle A'=\angle A=45^{\circ}$, $\angle C'=\angle C=55^{\circ}$
 
+$\therefore\quad \triangle ABC\backsim \triangle A'B'C'$
+\end{solution}
 
-
-
-
-\begin{blk}
-	
-\end{blk}
-
-\begin{blk}
-	
-\end{blk}
-
-\begin{blk}
-	
-\end{blk}
-
-
-
+有一个角是直角的三角形叫做\textbf{直角三角形}。在两个直角
+三角形中，因为有一个直角对应相等，所以只要再各有一个
+锐角对应地相等，这两个直角三角形就相似了。
 
 \begin{example}
-	
+	设树身在地面上的影长为4米，同时一根2米长的
+竹杆，直立于地面上，影长为1.5米，求树高。
 \end{example}
 
 \begin{solution}
-	
+	直立于地面的物体和影子垂直，故物体及其影子和
+光线成直角三角形。因为平行光线和地面的夹角都相等，所
+以这两个直角三角形相似，于是对应边成比例。
+
+设树高为$h$, 则$\frac{h}{2}=\frac{4}{1.5}$
+
+$\therefore\quad h=2\x4\div 1.5\approx 5.33{\rm m}$
+
+答：树高5.33米。
 \end{solution}
+
+
+
+
+
+
+
+\begin{blk}
+	
+\end{blk}
+
+\begin{blk}
+	
+\end{blk}
+
+\begin{blk}
+	
+\end{blk}
+
+
+
 
 
 \begin{example}
 	
 \end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{solution}
     
