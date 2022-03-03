@@ -3292,23 +3292,293 @@ $\therefore\quad h=2\x4\div 1.5\approx 5.33{\rm m}$
 答：树高5.33米。
 \end{solution}
 
+\begin{figure}[htp]
+	\centering
+\includegraphics[scale=.6]{fig/1-64.png}
+	\caption{}
+\end{figure}
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\includegraphics[scale=.5]{fig/1-2ti.png}
+    \caption*{第2题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\includegraphics[scale=.5]{fig/1-3ti.png}
+    \caption*{第3题}
+    \end{minipage}
+    \end{figure}
+
+\begin{ex}
+\begin{enumerate}
+	\item 在下列的$\square \square \square $之中填上适当的词或数：
+\begin{enumerate}
+\item 形状相同的图形叫做$\square \square \square $。
+\item 两个相似三角形对应边长的比为2:3,那么这两个三
+	角形的相似比为$\square : \square $，这两个三角形面积的比为$\square : \square $。
+\end{enumerate}
+
+	\item 某时刻，烟囱的
+	影长$\overline{AB}=54$米，这时在地面上立一根
+	长为2米的竹竿$\overline{B'C'}$, 它的影长$\overline{B'A'}=1.8$米，求烟囱
+	的高。
+	\item 某人站在河岸位置$A$, 要测量$A$点到对岸$B$点的距离，
+	测得$\overline{AC}=50$米，$\angle BAC=60^{\circ}$, $\angle BCA=40^{\circ}$, 试以
+	1cm代表10米（即以$\frac{1}{1000}$的比例尺），在纸上画出图
+	来，然后量出$\overline{AB}$的长，再计算$\overline{AB}$的实际长度。
+\end{enumerate}
+\end{ex}
+
+
+\subsection*{习题1.4}
+\begin{enumerate}
+	\item 已知$\triangle ABC\backsim \triangle BDC$, 试写出它们的对应边和对应角
+	来。
+\item 如图，$AB$、$CD$交于$E$点，$\angle D=\angle B$, $\triangle AED$与$\triangle CEB$
+	是否相似？如果相似，试指出它们的对应边和对应角。
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.8]
+\tkzDefPoints{0/0/C, 3/0/B, 3/4/A}
+\tkzDefPointBy[projection= onto A--C](B) \tkzGetPoint{D}
+\tkzDrawPolygon(A,C,B)
+\tkzDrawSegments(B,D)
+\tkzMarkRightAngles[size=.2](A,B,C B,D,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[left](D)
+    \end{tikzpicture}
+    \caption*{第1题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoint(50:3){D}
+\tkzDefPoint(140:2){A}
+\tkzDefPoint(-40:2.1){B}
+\tkzDefPoint(50+180:1.4){C}
+\tkzDefPoint(0,0){E}
+\tkzDrawPolygon(A,D,C,B)
+\tkzLabelPoints[left](A,C)
+\tkzLabelPoints[right](B,D,E)
+\tkzMarkAngles[size=.4, mark=none](A,D,E E,B,C)
+    \end{tikzpicture}
+    \caption*{第2题}
+    \end{minipage}
+    \end{figure}
+
+\item 如图，试找出图中的所有相似三角形。
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/C, 3/0/D, 5/0/E, 6/2.3/F}
+\tkzDefPointsBy[translation= from E to F](D){A}
+\tkzDrawPolygon(C,E,F,A)
+\tkzLabelPoints[below](C,D,E)
+
+
+\tkzLabelPoints[above](A,F)
+\tkzDrawSegments(A,D D,F)
+\tkzDefPointWith[linear, K=.7](C,A)\tkzGetPoint{B}
+\tkzDefPointWith[linear, K=.7](D,F)\tkzGetPoint{G}
+\tkzDrawSegments(B,D A,G)
+\tkzMarkAngles[mark=none, size=.6](D,C,B F,D,A D,F,E)
+\tkzMarkAngles[mark=none, size=.4](C,A,D A,G,D A,F,D A,D,B)
+\tkzLabelAngle[pos=1](D,C,B){$30^{\circ}$}
+\tkzLabelAngle[pos=.8](A,D,B){$30^{\circ}$}
+\tkzLabelAngle[pos=.8](F,D,A){$30^{\circ}$}
+\tkzLabelAngle[pos=.8](D,F,E){$30^{\circ}$}
+
+\tkzLabelAngle[pos=.8](C,A,D){$40^{\circ}$}
+\tkzLabelAngle[pos=.8](A,G,D){$70^{\circ}$}
+\tkzLabelAngle[pos=.8](A,F,D){$40^{\circ}$}
+
+\tkzLabelPoints[above](B)
+\tkzLabelPoints[below](G)
+
+    \end{tikzpicture}
+    \caption*{第3题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\includegraphics[scale=.6]{fig/1-4ti.png}
+    \caption*{第4题}
+    \end{minipage}
+    \end{figure}
+
+\item 某人民公社准备开山修渠（如图）$\overline{BC}$是其中的一段，
+测得$\overline{AC}=44$m, $\overline{AB}=50$m, $\angle BAC=55^{\circ}$, 试用$\frac{1}{1000}$
+的比例尺把地面上的三角形划在纸上，再量出纸上$\overline{BC}$的
+长，计算$B$、$C$两点间的实际距离（精确到米）。
+
+\item 在$\triangle ABC$中，$\angle B=55^{\circ}$, $\angle C=85^{\circ}$, 试作一个三角
+形和$\triangle ABC$相似，这样作出的与$\triangle ABC$相似的三角形能
+有多少个？
+\end{enumerate}
+
+\section{基本作图}
+同学们已画过一些简单的几何图形，当时所用的画图工
+具有直尺、圆规、三角板、量角器等。在这一节里，我们将
+介绍只用直尺（没有刻度的）和圆规来画出几个简单几何图
+形的方法。这些图形及其画法，以后经常使用，一般把它们
+叫做基本作图题。
+
+\subsection{作一条线段与已知线段相等}
+已知：线段$a$ (图1.65).
+
+求作：一段线等于$a$.
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[>=latex]
+\draw[|-|](0,0)--node[above]{$a$}(1.5,0);
+\draw[thick, ->](0,-1)--(4,-1)node[right]{$A$};
+\draw[|-|](0,-1)node[below]{$O$}--(1.5,-1)node[below]{$B$};
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+
+作法：
+\begin{enumerate}
+\item 任作一条射线$OA$,
+\item 以$O$为圆心，$a$为半径画弧，交$OA$于$B$, 则
+$OB$为所求。
+\end{enumerate}
+
+
+
+
+\subsection{作一个角与已知角相等}
+已知：$\angle O$.
+
+求作：一角等于$\angle O$.
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+\draw(40:3)--(0,0)node[left]{$O$}--(3,0);
+\draw(-5:2) arc (-5:50:2);
+\node at (40:2)[above]{$A$};
+\draw[dashed](2,0)node[below right]{$B$}--(40:2);
+\end{scope}
+\begin{scope}[xshift=5cm]
+	\draw(40:3)--(0,0)node[left]{$O'$}--(3,0)node[right]{$X$};
+	\draw(-5:2) arc (-5:50:2);
+	\node at (40:2)[above]{$A'$};
+	\draw[dashed](2,0)node[below right]{$B'$}--(40:2);
+\tkzDefPoint(2,0){B'}
+\tkzDefPoint(40:2){A'}
+\tkzCompass[color=black](B',A')
+
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+作法：（图1.66）
+\begin{enumerate}
+	\item 作一射线$O'X$;
+	\item 以$O$为圆心任意长为半径作一圆弧，交$\angle O$的两
+	边于$A$、$B$两点；
+	\item 不改变半径，以$O'$为圆心作一圆弧，交$O'X$于$B$
+	点；
+	\item 以$B'$为圆心，$\overline{BA}$为半径作一圆弧，与前一圆弧交
+	于$A'$点；
+	\item 作射线$O'A'$，则$\angle A'O'B'$就等于$\angle O$.
+\end{enumerate}
+
+理由：由作法可知：
+
+$\because\quad \overline{OA}=\overline{O'A'},\quad \overline{OB}=\overline{O'B'},\quad \overline{AB}=\overline{A'B'}$
+
+$\therefore\quad \triangle AOB\cong \triangle A'O'B'$（SSS）
+
+$\therefore\quad \angle A'O'B'=\angle O$.
+
+\subsection{已知三边作三角形}
+
+已知：三条线段$a$、$b$、$c$.
+
+求作：一三角形使其三边长分别等于$a$、$b$、$c$.
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+	\draw(0,0)--node[above]{$c$}(3,0);
+	\draw(0,1)--node[above]{$b$}(2.5,1);
+	\draw(0,2)--node[above]{$a$}(4,2);
+\end{scope}
+\begin{scope}[xshift=5cm]
+\tkzDefPoints{0/0/B, 4/0/C}
+\tkzDefPoint(38.62:3){A}
+\tkzDrawPolygon(A,B,C)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+\tkzLabelSegment[left](A,B){$c$}
+\tkzLabelSegment[right](A,C){$b$}
+\tkzLabelSegment[below](C,B){$a$}
+\tkzCompass[color=black](B,A)
+\tkzCompass[color=black](C,A)
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+
+作法：（图1.67）
+\begin{enumerate}
+	\item 作$\overline{BC}=a$
+	\item 分别以$B$、$C$为圆心，$c$、$b$为半径在$\overline{BC}$的同
+	旁作两条弧，它们相交于$A$点。
+	\item 连结$\overline{AB}$、$\overline{AC}$, 则$\triangle ABC$为满足已知条件的三角形。
+\end{enumerate}
+
+\begin{rmk}
+	如果已知条件中，$b+c\le a$或$a+b\le c$或$a+c\le 
+b$, 则作不成三角形。图1.68是$b+c\le a$的情况。
+\end{rmk}
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[scale=.8]
+\begin{scope}
+\tkzDefPoints{0/0/A, 5/0/B, 3/0/C}
+\tkzDrawSegments[|-|](A,B)
+\tkzLabelSegment[above](A,C){$b$}
+\tkzLabelSegment[above](B,C){$c$}
+\tkzLabelSegment[below](A,B){$a$}
+\tkzCompass[color=black](A,C)
+\tkzCompass[color=black](B,C)
+
+\end{scope}
+\begin{scope}[xshift=7cm]
+	\tkzDefPoints{0/0/A, 5/0/B, 3/1/C}
+\tkzDefPoint(30:2){D}
+
+
+\tkzDrawSegments(A,B A,D B,C)
+\tkzLabelSegment[below](A,B){$a$}
+\tkzLabelSegment[above](B,C){$c$}
+\tkzLabelSegment[above](A,D){$b$}
+\tkzCompass[color=black, delta=35](A,D)
+\tkzCompass[color=black, delta=35](B,C)
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
 
 
 
 
 
 
-\begin{blk}
-	
-\end{blk}
-
-\begin{blk}
-	
-\end{blk}
-
-\begin{blk}
-	
-\end{blk}
 
 
 
@@ -3318,12 +3588,17 @@ $\therefore\quad h=2\x4\div 1.5\approx 5.33{\rm m}$
 	
 \end{example}
 
+\begin{blk}
+	
+\end{blk}
 
+\begin{blk}
+	
+\end{blk}
 
-
-
-
-
+\begin{blk}
+	
+\end{blk}
 
 
 
