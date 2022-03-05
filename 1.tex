@@ -3574,104 +3574,298 @@ b$, 则作不成三角形。图1.68是$b+c\le a$的情况。
 	\caption{}
 \end{figure}
 
+\subsection{已知两角及夹边作三角形}
+已知：$\angle \alpha$、$\angle \beta$及线段$a$.
+
+求作：$\triangle ABC$, 使$\angle B=\angle \alpha$, $\angle C=\angle \beta$, $\overline{BC}=a$.
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\begin{scope}
+\draw(0,2)--node[above]{$a$}(4,2);
+\tkzDefPoints{0/0/A, 2/0/B, 3/0/C, 5/0/D}
+\tkzDefPoint(45:2){B'}
+\tkzDrawSegments(A,B A,B')
+\tkzMarkAngles[mark=none, size=.3](B,A,B')
+\tkzLabelAngle[pos=.5](B,A,B'){$\alpha$}
+\tkzDefPoint(5,1.5){D'}
+\tkzDrawSegments(C,D C,D')
+\tkzMarkAngles[mark=none, size=.3](D,C,D')
+\tkzLabelAngle[pos=.5](D,C,D'){$\beta$}
+\end{scope}
+\begin{scope}[xshift=7cm]
+\tkzDefPoints{0/0/B, 4/0/C}
+\tkzDefPoint(45:2.42){A}
+\tkzDrawLines[add=0 and .25](B,A C,A)
+\tkzDrawSegments(B,C)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](A)
+\tkzLabelSegment[below](B,C){$a$}
+\tkzLabelAngle[pos=.6](C,B,A){$\alpha$}
+\tkzLabelAngle[pos=.6](A,C,B){$\beta$}
+\node at (1,2.5){$Y$};
+\node at (2.3,2.5){$X$};
+\tkzDefPoint(45:1.5){B'}
+\tkzDefPoints{1.5/0/B'', 2.5/0/C''}
+\tkzDrawArc[color=black, delta=15](B,B'')(B')
+\tkzCompass[color=black](B'',B')
+
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+作法：（图1.69）
+\begin{enumerate}
+\item 作$\overline{BC}=a$,
+\item 作$\angle XBC=\angle \alpha$,
+\item 作$\angle YCB=\angle \beta$,
+\item 射线$BX$与射线$CY$相交于$A$点。
+\end{enumerate}
+则$\triangle ABC$即为所求作的三角形。
+
+理由：请同学们自己说明。
+
+\begin{rmk}
+	如果已知条件中的$\angle\alpha$与$\angle\beta$的大小不适当
+（$\angle\alpha+\angle \beta\ge 180^{\circ}$）, 射线$BX$与射线$CY$不相交，这时就作
+不出三角形。如图1.70所示。
+\end{rmk}
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+	\tkzDefPoints{0/0/B, 2/0/C, 1.5/2/X, 3.5/2/Y}
+\tkzDrawSegments[->](B,X C,Y)
+\tkzDrawSegments(B,C)
+\tkzLabelSegment[below](B,C){$a$}
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[above](X,Y)
+\tkzMarkAngles[mark=none,size=.4](C,B,X Y,C,B)
+\tkzLabelAngle[pos=.6](C,B,X){$\alpha$}
+\tkzLabelAngle[pos=.6](Y,C,B){$\beta$}
+\end{scope}
+\begin{scope}[xshift=6cm]
+	\tkzDefPoints{0/0/B, 2/0/C, -1/2/X, 3/2/Y}
+	\tkzDrawSegments[->](B,X C,Y)
+	\tkzDrawSegments(B,C)
+	\tkzLabelSegment[below](B,C){$a$}
+	\tkzLabelPoints[below](B,C)
+	\tkzLabelPoints[above](X,Y)
+	\tkzMarkAngles[mark=none,size=.3](C,B,X Y,C,B)
+	\tkzLabelAngle[pos=.5](C,B,X){$\alpha$}
+	\tkzLabelAngle[pos=.5](Y,C,B){$\beta$}
+\end{scope}
+\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\subsection{作已知角的平分线}
+
+已知：$\angle AOB$
+
+求作：$\angle AOB$的平分线。（在$\angle AOB$内部，以$O$为端
+点作一条射线，使它把$\angle AOB$分成相等的两个角，这条射
+线就是$\angle AOB$的平分线。）
+
+\begin{figure}[htp]
+	\centering
+\begin{tikzpicture}
+\tkzDefPoint(0,0){O}
+\tkzDefPoint(40:4){A}
+\tkzDefPoint(-10:4){B}
+\tkzDefPoint(15:4){C'}
+\tkzDefPoint(40:1.5){A'}
+\tkzDefPoint(-10:1.5){B'}
+\draw(A') arc (40:-10:1.5);
+\tkzDefPoint(15:3){C}
+\tkzDrawSegments(O,A O,B O,C')
+\tkzLabelPoints[right](A,B)
+\tkzLabelPoints[above](A')
+\tkzLabelPoints[below](B')
+\tkzDrawSegments[dashed](A',C B',C)
+\tkzLabelPoints[left](O)
+\tkzCompass[color=black](A',C)
+\tkzCompass[color=black](B',C)
+\tkzLabelPoints[above right](C)
+
+\end{tikzpicture}
+	\caption{}
+\end{figure}
 
 
+作法：（图1.71）
+\begin{enumerate}
+\item 以点$O$为圆心，任意
+长为半径作弧，交$\angle AOB$的两边
+于$A'$、$B'$两点。
+\item 再分别以$A'$、$B'$为圆心，以$OA'$为半径作两条弧交于$C$点。
+\item 作射线$OC$, 
+则射线$OC$即为所求的$\angle AOB$的平分线。
+\end{enumerate}
+
+理由：根据作法，在$\triangle A'OC$和$\triangle B'OC$中，
+
+$\because\quad \overline{OC}=\overline{OC},\quad \overline{OB'}=\overline{OA'},\quad \overline{A'C}=\overline{B'C}$
+
+$\therefore\quad \triangle A'OC\cong \triangle B'OC$, (SSS)
+
+$\therefore\quad \angle A'OC=\angle B'OC$. （全等三角形对应角相等）
+
+\begin{rmk}
+	我们把平分角的射线叫做\textbf{角的平分线}。如果给定
+的是一个平角，那么这个角的平分线和这个平角的两条边有什么关系？
+\end{rmk}
+
+\subsection{过已知直线上一点，作一直线和已知直线垂直}
+
+已知：直线$\ell$和$\ell$上一点$P$ (图1.72)
+
+求作：过$P$点并且垂直于直线$\ell$的直线。
+
+作法：
+\begin{enumerate}
+	\item 以点$P$为圆心，任意
+长为半径作弧交$\ell$于$A$、$B$两点。
+\item  分别以$A$、$B$为圆心，以大于$\overline{AB}$的一半为半径作两条弧交于$Q$点，
+\item  过$Q$、$P$作直线$QP$, 则直线$QP\bot\ell$于$P$点。
+\end{enumerate}
+
+理由：请同学们自己说明。
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1.3]
+\tkzDefPoints{-2/0/A', -1.5/0/A, 1.5/0/B, 0/0/P, 2/0/B', 0/2.5/Q}
+\draw(A) arc (180:0:1.5);
+\tkzLabelPoints[below](A,B)
+\tkzDrawLines(P,Q)
+\tkzLabelPoints[below right](P)
+\tkzLabelPoints[right](Q)
+\tkzLabelPoint[right](B'){$\ell$}
+\tkzCompass[color=black](A,Q)
+\tkzCompass[color=black](B,Q)
+\tkzDrawSegments(A',B')
+	\end{tikzpicture}
+	\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1.5/0/A', -1/0/A, 1/0/B, 0/1.5/P, 1.5/0/B', 0/-2/Q, .5/0/C}
+\tkzDrawSegments(A',B')
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[above](C)
+\tkzLabelPoints[right](P)
+\tkzLabelPoints[below right](Q)
+\tkzLabelPoint[right](B'){$\ell$}
+\tkzDrawPoints(P,C)
+\tkzDrawArc[delta=10, black](P,A)(B)
+\tkzCompass[color=black](A,Q)
+\tkzCompass[color=black](B,Q)
+\tkzDrawLines(P,Q)
+	\end{tikzpicture}
+	\caption{}
+	\end{minipage}
+	\end{figure}
+
+\subsection{过已知直线外一点作已知直线的垂线}
+已知：直线$\ell$和$\ell$外一点$P$(图1.73),
+
+求作：过$P$点并且垂直于$\ell$的直线。
+
+作法：
+\begin{enumerate}
+\item 以$P$为圆心，在$\ell$上任
+意取$C$点，以大于$\overline{PC}$长的线段为
+半径画弧交于$\ell$于$A$、$B$两点；
+\item 分别以$A$、$B$为圆心，以
+$\overline{AB}$为半径画两条弧相交于$Q$点；
+\item 过$P$、$Q$作直线$PQ$, 则直线$PQ$即为所求作的垂线。
+\end{enumerate}
+
+理由：（略）
+
+\subsection{求已知线段的中点}
+
+已知：$\overline{AB}$(图1.74).
+
+求作：$\overline{AB}$的中点。
+
+作法：
+\begin{enumerate}
+\item 分别以$A$、$B$为圆心，以$\overline{AB}$为半径画两条弧
+交于$P$、$Q$两点。
+\item 过$P$、$Q$两点作直线交$\overline{AB}$于$M$点，则$M$点就是$\overline{AB}$
+的中点。
+\end{enumerate}
+
+\begin{rmk}
+	这种作法和作$\overline{AB}$的垂线的作法一致，因而直线
+	$\overline{PQ}$不仅平分$\overline{AB}$, 还垂直$\overline{AB}$,因此我们把$\overline{PQ}$叫做$\overline{AB}$的垂
+直平分线。线段的垂直平分线的一般意义可表述为：垂直且
+平分一条线段的直线叫做这条\textbf{线段的垂直平分线}。
+\end{rmk}
+
+\begin{figure}[htp]\centering
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+  \begin{tikzpicture}[>=latex, scale=1]
+	\tkzDefPoints{-1.5/0/A, 1.5/0/B, 0/1.5/P,  0/-1.5/Q, 0/0/M}
+\tkzDrawSegments(A,B)
+\tkzDrawLines(P,Q)
+\tkzCompass[color=black](A,Q)
+\tkzCompass[color=black](B,Q)
+\tkzCompass[color=black](A,P)
+\tkzCompass[color=black](B,P)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[below right](M)
+\tkzLabelPoints[right](P,Q)
+	\end{tikzpicture}
+	\caption{}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/P', 2/0/M', 1/1.5/P, 1/0/R'}
+\tkzDefPoint(56.3:1){Q'}
+\tkzDefPointsBy[translation= from P' to P](M',Q',R'){M,Q,R}
+\tkzDrawLines(P,M P',M')
+\tkzDrawLines[add= .4 and 1](P',P)
+\tkzDrawArc[color=black, delta=10](P,R)(Q)
+\tkzDrawArc[color=black, delta=10](P',R')(Q')
+\tkzLabelPoints[left](Q)
+\tkzLabelPoints[below](P,P')
+\tkzCompass[color=black](Q,R)
+\tkzLabelPoints[above right](M)
+\tkzLabelPoint[above right](M'){$\ell$}
+\tkzLabelAngle[pos=.4](M',P',Q){$\alpha$}
+	\end{tikzpicture}
+	\caption{}
+	\end{minipage}
+	\end{figure}
 
 
+\subsection{过已知直线外一点作已知直线的平行线}
+已知；直线$\ell$和$\ell$外一点$P$(图1.75).
+
+求作：过$P$点作一直线和$\ell$平行。
+
+作法：
+\begin{enumerate}
+\item 在直线$\ell$上任取一点$P'$.
+\item 过$P$、$P'$作直线$PP'$.
+\item 作$\angle QPM=\angle\alpha$.
+\end{enumerate}
+则直线$PM$和$\ell$平行。
+
+理由：由作法$\angle QPM=\angle\alpha$，
+所以直线$PM\parallel \ell$（同位角相等则两条直线平行）。
 
 
-
-
-
-
-\begin{example}
-	
-\end{example}
-
-\begin{blk}
-	
-\end{blk}
-
-\begin{blk}
-	
-\end{blk}
-
-\begin{blk}
-	
-\end{blk}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-	
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{example}
-	
-\end{example}
-
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-
-
-\begin{solution}
-    
-\end{solution}
 
 \begin{ex}
 \begin{enumerate}
