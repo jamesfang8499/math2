@@ -335,14 +335,542 @@ $BE$、$CF$分别是$\triangle A'B'C'$的三边上的垂直平分线，由推论
     求作一条已知弧的圆心。
 \end{example}
 
+已知$\wideparen{EF}$（图4.11）.
+
+求作：$\wideparen{EF}$所在圆的圆心。
+
+作法
+\begin{enumerate}
+    \item 在$\wideparen{EF}$
+    上任取三点$A$、$B$、$C$, 并且作$\overline{AB}$、$\overline{BC}$.
+    \item 分别作$\overline{AB}$、$\overline{BC}$的垂直平分线$\ell_1$和$\ell_2$, 设它们
+    的交点为$O$, $O$点就是所求作的圆心。
+\end{enumerate}
+
+\begin{proof}
+    $\because\quad A$、$B$、$C$三点在$\wideparen{EF}$上（作法）
+
+$\therefore\quad \wideparen{EF}$是经过$A$、$B$、$C$的圆的一部分。
+
+又$\because\quad O$是经过$A$、$B$、$C$的圆的圆心，
+
+$\therefore\quad O$是$\wideparen{EF}$所在圆的圆心。
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoint(150:2.5){A}
+\tkzDefPoint(110:2.5){B}
+\tkzDefPoint(40:2.5){C}
+\tkzDefPoint(160:2.5){E}
+\tkzDefPoint(20:2.5){F}
+\tkzDrawSegments[very thick](A,B B,C)
+\tkzDefPoints{0/0/O}
+\tkzDefPointBy[projection = onto A--B](O)\tkzGetPoint{O'}
+\tkzDefPointBy[projection = onto C--B](O)\tkzGetPoint{O''}
+\tkzDrawLines[add=.3 and .7](O,O' O,O'')
+\tkzAutoLabelPoints[center=O](A,B,C,E,F)
+\tkzDrawArc[color=black, thick](O,F)(E)
+\tkzLabelPoints[right](O)
+\node at (-2,3){$\ell_1$};
+\node at (1,3){$\ell_2$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/B, 4/0/C, 3/3/A}
+\tkzDrawPolygon(A,B,C)
+\tkzDefTriangleCenter[circum](A,B,C)  \tkzGetPoint{O}
+\tkzDefTriangleCenter[ortho](A,B,C)  \tkzGetPoint{H}
+\tkzDefPointBy[projection= onto B--C](O) \tkzGetPoint{L}
+\tkzDefPointBy[projection= onto B--A](O) \tkzGetPoint{M}
+\tkzInterLL(A,C)(B,H)\tkzGetPoint{B'}
+\tkzInterLL(B,C)(A,H)\tkzGetPoint{D}
+\tkzInterLL(A,B)(C,H)\tkzGetPoint{C'}
+\tkzDefMidPoint(B,H) \tkzGetPoint{K}
+\tkzDrawSegments(A,D C,C' B,B' O,M O,L M,K L,K)
+\tkzLabelPoints[below](B,C,L,D)
+\tkzLabelPoints[above](A,M)
+\tkzLabelPoints[right](O)
+\tkzLabelPoints[above right](H)
+\tkzLabelPoints[above left](K)
+\tkzDrawPoints(O,H,K)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{example}
+    已知$O$和$H$各是$\triangle ABC$的外心和垂心，$OL\bot \overline{BC}$
+    于$L$(图4.12). 
+    求证：$\overline{OL}=\frac{1}{2}\overline{AH}$
+\end{example}
+
+\begin{proof}
+    已知$OL\bot \overline{BC}$于$L$点，作$OM\bot \overline{AB}$于$M$点，由
+    于$O$是$\triangle ABC$的外心，所以$L$、$M$分别是$\overline{BC}$、$\overline{AB}$的中点。
+    取$\overline{BH}$的中点$K$, 作$\overline{MK}$, $\overline{LK}$, 
+ 
+$\because\quad     MK\parallel AH,\quad OL\parallel AH$,
+
+$\therefore\quad MK\parallel OL$,
+
+同理可证，$LK\parallel OM$,
+
+$\therefore\quad OMKL$是平行四边形，
+
+$\therefore\quad \overline{OL}=\overline{MK}=\frac{1}{2}\overline{AH}$
+\end{proof}
+
+\begin{ex}
+\begin{enumerate}
+    \item 分别作一个锐角三角形、一个直角三角形和一个钝角三
+    角形的外接圆，并说出它们的外心的位置各有什么特点。
+    \item 经过任意四点，可不可以作一个圆？试举例说明。
+    \item 分别作出一个锐角三角形、一个直角三角形和一个钝角
+    角形的套心，并说出它们的位置各有什么特点。
+    \item 已知$H$是$\triangle ABC$的垂心，
+    $D$、$E$、$F$是三高的垂足。试分别说出$\triangle HBC$、$\triangle HAC$、$\triangle HAB$的垂心各是图中哪一点。
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/B, 4/0/C, 1.8/2.5/A}
+\tkzDrawPolygon(A,B,C)
+\tkzDefTriangleCenter[ortho](A,B,C)  \tkzGetPoint{H}
+\tkzInterLL(A,C)(B,H)\tkzGetPoint{E}
+\tkzInterLL(B,C)(A,H)\tkzGetPoint{D}
+\tkzInterLL(A,B)(C,H)\tkzGetPoint{F}
+\tkzDrawSegments(A,D B,E C,F)
+\tkzLabelPoints[below](B,C,D)
+\tkzLabelPoints[left](F)
+\tkzLabelPoints[right](E)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below right](H)
+\end{tikzpicture}
+    \caption*{第4题}
+\end{figure}
+
+\subsection{圆的对称性}
+已知$\odot O$(图4.13), 在$O$上任取一点$A$, 引直径$\overline{AA'}$, 
+则$\overline{AA'}$被圆心$O$平分．这就是说$A'$是以点$O$为对称中心的
+点$A$的对称点，如果在$\odot O$上再取$B,C,D,\ldots$, 并引直径
+$\overline{BB'},\overline{CC'},\overline{DD'},\ldots$， 那么点$B',C',D',\ldots$ 也都分别是
+以$O$为对称中心的点$B,C,D,\ldots$的对称点。这就说明
+了$\odot O$上以$O$为对称中心的任何点的对称点都在$\odot O$上。由
+此可知：\textbf{圆是中心对称形；圆心是它的对称中心}。
+
+已知$\overline{AA'}$是$\odot O$的任一条直径（图4.14），作直径$\overline{BB'}\bot 
+\overline{AA'}$, 把$\odot O$左边部分沿着直线$AA'$翻折过来，由于$\overline{BB'}\bot \overline{AA'}$, $\overline{OB'}=\overline{OB}$, 那么$B$点就与$B'$点重合，因为经过$A$、
+$B'$、$A'$三点只可以作一个圆，所以以$A$、$A'$为端点，经过
+$B'$点的弧只有一条，因此$\wideparen{ABA'}$与
+$\wideparen{AB'A'}$重合。由此可知，
+圆是轴对称图形，任一条通过圆心的直线都是它的对称轴。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoint(20:1.5){A'}
+\tkzDefPoint(-30:1.5){B'}
+\tkzDefPoint(200:1.5){A}
+\tkzDefPoint(150:1.5){B}
+\tkzDefPoint(90:1.5){C}
+\tkzDefPoint(-90:1.5){C'}
+\tkzDefPoint(0,0){O}
+\tkzDrawCircle[very thick](O,A)
+\tkzDrawSegments[thick](A,A' B,B' C,C')
+\tkzAutoLabelPoints[center=O](A,A',B,B',C,C')
+\tkzLabelPoints[above right](O)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+      \tkzDefPoint(0:1.5){B'}
+\tkzDefPoint(180:1.5){B}
+\tkzDefPoint(90:1.5){A}
+\tkzDefPoint(-90:1.5){A'}
+\tkzDefPoint(0,0){O}
+\tkzDrawCircle[very thick](O,A)
+\tkzDrawSegments[thick](A,A' B,B')
+\tkzAutoLabelPoints[center=O](B,B')
+\draw[dashed](A)node[above right]{$A$}--(0,2.5);
+\draw[dashed](A')node[below right]{$A'$}--(0,-2.5);
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+由上述圆的对称性，我们可推出许多圆的重要性质。
+
+\begin{blk}
+    {推论1} 圆被它的任何一条直径截出的两段弧相等。这两
+段弧都叫做半圆。
+\end{blk}
+
+小于半圆的弧叫做\textbf{劣弧}，大于半圆的弧叫做\textbf{优弧}。以后
+说到弧，如不特别指明，一般都指的是劣弧。
+
+\begin{blk}
+    {推论2} 一圆的直径垂直于一条非直径的弦的充分必要
+条件是这直径平分这条弦或平分这条弦所对的弧。
+\end{blk}
+
+我们来证必要性，充分性留给同学们自证。
+
+已知：$\odot O$中，直径$\overline{CD}\bot $弦$\overline{AB}$于$E$点（图4.15）.
+
+求证：$\overline{AE}=\overline{BE}$, $\wideparen{AD}=\wideparen{BD}$, $\wideparen{AC}=\wideparen{BC}$.
+
+\begin{proof}
+$\because\quad \overline{CD}$是$\odot O$的直径
+
+$\therefore\quad $直线$CD$是$\odot O$的对称轴。
+
+又$\because\quad CD\bot AB$于$E$点
+
+$\therefore\quad CD$也是等腰$\triangle OAB$的
+对称轴。以$CD$为轴把图形翻
+折叠合时，半圆$\wideparen{CAD}$与半圆$\wideparen{CBD}$重合，$\overline{AE}$与
+$\overline{BE}$
+重合。$A$点与$B$点重合，
+$\wideparen{AD}$与$\wideparen{BD}$, $\wideparen{AC}$与
+$\wideparen{BC}$都重合
+
+$\therefore\quad \overline{AE}=\overline{BE},\quad 
+\wideparen{AD}=\wideparen{BD},\quad 
+\wideparen{AC}=\wideparen{BC}$.
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/O, 0/2/C, 0/-2/D}
+\tkzDefPoint(-30:2){B}
+\tkzDefPoint(-150:2){A}
+\tkzAutoLabelPoints[center=O](A,B,C,D)
+\tkzLabelPoints[above left](O)
+\tkzInterLL(O,D)(A,B)\tkzGetPoint{E}
+\tkzLabelPoints[above right](E)
+\tkzDrawSegments(A,B C,D A,O B,O)
+\tkzDrawCircle[thick](O,C)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/O, 0/3.5/C, 0/-1/D, 0/2/E}
+\tkzDefPoint(30:2){B}
+\tkzDefPoint(150:2){A}
+\tkzDrawLines[add=.1 and .1](C,D)
+\tkzLabelPoints[right](C,D)
+\tkzLabelPoints[below](A,B)
+\tkzLabelPoints[below right](E)
+\tkzDrawArc[thick, color=black](O,B)(A)
+\tkzDrawSegments[thick](A,B)
+\tkzCompasss(A,C B,C A,D B,D)
+
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+
+\begin{example}
+    平分一条已知弧。
+
+已知：$\wideparen{AB}$(图4.16).
+
+求作：平分$\wideparen{AB}$的点。
+
+作法
+\begin{enumerate}
+    \item 作$\overline{AB}$
+    \item 作$\overline{AB}$的垂直平分线$CD$交$\wideparen{AB}$于$E$点。则$E$点就
+是所求作的点。
+\end{enumerate}
+\end{example}
+
+\begin{proof}
+$\because\quad CD$是$\overline{AB}$的垂直平分线（作法）。
+
+$\therefore\quad CD$ 必通过圆心，
+
+$\therefore\quad \wideparen{AE}=\wideparen{BE}$ (推论2).
+
+$\therefore\quad E$点平分$\wideparen{AB}$.
+\end{proof}
+
+\begin{example}
+    已知大小两圆有公共圆心$O$, 大圆的弦交小圆于
+$C$、$D$ (图4.17).
+
+求证：$\overline{AC}=\overline{BD}$.
+\end{example}
+
+\begin{proof}
+    作$\overline{OM}\bot \overline{AB}$于$M$点，则$\overline{AM}=\overline{BM}$, $\overline{CM}=\overline{DM}$.
+
+$\therefore\quad     \overline{AM}-\overline{CM}=\overline{BM}-\overline{DM}$.
+    
+$\therefore\quad \overline{AC}=\overline{BD}$
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/O, 0/-1/M, -1.5/-1/A, 1.5/-1/B, -1/-1/C, 1/-1/D}
+\tkzDrawCircle[thick](O,C)
+\tkzDrawCircle[thick](O,A)
+\tkzDrawSegments[thick](A,B O,M)
+\tkzLabelPoints[below](A,B,C,D,M)
+\tkzLabelPoints[above](O)
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/O}
+\tkzDefPoint(45:1.8){B}
+\tkzDefPoint(135:1.8){A}
+\tkzDefPoint(-30:1.8){D}
+\tkzDefPoint(-150:1.8){C}
+\tkzDefMidPoint(A,B)\tkzGetPoint{E}
+\tkzDefMidPoint(C,D)\tkzGetPoint{F}
+\tkzAutoLabelPoints[center=O](A,B,C,D)
+\tkzLabelPoints[above](E)
+\tkzLabelPoints[below](F)
+\tkzDrawSegments(A,O C,O A,B C,D E,F)
+\tkzLabelPoints[right](O)
+\tkzDrawCircle[thick](O,A)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+    
+\begin{example}
+    已知$\odot O$的两条平行弦$\overline{AB}=6$cm, $\overline{CD}=8$cm
+    且
+    $AB$和$CD$间的距离是7cm, 求$\odot O$的半径长（图4.18）.
+\end{example}
+
+\begin{solution}
+    作$OE\bot \overline{AB}$
+于$E$点，延长$\overline{EO}$交$\overline{CD}$于$F$点。
+
+$\because\quad AB\parallel CD$,
+
+$\therefore\quad OF\bot CD$,
+
+$\therefore\quad \overline{EF}$为$\overline{AB}$和$\overline{CD}$的公垂线段，且$\overline{EF}=7$cm，
+$\overline{AE}=\frac{1}{2}\overline{AB}=3$cm, $\overline{CF}=
+\frac{1}{2}\overline{CD}=4$cm.
+
+设$\overline{OA}=\overline{OC}=x$, $\overline{OE}=y$, 则由勾股定理可得方程组：
+\[\begin{cases}
+    x^2=3^2+y^2\\
+    x^2=(7-y)^2+4^2
+\end{cases}\]
+解这个方程组，舍去不合理的根得：
+\[\begin{cases}
+    x=5\\y=4
+\end{cases}\]
+
+答：$\odot O$的半径是5cm.
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 把本节推论2用“若一则”
+    形式写出互逆的定理。
+    \item 作出图中圆的圆心。
+    \item 已知$\odot(0,5{\rm cm})$, 它的一条弦$\overline{AB}=8$cm, 点$M$是
+    $\overline{AB}$的
+    中点，求$\overline{OM}$的长。
+    \item 已知一圆的半径是25cm, 一弧所对的弦长是48cm, 求这
+    弧的一半所对的弦长。
+    \item 求证圆中的非直径的两弦必不能互相平分
+    （提示：用反证法）。
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+    \draw(0,0) circle (1.5);
+\end{tikzpicture}
+    \caption*{第2题}
+\end{figure}
+
+\subsection{弧、弦和弦心距之间的关系}
+圆的圆心到一条弦的距离，叫做这条弦的弦心距，例如
+在图4.19中，$\overline{AB}$是$\odot O$的一条弦，$\overline{OE}\bot \overline{AB}$于$E$点，$\overline{OE}$
+的长就是弦
+$\overline{AB}$的弦心距。下面我们来学习弧、弦和弦心距
+之间的关系。
+
+\begin{blk}
+    {定理} 在同圆或等圆中，两条弧相等的充要条件是它们
+所对的弦相等，或它们所对的弦的弦心距相等。
+\end{blk}
+
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}[>=latex]
+ \tkzDefPoints{0/0/O}
+\tkzDefPoint(-60:2){B}
+\tkzDefPoint(-120:2){A}
+\tkzDefPoint(0:2){C}
+\tkzDefPoint(60:2){D}
+\tkzDefMidPoint(A,B)\tkzGetPoint{E}
+\tkzDefMidPoint(C,D)\tkzGetPoint{F}
+\tkzDrawSegments[very thick](A,B C,D)
+\tkzDrawSegments(O,A O,B O,C O,D O,E O,F)
+\tkzLabelPoints[above left](O)
+\tkzAutoLabelPoints[center=O](A,B,C,D)
+\tkzLabelPoints[above right](E)
+\tkzLabelPoints[left](F)
+\tkzDrawCircle[thick](O,A)       
+
+\draw[->](-50:1.2) arc (-50:-10:1.2);
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+我们来证条件的必要性，充分性由同学们自证：
+
+已知：在$\odot O$中，$\wideparen{AB}=\wideparen{CD}$, 
+$OE\bot  AB$于$E$点，$OF\bot CD$于
+$F$点（图4.19）。
+
+求证：$\overline{AB}=\overline{CD}$, $\overline{OE}=\overline{OF}$.
+
+\begin{proof}
+    作半径$\overline{OA}$、$\overline{OB}$、$\overline{OC}$、$\overline{OD}$. 把$\wideparen{AB}$连同经过
+两端的半径绕着$O$点，依箭头所指的方向旋转，使半径$\overline{OA}$
+和半径$\overline{OC}$重合。
+
+$\because\quad \wideparen{AB}=\wideparen{CD}$.
+
+$\therefore\quad \wideparen{AB}$与$\wideparen{CD}$重合，弦$\overline{AB}$与弦$\overline{CD}$重合。
+
+又$\because\quad $从一点到一条直线只可以作一条垂线，
+
+$\therefore\quad \overline{OE}$与$\overline{OF}$
+也重合
+
+$\therefore\quad \overline{AB}=\overline{CD},\quad \overline{OE}=\overline{OF}$.
+\end{proof}
+
+对于等圆情况的证明，只要使两圆重合就可以了。
+
+这个定理告诉我们，在同圆或等圆中，“弧相等”、
+“弦相等”、“弦心距相等”它们当中只要有一个是对的，
+其它两个也一定是对的。这就是说：
+
+\begin{blk}
+   “弧相等”$\Longleftrightarrow$“弦相等”$\Longleftrightarrow$“弦心距相等” 
+\end{blk}
+
+\begin{example}
+    已知（图4.20），$\overline{OE}$是$\odot O$中的半径，$F$是$\overline{OE}$上任一
+点，$\overline{AB}$和$\overline{CD}$为过$F$点的弦且$\angle AFO=\angle DFO$.
+
+求证：$\overline{AB}=\overline{CD}$
+\end{example}
+
+\begin{proof}
+作$\overline{OM}\bot \overline{AB}$于$M$点，$\overline{ON}\bot \overline{CD}$ 于$N$点，在直角
+$\triangle OMF$与直角$\triangle ONF$中，
+
+$\because\quad \angle MFO=\angle NFO,\quad \overline{OF}=\overline{OF}$.
+
+$\therefore\quad \triangle OMF\cong \triangle ONF$
+
+$\therefore\quad \overline{OM}=\overline{ON}$.
+
+$\therefore\quad \overline{AB}=\overline{CD}$.
+\end{proof}
 
 
 
 
 
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
 
 
 
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
 
 
 
