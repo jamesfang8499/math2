@@ -784,7 +784,7 @@ $\therefore\quad \overline{AB}=\overline{CD},\quad \overline{OE}=\overline{OF}$.
 “弦相等”、“弦心距相等”它们当中只要有一个是对的，
 其它两个也一定是对的。这就是说：
 
-\begin{blk}
+\begin{blk}{}
    “弧相等”$\Longleftrightarrow$“弦相等”$\Longleftrightarrow$“弦心距相等” 
 \end{blk}
 
@@ -794,6 +794,31 @@ $\therefore\quad \overline{AB}=\overline{CD},\quad \overline{OE}=\overline{OF}$.
 
 求证：$\overline{AB}=\overline{CD}$
 \end{example}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/O, 2/0/E}
+\tkzDefPoint(70:2){A}
+\tkzDefPoint(-70:2){D}
+\tkzDefPoint(-20:2){B}
+\tkzDefPoint(20:2){C}
+\tkzDefMidPoint(A,B)\tkzGetPoint{M}
+\tkzDefMidPoint(C,D)\tkzGetPoint{N}
+\tkzInterLL(O,E)(A,B)\tkzGetPoint{F}
+\tkzLabelPoints[left](O)
+\tkzAutoLabelPoints[center=O](A,B,C,D,E)
+\tkzDrawSegments[thick](O,M O,N A,B C,D O,E)
+\tkzDrawCircle[very thick](O,A)
+\tkzLabelPoints[above](F)
+\tkzLabelPoints[above](M)
+\tkzLabelPoints[below](N)
+
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
 
 \begin{proof}
 作$\overline{OM}\bot \overline{AB}$于$M$点，$\overline{ON}\bot \overline{CD}$ 于$N$点，在直角
@@ -808,7 +833,67 @@ $\therefore\quad \overline{OM}=\overline{ON}$.
 $\therefore\quad \overline{AB}=\overline{CD}$.
 \end{proof}
 
+\begin{ex}
+\begin{enumerate}
+    \item 把本节定理用“若—则”形式写出互逆的定理。
+    \item 以$\angle A$的平分线上任一点$O$为圆心，大于$O$点到边的距
+    离之长为半径作一个圆，那么这圆在$A$的两边上截出
+    的两条弦相等。
+    \item 在$\odot O$中，已知$\overline{AB}$是一条直径，$\overline{AC}$和$\overline{AD}$是分属于
+    $\overline{AB}$两侧的两条相等的弦，
+    求证：$AB$平分$\angle CAD$
+    \item 如图，$\odot O$内相等的两弦
+    $\overline{AB}$、$\overline{CD}$相交于$E$点，
+    求证
+    \begin{enumerate}
+        \item $\wideparen{AC}=\wideparen{BD}$
+        \item $\overline{AE}=\overline{DE}$
+        \item $\overline{BE}=\overline{CE}$
+    \end{enumerate}
+\end{enumerate}
+\end{ex}
 
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=.8]
+\tkzDefPoints{0/0/O}
+\tkzDefPoint(30:2){A}
+\tkzDefPoint(-140:2){D}
+\tkzDefPoint(-90:2){B}
+\tkzDefPoint(-20:2){C}
+\tkzInterLL(C,D)(A,B)\tkzGetPoint{E}
+\tkzAutoLabelPoints[center=O](A,B,C,D)
+\tkzLabelPoints[above left](E)
+\tkzDrawSegments[thick](A,B C,D)
+\tkzDrawCircle[very thick](O,A)
+\end{tikzpicture}
+    \caption*{第4题}
+\end{figure}
+
+\subsection{两圆的位置关系}
+不重合的两圆，它们的位置关系，有以下五种情况：
+\begin{enumerate}
+\item 一圆在另一圆的外部，这种位置关系叫做\textbf{两圆相
+离}，如图4.21(1).这时，两圆没有公共点。
+\item 两圆只有一个公共点且其中一圆上的其它各点都
+在另一圆的外部，这种位置关系叫做\textbf{两圆外切}，如图
+4.21(2). 这个公共点叫做两圆的\textbf{切点}。
+\item 两圆有两个公共点，这种位置关系叫做两圆\textbf{相交}。
+两个公共点叫做两圆的\textbf{交点}，如图4.21(3). 连结两个交点的
+线段叫做两圆的\textbf{公共弦}。
+\item 两圆只有一个公共点且其中一圆上的其它各点都
+在另一圆的内部，这种位置关系叫做两圆\textbf{内切}，这个公共点
+叫做两圆的\textbf{切点}，如图4.21(4).
+\item 一圆在另一圆的内部，这种位置关系叫做两圆内
+含，如图4.21(5). 这时两圆没有公共点。如果这两圆的圆心
+重合，这两个圆叫做\textbf{同心圆}，如图4.21(6).
+\end{enumerate}
+
+经过两个圆的圆心的直线，叫做\textbf{两圆的连心线}，两个圆
+心之间的距离叫做圆心距。如图4.21, $\overline{O_1O_2}$所在的直线就是$\odot O_1$和$\odot O_2$的连心线，$\overline{O_1O_2}$的长就是两圆的圆心距。
+
+由圆的轴对称性可知，两圆的连心线是两圆的对称轴，
+并且\textbf{两圆相切}（外切或内切）时，它们的\textbf{切点在连心线上}（要不然，两圆就将有两个公共点）。
 
 
 
