@@ -889,6 +889,65 @@ $\therefore\quad \overline{AB}=\overline{CD}$.
 重合，这两个圆叫做\textbf{同心圆}，如图4.21(6).
 \end{enumerate}
 
+\begin{figure}[htp]
+    \centering
+  \begin{tikzpicture}[scale=1.3]
+  \begin{scope}
+    \tkzDefPoints{0/0/O_1, 1.6/0/O_2, .5/0/a, .8/0/b}
+  \tkzDrawCircles[thick](O_1,a O_2,b)
+  \tkzDrawSegments[thick](O_1,O_2)
+    \tkzDrawPoints(O_1,O_2)
+    \tkzLabelPoints[below](O_1,O_2)
+    \node at (1,-1){(1)};
+  \end{scope}
+  \begin{scope}[xshift=3.5cm]
+    \tkzDefPoints{0/0/O_1, 1.3/0/O_2, .5/0/a}
+  \tkzDrawCircles[thick](O_1,a O_2,a)
+  \tkzDrawSegments[thick](O_1,O_2)
+    \tkzDrawPoints(O_1,O_2)
+    \node at (.7,-1){(2)};
+    \tkzLabelPoints[below](O_1,O_2)
+  \end{scope}
+  \begin{scope}[xshift=7cm]
+    \tkzDefPoints{0/0/O_1, 1.1/0/O_2, .5/0/a, .3/0/b}
+    \tkzDrawCircles[thick](O_1,a O_2,b)
+    \tkzDrawSegments[thick](O_1,O_2)
+    \tkzLabelPoints[below](O_1,O_2)
+    \tkzDrawPoints(O_1,O_2)
+  \tkzInterCC(O_1,a)(O_2,b) \tkzGetPoints{A}{B}
+  \tkzLabelPoints[above](A)
+  \tkzLabelPoints[below](B)
+    \node at (.5,-1){(3)};
+    \tkzDrawSegments[dashed](O_1,A O_2,A)
+  \tkzDrawSegments[thick](A,B)
+  \end{scope}
+  \begin{scope}[yshift=-2.5cm, xshift=1cm]
+    \tkzDefPoints{0/0/O_1, .6/0/O_2, -.5/0/a}
+    \tkzDrawCircles[thick](O_1,a O_2,a)
+    \tkzDrawSegments[thick](a,O_2)
+      \tkzDrawPoints(O_1,O_2)
+      \tkzLabelPoints[below](O_1,O_2)
+      \node at (.6,-1.5){(4)};
+  \end{scope}
+  \begin{scope}[yshift=-2.5cm, xshift=4cm]
+    \tkzDefPoints{0.2/0/O_1, .6/0/O_2, -.5/0/a, -.4/0/b}
+    \tkzDrawCircles[thick](O_1,b O_2,a)
+    \tkzDrawSegments[thick](O_1,O_2)
+      \tkzDrawPoints(O_1,O_2)
+      \tkzLabelPoints[below](O_1,O_2)
+      \node at (.6,-1.5){(5)};
+  \end{scope}
+  \begin{scope}[yshift=-2.5cm, xshift=7.5cm]
+    \tkzDefPoints{0/0/O, 1/0/a, .7/0/b}
+    \tkzDrawCircles[thick](O,b O,a)
+      \tkzDrawPoints(O)
+      \tkzLabelPoint[below](O){$O_1(O_2)$}
+      \node at (0,-1.5){(6)};
+  \end{scope}
+  \end{tikzpicture}
+    \caption{}
+  \end{figure}
+
 经过两个圆的圆心的直线，叫做\textbf{两圆的连心线}，两个圆
 心之间的距离叫做圆心距。如图4.21, $\overline{O_1O_2}$所在的直线就是$\odot O_1$和$\odot O_2$的连心线，$\overline{O_1O_2}$的长就是两圆的圆心距。
 
@@ -897,6 +956,478 @@ $\therefore\quad \overline{AB}=\overline{CD}$.
 
 
 
+如果用$r_1$和$r_2$（$r_1>r_2$）表示两圆的半径长，用$d$表示圆心距，从图4.21可以看出：
+\begin{enumerate}
+\item 若两圆相离时，则$d>r_1+r_2$;
+\item 若两圆外切时，则$d=r_1+r_2$;
+\item 若两圆相交时，则$r_1-r_2<d<r_1+r_2$;
+\item 若两圆内切时，则$d=r_1-r_2$;
+\item 若两圆内含时，则$d<r_1-r_2$; 特殊情况，若两圆
+是同心圆时，则$d＝0$．
+\end{enumerate}
+
+同学们不难用反证法证明上述各命题的逆命题也是正确的，即：
+\begin{enumerate}
+  \item 若$d>r_1+r_2$，则两圆相离;
+\item 若$d=r_1+r_2$，则两圆外切;
+\item 若$r_1-r_2<d<r_1+r_2$，则两圆
+相交;
+\item  若$d＝r_1-r_2$，则两圆内切;
+\item 若$d<r_1-r_2$，则两圆内含；特殊情况，若$d=0$，则两圆是同心圆.
+\end{enumerate}
+
+\begin{example}
+已知$\odot A$、$\odot B$、$\odot C$
+  两两外切，它们的圆心距分别是5cm、6cm、7cm，求这三个圆的半径．
+\end{example}
+
+\begin{figure}[htp]
+  \centering
+\begin{tikzpicture}[scale=.7]
+\tkzDefPoints{0/0/C, 3.5/0/B, 2/0/a, 2.15/-2.1/A, 2.15/-1.09/b}
+\tkzDrawCircles[thick](C,a B,a A,b)
+\tkzLabelPoints[left](C)
+\tkzLabelPoints[right](B)
+\tkzLabelPoints[below](A)
+\tkzDrawPolygon(A,B,C)
+\tkzLabelSegment[above](C,a){$z$}
+\tkzLabelSegment[above](B,a){$y$}
+\tkzInterCC(C,a)(A,b)  \tkzGetPoints{T1}{T2}
+\tkzInterCC(B,a)(A,b)  \tkzGetPoints{T3}{T4}
+\tkzLabelSegment[left](C,T1){$z$}
+\tkzLabelSegment[left](T1,A){$x$}
+\tkzLabelSegment[right](A,T3){$x$}
+\tkzLabelSegment[right](T3,B){$y$}
+\end{tikzpicture}
+  \caption{}
+\end{figure}
+
+
+\begin{solution}
+设$\odot A$、$\odot B$、$\odot C$的半径分别为$x$、$y$、$z$，因为$\odot A$、$\odot B$、$\odot C$两两外切，于是有方程组
+\[\begin{cases}
+  x+y=5\\
+  y+z=7\\
+  x+z=6
+\end{cases}\]
+解之得：
+\[x=2,\qquad y=3,\qquad z=4\]
+
+答：$\odot A$、$\odot B$、$\odot C$的半径分别是2cm、3cm、4cm.
+\end{solution}
+
+
+\begin{example}
+如果两圆相交，则连心线垂直平分两圆的公共弦。
+
+已知：$\odot O_1$、$\odot O_2$相交于$A$、$B$两点（图4.23）。
+
+求证：直线$O_1O_2$垂直平分$\overline{AB}$．
+\end{example}
+
+\begin{proof}
+$\because\quad  O_1$、$O_2$各与$A$、$B$两点的距离相等，
+
+$\therefore\quad \overline{O_1O_2}$是$\overline{AB}$的垂直平分线。即$O_1O_2$垂直平分$\overline{AB}$。
+\end{proof}
+
+\begin{figure}[htp]
+  \centering
+  \begin{minipage}[t]{0.48\textwidth}
+  \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/O_1, 1/-1/O_2}
+\tkzDefPointWith[linear, K=.6](O_1,O_2)\tkzGetPoint{a}
+\tkzDefPointWith[linear, K=.2](O_1,O_2)\tkzGetPoint{b}
+\tkzDrawCircles[thick](O_1,a O_2,b)
+\tkzDrawLines[add=1 and 1, thick](O_1,O_2)
+\tkzDrawPoints(O_1,O_2)
+\tkzInterCC(O_1,a)(O_2,b) \tkzGetPoints{A}{B}
+\tkzLabelPoints[above](O_1,O_2)
+\tkzLabelPoints[above right](A)
+\tkzLabelPoints[below left](B)
+\tkzDrawSegments[thick](B,A)
+  \end{tikzpicture}
+  \caption{}
+  \end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+  \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/O, 2.6/0/O', 1/0/P}
+\tkzDrawCircles[thick](O,P O',P)
+\tkzDrawSegments[thick](O,O')
+\tkzLabelPoints[above right](P)
+\tkzLabelPoints[below](O,O')
+\tkzDrawPoints(O,O')
+\draw[|-|, thick](-.6,1.8)--node[above]{$a$}(1,1.8);
+  \end{tikzpicture}
+  \caption{}
+  \end{minipage}
+\end{figure}
+
+\begin{example}
+已知：$\odot(O,r)$上一点$P$，和线段$a$（图4.24）。
+
+求作：一圆使它的半径等于$a$，且与$\odot(O,r)$在$P$点外切.
+
+作法
+\begin{enumerate}
+\item 作半径$\overline{OP}$，
+\item 在射线$OP$上截$\overline{PO'}=a$，
+\item 以$O'$为圆心。为半径长，画$\odot O'$，则$\odot O'$为所
+求作的圆.
+\end{enumerate}
+\end{example}
+
+\begin{proof}
+  根据作法可知：
+\[\overline{OO'}=\overline{OP}+\overline{PO'}=r+a\]
+
+$\therefore\quad \odot O$与$\odot O'$在$P$点外切。
+\end{proof}
+
+\begin{ex}
+\begin{enumerate}
+\item 把本节互逆的两个正确的命题，用“充要”逻辑语句合
+写成一个定理。
+\item 试说出下列各题中两圆的位置关系：$r$、$r'$分别为两圆的
+半径，$d$表示圆心距。
+\begin{enumerate}
+\item $d=$6cm,\quad $r=$4cm,\quad $r'=$2cm;
+\item $d=$2cm,\quad $r=5$cm,\quad $r'=$3cm;
+\item $d=$7cm,\quad $r=3$cm,\quad $r'=$2cm;
+\item $d=$1cm,\quad $r=6$cm,\quad $ r'=$3cm.
+\end{enumerate}
+
+\item 已知两圆外切时，圆心距为12cm，内切时圆心距是4cm，
+求两圆的半径的长。
+\item 两圆的半径的比是5:3，当两圆外切时，圆心距为24cm，
+求这两圆内切时的圆心距。
+\item 两个等圆外切，并且它们都内切于另一个大圆，已知这
+三个圆的圆心所构成的三角形周长为20cm，求大圆的半
+径。
+\item 求作一圆，使圆的半径是4cm，并且与已知$\odot (0,2{\rm cm})$
+外切于已知点$A$．
+\item 求作一圆使圆的半径是2cm，并且与已知$\odot (0,1{\rm cm})$内
+切于已知点$P$.
+\item 设$\triangle ABC$的三边长分别为7cm，8cm，9cm，试分别以
+三顶点为圈心作三个圆两两外切（提示：先计算出三个
+圆的半径）。
+\end{enumerate}
+\end{ex}
+
+\subsection{圆与圆的位似}
+已知$\odot (O,r)$和一点$S$（图4.25），我们来研究怎样求作$\odot O$的以$S$为位似中心，位似比为常数$k$的位似形。
+
+设$k>0$，由位似变换的定义，我们先作出以$S$点为顺位似中心，$k$为位似比的点$O$的对应点$O'$（图4.25，取$k=\frac{5}{2}$），则
+\[\frac{\overline{SO'}}{\overline{SO}}=k\]
+\begin{figure}[htp]
+  \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/S, 2/0/O, 5/0/O', 2.5/.5/A}
+\tkzDefPointWith[linear, K=2.5](S,A)\tkzGetPoint{A'}
+\tkzDrawCircles(O,A O',A')
+\tkzDrawSegments[thick](O,A O',A')
+\tkzDrawLines[add=0 and .15,  thick](S,A')
+\tkzDrawLines[add=0 and .5,  thick](S,O')
+\tkzLabelPoints[below](O,O')
+\tkzLabelPoints[above right](A,A')
+\tkzLabelPoints[left](S)
+\end{tikzpicture}
+  \caption{}
+\end{figure}
+
+设$A$是$\odot (O,r)$上任一点，同样可作出$A$的对应点$A'$, 
+使$\frac{\overline{SA'}}{\overline{SA}}=k$, 于是
+\[\frac{\overline{SO'}}{\overline{SO}}=\frac{\overline{SA'}}{\overline{SA}},\qquad O'A'\parallel OA\]
+
+$\therefore\quad \triangle SO'A'\backsim \triangle SOA$.
+
+\[\frac{\overline{O'A'}}{\overline{OA}}=\frac{\overline{SO'}}{\overline{SO}}=k,\qquad \overline{O'A'}=k\overline{OA}=k\cdot r\]
+
+$\therefore \quad A'$在$\odot (O',kr)$上。
+
+这样，$\odot O$上的每一点，以$S$为顺位似中心，$k$为位似比
+的位似点都在$\odot (O',kr)$上。
+
+反过来，如果$A'$点是$\odot (O',kr)$上任一点，我们可求
+作一点$A$使$\frac{\overline{SA'}}{\overline{SA}}=k$. 这时$\triangle SO'A'\backsim \triangle SOA$,
+
+$\therefore \quad \frac{\overline{O'A'}}{\overline{OA}}=k$
+
+又$\because\quad \overline{O'A'}=kr$
+
+$\therefore\quad \overline{OA}=r$
+
+$A$点必在$\odot (0,r)$上。
+
+这样，$\odot (O',kr)$上的所有点，又都是以$S$为顺位似
+中心，$k$为位似比$\odot (O,r)$上的点的位似点。
+
+由上述正反两方面的说明，$\odot (O,r)$的以$S$为位似中
+心，$k$为位似比的位似形是$\odot (O',kr)$.
+
+如给出的常数$k<0$, 与$k>0$的情况类似，我们可作出
+已知$\odot (O,r)$的逆位似形（图4.26），这时变换的方向是相
+反的，即$O$点的逆位似点$O'$在射线$SO$的反向延长线上，
+$A$点的逆位似点在射线$SA$的反向延长线上，$\odot (O',|k|r)$就
+是$\odot (O,r)$的逆位似形。
+
+\begin{figure}[htp]
+    \centering
+  \begin{tikzpicture}[scale=.8]
+  \tkzDefPoints{2/0/S, 0/0/O, 5/0/O', 6/2/A'}
+  \tkzDefPointsBy[translation= from O' to A'](O){A''}
+  \tkzInterLL(O,A'')(A',S)\tkzGetPoint{A}
+  \tkzDrawSegments[thick](O,A O',A' A,A')
+  \tkzDrawLines[add=.5 and .7, thick](O,O')
+  \tkzDrawCircles(O,A O',A')
+  \tkzLabelPoints[below](O',A)
+  \tkzLabelPoints[above](O,A',S)
+  \end{tikzpicture}
+    \caption{}
+  \end{figure}
+
+
+
+综合以上讨论，我们得到：
+\begin{blk}{}
+    圆的位似形仍是圆。
+\end{blk}
+
+进一步我们还可证明：
+
+\begin{blk}{}
+任何两个不等的圆，都是位似形，它们即可看作顺位似
+形，又可看作逆位似形，它们有两个位似中心。
+\end{blk}
+
+已知$\odot (O,r)$和$\odot (O',r')$且$r<r'$(图4.25)，我们作
+两圆的半径$\overline{OA}$和$\overline{O'A'}$, 且使射线$OA$与$O'A'$的方向相
+同，设直线$AA'$与连心线$OO'$交于一点$S$, 这时$S$点在$\overline{O'O}$
+的延长线上，于是，
+\[\frac{\overline{SO'}}{\overline{SO}}=\frac{r'}{r}\]
+
+由于圆的位似形仍是圆，我们以$S$为位似中心，$\frac{r'}{r}$
+为
+位似比作$\odot (O,r)$的位似圆$\odot (O',r'')$，则
+\[\frac{r''}{r}=\frac{r'}{r}\quad \Rightarrow\quad r''=r'\]
+$\odot (O',r'')$就是$\odot (O',r')$.
+
+这就证明了$\odot (O',r')$与$\odot (O,r)$为顺位似形，且位似
+比等于它们的半径的比，并且位似中心在它们的连心线上。
+如果作两圆的半径$\overline{O'A'}$和$\overline{OA}$, 且使射线$O'A'$与$OA$
+的方向相反（图4.26）。设$\overline{AA'}$与$\overline{OO'}$相交于$S$, 用同样的方
+法也可以证明$\odot (O,r)$与$\odot (O',r')$是以$S$点为逆位似中
+心的逆位似图形。
+
+从上述证明过程，我们还可看出，如果两圆相等且不同
+心，它们只能看作逆位似图形。
+
+由于凡位似形都是相似形，这样我们也就证明了\textbf{任何两
+个圆都是相似形}。
+
+\begin{ex}
+\begin{enumerate}
+    \item 在图中$S$为$\odot O$和$\odot O'$的顺位似中心，试在$O'$上找
+    出以$S$为中心的$A$、$B$、$C$、$D$、$E$、$F$各点的顺位似点。
+    \item 求作相离、相交的两个不等的圆的顺位似中心。
+    \item 求作相交两圆的逆位似中心。
+    \item 求证：如果两圆外切，切点是两圆的逆位似中心；如果
+    两圆内切，切点是两圆的顺位似中心。
+    \item 两个同心圆的顺位似中心是那一点，逆位似中心呢？
+\end{enumerate}
+\end{ex}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=.9]
+\tkzDefPoints{-1/0/S, 2/0/a, 3/0/O, 5/0/b, 7/0/O'}
+\tkzDrawCircles[thick](O,a O',b)
+\tkzDrawLines[add=0 and .3](S,O')
+\tkzDefPoint(20:1){c}
+\tkzDefPoint(8:1){d}
+\tkzDefPoint(-20:1){e}
+\tkzInterLC(S,c)(O,a)  \tkzGetPoints{A}{B}
+\tkzInterLC(S,c)(O',b)  \tkzGetPoints{P}{Q}
+\tkzInterLC(S,d)(O,a)  \tkzGetPoints{C}{D}
+\tkzInterLC(S,d)(O',b)  \tkzGetPoints{R}{S'}
+\tkzInterLC(S,e)(O,a)  \tkzGetPoints{F}{E}
+\tkzInterLC(S,e)(O',b)  \tkzGetPoints{H}{G}
+\tkzAutoLabelPoints[center=O](C,D)
+\tkzAutoLabelPoints[center=O'](R,S')
+\tkzLabelPoints[below](O,O',E,F,G,H)
+\tkzLabelPoints[left](S)
+\tkzDrawSegments(S,Q S,S' S,H)
+\tkzLabelPoints[above](A,B,P,Q)
+\tkzDrawPoints(O,O')
+\end{tikzpicture}
+    \caption*{第1题}
+\end{figure}
+
+\subsection*{习题4.1}
+\begin{enumerate}
+\item 以$\odot O$的半径$\overline{OA}$为一边作正方形$OABC$, 求证$B$点在
+圆外，$C$点在圆上，两条对角线的交点$D$在$\odot O$内。
+\item 已知$O$是矩形$ABCD$的对角线的交点，求证$A$、$B$、
+$C$、$D$四个顶点在以$O$为圆心，以$OA$为半径的圆上。
+\item 已知$AB$、$CD$是$\odot O$中互相垂直的弦，并且$\overline{AB}$把$\overline{CD}$分
+成3cm和7cm的两部分，求弦$\overline{AB}$的长和它的弦心距。
+\item 经过圆内一个已知点作一条弦，使这条弦被这点所平
+分。
+\item 已知$\overline{AB}$是$\odot O$的直径，$\overline{CD}$是$\odot O$的弦，$AE\bot $直线$CD$
+于$E$点，$BF\bot $直线$CD$于$F$点，求证：$\overline{EC}=\overline{DF}$.
+\item 已知$\overline{AB}$是$\odot O$的直径，$\wideparen{AC}$与
+$\wideparen{AD}$
+位于$\wideparen{AB}$的两侧且
+$\wideparen{AC}=\wideparen{AD}$. 求证：$AB$平分$\angle CAD$.
+\item 已知$\odot O_1$和$\odot O_2$是相离的两个等圆，一条与连心线$O_1O_2$
+平行的直线顺次与$\odot O_1$、$\odot O_2$相交于$A$、$B$、$C$、$D$各
+点。求证：$\overline{AB}=\overline{CD}$, $\overline{AB}=\overline{CD}$.
+\item 已知$\odot O_1$和$\odot O_2$是相离的两个等圆，过$\overline{O_1O_2}$的中点，作直线顺次与$\odot O_1$、$\odot O_2$相交于$C$、$D$、$E$、$F$各点，求证：
+$\wideparen{CD}=\wideparen{EF}$.
+\item 在第7题、第8题中，如果条件是相交的两个等圆，结
+论是否都还成立。
+\item 已知两圆相交，经过它们的一个交点有一条和公共弦垂
+直的直线，和两圆相交于另外两点，求证这两点间的
+长等于圆心距的2倍。
+\end{enumerate}
+
+\section{圆与直线的位置关系}
+\subsection{圆与直线的位置关系}
+在图4.27中，如果直线$AB$和$\odot O$的圆心$O$的距离$\overline{OD}$大
+于半径$\overline{OC}$, 那么$D$点在圆外；在直线${AB}$上再任取一点$M$, 
+那么$\overline{OM}>\overline{OD}>\overline{OC}$, 那么$M$点也一定在圆外，所以直线
+$AB$上任何一点都在圆外，于是$\odot O$和直线$AB$便没有公共
+点。
+
+如果一条直线和一个圆没有公共点，我们就说这条直线
+和这个圆\textbf{相离}。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-2/0/A, -1/0/M, 0/0/D, 1/0/B, 0/2/O, 0/.5/C}
+\tkzDrawLines[add=0 and .3, thick](A,B)
+\tkzDrawCircle[thick](O,C)
+\tkzDrawSegments[thick](O,M O,D)
+\tkzMarkRightAngles[size=.2](O,D,M)
+\tkzLabelPoints[below](A,B,D,M)
+\tkzLabelPoints[above](O)
+\tkzLabelPoints[above right](C)
+\tkzDrawPoints(A,B,D,M,O,C)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{0/0/O, .5/2.5/a, 2/-1.5/b}
+\tkzDefPointBy[projection = onto a--b](O)\tkzGetPoint{A}
+\tkzDrawCircle[thick](O,A)
+\tkzDefPointWith[linear, K=.8](a,b) \tkzGetPoint{P}
+\tkzDefPointWith[linear, K=.95](a,b) \tkzGetPoint{B}
+\tkzDrawSegments[thick](a,b O,A O,P)
+\tkzMarkRightAngles[size=.2](O,A,a)
+\tkzLabelPoints[right](A,P,B)
+\tkzLabelPoints[left](O)
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+在图4.28中，过$\odot (O,r)$的任一条半径$\overline{OA}$的端点$A$作直
+线$AB\bot \overline{OA}$于$A$点，$P$为直线$AB$上除$A$点外的任一点，则
+$\overline{OP}>\overline{OA}$, 于是$P$就在圆外，这就是说，在直线$AB$上，除$A$点外其它的点都在圆外。这时直线$AB$和$\odot O$只有一个公共
+点$A$.
+
+如果一条直线和一个圆只有一个公共点，我们就说这条
+直线和这个圆\textbf{相切}，这条直线叫做圆的\textbf{切线}，这个公共点叫
+做它们的切点。
+
+\begin{blk}
+    {切线判定定理} 经过圆的半径外端，并且垂直这条半径
+的直线是这圆的切线。
+\end{blk}
+
+这就是说，“一条直线经过半径外端且垂直于半径”为
+这条直线是圆的切线的充分条件，反过来可证条件也是必要
+的。
+
+\begin{blk}
+    {切线性质定理} 圆的切线垂直于经过切点的半径。
+\end{blk}
+
+已知：直线$AB$与$\odot O$相
+切于$C$点（图4.29）.
+
+求证：$AB\bot \overline{OC}$.
+
+\begin{proof}
+    假设$AB$和$\overline{OC}$不垂
+直，自圆心$O$引$\overline{OD}\bot AB$于$D$
+点，在$AB$上取$\overline{DC'}=\overline{DC}$, 且
+使$D$点在$C$与$C'$之间，于是
+$OD$垂直平分$\overline{CC'}$, $\overline{OC'}=\overline{OC}$.
+
+$\because\quad C$点是切点，$\overline{OC}$是$O$的半径。
+
+$\therefore\quad \overline{OC'}$是$O$的半径，$C'$点也在$\odot O$上。
+
+这就是说，直线$AB$和$\odot O$有了两个公共点$C$和$C'$，但
+这与$AB$是圆的切线，即$AB$和$\odot O$只有一个公共点相矛
+盾，
+
+$\therefore\quad AB\bot \overline{OC}$.
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoints{-1/0/A, 1.5/0/C, 2/0/D, 3/0/C', 4/0/B, 1.5/1.5/O}
+\tkzDrawCircle[thick](O,C)
+\tkzDrawSegments[thick](A,B C,O C',O D,O)
+\tkzLabelPoints[above](O)
+\tkzLabelPoints[below](A,B,C,D,C')
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.2]
+\tkzDefPoints{-2/0/a, -1/0/A, 1/0/A', 2/0/B, 0/1/O, 0/0/D}
+\tkzDrawCircle[thick](O,A)
+\tkzDrawSegments[thick](B,a O,D)
+\tkzLabelPoints[below](A,A',B,D)
+\tkzLabelPoints[above](O)
+\tkzMarkRightAngles[size=.2](O,D,A')
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+在图4.30中，经过半径$\overline{OA}$的端点$A$, 作与$\overline{OA}$不垂直
+的任一条直线$AB$, 由上面的证明可知：这条直线和圆不能
+只有一个公共点，还必须有另一个交点$A'$. 这就是说，直
+线$AB$和$\odot O$有了两个公共点。
+
+如果一条直线和一个圆有
+两个公共点，我们就说，这条
+直线和这个圆相交，这条直线叫做这个圆的\textbf{割线}，这两个公
+共点叫做它们的\textbf{交点}。
+
+一条直线和一个圆如果有公共点，那么，它们的公共点
+是不能多于两个的，因此，\textbf{直线和圆的位置关
+系只能有相离、相切和相交三种关系}。
+
+
+
+
+
 \begin{example}
     
 \end{example}
@@ -934,6 +1465,31 @@ $\therefore\quad \overline{AB}=\overline{CD}$.
 
 
 
+
+
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
+
 \begin{example}
     
 \end{example}
@@ -941,6 +1497,60 @@ $\therefore\quad \overline{AB}=\overline{CD}$.
 \begin{solution}
     
 \end{solution}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
 \begin{example}
     
 \end{example}
@@ -956,60 +1566,6 @@ $\therefore\quad \overline{AB}=\overline{CD}$.
 \begin{solution}
     
 \end{solution}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
