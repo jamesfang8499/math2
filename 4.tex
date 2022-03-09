@@ -1429,43 +1429,1168 @@ $\therefore\quad AB\bot \overline{OC}$.
 
 
 \begin{example}
-    
+    求证连结圆的两条平切线的切点间的弦必是圆
+的直径。
+
+已知：直线$\ell_1$和直线$\ell_2$分别与$\odot O$切于$A$、$B$两点，且$\ell_1\parallel \ell_2$.
+
+求证：$\overline{AB}$是$\odot O$的直径。
 \end{example}
 
-\begin{solution}
-    
-\end{solution}
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{-2/0/a, 2/0/b, -2/1/a', -2/-1/a'', 0/0/O, 1/0/o}
+\tkzDefPointsBy[translation= from a to b](a',a''){b',b''}
+\tkzDrawSegments[thick](a,b a',b' a'',b'')
+\tkzLabelPoint[right](b'){$\ell_1$}
+\tkzLabelPoint[right](b''){$\ell_2$}
+\tkzLabelPoint[right](b){$\ell_3$}
+\tkzDrawCircle[thick](O,o)
+\tkzLabelPoints[below right](O)
+\tkzDefPoints{0/1/A,0/-1/B}
+\tkzDrawSegments[thick](A,B)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](B)
+\tkzLabelPoint[above left](O){1}
+\tkzLabelPoint[below left](O){2}
+
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{proof}
+    作$\overline{OA}$、$\overline{OB}$, 过$O$
+点作直线$\ell_3\parallel \ell_2$
+
+$\because\quad \ell_1\parallel \ell_2$
+
+$\therefore\quad \ell_3\parallel \ell_1$
+
+$\because\quad \ell_1$是$\odot O$的切线，
+
+$\therefore\quad \overline{OA}\bot \ell_1,\quad \overline{OA}\bot \ell_3,\quad \angle 1=90^{\circ}$
+同理可证：$\angle 2=90^{\circ}$.
+
+$\therefore\quad \angle 1+\angle 2=180^{\circ}$.
+
+$\therefore\quad A$、$O$、$B$三点共线。即$\overline{AB}$通过圆心$O$, $\overline{AB}$是$\odot O$的
+直径。
+\end{proof}
+
+
+利用例4.10所证原理，早在公元九年，我国就已发明出一
+种可以测量圆形工件直径的卡尺。这种卡尺是青铜制的，由
+两支丁字形具有刻度的尺子所组成（图4.32），这是世界上
+最早的卡尺。由于当时是王莽称帝时代（公元9—23年，王莽
+称帝，国号新）后人多把这种卡尺叫做《王莽卡尺》。
+\begin{figure}[htp]
+    \centering
+\includegraphics[scale=.7]{fig/4-32.png}
+    \caption{}
+\end{figure}
+
+\begin{example}
+    已知：$P$点在已知$\odot O$外（图4.33）.
+
+求作：经过$P$点的$\odot O$的切线。
+
+作法
+\begin{enumerate}
+    \item 作$\overline{OP}$
+    \item 以$\overline{OP}$的中点$C$为圆
+心，以$\overline{CO}$为半径作$\odot C$交$\odot O$于$A$、$B$两点；
+\item 作直线$PA$、$PB$, 则$PA$、$PB$就是所求作的切线。
+\end{enumerate}
+\end{example}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=.8]
+\tkzDefPoints{0/0/O, 5/0/P, 1.5/0/a}
+\tkzDefMidPoint(O,P)\tkzGetPoint{C}
+\tkzDrawCircle[thick](O,a)
+\tkzDrawCircle[dashed](C,O)
+\tkzInterCC(O,a)(C,O)  \tkzGetPoints{A}{B}
+\tkzDrawLines[very thick](A,P B,P)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[above right](P)
+\tkzLabelPoints[below](B,C)
+\tkzLabelPoints[left](O)
+\tkzDrawSegments[dashed](O,P A,C A,O)
+\tkzLabelAngle[pos=1.5](C,A,P){1}
+\tkzLabelAngle[pos=1.5](A,P,C){2}
+\tkzLabelAngle[pos=.5](O,A,C){3}
+\tkzLabelAngle[pos=.5](C,O,A){4}
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+
+\begin{proof}
+  作$\overline{OA}$、$\overline{CA}$.
+
+$\because\quad  \overline{CA}=\overline{CO}=\overline{CP}$,
+
+$\therefore\quad \angle 1=\angle 2,\quad \angle 3=\angle 4,\quad \angle 1+\angle 3=\angle 2+\angle 4$.
+
+$\because\quad \angle 1+\angle 3+\angle 2+\angle 4=180^{\circ}$,
+
+$\therefore\quad \angle 1+\angle 3=90^{\circ}$, 即$OA\bot PA$，
+$PA$是$\odot O$的切线（切线判定定理）。
+
+同理可证$PB$也是所求作的切线。
+
+另外，在直角$\triangle POA$和直角$\triangle POB$中，
+
+$\because\quad \overline{OA}=\overline{OB},\quad \overline{PO}=\overline{PO}$.
+
+$\therefore\quad \triangle POA\cong \triangle POB,\quad 
+\overline{PA}=\overline{PB}$.  
+\end{proof}
+
+如果$\overline{PA}$, $\overline{PB}$的长叫做$P$点到圆的切线长，那么我们就可得到下面的定理：
+
+\begin{blk}
+    {切线长定理}
+从圆外一个已知点到圆的两条切线的长相
+等。
+\end{blk}
+
+以$\triangle POA\cong \triangle POB$, 还可推出$\angle APO=\angle BPO$, 因此又
+可得出：
+
+\begin{blk}
+    {定理} 连结圆外一个已知点和圆心的直线，平分从这点
+向圆所作的两条切线所夹的角。
+\end{blk}
+
+\begin{ex}
+\begin{enumerate}
+    \item 回答如下问题。
+\begin{enumerate}
+    \item 设$\odot (O,r)$的圆心$O$点和直线$\ell$的距离为$d$, 试分
+    别说出$d>r$, $d=r$, $d<r$时，直线$\ell$和$\odot (O,r)$的位置关系。
+    \item 凡是和圆的一条半径垂直的直线，都是圆的切线
+    吗？凡是经过半径外端的直线都是圆的切线吗？
+\end{enumerate}
+    \item 过圆上一点作圆的切线。
+    \item 作一圆与已知直线相切于直线上已知点，这样的圆可作
+    多少？这些圆的圆心组成什么图形？
+    \item $PA$、$PB$都是$\odot O$的切线，$A$、$B$是切点，求证：
+    $\angle AOB+\angle APB=180^{\circ}$.
+    \item 求证经过圆的直径两端的两条切线互相平行。
+    \item 在已知圆内画两条互相垂直的直径，经过各直径的端点
+    画圆的切线；问这四条切线相交成什么四边形？为什
+    么？
+    \item 从圆外一点向圆作两条切线。求证；连结这点和圆心的
+    直线垂直平分连结两切点的线段。
+\end{enumerate}
+\end{ex}
+
+\subsection{三角形的内切圆}
+如果一个多边形的各边都和一个圆相切（图4.34），这
+个多边形叫做\textbf{圆的外切多边形}，这个圆叫做多边形的\textbf{内切
+圆}，内切圆的圆心又叫做外切多边形的\textbf{内心}。如图4.34所
+示，$ABCD$是$\odot O$的外切四边形，$ABCDE$是$\odot P$的外切五
+边形等，$O$、$P$分别是四边形$ABCD$与五边形$ABCDE$
+的内心。
+
+\begin{figure}[htp]
+    \centering
+  \begin{tikzpicture}[scale=.8]
+    \begin{scope}
+  \tkzDefPoints{0/0/O,1.5/0/a}
+  \tkzDefPoint(80:1.5){b}
+  \tkzDefPoint(170:1.5){c}
+  \tkzDefPoint(-90:1.5){d}
+  \tkzDrawCircle[thick](O,a)
+  \tkzLabelPoints[below](O)
+  \tkzDrawPoints(O)
+  \tkzDefTangent[at=a](O) \tkzGetPoint{a'}
+  \tkzDefTangent[at=b](O) \tkzGetPoint{b'}
+  \tkzDefTangent[at=c](O) \tkzGetPoint{c'}
+  \tkzDefTangent[at=d](O) \tkzGetPoint{d'}
+  \tkzInterLL(a,a')(b,b')\tkzGetPoint{C}
+  \tkzInterLL(c,c')(b,b')\tkzGetPoint{D}
+  \tkzInterLL(c,c')(d,d')\tkzGetPoint{A}
+  \tkzInterLL(a,a')(d,d')\tkzGetPoint{B}
+  \tkzDrawPolygon[thick](A,B,C,D)
+  \tkzAutoLabelPoints[center=O](A,B,C,D)
+    \end{scope}
+    \begin{scope}[xshift=5cm]
+    \tkzDefPoints{0/0/P}
+  \tkzDefPoint(0:1.5){a}
+  \tkzDefPoint(70:1.5){b}
+  \tkzDefPoint(150:1.5){c}
+  \tkzDefPoint(-145:1.5){d}
+  \tkzDefPoint(-80:1.5){e}
+  \tkzDrawCircle[thick](P,a)
+  \tkzLabelPoints[below](P)
+  \tkzDrawPoints(P)
+  \tkzDefTangent[at=a](P) \tkzGetPoint{a'}
+  \tkzDefTangent[at=b](P) \tkzGetPoint{b'}
+  \tkzDefTangent[at=c](P) \tkzGetPoint{c'}
+  \tkzDefTangent[at=d](P) \tkzGetPoint{d'}
+  \tkzDefTangent[at=e](P) \tkzGetPoint{e'}
+  \tkzInterLL(a,a')(b,b')\tkzGetPoint{C}
+  \tkzInterLL(c,c')(b,b')\tkzGetPoint{D}
+  \tkzInterLL(c,c')(d,d')\tkzGetPoint{E}
+  \tkzInterLL(e,e')(d,d')\tkzGetPoint{A}
+  \tkzInterLL(a,a')(e,e')\tkzGetPoint{B}
+  \tkzDrawPolygon[thick](A,B,C,D,E)
+  \tkzAutoLabelPoints[center=P](A,B,C,D,E)
+    \end{scope}
+    \begin{scope}[xshift=10cm]
+    \tkzDefPoints{0/0/Q,1.5/0/a}
+  \tkzDefPoint(58:1.5){b}
+  \tkzDefPoint(125:1.5){c}
+  \tkzDefPoint(170:1.5){d}
+  \tkzDefPoint(-125:1.5){e}
+  \tkzDefPoint(-68:1.5){f}
+  \tkzDrawCircle[thick](Q,a)
+  \tkzLabelPoints[below](Q)
+  \tkzDrawPoints(Q)
+  \tkzDefTangent[at=a](Q) \tkzGetPoint{a'}
+  \tkzDefTangent[at=b](Q) \tkzGetPoint{b'}
+  \tkzDefTangent[at=c](Q) \tkzGetPoint{c'}
+  \tkzDefTangent[at=d](Q) \tkzGetPoint{d'}
+  \tkzDefTangent[at=e](Q) \tkzGetPoint{e'}
+  \tkzDefTangent[at=f](Q) \tkzGetPoint{f'}
+  \tkzInterLL(a,a')(b,b')\tkzGetPoint{C}
+  \tkzInterLL(c,c')(b,b')\tkzGetPoint{D}
+  \tkzInterLL(c,c')(d,d')\tkzGetPoint{E}
+  \tkzInterLL(e,e')(d,d')\tkzGetPoint{F}
+  \tkzInterLL(e,e')(f,f')\tkzGetPoint{A}
+  \tkzInterLL(a,a')(f,f')\tkzGetPoint{B}
+  \tkzDrawPolygon[thick](A,B,C,D,E,F)
+  \tkzAutoLabelPoints[center=Q](A,B,C,D,E,F)
+    \end{scope}
+  \end{tikzpicture}
+    \caption{}
+  \end{figure}
+
+已知$\odot I$, 过这圆上$D$、
+$E$、$F$三点作它的三条切线交成
+$\triangle ABC$(图4.35), 于是$\odot I$
+便是$\triangle ABC$的内切圆。由于切
+线垂直于过切点的半径，则内
+心$I$到三边的距离相等，$I$在
+$\triangle ABC$的三个内角的平分线上。
+
+
+  \begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=.7]
+\tkzDefPoints{0/0/I}
+  \tkzDefPoint(15:1.5){E}
+  \tkzDefPoint(135:1.5){F}
+  \tkzDefPoint(-90:1.5){D}
+  \tkzLabelPoints[above](I)
+  \tkzDefTangent[at=E](I) \tkzGetPoint{a'}
+  \tkzDefTangent[at=F](I) \tkzGetPoint{b'}
+  \tkzDefTangent[at=D](I) \tkzGetPoint{c'}
+  \tkzInterLL(E,a')(F,b')\tkzGetPoint{A}
+  \tkzInterLL(D,c')(F,b')\tkzGetPoint{B}
+  \tkzInterLL(D,c')(E,a')\tkzGetPoint{C}
+  \tkzLabelPoints[below](B,D,C)
+  \tkzLabelPoints[above](A)
+  \tkzLabelPoints[left](F)
+  \tkzLabelPoints[right](E)
+  \tkzDrawPolygon[thick](A,B,C)
+  \tkzDrawSegments[dashed](B,I C,I A,I)
+  \tkzDrawSegments[thick](I,F I,D I,E)
+  \tkzDrawCircle[thick](I,E)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.8]
+\tkzDefPoints{0/0/B, .8/1.5/A, 2/-.1/C}
+    \tkzDefSpcTriangle[excentral,name=I](A,B,C){_1,_2,_3}
+    \tkzDefSpcTriangle[extouch,name=T](A,B,C){_1,_2,_3}
+    \tkzDrawPolygon[thick](I_1,I_2,I_3)
+    \tkzLabelPoints[above](A)
+    \tkzLabelPoints[below left](B)
+    \tkzLabelPoints[below right](C)
+    \tkzLabelPoints[above right](I_2)
+    \tkzLabelPoints[below](I_1)
+    \tkzLabelPoints[above left](I_3)
+    \tkzDrawCircles(I_1,T_1 I_2,T_2 I_3,T_3)
+  
+  \tkzDrawLines[add=1.3 and 1.3, thick](A,C B,C A,B)
+  \tkzDrawSegments(A,I_1 B,I_2 C,I_3)
+  \tkzInterLL(A,I_1)(B,I_2)\tkzGetPoint{I}
+    \tkzLabelPoints[above right](I)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+  仿此，我们还可证明：
+  三角形一内角平分线和其余两内角的外角平分线交于一点，这一点叫做三角形的\textbf{旁心}（图4.36），以旁心为圆心可作一圆和一边及其它两边的延长线相切、所作的圆叫做三角形的\textbf{旁切圆}，一个三角形有三个旁心，三个旁切圆，如图4.36所示，$\odot I_1$、$\odot I_2$、$\odot I_3$是$\triangle ABC$的三个旁切圆。
+  
+  \begin{example}
+  已知$\triangle ABC$，$\overline{BC}=a$、$\overline{AC}=b$，$\overline{AB}=c$，求三个顶点到内切圆的切线长（图4.37）.
+  \end{example}
+  
+  \begin{solution}
+    设$\triangle ABC$的三边、$\overline{BC}$、$\overline{CA}$、$\overline{AB}$分别与内切圆$I$
+  相切于$D$、$E$、$F$三点，由于从圆外一点引圆的两条切线长相等，
+  
+  $\therefore\quad \overline{AE}=\overline{AF},\quad \overline{BF}=\overline{BD},\quad \overline{CD}=\overline{CE}$. 
+  
+  设$\overline{AE}=x$、$\overline{BF}=y$，$\overline{CD}=z$，则可得到，
+  \[\begin{cases}
+    x+y=c\\
+    y+z=a\\
+    z+x=b
+  \end{cases}\]
+  解之得：
+  \[x=\frac{b+c-a}{2},\quad y=\frac{a+c-b}{2},\quad z=\frac{a+b-c}{2}\]
+  
+  答：三个顶点$A$、$B$、$C$到内切圆的切线长分别为
+  \[\frac{b+c-a}{2},\qquad \frac{a+c-b}{2},\qquad \frac{a+b-c}{2}\]
+  \end{solution}
+  
+  \begin{figure}[htp]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.7]
+  \tkzDefPoints{0/0/I}\tkzDrawPoints(I)
+  \tkzDefPoint(15:1.5){E}
+  \tkzDefPoint(135:1.5){F}
+  \tkzDefPoint(-90:1.5){D}
+  \tkzLabelPoints[right](I)
+  \tkzDefTangent[at=E](I) \tkzGetPoint{a'}
+  \tkzDefTangent[at=F](I) \tkzGetPoint{b'}
+  \tkzDefTangent[at=D](I) \tkzGetPoint{c'}
+  \tkzInterLL(E,a')(F,b')\tkzGetPoint{A}
+  \tkzInterLL(D,c')(F,b')\tkzGetPoint{B}
+  \tkzInterLL(D,c')(E,a')\tkzGetPoint{C}
+  \tkzLabelPoints[below](B,D,C)
+  \tkzLabelPoints[above](A)
+  \tkzLabelPoints[left](F)
+  \tkzLabelPoints[right](E)
+  \tkzDrawPolygon[thick](A,B,C)
+  \tkzDrawCircle[thick](I,E)
+  \tkzLabelSegment[below](B,D){$y$}
+  \tkzLabelSegment[below](C,D){$z$}
+  \tkzLabelSegment[left](B,F){$y$}
+  \tkzLabelSegment[left](A,F){$x$}
+  \tkzLabelSegment[right](A,E){$x$}
+  \tkzLabelSegment[right](E,C){$z$}
+  
+  
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+  \tkzDefPoints{0/0/I}
+  \tkzDefPoint(0:1){E}
+  \tkzDefPoint(135:1){F}
+  \tkzDefPoint(-90:1){D}
+  \tkzLabelPoints[above](I)
+  \tkzDefTangent[at=E](I) \tkzGetPoint{a'}
+  \tkzDefTangent[at=F](I) \tkzGetPoint{b'}
+  \tkzDefTangent[at=D](I) \tkzGetPoint{c'}
+  \tkzInterLL(E,a')(F,b')\tkzGetPoint{A}
+  \tkzInterLL(D,c')(F,b')\tkzGetPoint{B}
+  \tkzInterLL(D,c')(E,a')\tkzGetPoint{C}
+  \tkzLabelPoints[below](B,C)
+  \tkzLabelPoints[above](A)
+  \tkzDrawPolygon[thick](A,B,C)
+  \tkzDrawCircle[thick](I,E)
+  \tkzDrawSegments[thick](I,E I,F I,D)
+  \tkzDrawSegments[dashed](A,I B,I C,I)
+  \tkzLabelSegment[above](I,E){$r$}
+  \tkzLabelSegment[below](I,F){$r$}
+  \tkzLabelSegment[right](I,D){$r$}
+  
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+  \end{figure}
+  
+  \begin{example}
+  在直角$\triangle ABC$中，$\angle C=90^{\circ}$, $\overline{AB}=3$cm, $\overline{AC}=2$cm.
+  
+  求：直角三角形内切圆半径长（图4.38）.
+  \end{example}
+  
+  \begin{solution}
+    设$\odot I$为$\triangle ABC$的内切圆，半径为$r$.
+  
+  $\because\quad \triangle AIB$的面积$+\triangle BIC$的面积$+\triangle AIC$的面积$=\triangle ABC$的面积
+  
+  $\therefore\quad r\x \overline{AB}+r\x \overline{BC}+r\x \overline{AC}=\overline{AC}\x \overline{BC}$
+  
+  又知：$\overline{AB}=3,\quad \overline{AC}=2,\quad \overline{BC}=\sqrt{3^2-2^2}=\sqrt{5}$
+  
+  $\therefore\quad r\x 3+r\x \sqrt{5}+r\x 2=2\x \sqrt{5}$
+  
+  \[r=\frac{2\sqrt{5}}{5+\sqrt{5}}=\frac{10\sqrt{5}-10}{20}=\frac{\sqrt{5}-1}{2}\]
+  
+  答：内切圆半径等于$\frac{\sqrt{5}-1}{2}$cm.
+  \end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 求作一个三角形的内切圆。
+    \item 求作一个三角形的三个旁切圆。
+    \item 在$\triangle ABC$中，$\overline{BC}=28$cm, $\overline{AC}=18$cm, $\overline{AB}=26$cm, 它的内
+    切圆分别和$\overline{BC}$, $\overline{AC}$, $\overline{AB}$
+    相切于$D$、$E$、$F$, 求$\overline{AF}$、$\overline{BD}$
+    和$\overline{CE}$的长。
+    \item 已知$\triangle ABC$, $\overline{BC}=a$, $\overline{AC}=b$, $\overline{AB}=c$, 面积是$s$, 求它的
+    内切圆半径。
+    \item 已知直角三角形的两直角边分别是$a$、$b$, 求这个直角三
+    角形的内切圆半径$r$.
+\end{enumerate}
+\end{ex}
+
+\subsection{圆的外切四边形}
+
+我们已经知道，每一个三角形都有一个内切圆，现在要
+问，是不是每个四边形也都有
+一个内切圆呢？如果四边形有
+一个内切圆，那么，这个四边
+形的四个角的平分线应相交于
+一点，显然，这个性质并不是
+每个四边形都能具备的。下面
+先让我们来寻求四边形有内切
+圆的必要条件。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoints{0/0/I, 0/-1.5/Q}
+\tkzDefPoint(10:1.5){R}
+\tkzDefPoint(165:1.5){P}
+\tkzDefPoint(75:1.5){S}
+\tkzDefTangent[at=R](I) \tkzGetPoint{a}
+\tkzDefTangent[at=S](I) \tkzGetPoint{b}
+\tkzDefTangent[at=P](I) \tkzGetPoint{c}
+\tkzDefTangent[at=Q](I) \tkzGetPoint{d}
+\tkzInterLL(R,a)(S,b)\tkzGetPoint{C}
+\tkzInterLL(S,b)(P,c)\tkzGetPoint{D}
+\tkzInterLL(P,c)(Q,d)\tkzGetPoint{A}
+\tkzInterLL(R,a)(Q,d)\tkzGetPoint{B}
+\tkzDrawPolygon[thick](A,B,C,D)
+\tkzDrawCircle[thick](I,Q)
+\tkzLabelPoints[below](A,Q,B)
+\tkzLabelPoints[left](D,P)
+\tkzLabelPoints[right](C,R,I)
+\tkzLabelPoints[above](S)
+\tkzDrawPoints(I)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+已知$\odot I$, 过圆上四点$P$、$Q$、$R$、$S$分别作$\odot I$的切线交
+成四边形$ABCD$(图4.39). 于是有，
+\begin{equation*}
+    \overline{AP}=\overline{AQ},\quad \overline{BR}=\overline{BQ},\quad \overline{CR}=\overline{CS},\quad 
+\overline{DP}=\overline{DS}\tag{切线长定理}
+\end{equation*}
+将四个等式左右各相加得：
+\[\overline{AP}+\overline{BR}+\overline{CR}+\overline{DP}=\overline{AQ}+\overline{BQ}+\overline{CS}+\overline{DS}\]
+即：$\overline{AD}+\overline{BC}=\overline{AB}+\overline{CD}$.
+
+这就说“对边的和相等”是圆外切四边形的一个必要条
+件。于是我们得到：
+
+\begin{blk}
+    {定理}圆的外切四边形的每双对边的和相等。
+\end{blk}
+
+现在要问，“对边的和相等”是不是一个四边形有内切
+圆的充分条件呢？答案也是肯定的。
+
+\begin{blk}
+    {定理}如果四边形的每双对边的和此相等，则它必有
+内切圆。
+\end{blk}
+
+已知：在四边形$ABCD$中（图4.40）, $\overline{AB}+\overline{CD}=\overline{AD}+\overline{BC}$.
+
+求证：四边形$ABCD$有内切圆。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\tkzDefPoint(-90:1.5){E}
+\tkzDefPoint(0:1.5){F}
+\tkzDefPoint(60:1.5){G}
+\tkzDefPoint(150:1.5){H}
+\tkzDefPoint(0,0){I}
+\tkzDefTangent[at=E](I) \tkzGetPoint{a}
+\tkzDefTangent[at=F](I) \tkzGetPoint{b}
+\tkzDefTangent[at=G](I) \tkzGetPoint{c}
+\tkzDefTangent[at=H](I) \tkzGetPoint{d}
+\tkzInterLL(E,a)(F,b)\tkzGetPoint{B}
+\tkzInterLL(F,b)(G,c)\tkzGetPoint{C}
+\tkzInterLL(G,c)(H,d)\tkzGetPoint{D}
+\tkzInterLL(E,a)(H,d)\tkzGetPoint{A}
+\tkzDrawPolygon[thick](A,B,C,D)
+\tkzDrawCircle[thick](I,E)
+\tkzDrawSegments[dashed](I,E I,F I,G I,H I,D A,C B,I)
+\tkzAutoLabelPoints[center=I](E,F,G,H,A,B,C,D)
+\tkzInterLC(A,B)(B,C)  \tkzGetPoints{M}{M'}
+\tkzInterLC(A,D)(D,C)  \tkzGetPoints{N}{N'}
+\tkzDrawSegments[thick](M,N)
+\tkzLabelPoints[below](M)
+\tkzLabelPoints[left](N)
+\tkzLabelPoints[above right](I)
+\tkzDrawSegments[dashed](C,N C,M)
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+\begin{proof}
+    假定$\overline{AB}>\overline{BC}$, 则根据已知条件$\overline{AB}+\overline{CD}=\overline{AD}+
+    \overline{BC}$, 可知$\overline{AD}>\overline{CD}$. 故在$\overline{AB}$及$\overline{AD}$上，可以截取线段
+    $\overline{BM}=\overline{BC}$, $\overline{DN}=\overline{DC}$, 从而，
+\[\overline{AM}=\overline{AB}-\overline{BC},\quad \overline{AN}=\overline{AD}-\overline{CD}\]
+
+但根据已知条件$\overline{AB}-\overline{BC}=\overline{AD}-\overline{CD}$, 
+
+$\therefore\quad \overline{AM}=\overline{AN}$.
+
+连结$\overline{MN}$、$\overline{CM}$、$\overline{CN}$, 于是$\triangle AMN$、$\triangle BCM$、$\triangle DCN$都是等
+腰三角形，因此它们的顶角$\angle A$、$\angle B$、$\angle C$的平分线，必然
+是底边$\overline{MN}$、$\overline{CM}$、$\overline{CN}$的垂直平分线，这样一来，这三条角
+平分线也是$\triangle CMN$的边$\overline{MN}$、$\overline{CM}$、$\overline{CN}$的垂直平分线。所
+以这三条角平分线一定相交于一点$I$. 自$I$点分别作$\overline{AB}$、$\overline{BC}$、$\overline{CD}$、$\overline{DA}$的垂线，垂足分别是$E$、$F$、$G$、$H$. 于是得
+\[\overline{IE}=\overline{IF}=\overline{IG}=\overline{IH}\]
+
+因此，以$I$为圆心，$\overline{IE}$为半径的圆与四边形$ABCD$的
+各边分别相切于$E$、$F$、$G$、$H$四点、即四边形有内切圆
+$\odot I$. 
+\end{proof}
+
+\begin{rmk}
+    在证明本定理时，假定了$\overline{AB}>\overline{BC}$, 如果$\overline{AB}<\overline{BC}$, 
+证明方法完全一样，如果$\overline{AB}=\overline{BC}$, 那么，证法就更简单了，
+请同学们想一想为什么？
+\end{rmk}
+
+\begin{ex}
+\begin{enumerate}
+    \item 一个菱形有内切圆吗？一个正方形呢？如果有，就分别
+    作出一个菱形和一个正方形的内切圆。
+    \item 作一等边三角形的内切圆和外接圆，内心和外心重合吗？
+    \item 果一个四边形的每双对边和不相等，你能否判定这个
+    四边形有没有内切圆？为什么？
+    \item 如果四边形的各边的比顺次地如下列各数的比
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $2:2:3:3$
+    \item $2:5:3:4$
+    \item $3:5:3:1$
+\end{enumerate}
+\end{multicols}
+这些四边形是否有内切圆？
+\end{enumerate}
+\end{ex}
+
+\subsection{两圆的公切线}
+如图4.41所示，一条直线与两圆都相切，这条直线就叫
+做两圆的公切线。如果两圆的圆心都在公切线的同侧，这条
+公切线就叫做两圆的\textbf{外公切线}；如果两圆的圆心分别在公切
+线的两侧，这条公切线就叫做两圆的\textbf{内公切线}。显然，如果
+两圆相交，两圆只有外公切线而无内公切线（图4.41(2)）.
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\begin{scope}
+\tkzDefPoints{0/0/O, 1/0/a, 3/0/O', 3-1.2/0/b}
+\tkzDrawCircles[thick](O,a O',b)
+\tkzDrawPoints(O,O')
+\tkzDefPoint(93.82:1){M}
+\tkzDefPoint(-93.82:1){M'}
+\tkzDefPointsBy[translation= from O to O'](M,M'){N,N'}
+\tkzDefTangent[at=M](O) \tkzGetPoint{a}
+\tkzDefTangent[at=M'](O) \tkzGetPoint{b}
+\tkzInterLL(O',N)(M,a) \tkzGetPoint{P}
+\tkzInterLL(O',N')(M',b) \tkzGetPoint{P'}
+\tkzDrawLines[add=.5 and .5, thick](M,P M',P')
+\tkzDefPoints{1.36/0/T}
+\tkzDefPoint(42.67:1){R}
+\tkzDefPoint(-42.67:1){R'}
+\tkzDrawLines[add=2.5 and 1, thick](T,R T,R')
+\node at (1.5,-1.7){(1)};
+\end{scope}
+\begin{scope}[xshift=7cm]
+    \tkzDefPoints{0/0/O, 1/0/a, 1.5/0/O', 1.5-1.2/0/b}
+\tkzDrawPoints(O,O')
+\tkzDrawCircles[thick](O,a O',b) 
+\tkzDefPoint(97.66:1){M}
+\tkzDefPoint(-97.66:1){M'}
+\tkzDefPointsBy[translation= from O to O'](M,M'){N,N'}
+\tkzDefTangent[at=M](O) \tkzGetPoint{a}
+\tkzDefTangent[at=M'](O) \tkzGetPoint{b}
+\tkzInterLL(O',N)(M,a) \tkzGetPoint{P}
+\tkzInterLL(O',N')(M',b) \tkzGetPoint{P'}
+\tkzDrawLines[add=1 and 1, thick](M,P M',P')
+\node at (.75,-1.7){(2)};
+
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+
+一条公切线上两切点间线段的长，叫做两圆的公切线的
+长。
+
+在实践中，要画两圆的公切线时，可将直尺渐渐移动使
+靠近两圆直至和两圆各只有一个接触点时，然后沿着直尺的
+边缘，就可画出两圆的公切线。
+
+下面我们来研究只用圆规和直尺两圆外公切线的方
+法。
+
+\subsubsection{作两个圆的外公切线}
+
+已知：$\odot(O，r)$和$\odot (O',r')$且$r>r'$.
+
+求作：$\odot O$和$\odot O'$的外公切线。
+
+\begin{figure}[htp]
+  \centering
+\begin{tikzpicture}[scale=.8]
+\tkzDefPoints{0/2/A, 5/2/B, 0/.8/E, 5/.8/O', 0/0/O}
+\tkzDrawCircles(O,E O,A O',B)
+\tkzDrawLines[thick](A,B)
+\tkzDrawLines[thick, add=0 and .2](O',E)
+\tkzLabelPoints[above](A,B)
+\tkzDrawSegments[thick](B,O')
+\tkzLabelPoints[below](O,O')
+\tkzDrawSegments(A,O)
+\tkzLabelPoints[above right](E)
+\end{tikzpicture}
+  \caption{}
+\end{figure}
+
+
+\begin{analyze}
+  假设$AB$是所求作的$\odot O$和$\odot O$的外公切线（图4.42），$A$和$B$是切点，分别作半径$\overline{OA}$，$\overline{O'B}$，由于$\overline{OA}$，$\overline{O'B}$都垂直于$AB$，所以$OA\parallel O'B$，作$O'E\parallel AB$交$\overline{OA}$于$E$点，则$O'E\bot OA$，且$\overline{OE}=r-r'$，这时$O'E$与$\odot (O,r-r')$相切于$E$点。$\odot (O,r-r')$可作，过$O'$也可作$\odot (O,r-r')$的切线。故切点$E$可定，于是$AB$可作。
+\end{analyze}
+
+作法（图4.43）．
+\begin{enumerate}
+\item 作$\odot (O,r-r')$；
+\item 从$O'$点作$\odot (O,r-r')$的切线$O'E$，$E$为切点；
+\item 作$\overline{OE}$，并延长交$\odot O$于$A$点；
+\item 过$O'$点作$O'B\parallel OA$交$\odot O'$于$B$点；
+\item 过$A$、$B$作直线$AB$，则直线$AB$为所求的公切线。
+\end{enumerate}
+
+\begin{proof}
+  （略）
+\end{proof}
+
+讨论：
+\begin{enumerate}
+  \item 如果两圆相离、外切、或相交，那么$\overline{OO'}>r-r'$，从$O'$向$\odot(O,r-r')$作切线可作两条切线，这时所求作的外公切线有两条，如图4.43中的$AB$和$CD$．
+
+\begin{figure}[htp]
+  \centering
+  \begin{minipage}[t]{0.48\textwidth}
+  \centering
+  \begin{tikzpicture}[>=latex, scale=.8]
+\tkzDefPoints{0/0/O, 4/0/O', 1/0/a, 2/0/b, 5/0/c}
+\tkzDefMidPoint(O,O')\tkzGetPoint{O''}
+\tkzDrawCircles(O,a O,b O',c)
+\tkzDefPoint(75.52:1){E}
+\tkzDefPoint(75.52:2){A}
+\tkzDefPoint(-75.52:1){F}
+\tkzDefPoint(-75.52:2){C}
+\tkzDefPointsBy[translation = from O to O'](A,C){A',C'}
+\tkzDefTangent[at=A](O)  \tkzGetPoint{A''}
+\tkzDefTangent[at=C](O)  \tkzGetPoint{C''}
+\tkzInterLL(A,A'')(O',A') \tkzGetPoint{B}
+\tkzInterLL(C,C'')(O',C')\tkzGetPoint{D}
+\tkzLabelPoints[above](A,B)
+\tkzLabelPoints[below](C,D)
+\tkzLabelPoints[left](O)
+\tkzLabelPoints[above left](E)
+\tkzLabelPoints[below left](F)
+\tkzLabelPoints[right](O')
+\tkzDrawSegments(A,O C,O B,O' D,O' O,O')
+\tkzDrawSegments[dashed](E,O' F,O')
+\tkzDrawCircles[dashed](O'',O)
+\tkzDrawLines[thick](A,B C,D)
+
+  \end{tikzpicture}
+  \caption{}
+  \end{minipage}
+  \begin{minipage}[t]{0.48\textwidth}
+  \centering
+  \begin{tikzpicture}[>=latex, scale=.7]
+\tkzDefPoints{0/0/A, -1.5/0/O', -2.2/0/O}
+\tkzDrawCircles[thick](O,A O,O' O',A)
+\draw(0,3)--(0,-3);
+\draw[dashed](-1.5,3)--(-1.5,-3);
+\tkzLabelPoints[below](O)
+\tkzLabelPoints[below right](O')
+\tkzDrawPoints(O,O')
+\draw[dashed](O)--(-4.4,0);
+\draw(O)--(0,0)node[right]{$A$};
+
+  \end{tikzpicture}
+  \caption{}
+  \end{minipage}
+\end{figure}  
+
+  \item 如果两圆内切于$A$点（图4.44），那么$O'$正好在
+  $\odot(O,r-r')$上，过$O'$点作$\odot(O,r-r')$的切线只能作一条，
+这时两圆的公切线只能作出一条，它就是过两圆的切点$A$，
+并垂直于连心线的直线。
+\item 如果两圆内含时，那么$O'$点在$\odot(O,r-r')$内，
+这时，过$O'$点作不出$\odot(O,r-r')$的切线则作图题无解。
+\end{enumerate}
+
+\subsubsection{作两圆的内公切线}
+已知：$\odot(O,r)$，$\odot(O',r')$.
+
+求作：$\odot(O,r)$和$\odot(O',r')$的内公切线。
+
+\begin{analyze}
+如图4.45，设$AB$为所求的内公切线，$A$和$B$为切点，作$\overline{OA}$，$\overline{O'B}$，因为这两条半径都垂直于公切线$AB$，所以互相平行，再从$O'$点引$O'C\parallel BA$交$\overline{OA}$的延长线于$C$，所以$O'C$和以$O$为圆心，$\overline{OC}$为半径的圆相切，但这圆的半径$\overline{OC}$等于$\overline{OA}+\overline{AC}$，也等于$\overline{OA}+\overline{O'B}$，就是等于$r+r'$，而它的圆心就是已知圆的圆心$O$，所以这个圆可作。
+\end{analyze}
+
+\begin{figure}[htp]
+    \centering
+  \begin{tikzpicture}
+    \tkzDefPoints{0/0/O, 4/0/O'}
+    \tkzDefMidPoint(O,O')\tkzGetPoint{O''}
+  \tkzDefPoint(60:1.2){A}
+  \tkzDefPoint(60:2){C}
+  \tkzDefPoint(-60:1.2){A'}
+  \tkzDefPoint(-60:2){C'}
+  \tkzDefPointsBy[translation = from C to O'](A){B}
+  \tkzDefPointsBy[translation = from C' to A'](O'){B'}
+  \tkzDrawCircles[thick](O,A O,C O',B)
+  \tkzDrawLines[add=0 and .2, thick](O',C O',C')
+  \tkzDrawLines[add=.2 and .2, thick](A',B' A,B)
+  \tkzLabelPoints[above](B',C,A)
+  \tkzLabelPoints[below](B,C',A')
+  \tkzLabelPoints[left](O)
+  \tkzLabelPoints[right](O')
+  \tkzDrawCircles[dashed](O'',O)
+  \tkzDrawSegments(O,O' O,C O,C' O',B O',B')
+  
+  \end{tikzpicture}
+    \caption{}
+  \end{figure}
+
+作法（图4.45）．
+\begin{enumerate}
+\item 以$O$为圆心，$r+r'$为半径画圆；
+\item 从$O'$作该圆的切线$O'C$，切点为$C$；
+\item 作$\overline{OC}$交$\odot O$于$A$点；
+\item 过$A$作$AB\parallel CO'$，切$\odot O$于$B$点，$AB$即为所求作的内公切线.
+\end{enumerate}
+
+
+\begin{figure}[htp]
+    \centering
+  \begin{tikzpicture}[scale=.8]
+  \tkzDefPoints{-2/0/O, 1/0/O', -.3/0/A}
+  \tkzDrawCircles[thick](O,A O',A)
+  \tkzLabelPoints[below](O,O')
+  \tkzLabelPoints[above left](A)
+  \tkzDrawPoints(O,O')
+  \tkzDrawLines[add=1 and 1](O,O')
+  \draw(-.3,2)--(-.3,-2)node[right]{$B$};
+  
+  \end{tikzpicture}
+    \caption{}
+  \end{figure}
+
+\begin{proof}
+  略.
+\end{proof}
+
+讨论：
+\begin{enumerate}
+\item 如果两圆相离，可作出两条内公切线。
+\item 如果两圆外切，只能作一条内公切线，这条内公
+切线就是过切点并且垂直于连心线的直线（图4.46）.
+\item 如果两圆相交或内含作图题无解。
+\end{enumerate}
+
+
+
+\begin{ex}
+\begin{enumerate}
+    \item 已知$\odot(A,4{\rm cm})$, $\odot(B,3{\rm cm})$, 圆心距分别如下，求
+    作公切线（要求只作出图形）。
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item 7cm;
+        \item 1cm.
+    \end{enumerate}
+\end{multicols}
+    \item 已知两圆的半径分别是7cm和1cm, 连心线的长是10cm, 
+    求这两圆的外公切线和内公切线长。
+    \item $\odot O$和$\odot O'$相外切，直线$BC$是它们的一条外公切线，
+    切点是$B$和$C$, 已知切线$BC$和连心线的交角是$30^{\circ}$, 
+    连心线长是2cm, 求这两圆的半径和外公切线的长。
+    \item 如果两圆外切，那么内公切线平分两圆的外公切线（两
+    切点间的线段）。
+\end{enumerate}
+\end{ex}
+
+\subsection*{习题4.2}
+\begin{enumerate}
+    \item 已知$\odot(O,r)$，圆心$O$到直线$\ell$的距离是$d$, 说出下列
+    情况$\ell$和$\odot O$的位置关系。
+\begin{multicols}{3}
+    \begin{enumerate}
+        \item $r<d$,
+        \item $r=d$,
+        \item $r>d$.
+    \end{enumerate}
+\end{multicols}
+
+    \item 已知直线$\ell$和$\odot O$相切于$P$点，$\overline{AB}$是$\odot O$的一条直径，
+    并且$A$、$B$两点到$\ell$的距离各为2.3cm和1.5cm, 求
+    $\odot O$的直径长.
+    \item 从$\odot O$外一点$P$作圆的两条切线，和$\odot O$分别相切于
+$A$、$B$. 作半径$\overline{OB}$, 延长到$C$, 使$\overline{BC}=\overline{OB}$, 
+求证：$\angle APC=3\angle BPC$.
+\item 在第3题中，能否通过作出$\triangle POC$的方法，过$P$点作
+出$\odot O$的切线。
+\item 以直角三角形$ABC$的直角边$\overline{AC}$为直径作圆，交斜边
+$\overline{AB}$于$D$点，由$D$点作这圆的切线，求证这条切线平分
+另一条直角边$\overline{BC}$.
+\item 已知$AB$和$CD$是$\odot O$的两条平行的切线，$A$、$C$是切
+点，$\odot O$的另一切线与$AB$、$CD$分别相交于$B$、$D$两
+点。
+求证：$BO\bot OD$.
+\item 两圆外切于$A$, 它们的一条外公切线切一个圆于$B$点，
+切另一个圆于$C$点，它们的内公切线交$\overline{BC}$于$D$, 求证：
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\overline{BD}=\overline{DC}$
+        \item $\angle BAC$是直角
+    \end{enumerate}
+\end{multicols}
+
+\item 求证：直角三角形的内切的直径的长等于两条直角边
+的长的和减去斜边的长。
+\item 求证：两圆的两条外公切线的交点是两圆的顺位似中
+心，两圆的两条内公切线的交点是两圆的逆位似中心，
+\item 已知$\odot (O,r)$与$\odot (O',r')$外切，从$O$点引$\odot O'$的切
+线$OA$, $A$是切点，再从$A$引$\odot O$的切线$AB$, 切点是
+$B$, 求$\overline{AB}$长。
+\end{enumerate}
+
+\section{与圆有关的角}
+\subsection{圆心角、圆周角}
+顶点在圆心的角叫做圆心角。如图4.7中的$\angle AOB$, 就
+是一个圆心角，它的两边与$\odot O$的交点为$A$、$B$. $\wideparen{AB}$叫做
+$\angle AOB$所对的弧，$\angle AOB$叫做$\wideparen{AB}$所对的圆心角。
+
+圆心角与它所对的弧之间
+有如下关系。
+
+\begin{blk}
+    {定理} 在同圆或等圆中，
+弧相等的充要条件是它们所对
+的圆心角相等。
+\end{blk}
+
+我们来证充分性，必要性由同学们自证。
+
+已知：$\angle AOB$和$\angle A'OB'$都是$\odot O$的圆心角（图4.47），
+它们所对的弧分别是$\wideparen{AB}$和$\wideparen{A'B'}$, 且$\angle AOB=\angle A'OB'$.
+
+求证：$\wideparen{AB}=\wideparen{A'B'}$.
+
+\begin{proof}
+    把圆心角$\angle AOB$, 连同它所对的弧依图中箭头所
+示的方向旋转，使$\overline{OA}$与$\overline{OA'}$重合，因$\angle AOB=\angle A'OB'$, 
+$\overline{OB}=\overline{OB'}$, 所以$\overline{OB}$可与$\overline{OB'}$重合，$B$与$B'$重合，因此$\wideparen{AB}$与
+$\wideparen{A'B'}$重合，所以$\wideparen{AB}=\wideparen{A'B'}$. 
+\end{proof}
+
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoint(80:1.5){A'}
+\tkzDefPoint(150:1.5){B'}
+\tkzDefPoint(-130:1.5){A}
+\tkzDefPoint(-60:1.5){B}
+\tkzDefPoint(0,0){O}
+\tkzDrawCircle[thick](O,A)
+\tkzDrawSegments[thick](O,A O,A' O,B O,B')
+\tkzAutoLabelPoints[center=O](A,B,A',B')
+\tkzLabelPoints[right](O)
+\tkzMarkAngles[mark=none, size=.3](A,O,B)
+\draw[->](-30:.8) arc (-30:45:.8);
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+\tkzDefPoint(10:1.5){C}
+\tkzDefPoint(170:1.5){A}
+\tkzDefPoint(60:1.5){B}
+\tkzDefPoint(0,0){O}
+\tkzDrawCircle[thick](O,A)
+\tkzAutoLabelPoints[center=O](A,B,C)
+\tkzDrawSegments[thick](A,B A,C)
+\tkzDrawPoints(O)
+\tkzLabelPoints[below](O)
+\tkzMarkAngles[mark=none, size=.5](C,A,B)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+如果把顶点在圆心的周角分成360等份，这时，整个圆
+周也被分成360等份。我们把每一份叫做$1^{\circ}$弧。由此可知$1^{\circ}$
+的圆心角所对的弧是$1^{\circ}$弧，
+$1^{\circ}$的弧所对的圆心角是$1^{\circ}$的角，
+于是$n^{\circ}$的圆心角所对的弧也是$n^{\circ}$. 因此有：
+
+\begin{blk}{}
+    圆心角的度数等于它所对的弧的度数。
+\end{blk}
+
+顶点在圆周上，并且两边都与圆相交的角，叫做\textbf{圆周
+角}。
+
+如图4.48, $\angle BAC$就是$\odot O$的一个
+圆周角，它的顶点$A$在$\odot O$上，它的两
+边分别交$\odot O$于$B$、$C$, 这时，$\wideparen{BC}$叫做
+$\angle BAC$所对的弧，$\angle BAC$叫做
+$\wideparen{BC}$所对
+的圆周角，圆周角与它所对弧之间有如下关系：
+
+\begin{blk}
+    {圆周角定理}
+圆周角的度数等于它所对弧的度数的一半。
+\end{blk}
+
+已知：$\angle BAC$是$\odot O$的圆周角，$\wideparen{BC}$是它所对的弧（图4.49）.
+
+求证：$\angle BAC$的度数=$\frac{1}{2}\wideparen{BC}$的度数。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\begin{scope}
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(70:1.5){A}
+    \tkzDefPoint(-110:1.5){B}
+    \tkzDefPoint(-30:1.5){C}
+\tkzDrawCircle[thick](O,A)
+\tkzDrawSegments[thick](A,B A,C)
+\tkzDrawSegments[dashed](O,C)
+\tkzAutoLabelPoints[center=O](A,B,C)
+\tkzDrawPoints(O)
+\tkzLabelPoints[left](O)
+\node at (0,-2.3){(1)};
+\tkzMarkAngles[mark=none, size=.4](B,O,C B,A,C A,C,O)
+
+\end{scope}
+\begin{scope}[xshift=4.5cm]
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(70:1.5){A}
+    \tkzDefPoint(-150:1.5){B}
+    \tkzDefPoint(-110:1.5){D}
+    \tkzDefPoint(-30:1.5){C}
+\tkzDrawCircle[thick](O,A)
+\tkzDrawSegments[thick](A,B A,C)
+\tkzDrawSegments[dashed](A,D)
+\tkzAutoLabelPoints[center=O](A,B,C,D)
+\node at (0,-2.3){(2)};
+\tkzLabelPoints[right](O)
+\tkzDrawPoints(O)
+\end{scope}
+\begin{scope}[xshift=9cm]
+    \tkzDefPoints{0/0/O}
+    \tkzDefPoint(90:1.5){A}
+    \tkzDefPoint(180:1.5){B}
+    \tkzDefPoint(-90:1.5){D}
+    \tkzDefPoint(-135:1.5){C}
+\tkzDrawCircle[thick](O,A)
+\tkzDrawSegments[thick](A,B A,C)
+\tkzDrawSegments[dashed](A,D)
+\tkzAutoLabelPoints[center=O](A,B,C,D)
+\node at (0,-2.3){(3)};
+\tkzDrawPoints(O)
+\tkzLabelPoints[right](O)
+\end{scope}
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+\begin{proof}
+分三种情况来证明
+\begin{enumerate}
+\item 圆心$O$在$\angle BAC$的一边上，如图4.49(1), $O$在
+$AB$边上，作半径$\overline{OC}$, 在$\triangle AOC$中，
+
+$\because \quad \overline{OA}=\overline{OC}$,
+
+$\therefore\quad \angle C=\angle BAC$.
+
+又$\because\quad \angle BOC$是$\triangle OAC$的外角，
+
+$\therefore\quad \angle BOC=\angle BAC+\angle C=2\angle BAC,\quad \angle BAC=\frac{1}{2}\angle BOC$.
+
+又$\because\quad \angle BOC$的度数$=\wideparen{BC}$的度数。
+
+$\therefore\quad \angle BAC$的度数$=\frac{1}{2}\wideparen{BC}$的度数。
+
+\item 圆心$O$在$\angle BAC$内，如图4.49(2), 
+作直径$AD$, 从1可以知道：
+\[\angle BAC\text{的度数}=\frac{1}{2}\wideparen{BC}\text{的度数},\quad \angle DAC\text{的度数}=\frac{1}{2}\wideparen{DC}\text{的度数}\]
+
+$\because\quad \angle BAC=\angle BAD+\angle DAC$
+
+$\therefore\quad \angle BAC\text{的度数}=\frac{1}{2}\wideparen{BD}\text{的度数}+\frac{1}{2}\wideparen{DC}\text{的度数}=\frac{1}{2}\wideparen{BC}\text{的度数}$
+
+\item 圆心$O$在$\angle BAC$的外部，如图4.49(3), 作直
+径$AD$, 从1可以知道，
+\[\angle BAD\text{的度数}=\frac{1}{2}\wideparen{BD}\text{的度数},\quad \angle CAD\text{的度数}=\frac{1}{2}\wideparen{DC}\text{的度数}\]
+
+$\because\quad \angle BAC=\angle BAD-\angle CAD$,
+
+$\therefore\quad \angle BAC\text{的度数}=\frac{1}{2}\wideparen{BD}\text{的度数}-\frac{1}{2}\wideparen{CD}\text{的度数}=\frac{1}{2}\wideparen{BC}\text{的度数}$
+\end{enumerate}
+\end{proof}
+
+根据圆周角定理，请同学们自证下列的推论。
+
+\begin{blk}{推论1} 
+同弧（或等弧）所对的圆周角相等（图4.50）。
+\end{blk}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1.2]
+\tkzDefPoints{0/0/O, 0/1.5/Q}
+\tkzDefPoint(200:1.5){A}
+\tkzDefPoint(-20:1.5){B}
+\tkzDefPoint(45:1.5){P}
+\tkzDefPoint(140:1.5){R}
+\tkzDrawCircle[thick](O,A)
+\tkzDrawSegments[thick](A,R R,B A,Q Q,B A,P P,B)
+\tkzAutoLabelPoints[center=O](A,B,P,R,Q)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.2]
+\tkzDefPoints{0/0/O}
+\tkzDefPoint(180:1.5){A}
+\tkzDefPoint(0:1.5){B}
+\tkzDefPoint(60:1.5){C}
+\tkzDefPoint(125:1.5){D}
+\tkzDrawCircle[thick](O,A)
+\tkzDrawSegments[thick](A,D D,B A,C C,B A,B)
+\tkzAutoLabelPoints[center=O](A,B,C,D)      
+\tkzLabelPoints[below](O)
+\tkzDrawPoints(O)
+\tkzMarkRightAngles[size=.2](A,D,B A,C,B)
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{blk}
+    {推论2} 半圆上的圆周角都是直角（图4.51）。
+\end{blk}
+
+\begin{blk}
+    {推论3}
+等于直角的圆周角所对的弦是圆的直径（图4.51）。
+\end{blk}
+
+\begin{example}
+已知：$\odot O$的两弦$\overline{AB}$、$\overline{CD}$相交于圆内一点$P$.
+
+求证：$\angle APC$的度数$=\frac{1}{2}(\wideparen{AC}+\wideparen{BD})$的度数（图4.52）.
+\end{example}
+
+\begin{proof}
+作弦$\overline{AD}$, 则
+$\angle APC=\angle A+\angle D$
+
+$\therefore\quad \angle APC$的度数=$(\angle A+\angle D)$的度数
+$=\frac{1}{2}(\wideparen{BD}+\wideparen{AC})$的度数（圆周
+角定理）。
+\end{proof}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+  \begin{tikzpicture}[>=latex, scale=1]
+       
+ 
+      
+   \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1]
+
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
 
 \begin{example}
     
 \end{example}
 
-
-\begin{solution}
+\begin{proof}
     
-\end{solution}
 
-\begin{example}
     
-\end{example}
+\end{proof}
 
 
-\begin{solution}
-    
-\end{solution}
 
 
 \begin{example}
     
 \end{example}
 
-\begin{solution}
+\begin{proof}
     
-\end{solution}
-
-
-
-
+\end{proof}
 
 
 
