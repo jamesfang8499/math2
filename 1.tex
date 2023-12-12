@@ -105,7 +105,25 @@ $D$、点$E$．
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-      \includegraphics[scale=.75]{fig/1-5.png}
+	\begin{tikzpicture}
+		\tikzset{arrow/.style={
+				decoration={markings,
+					mark = at position 0.25 with {\arrow{#1}} ,
+					mark = at position 0.5 with {\arrow{#1}} ,
+				},
+				postaction={decorate}
+			}
+		}
+		\coordinate (A) at (2,5.5);
+		\coordinate (B) at (7,5.5);
+		\draw (A)--(B);
+		\node[xshift=-10] at (A) {$A$};
+		\node[xshift=10] at (B) {$B$};
+		\draw (A) to[out=90, in=180] (4, 7) to[out=0, in=180] (6, 4.5) to[out=0, in=-90] (B);	
+		\draw (A) -- (4,7) -- (5.5,4.7) -- (B);\\
+		\draw (A) to[out=60, in=180] (3, 6) to[out=0, in=180] (4.5, 5) to[out=0, in=180] (6, 6) to[out=0, in=135] (B);
+		\draw[arrow={>}] (A) to[out=-45, in=180] (3.5, 5) to[out=0, in=-120] (4.5, 5.5) to[out=60, in=180] (5.5, 6.5) to[out=0, in=180] (6.5, 4.6)  to[out=0, in=-100] (B);
+	\end{tikzpicture}
     \caption{}
     \end{minipage}
     \end{figure}
@@ -692,12 +710,54 @@ $a, b$, 它们的长度比值是否总是一个分数（整数也可看作
 \begin{figure}[htp]\centering
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-	\includegraphics[scale=.8]{fig/1-18.png}
-    \caption{}
+	\begin{tikzpicture}
+		\draw (0,0)--(3,0)--(3,0.3)--(0,0.3)--cycle;
+		\draw (3,0)--(4,0.6);
+		\draw (3,0.3)--(4,0.9);
+		\draw (0,0.3)--(1,0.9)--(4,0.9);
+		\foreach \i in {0,...,20} {
+			\draw (3+\i*0.05,\i*0.03)--(3+\i*0.05,0.3+\i*0.03);
+		}
+		\coordinate (P1) at (3,0.9);
+		\coordinate (P2) at ($(P1)-(1.5,1.5*0.6)$);
+		\draw[fill=white] (P1)--(P2)--($(P2)+(-0.1,0)$)--($(P2)+(-0.1,0.2)$)--($(P1)+(-0.1,0.2)$)--($(P1)+(0,0.2)$)--cycle;
+		\draw ($(P2)+(0,0.2)$)--($(P2)+(-0.1,0.2)$);
+		\draw ($(P2)+(0,0.2)$)--(P2);
+		\draw ($(P2)+(0,0.2)$)--($(P1)+(0,0.2)$);
+		\foreach \i in {0,...,30} {
+			\draw ($(P2)+(\i*0.05,\i*0.03)$)--($(P2)+(\i*0.05,\i*0.03+0.2)$);
+		}
+	\end{tikzpicture}
+	\caption{}
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-	\includegraphics[scale=.8]{fig/1-19.png}
+	\begin{tikzpicture}
+		\draw (2, 4) to[out=0, in=180] (5, 3.5) to[out=0, in=180] (7.5, 5);
+		\draw[xshift=0.45cm, yshift=1.5cm] (2, 4) to[out=0, in=180] (5, 3.5) to[out=0, in=180] (7.5, 5);
+		\draw (2,4)--(2.45,5.5);
+		\draw (7.5,5)--(7.95,6.5);
+		\coordinate (segment) at (0.35,1.16667);
+		\coordinate (P1) at (2.4,4.1);
+		\coordinate (P2) at (3.4,3.9);
+		\coordinate (P3) at (4.4,3.65);
+		\coordinate (P4) at (5.4,3.7);
+		\coordinate (P5) at (7,4.95);
+		\draw (P1)--($(P1)+(segment)$); \node[shift={(0.25,0.1)}] at (P1) {$\ell_1$};
+		\draw (P2)--($(P2)+(segment)$); \node[shift={(0.25,0.1)}] at (P2) {$\ell_2$};
+		\draw (P3)--($(P3)+(segment)$);
+		\draw (P4)--($(P4)+(segment)$);
+		\draw (P5)--($(P5)+(segment)$); \node[shift={(0.25,0.2)}] at (P5) {$\ell_n$};
+		\coordinate (A) at (3,5);
+		\coordinate (B) at (7.5,6);
+		\draw[fill] (A) circle (0.05); \node[shift={(0.15,-0.2)}] at (A) {$A$};
+		\draw[fill] (B) circle (0.05); \node[shift={(0.15,0.2)}] at (B) {$B$};
+		\draw (A)--(B);
+		\coordinate (P1) at (2.25,4.83333);
+		\coordinate (P2) at (7.82143,6.07143);
+		\draw (P1)--($(P1)-(0.45,0.1)$);
+		\draw (P2)--($(P2)+(0.45,0.1)$);
+	\end{tikzpicture}
     \caption{}
     \end{minipage}
     \end{figure}
@@ -1551,14 +1611,42 @@ $\ell_1\bot \ell_2$于$O$点．符号“$\bot$”读作“垂直
 过$A$点画直线$\ell$的垂线的方法如图1.39所示．
 
 \begin{figure}[htp]\centering
+	\def\pencil#1#2{
+		\begin{scope}[shift={#1}, rotate=#2]
+			\draw (-0.1,1) -- (-0.1,0.3) -- (0,0) -- (0.1,0.3) -- (0.1,1);
+			\draw (-0.1,0.3) -- (0.1,0.3);
+			\draw[fill=black] (-0.03,0.09)--(0,0)--(0.03,0.09)--cycle;
+			\draw[fill=black] (0.07,0.3)--(0.1,0.3)--(0.1,1)--(0.07,1)--cycle;
+		\end{scope}
+	}
 	\begin{minipage}[t]{0.48\textwidth}
-	\centering
-\includegraphics[scale=.6]{fig/1-39-1.png}
-	\caption*{过直线$\ell$上一点$A$划$\ell$的垂线}
+		\centering
+		\begin{tikzpicture}
+			\draw (-2,0)--(2,0);
+			\draw[thick] (1,0)--(1,3);
+			\draw (1,3)--(-1,0);
+			\draw (-0.43333,0.3)--(0.7,0.3)--(0.7,2)--cycle;
+			\draw[fill] (1,0) circle (0.05);
+			\node at (1,-0.3) {$A$};
+			\node at (-2.2,0) {$\ell$};
+		
+			\pencil{(1,2)}{-60}
+		\end{tikzpicture}	
+		\caption*{过直线$\ell$上一点$A$划$\ell$的垂线}
 	\end{minipage}
 	\begin{minipage}[t]{0.48\textwidth}
 	\centering
-\includegraphics[scale=.6]{fig/1-39-2.png}
+		\begin{tikzpicture}
+				\draw (-2,0)--(2,0);
+				\draw[thick] (1,0)--(1,3);
+				\draw (1,3)--(-1,0);
+				\draw (-0.43333,0.3)--(0.7,0.3)--(0.7,2)--cycle;
+				\draw[fill] (1,1) circle (0.05);
+				\node at (1.2,1) {$A$};
+				\node at (-2.2,0) {$\ell$};
+	
+			\pencil{(1,2)}{-60}
+		\end{tikzpicture}	
 	\caption*{过直线$\ell$外一点$A$划$\ell$的垂线}
 	\end{minipage}
 	\caption{}
@@ -1678,8 +1766,39 @@ $180^{\circ}$.
 
 \begin{figure}[htp]
 	\centering
-\includegraphics[scale=.7]{fig/1-43.png}
-	\caption{}
+	\begin{tikzpicture}
+	\draw (0,0)--(4,0)--(3,3)--cycle;
+	\draw[dashed] (2.5,1)--(2.5,0);
+	\draw[dashed] (2.5,1)--(1.5,1.5);
+	\draw[dashed] (2.5,1)--(3.6,1.2);
+	\draw (0.5,0) arc (0:45:0.5);
+	\node at (0.35,0.15) {1};
+	\draw (3.5,0) arc (180:108.435:0.5);
+	\node at (3.75,0.15) {2};
+	\draw (2.64645,2.64645) arc (225:288.435:0.5);
+	\node at (2.95,2.75) {3};
+	
+	\node at (2,-0.3) {(1)};
+	
+	\draw (5,0)--(10,0)--(10,0.1)--(5,0.1)--cycle;
+	\node at (7.5,-0.3) {(2)};
+	
+	\coordinate (newpivot) at (7.3,0.1);
+	\draw (newpivot)--($(newpivot)+(1.5,1.5)$);
+	\draw[dashed] ($(newpivot)+(1.5,1.5)$)--($(newpivot)+(2.5,1)$)--($(newpivot)+(2.5,0)$);
+	\draw ($(newpivot)+(0.5,0)$) arc (0:45:0.5);
+	\node at ($(newpivot)+(0.35,0.15)$) {1};
+	
+	\draw (newpivot)--($(newpivot)+(-0.948683,1.89737)$);
+	\draw ($(newpivot)-(0.4,0)$) arc (180:116.565:0.4);
+	\node at ($(newpivot)+(-0.21,0.15)$) {3};
+	\draw[dashed] ($(newpivot)+(-0.948683,1.89737)$)--($(newpivot)+(-1.73925,1.1068)$)--($(newpivot)+(-1.89737,0)$);
+	
+	\draw[dashed] ($(newpivot)+(-0.67082,1.34164)$) -- ($(newpivot)+(0.223607,1.78885)$) -- ($(newpivot)+(0.894427,0.894427)$);
+	\draw ($(newpivot)+(0.424264,0.424264)$) arc (45:116.565:0.6);
+	\node at ($(newpivot)+(0.07,0.35)$) {2};
+\end{tikzpicture}
+\caption{}
 \end{figure}
 
 先用硬纸板仔细地剪出一个三角形（如图1.43(1)），

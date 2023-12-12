@@ -2381,8 +2381,19 @@ $\alpha$、$\beta$的大小和$AB$的长度（图
 
 \begin{figure}[htp]
     \centering
-\includegraphics[scale=.6]{fig/6-43.png}
-    \caption{}
+    \resizebox{0.8\textwidth}{!}{
+	\begin{tikzpicture}
+	\draw[rotate=-30] (0,0) ellipse (1.2 and 3);
+	\draw[dashed] (1.5,2.598)--(-1.5,-2.598);
+	\draw (0.75,1.299) circle (0.2);
+	\node at (0.75,0.9) {太阳};
+	\draw (-1.5,-2.598) circle (0.09);
+	\node at (-1.5,-2.9) {地球};
+	\draw (12,-1) circle (0.09);
+	\draw[dashed] (1.5,2.598)--(12,-1)--(-1.5,-2.598);
+	\node at (1.5,3) { };
+	\end{tikzpicture}}    
+\caption{}
 \end{figure}
 
 从以上的分析我们知道，当我们应用解三角形原理在地
