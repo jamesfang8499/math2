@@ -1108,7 +1108,7 @@ $a$
 下面我们举例说明解直角三角形在实际中的应用．
 \begin{example}
 如图6.17, 已知在测点$C$处，测得一铁塔顶端$A$的
-仰角$\angle ACE=\aleph$, $\overline{BD}=a$, 仪器的高度$\overline{CD}=b$, 求铁塔的高$\overline{AB}$.
+仰角$\angle ACE=\alpha$, $\overline{BD}=a$, 仪器的高度$\overline{CD}=b$, 求铁塔的高$\overline{AB}$.
 
 \end{example}
 
@@ -1125,7 +1125,44 @@ $\therefore\quad \overline{AB}=a\cdot \tan\alpha+b$
 \begin{figure}[htp]\centering
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-\includegraphics[scale=.5]{fig/6-17.png}
+   	\begin{tikzpicture}[scale=1]
+   	\draw (-0.5, 0) -- (-0.0625, 3) coordinate[pos=0] (l1)
+   	coordinate[pos=0.16] (l2)
+   	coordinate[pos=0.32] (l3)
+   	coordinate[pos=0.48] (l4)
+   	coordinate[pos=0.64] (l5)
+   	coordinate[pos=0.80] (l6)
+   	coordinate[pos=1.0] (l7);
+   	\draw (0.5, 0) -- (	0.0625, 3) coordinate[pos=0] (r1)
+   	coordinate[pos=0.16] (r2)
+   	coordinate[pos=0.32] (r3)
+   	coordinate[pos=0.48] (r4)
+   	coordinate[pos=0.64] (r5)
+   	coordinate[pos=0.80] (r6)
+   	coordinate[pos=1.0] (r7);
+   	\foreach \i in {1,...,6} {
+   		\pgfmathsetmacro{\j}{\i + 1} 
+   		\draw (l\i)--(r\i);
+   		\draw (l\i)--(r\j);
+   		\draw (r\i)--(l\j);
+   	}
+   	\draw (l7)--(r7);
+   	\draw (0,3)--(0,0);
+   	\draw (-0.7,0)--(4.5,0);
+   	
+   	\node[label=above:$A$,inner sep=0,outer sep=0] (A) at (0,3) {};
+   	\node[label=below:$B$,inner sep=0,outer sep=0] (B) at (0,0) {};
+   	\node[label=below:$D$,inner sep=0,outer sep=0] (D) at (3.8,0) {};
+   	\coordinate (E) at (0,0.48);
+   	\node[below left,fill=white,inner sep=0,outer sep=0] at (E) {$E$};
+   	\draw ($(D)-(0.05,0)$) rectangle ($(D)+(0.05,0.48)$);
+   	\coordinate (C) at ($(D)+(0.15,0.48)$);
+   	\draw[dashed] (E)--(C);
+   	\node[right] at (C) {$C$};
+   	\draw (A)--(C);
+   	\node at ($(C)+(-0.8,0.24)$) {$\alpha$};
+   	\draw[fill=white] (C) arc (-32.211:-200:0.2) -- ++(-0.1,0.063) -- ++(0.0251,0.035) -- cycle;
+    \end{tikzpicture}
     \caption{}
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
@@ -1165,7 +1202,59 @@ $\overline{AB}$
 \begin{figure}[htp]\centering
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-    \includegraphics[scale=.5]{fig/6-19.png}
+	\begin{tikzpicture}[scale=1]
+	\draw (-0.5, 0) -- (-0.0625, 4) coordinate[pos=0] (l1)
+	coordinate[pos=0.125] (l2)
+	coordinate[pos=0.250] (l3)
+	coordinate[pos=0.375] (l4)
+	coordinate[pos=0.500] (l5)
+	coordinate[pos=0.625] (l6)
+	coordinate[pos=0.750] (l7)
+	coordinate[pos=0.875] (l8)
+	coordinate[pos=1.0] (l9);
+	\draw (0.5, 0) -- (	0.0625, 4) coordinate[pos=0] (r1)
+	coordinate[pos=0.125] (r2)
+	coordinate[pos=0.250] (r3)
+	coordinate[pos=0.375] (r4)
+	coordinate[pos=0.500] (r5)
+	coordinate[pos=0.625] (r6)
+	coordinate[pos=0.750] (r7)
+	coordinate[pos=0.875] (r8)
+	coordinate[pos=1.0] (r9);
+	\foreach \i in {1,...,8} {
+		\pgfmathsetmacro{\j}{\i + 1} 
+		\draw (l\i)--(r\i);
+		\draw (l\i)--(r\j);
+		\draw (r\i)--(l\j);
+	}
+	\draw (l9)--(r9);
+	\draw (0,4)--(0,0);
+	\draw (-0.7,0)--(5.5,0);
+	
+	\node[label=above:$A$,inner sep=0,outer sep=0] (A) at (0,4) {};
+	\node[label=below:$B$,inner sep=0,outer sep=0] (B) at (0,0) {};
+	\node[label=below:$C$,inner sep=0,outer sep=0] (C) at (3.8,0) {};
+	\node[label=below:$D$,inner sep=0,outer sep=0] (D) at (5.3,0) {};
+	\coordinate (E) at (0,1);
+	\node[below left,fill=white,inner sep=0,outer sep=0] at (E) {$E$};
+	\draw ($(C)-(0.05,0)$) rectangle ($(C)+(0.05,1)$);
+	\coordinate (C') at ($(C)+(0.15,1)$);
+	\draw[dashed] (E)--(C');
+	\node[right,above] at (C') {$C'$};
+	\draw (A)--(C');
+	\node at ($(C')+(-0.8,0.24)$) {$\alpha$};
+	\draw[fill=white] (C') arc (-38.2902:-200:0.2) -- ++(-0.1,0.0789) -- ++(0.03,0.038) -- cycle;
+	\draw ($(C')-(0.65,0)$) arc (180:141.71:0.65);
+	
+	\draw ($(D)-(0.05,0)$) rectangle ($(D)+(0.05,1)$);
+	\coordinate (D') at ($(D)+(0.15,1)$);
+	\draw[dashed] (E)--(D');
+	\node[right,above] at (D') {$D'$};
+	\draw (A)--(D');
+	\node at ($(D')+(-0.8,0.2)$) {$\beta$};
+	\draw[fill=white] (D') arc (-29.5115:-191:0.2) -- ++(-0.1,0.0566) -- ++(0.028,0.0494667) -- cycle;
+	\draw ($(D')-(0.65,0)$) arc (180:150.489:0.65);
+	\end{tikzpicture}
     \caption{}
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
@@ -1272,11 +1361,11 @@ $\overline{AB'}=36$米．
     直于$BC$方向上找一点$A$, 测出$\angle BAC=58^{\circ}12'$,
     $\overline{AB}=25$米，求$B$、$C$两点间的距离．
     \item 如图，从山顶$D$测得地平面上同一方向的两点$A$和$B$的俯
-角分别是$18^{\circ}$和$23^{\circ}$, 已知$\overline{AB}=140$米，求山高
+角分别是$18^{\circ}$和$23^{\circ}$. 已知$\overline{AB}=140$米，求山高
 $\overline{CD}$（得数保留整数米）．
-\item 已知传送带和地面的夹角是$25^{\circ}$, 它把物件从地面运到
+\item 已知传送带和地面的夹角是$25^{\circ}$. 它把物件从地面运到
 离地面9米高的地方，求物件所走的路程．
-\item 工件上有V形槽，测出上口宽200mm,深19.2mm,
+\item 工件上有V形槽，测出上口宽200mm，深19.2mm，
 求V形角$\alpha$多大．
 \item 如图，在离地面高5米处引拉线固定电线杆，拉线和地
 面成$60^{\circ}$角，求每根拉线多长，拉线底端离杆底多远．
@@ -1285,13 +1374,47 @@ $\overline{CD}$（得数保留整数米）．
 
 \begin{figure}[htp]\centering
     \begin{minipage}[t]{0.3\textwidth}
-    \centering
-\includegraphics[scale=.7]{fig/6-3ti.PNG}
-    \caption*{第3题}
+    	\centering
+		\begin{tikzpicture}[scale=1]
+			\pgfmathsetseed{10020}
+			\draw[name path=upper,gray!30,smooth,domain=-1:2] plot (\x,rand*0.2+1.9);	
+			\draw[name path=lower,gray!30,smooth,domain=-1:2] plot (\x,rand*0.2+0.4);	
+			\tikzfillbetween[of=upper and lower]{gray!30};
+			\tkzDefPoint[label=above:$C$](1.5,2.41925){C}
+			\tkzDefPoint[label=below:$B$](1.5,0){B}
+			\tkzDefPoint[label=below:$A$](0,0){A}
+			\tkzDrawPolySeg(A,B,C)
+			\tkzDrawSegment[dashed](A,C)
+		\end{tikzpicture}
+    	\caption*{第3题}
     \end{minipage}
     \begin{minipage}[t]{0.6\textwidth}
     \centering
-    \includegraphics[scale=.7]{fig/6-4ti.PNG}
+    \begin{tikzpicture}[scale=1]
+    	\tikzset{trees/.style={postaction={decorate,
+    				decoration={markings,% switch on markings 
+    					mark=% actually add a mark
+    					between positions 0 and 1 step 0.9999/#1
+    					with
+    					{
+    						\draw (0,0)--(0,0.07)--(-0.05,0.15) 
+    						(0,0.1)--(0.05,0.15);
+    					}
+    	}}}}
+    	\draw[trees=20] (2, 7) to[out=45, in=-120] (3, 8) to[out=60, in=-120] (3.5,8.7) to[out=60,in=180] (4, 9) to[out=0, in=135] (5, 8);
+    	\tkzDefPoint[label=below:$C$](4,7){C}
+    	\tkzDefPoint[label=above:$D$](4,9){D}
+    	\tkzDefPoint[label=below:$A$](-2.47214,7){A}
+    	\tkzDefPoint[label=below:$B$](-1.11861,7){B}
+    	\tkzDefPoint(-1.5,9){E}
+    	\tkzDrawSegment(C,D)
+    	\tkzDrawSegments[dashed](A,D B,D E,D)
+    	\draw ($(A)-(0.5,0)$)--(5,7);
+    	\tkzMarkAngle[size=0.7](E,D,A)
+    	\tkzMarkAngle[size=1.5](E,D,B)
+    	\tkzLabelAngle[pos=1](E,D,A) {$18^\circ$}
+    	\tkzLabelAngle[pos=1.8](E,D,B) {$23^\circ$}
+    \end{tikzpicture}
     \caption*{第4题}
     \end{minipage}
     \end{figure}
@@ -2419,19 +2542,52 @@ $\alpha$、$\beta$的大小和$AB$的长度（图
 \begin{figure}[htp]\centering
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-    \includegraphics[scale=.7]{fig/6-ti1.PNG}
+%    \resizebox{\columnwidth}{!}{
+	\begin{tikzpicture}
+		\pgfmathsetseed{10020}
+		\draw[name path=upper,gray!30,smooth,domain=-1:4] plot (\x,rand*0.2+1.5);	
+		\draw[name path=lower,gray!30,smooth,domain=-1:4] plot (\x,rand*0.2+0.2);	
+		\tikzfillbetween[of=upper and lower]{gray!30};
+		\tkzDefPoints{0/0/C,3/-0.5/A,2.76/1.97/B};
+		\tkzDrawSegment(A,C)
+		\tkzDrawSegments[dashed](B,C B,A)
+		\tkzLabelPoints[below left](C)
+		\tkzLabelPoints[below right](A)
+		\tkzLabelPoints[above](B)
+	\end{tikzpicture} %}
     \caption*{第1题}
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-    \includegraphics[scale=.7]{fig/6-ti2.PNG}
+	\begin{tikzpicture}[>=latex, scale=1.2]
+	\tkzDefPoints{0/0/A', 2/0/B', 0.272748/-1.77947/C, -0.5/0/A, 3/0/B}
+	\tkzLabelPoint[left](A){$A$}
+	\tkzLabelPoint[right](B){$B$};
+	\tkzLabelPoint[below](C){$C$}
+	\tkzDrawPolySeg(A,C,B)
+	\tkzDrawSegments(A,A' B,B')
+	\tkzDrawSegment[dashed](A',B')
+	\pgfmathsetseed{12510}
+	\draw[decorate,decoration={random steps, segment length = 3pt, amplitude = 0.5pt},smooth] (1.007,0) ellipse (0.96 and 0.3);
+	\draw[decorate,decoration={random steps, segment length = 2pt, amplitude = 0.5pt},smooth] (1.007,0) ellipse (0.6 and 0.18);
+	\draw (1.007,0) ellipse (0.3 and 0.09);
+	\end{tikzpicture}
     \caption*{第2题}
     \end{minipage}
     \end{figure}
 
     \begin{figure}[htp]
         \centering
-    \includegraphics[scale=.7]{fig/6-ti3.PNG}
+	\begin{tikzpicture}[scale=0.5]
+	\pgfmathsetseed{10020}
+	\draw[name path=upper,gray!30,smooth,domain=-2:6] plot (\x,rand*0.2+2.3);	
+	\draw[name path=lower,gray!30,smooth,domain=-2:6] plot (\x,rand*0.2-0.1);	
+	\tikzfillbetween[of=upper and lower]{gray!30};
+	\tkzDefPoint(0, 2.7){A}
+	\tkzDefPoint(4.5, 2.7){B}
+	\tkzDrawPoints(A,B)
+	\tkzLabelPoints[above](A,B)
+	\end{tikzpicture}
         \caption*{第3题}
     \end{figure}
 
@@ -2544,7 +2700,28 @@ $\odot A$分别与$\odot B$和$\odot C$相外
 
 \begin{figure}[htp]
     \centering
-\includegraphics[scale=.7]{fig/6-14ti.png}
+	\begin{tikzpicture}[scale=1]
+	\pgfmathsetseed{10020}
+	\draw[name path=upper,gray!30,smooth,domain=-2:6] plot (\x,rand*0.2+2-\x/10);	
+	\draw[name path=lower,gray!30,smooth,domain=-1:7] plot (\x,rand*0.2-\x/10);	
+	\tikzfillbetween[of=upper and lower]{gray!30};
+	\tkzDefPoint(0, 2.5){B}
+	\tkzDefPoint(0, 5.5){A}
+	\tkzDefPoint(2, -1){C}
+	\tkzDefPoint(4.5, -1){D}
+	\tkzDrawPoints(A,B,C,D)
+	\tkzLabelPoints[left](A,B)
+	\tkzLabelPoints[below](C,D)
+	\tkzDrawSegments(A,B C,D)
+	\tkzDrawSegments[dashed](A,C B,C B,D)
+	\tkzMarkAngle[size=1](A,C,B)
+	\tkzLabelAngle[pos=1.2](A,C,B){$\alpha$}
+	\tkzMarkAngle[size=0.5](D,C,B)
+	\tkzLabelAngle[pos=0.7](D,C,B){$\beta$}
+	\tkzMarkAngle[size=0.5](B,D,C)
+	\tkzLabelAngle[pos=0.7](B,D,C){$\gamma$}
+	\node at (3.25,-1.2) {$a$};
+	\end{tikzpicture}
     \caption*{第14题}
 \end{figure}
 

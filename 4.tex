@@ -1488,7 +1488,32 @@ $\therefore\quad A$、$O$、$B$三点共线．即$\overline{AB}$通过圆心$O$,
 称帝，国号新）后人多把这种卡尺叫做《王莽卡尺》．
 \begin{figure}[htp]
     \centering
-\includegraphics[scale=.7]{fig/4-32.png}
+	\begin{tikzpicture}[scale=0.7]
+		\draw[thick] (0.9,-0.4) rectangle (6.9,-0.55);
+		\foreach \i in {0,...,110} {\draw (1.2+\i*0.055,-0.8)--(1.2+\i*0.055,-0.675);}
+		\foreach \i in {0,...,11} {\draw (1.2+\i*0.55,-0.675)--(1.2+\i*0.55,-0.55);}
+		\draw[fill=white,color=white,thick] (2.8,-0.4) rectangle (3.6,-1.35);
+		
+		\draw[thick] (0,0)--(9.22,0);
+		\draw[thick] (0,0)--(0,-3.8)--(0.9,-3.8)--(0.9,-0.8)--(2.8,-0.8);
+		\draw[thick] (2.8,0)--(2.8,-3.8)--(3.6,-3.8)--(3.6,-2.7);
+		\draw[thick] (3.6,-2.7) arc (-125:50:0.86);
+		\draw[thick] (4.12,-2) circle (0.5);
+		\draw[thick] (4.65,-1.35)--(8.42,-1.35);
+		\draw[thick] (3.6,0)--(3.6,-1.35);
+		\draw[thick] (3.6,-0.8)--(8.42,-0.8);
+		\draw[thick] (8.42,0)--(8.42,-1.35);
+		\draw[thick] (9.22,0)--(9.22,-1.35);
+		\draw[thick] (5,-0.8)--(5,-1.35);
+		\draw[thick] (6.5,-0.8)--(6.5,-1.35);
+		\draw[thick] (9.55,-0.8)--(9.55,-1.35);
+		\draw[thick] (9.22,-0.8)--(11.06,-0.8)--(11.06,-1.35)--(9.22,-1.35);
+		\draw[thick] (8.42,-1.35) to[bend right](9.22,-1.35);
+		\fill (9.1,-0.1) circle (0.05);
+		\fill (8.3,-0.1) circle (0.05);
+		\draw (3.13,-0.45) circle (0.08);
+		\draw[pattern={Lines[angle=45, distance={5pt}, line width=1pt]}] (1.85,-2.33) circle (0.95);
+	\end{tikzpicture}
     \caption{}
 \end{figure}
 
