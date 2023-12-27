@@ -18,7 +18,8 @@
 \usepackage[font=bf,labelfont=bf,labelsep=quad]{caption}
 
 \usepackage{tikz}
-
+\usepackage{pgfplots}
+\usetikzlibrary{intersections, pgfplots.fillbetween}
 
 \usepackage{ntheorem}
 \theoremseparator{\;}
@@ -30,7 +31,7 @@
 \usepackage[colorlinks=true, linkcolor=black]{hyperref}
 
 \usepackage{enumerate}
-
+\usepackage{scalerel}
 
 \theoremstyle{plain}
 \theoremheaderfont{\normalfont\bfseries} 
@@ -59,7 +60,7 @@
 \newcommand{\Var}{{\rm Var}}
 \newcommand{\Cov}{{\rm Cov}}
 \newcommand{\x}{\times}
-
+\def\msquare{\mathord{\scalerel*{\Box}{gX}}}
 
  \usepackage{tcolorbox}
  \tcbuselibrary{breakable}
