@@ -79,8 +79,31 @@
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-	\includegraphics[scale=.14]{fig/1-3.png}
-    \caption{}
+	\begin{tikzpicture}[scale=0.4]
+	\coordinate (alpha) at (10.7622, 0.141421);
+	\coordinate (beta) at (10.4793, -1.56978);
+	\coordinate (gamma) at (7.94081, -1.68999);
+	\coordinate (delta) at (7.49533, -0.311127);
+	\coordinate (epsilon) at (5.85484, 0.254558);
+	\coordinate (zeta) at (4.59619, 0.806102);
+	\coordinate (eta) at (2.53144, 0.226274);
+	\draw (alpha)--(beta)--(gamma)--(delta)--(epsilon)--(zeta)--(eta);
+	\draw [fill] 	   (alpha) circle (0.3);
+	\draw [fill=white] (alpha) circle (0.15);
+	\draw [fill] 	   (beta) circle (0.2);
+	\draw [fill=white] (beta) circle (0.1);
+	\draw [fill] 	   (gamma) circle (0.2);
+	\draw [fill=white] (gamma) circle (0.1);
+	\draw [fill] 	   (delta) circle (0.1);
+	\draw [fill=white] (delta) circle (0.05);
+	\draw [fill] 	   (epsilon) circle (0.3);
+	\draw [fill=white] (epsilon) circle (0.15);
+	\draw [fill] 	   (zeta) circle (0.25);
+	\draw [fill=white] (zeta) circle (0.125);
+	\draw [fill] 	   (eta) circle (0.28);
+	\draw [fill=white] (eta) circle (0.14);
+	\end{tikzpicture}    
+	\caption{}
     \end{minipage}
     \end{figure}
 
@@ -105,7 +128,25 @@ $D$、点$E$．
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-      \includegraphics[scale=.75]{fig/1-5.png}
+	\begin{tikzpicture}
+		\tikzset{arrow/.style={
+				decoration={markings,
+					mark = at position 0.25 with {\arrow{#1}} ,
+					mark = at position 0.5 with {\arrow{#1}} ,
+				},
+				postaction={decorate}
+			}
+		}
+		\coordinate (A) at (2,5.5);
+		\coordinate (B) at (7,5.5);
+		\draw (A)--(B);
+		\node[xshift=-10] at (A) {$A$};
+		\node[xshift=10] at (B) {$B$};
+		\draw (A) to[out=90, in=180] (4, 7) to[out=0, in=180] (6, 4.5) to[out=0, in=-90] (B);	
+		\draw (A) -- (4,7) -- (5.5,4.7) -- (B);
+		\draw (A) to[out=60, in=180] (3, 6) to[out=0, in=180] (4.5, 5) to[out=0, in=180] (6, 6) to[out=0, in=135] (B);
+		\draw[arrow={>}] (A) to[out=-45, in=180] (3.5, 5) to[out=0, in=-120] (4.5, 5.5) to[out=60, in=180] (5.5, 6.5) to[out=0, in=180] (6.5, 4.6)  to[out=0, in=-100] (B);
+	\end{tikzpicture}
     \caption{}
     \end{minipage}
     \end{figure}
@@ -692,12 +733,55 @@ $a, b$, 它们的长度比值是否总是一个分数（整数也可看作
 \begin{figure}[htp]\centering
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-	\includegraphics[scale=.8]{fig/1-18.png}
-    \caption{}
+	\begin{tikzpicture}[scale=1.2]
+		\draw (0,0)--(3,0)--(3,0.3)--(0,0.3)--cycle;
+		\draw (3,0)--(4,0.6);
+		\draw (3,0.3)--(4,0.9);
+		\draw (0,0.3)--(1,0.9)--(4,0.9);
+		\foreach \i in {0,...,20} {
+			\draw (3+\i*0.05,\i*0.03)--(3+\i*0.05,0.3+\i*0.03);
+		}
+		\coordinate (P1) at (3,0.9);
+		\coordinate (P2) at ($(P1)-(1.5,1.5*0.6)$);
+		\draw[fill=white] (P1)--(P2)--($(P2)+(-0.1,0)$)--($(P2)+(-0.1,0.2)$)--($(P1)+(-0.1,0.2)$)--($(P1)+(0,0.2)$)--cycle;
+		\draw ($(P2)+(0,0.2)$)--($(P2)+(-0.1,0.2)$);
+		\draw ($(P2)+(0,0.2)$)--(P2);
+		\draw ($(P2)+(0,0.2)$)--($(P1)+(0,0.2)$);
+		\foreach \i in {0,...,30} {
+			\draw ($(P2)+(\i*0.05,\i*0.03)$)--($(P2)+(\i*0.05,\i*0.03+0.2)$);
+		}
+	\end{tikzpicture}
+	\caption{}
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-	\includegraphics[scale=.8]{fig/1-19.png}
+   	\resizebox{\textwidth}{!}{
+	\begin{tikzpicture}
+		\draw (2, 4) to[out=0, in=180] (5, 3.5) to[out=0, in=180] (7.5, 5);
+		\draw[xshift=0.45cm, yshift=1.5cm] (2, 4) to[out=0, in=180] (5, 3.5) to[out=0, in=180] (7.5, 5);
+		\draw (2,4)--(2.45,5.5);
+		\draw (7.5,5)--(7.95,6.5);
+		\coordinate (segment) at (0.35,1.16667);
+		\coordinate (P1) at (2.4,4.1);
+		\coordinate (P2) at (3.4,3.9);
+		\coordinate (P3) at (4.4,3.65);
+		\coordinate (P4) at (5.4,3.7);
+		\coordinate (P5) at (7,4.95);
+		\draw (P1)--($(P1)+(segment)$); \node[shift={(0.25,0.1)}] at (P1) {$\ell_1$};
+		\draw (P2)--($(P2)+(segment)$); \node[shift={(0.25,0.1)}] at (P2) {$\ell_2$};
+		\draw (P3)--($(P3)+(segment)$);
+		\draw (P4)--($(P4)+(segment)$);
+		\draw (P5)--($(P5)+(segment)$); \node[shift={(0.25,0.2)}] at (P5) {$\ell_n$};
+		\coordinate (A) at (3,5);
+		\coordinate (B) at (7.5,6);
+		\draw[fill] (A) circle (0.05); \node[shift={(0.15,-0.2)}] at (A) {$A$};
+		\draw[fill] (B) circle (0.05); \node[shift={(0.15,0.2)}] at (B) {$B$};
+		\draw (A)--(B);
+		\coordinate (P1) at (2.25,4.83333);
+		\coordinate (P2) at (7.82143,6.07143);
+		\draw (P1)--($(P1)-(0.45,0.1)$);
+		\draw (P2)--($(P2)+(0.45,0.1)$);
+	\end{tikzpicture}}
     \caption{}
     \end{minipage}
     \end{figure}
@@ -1551,14 +1635,42 @@ $\ell_1\bot \ell_2$于$O$点．符号“$\bot$”读作“垂直
 过$A$点画直线$\ell$的垂线的方法如图1.39所示．
 
 \begin{figure}[htp]\centering
+	\def\pencil#1#2{
+		\begin{scope}[shift={#1}, rotate=#2]
+			\draw (-0.1,1) -- (-0.1,0.3) -- (0,0) -- (0.1,0.3) -- (0.1,1);
+			\draw (-0.1,0.3) -- (0.1,0.3);
+			\draw[fill=black] (-0.03,0.09)--(0,0)--(0.03,0.09)--cycle;
+			\draw[fill=black] (0.07,0.3)--(0.1,0.3)--(0.1,1)--(0.07,1)--cycle;
+		\end{scope}
+	}
 	\begin{minipage}[t]{0.48\textwidth}
-	\centering
-\includegraphics[scale=.6]{fig/1-39-1.png}
-	\caption*{过直线$\ell$上一点$A$划$\ell$的垂线}
+		\centering
+		\begin{tikzpicture}
+			\draw (-2,0)--(2,0);
+			\draw[thick] (1,0)--(1,3);
+			\draw (1,3)--(-1,0);
+			\draw (-0.43333,0.3)--(0.7,0.3)--(0.7,2)--cycle;
+			\draw[fill] (1,0) circle (0.05);
+			\node at (1,-0.3) {$A$};
+			\node at (-2.2,0) {$\ell$};
+		
+			\pencil{(1,2)}{-60}
+		\end{tikzpicture}	
+		\caption*{过直线$\ell$上一点$A$划$\ell$的垂线}
 	\end{minipage}
 	\begin{minipage}[t]{0.48\textwidth}
 	\centering
-\includegraphics[scale=.6]{fig/1-39-2.png}
+		\begin{tikzpicture}
+				\draw (-2,0)--(2,0);
+				\draw[thick] (1,0)--(1,3);
+				\draw (1,3)--(-1,0);
+				\draw (-0.43333,0.3)--(0.7,0.3)--(0.7,2)--cycle;
+				\draw[fill] (1,1) circle (0.05);
+				\node at (1.2,1) {$A$};
+				\node at (-2.2,0) {$\ell$};
+	
+			\pencil{(1,2)}{-60}
+		\end{tikzpicture}	
 	\caption*{过直线$\ell$外一点$A$划$\ell$的垂线}
 	\end{minipage}
 	\caption{}
@@ -1678,8 +1790,39 @@ $180^{\circ}$.
 
 \begin{figure}[htp]
 	\centering
-\includegraphics[scale=.7]{fig/1-43.png}
-	\caption{}
+	\begin{tikzpicture}
+	\draw (0,0)--(4,0)--(3,3)--cycle;
+	\draw[dashed] (2.5,1)--(2.5,0);
+	\draw[dashed] (2.5,1)--(1.5,1.5);
+	\draw[dashed] (2.5,1)--(3.6,1.2);
+	\draw (0.5,0) arc (0:45:0.5);
+	\node at (0.35,0.15) {1};
+	\draw (3.5,0) arc (180:108.435:0.5);
+	\node at (3.75,0.15) {2};
+	\draw (2.64645,2.64645) arc (225:288.435:0.5);
+	\node at (2.95,2.75) {3};
+	
+	\node at (2,-0.3) {(1)};
+	
+	\draw (5,0)--(10,0)--(10,0.1)--(5,0.1)--cycle;
+	\node at (7.5,-0.3) {(2)};
+	
+	\coordinate (newpivot) at (7.3,0.1);
+	\draw (newpivot)--($(newpivot)+(1.5,1.5)$);
+	\draw[dashed] ($(newpivot)+(1.5,1.5)$)--($(newpivot)+(2.5,1)$)--($(newpivot)+(2.5,0)$);
+	\draw ($(newpivot)+(0.5,0)$) arc (0:45:0.5);
+	\node at ($(newpivot)+(0.35,0.15)$) {1};
+	
+	\draw (newpivot)--($(newpivot)+(-0.948683,1.89737)$);
+	\draw ($(newpivot)-(0.4,0)$) arc (180:116.565:0.4);
+	\node at ($(newpivot)+(-0.21,0.15)$) {3};
+	\draw[dashed] ($(newpivot)+(-0.948683,1.89737)$)--($(newpivot)+(-1.73925,1.1068)$)--($(newpivot)+(-1.89737,0)$);
+	
+	\draw[dashed] ($(newpivot)+(-0.67082,1.34164)$) -- ($(newpivot)+(0.223607,1.78885)$) -- ($(newpivot)+(0.894427,0.894427)$);
+	\draw ($(newpivot)+(0.424264,0.424264)$) arc (45:116.565:0.6);
+	\node at ($(newpivot)+(0.07,0.35)$) {2};
+\end{tikzpicture}
+\caption{}
 \end{figure}
 
 先用硬纸板仔细地剪出一个三角形（如图1.43(1)），
@@ -2890,7 +3033,27 @@ $\therefore\quad \triangle ABE\cong \triangle ACD$ (SAS).
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-\includegraphics[scale=.6]{fig/4ti.png}
+	\begin{tikzpicture}[scale=0.4]
+	\pgfmathsetseed{10020}
+	\draw[name path=upper,gray!30,smooth,domain=-2:6] plot (\x,rand*0.2+3);	
+	\draw[name path=lower,gray!30,smooth,domain=-2:6] plot (\x,rand*0.2);	
+	\tikzfillbetween[of=upper and lower]{gray!30};
+	
+	\coordinate (A) at (4.4,3.2);
+	\coordinate (B) at (4.4,-0.19);
+	\coordinate (Aprime) at (-1,3.2);
+	\coordinate (C) at ($(A)!.5!(Aprime)$);
+	\coordinate (E) at (-1,8);
+	\draw (B)--(A)--(Aprime)--(E);
+	\node[yshift=5pt] at (A) {$A$};
+	\node[yshift=-5pt] at (B) {$B$};
+	\node[xshift=5pt,yshift=5pt] at (C) {$C$};
+	\node[xshift=-5pt,yshift=5pt] at (E) {$E$};
+	\node[xshift=-5pt] at (Aprime) {$A'$};
+	\tkzInterLL(B,C)(Aprime,E) \tkzGetPoint{Bprime}
+	\draw (B)--(Bprime);
+	\node[xshift=-5pt] at (Bprime) {$B'$};
+	\end{tikzpicture}
     \caption*{第4题}
     \end{minipage}
     \end{figure}
@@ -3296,7 +3459,31 @@ $\therefore\quad h=2\x4\div 1.5\approx 5.33{\rm m}$
 
 \begin{figure}[htp]
 	\centering
-\includegraphics[scale=.6]{fig/1-64.png}
+	\begin{tikzpicture}[>=latex, scale=2]
+	\pgfmathsetseed{12500}
+	\draw[decorate,decoration={random steps, segment length = 2pt, amplitude = 2pt},smooth] (2.5,1.96667) ellipse (0.25 and 0.7);
+	\draw (2.5, 1.9) arc (-90:-160:0.1 and 0.4);
+	\draw (2.5, 2.1) arc (-90:0:0.1 and 0.2);
+	\draw (2.5, 1.7) arc (-90:-10:0.15 and 0.3);
+	\draw (2.5, 1.65) arc (-90:-160:0.15 and 0.3);
+	\draw (2.5, 1.5) arc (-90:-30:0.18 and 0.3);
+	\draw[fill=white] (2.45,0)--(2.47,1.3)--(2.49,1.7)--(2.51,2.3)--(2.51,0)--cycle;
+	
+	\draw(2,0)--(6.5,0);
+	\draw (5,0)--(5,1);
+	\draw[dashed,decoration={markings,
+		mark=at position 0.5 with \arrow{>}},
+	postaction=decorate] ($(5,1)+(-0.4,0.4*1.5)$)--(5.75,0);
+	
+	\draw[dashed,decoration={markings,
+		mark=at position 0.5 with \arrow{>}},
+	postaction=decorate] (2.5,2.66667)--(4.5,0);
+	
+	\node at (3.6,-0.15) {4m};
+	\node at (5.4,-0.15) {1.5m};
+	\node at (4.75,0.5) {2m};
+	\node at (2.3,1.1) {$h$};
+\end{tikzpicture}
 	\caption{}
 \end{figure}
 
@@ -3304,23 +3491,51 @@ $\therefore\quad h=2\x4\div 1.5\approx 5.33{\rm m}$
 \begin{figure}[htp]\centering
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-\includegraphics[scale=.5]{fig/1-2ti.png}
+	\begin{tikzpicture}[>=latex, scale=1]
+	\tkzDefPoints{1.8/0/A, 0/0/B, 0/2/C}
+	\tkzDefPoints{3.75/0/A', 3/0/B', 3/0.83333/C'}		
+	\tkzDrawPolySeg[dashed](A,C,B)
+	\tkzDrawPolySeg(A',C',B')
+	\tkzLabelPoints[below](A,B,A',B')
+	\tkzLabelPoints[above](C,C')
+	\draw (-0.5,0)--(4,0);
+	\draw (-0.2,0)--(-0.1,2)--(0.1,2)--(0.2,0);
+	\node at (3.35,0.1) {\scriptsize 1.8m};
+	\node at (2.8,0.4) {\scriptsize 2m};
+	\end{tikzpicture}
     \caption*{第2题}
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-\includegraphics[scale=.5]{fig/1-3ti.png}
+    \resizebox{\columnwidth}{!}{
+	\begin{tikzpicture}
+		\pgfmathsetseed{10020}
+		\draw[name path=upper,gray!30,smooth,domain=-2:6] plot (\x,rand*0.2+2.3);	
+		\draw[name path=lower,gray!30,smooth,domain=-2:6] plot (\x,rand*0.2-0.1);	
+		\tikzfillbetween[of=upper and lower]{gray!30};
+		\tkzDefPoint(-1,-0.5){A}
+		\tkzDefPoint(1.231,2.71531){B}
+		\tkzDefPoint(5,-1){C}
+		\tkzDrawPolygon(A,B,C)
+		\tkzLabelPoints[below left](A)
+		\tkzLabelPoints[below right](C)
+		\tkzLabelPoints[above](B)
+		\tkzMarkAngle[size=0.9](C,A,B)
+		\tkzLabelAngle[pos=-0.6](B,A,C){$60^{\circ}$}
+		\tkzMarkAngle[size=0.9](B,C,A)
+		\tkzLabelAngle[pos=0.6](B,C,A){$40^{\circ}$}
+	\end{tikzpicture}}
     \caption*{第3题}
     \end{minipage}
-    \end{figure}
+\end{figure}
 
 \begin{ex}
 \begin{enumerate}
-	\item 在下列的$\square \square \square $之中填上适当的词或数：
+	\item 在下列的$\msquare \msquare \msquare $之中填上适当的词或数：
 \begin{enumerate}
-\item 形状相同的图形叫做$\square \square \square $．
+\item 形状相同的图形叫做$\msquare \msquare \msquare $．
 \item 两个相似三角形对应边长的比为2:3,那么这两个三
-	角形的相似比为$\square : \square $，这两个三角形面积的比为$\square : \square $．
+	角形的相似比为$\msquare : \msquare $，这两个三角形面积的比为$\msquare : \msquare $．
 \end{enumerate}
 
 	\item 某时刻，烟囱的
@@ -3411,7 +3626,20 @@ $\therefore\quad h=2\x4\div 1.5\approx 5.33{\rm m}$
     \end{minipage}
     \begin{minipage}[t]{0.48\textwidth}
     \centering
-\includegraphics[scale=.6]{fig/1-4ti.png}
+		\begin{tikzpicture}[>=latex, scale=1.5]
+		\tkzDefPoints{0/0/B, 2/0/C, 1.7/-1.7/A}
+		\tkzLabelPoint[below](A){$A$}
+		\tkzLabelPoint[left](B){$B$};
+		\tkzLabelPoint[right](C){$C$}
+		\tkzDrawPolySeg(B,A,C)
+		\tkzDrawSegment[dashed](B,C)
+		\tkzLabelAngle[pos=0.5](C,A,B){\small $55^\circ$};
+		\tkzMarkAngle[size=0.3](C,A,B)
+		\pgfmathsetseed{12510}
+		\draw[decorate,decoration={random steps, segment length = 3pt, amplitude = 0.5pt},smooth] (1.007,0) ellipse (0.96 and 0.3);
+		\draw[decorate,decoration={random steps, segment length = 2pt, amplitude = 0.5pt},smooth] (1.007,0) ellipse (0.6 and 0.18);
+		\draw (1.007,0) ellipse (0.3 and 0.09);
+	\end{tikzpicture}
     \caption*{第4题}
     \end{minipage}
     \end{figure}
@@ -4160,7 +4388,7 @@ $\angle AOB$的平分线是$OM$, 求$\angle COM$的度数．
 点在$E$点左边5m的地方，$B$点在$A$点左边4m的地方，
 问：
 \begin{enumerate}
-	\item 正好在中间的是那个点？
+	\item 正好在中间的是哪个点？
 	\item $D$点在$E$点右边
 多少米远的地方？
 \end{enumerate}
@@ -4169,14 +4397,14 @@ $\angle AOB$的平分线是$OM$, 求$\angle COM$的度数．
 	\begin{minipage}[t]{0.48\textwidth}
 	\centering
   \begin{tikzpicture}[>=latex, scale=1]
-\tkzDefPoints{-1/0/A, 0/0/B, 3/0/D, 0/3/E}
-\tkzDefPoint(88:3){C}
-\tkzDrawLine[bisector](C,B,D)  \tkzGetPoint{F'}
-\tkzDefPointWith[linear, K=2](B,F')  \tkzGetPoint{F}
-\tkzDrawSegments(A,D B,E B,C B,F)
-\tkzLabelPoints[below](A,B,D)
-\tkzLabelPoints[right](C,F)
-\tkzLabelPoints[left](E)
+		\tkzDefPoints{-1/0/A, 0/0/B, 3/0/D, 0/3/E}
+		\tkzDefPoint(88:3){C}
+		\tkzDefLine[bisector](C,B,D)  \tkzGetPoint{F'}
+		\tkzDefPointWith[linear, K=2](B,F')  \tkzGetPoint{F}
+		\tkzDrawSegments(A,D B,E B,C B,F)
+		\tkzLabelPoints[below](A,B,D)
+		\tkzLabelPoints[right](C,F)
+		\tkzLabelPoints[left](E)
 	\end{tikzpicture}
 	\caption*{第10题}
 	\end{minipage}
@@ -4184,14 +4412,14 @@ $\angle AOB$的平分线是$OM$, 求$\angle COM$的度数．
 	\centering
 	\begin{tikzpicture}[>=latex, scale=1]
 		\tkzDefPoints{-2/0/A, 0/0/O, 2/0/B}
-\tkzDefPoint(70:2.5){C}
-\tkzDrawLine[bisector](C,O,B)  \tkzGetPoint{E'}
-\tkzDrawLine[bisector](A,O,C)  \tkzGetPoint{D'}
-\tkzDefPointWith[linear, K=1.56](O,E')  \tkzGetPoint{E}\tkzDefPointWith[linear, K=2](O,D')  \tkzGetPoint{D}
-\tkzLabelPoints[below](A,B,O)
-\tkzLabelPoints[right](C,E)
-\tkzLabelPoints[left](D)
-\tkzDrawSegments(A,B D,O C,O E,O)
+		\tkzDefPoint(70:2.5){C}
+		\tkzDefLine[bisector](C,O,B)  \tkzGetPoint{E'}
+		\tkzDefLine[bisector](A,O,C)  \tkzGetPoint{D'}
+		\tkzDefPointWith[linear, K=1.56](O,E')  \tkzGetPoint{E}\tkzDefPointWith[linear, K=2](O,D')  			\tkzGetPoint{D}
+		\tkzLabelPoints[below](A,B,O)
+		\tkzLabelPoints[right](C,E)
+		\tkzLabelPoints[left](D)
+		\tkzDrawSegments(A,B D,O C,O E,O)
 	\end{tikzpicture}
 	\caption*{第13题}
 	\end{minipage}
